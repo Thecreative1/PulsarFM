@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRD1BYXB78"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRD1BYXB78');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Título da página -->
+  <title>Rádios Internacionais com Webamp</title>
+
+  <!-- Meta description -->
+  <meta name="description" content="Sintonize e descubra centenas de rádios internacionais grátis, organizadas por género e com visualizador Webamp." />
+
+  <!-- Open Graph (WhatsApp, Facebook, Telegram, etc.) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.pulsarfm.eu/" />
+  <meta property="og:title"       content="Pulsar FM – As melhores rádios online" />
+  <meta property="og:description" content="Descubra e ouça rádios internacionais grátis, por rock, jazz, chill, lofi, electrónica e muito mais." />
+  <meta property="og:image"       content="https://www.pulsarfm.eu/img/cover.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Pulsar FM – As melhores rádios online" />
+  <meta name="twitter:description" content="Sintonize centenas de rádios internacionais grátis, organizadas por género." />
+  <meta name="twitter:image"       content="https://www.pulsarfm.eu/img/cover.png" />
+
+  <style>
+    html, body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: #000;
+      color: #eee;
+      font-family: Arial, sans-serif;
+    }
+
+    #winamp > div {
+      position: fixed !important;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+
+    #container {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00ffcc;
+      border-radius: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      width: 90%;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      box-shadow:
+        0 0 25px #00ffcc88,
+        0 0 50px #00ffcc22,
+        inset 0 0 6px #00222299;
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      color: #00ffcc;
+      margin: 10px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    #now-playing, #genre-title {
+      font-size: 18px;
+      color: #00ffcc;
+      margin: 5px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .radio-card {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid #00ccff;
+      box-shadow:
+        0 0 15px #00ccff33,
+        inset 0 0 6px #00223388;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .radio-card:hover {
+      transform: scale(1.02);
+      background-color: rgba(34, 34, 34, 0.9);
+      box-shadow: 0 0 20px #00ccff;
+    }
+
+    .radio-card h3 {
+      margin: 0 0 10px 0;
+      color: #00ccff;
+      font-size: 1.2em;
+    }
+
+    .radio-card button {
+      background-color: #00ccff;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .radio-card button:hover {
+      background-color: #00aaff;
+    }
+
+    .filter-btn {
+      background-color: #00ccff;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .filter-btn:hover {
+      background-color: #00aaff;
+      transform: scale(1.05);
+    }
+
+    .filter-btn.active {
+      background-color: #007799;
+      color: white;
+      box-shadow: 0 0 5px #00ccff;
+    }
+
+    .genre-columns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+      max-width: 1200px;
+    }
+
+    .radio-group {
+      flex: 1 1 300px;
+      max-width: 320px;
+    }
+
+    .radio-group h2 {
+      font-size: 1.5em;
+      color: #00ffcc;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    img {
+      max-width: 300px;
+      width: 80%;
+      margin: 20px auto 10px;
+      display: block;
+      filter: drop-shadow(0 0 15px #00ffcc);
+    }
+  </style>
+</head>
+<body>
+  <div id="winamp"></div>
+
+  <div id="container">
+    <img src="img/pulsar.png" alt="Pulsar FM Logo">
+    <h1>🌐 As melhores Rádios Online</h1>
+    <div>
+      <button class="filter-btn active" onclick="filterRadios('all')">🎧 Todos</button>
+      <button class="filter-btn" onclick="filterRadios('rock')">🎸 Rock</button>
+      <button class="filter-btn" onclick="filterRadios('jazz')">🎷 Jazz</button>
+      <button class="filter-btn" onclick="filterRadios('chill')">🌿 Chill</button>
+      <button class="filter-btn" onclick="filterRadios('pop')">🎶 Pop</button>
+      <button class="filter-btn" onclick="filterRadios('Study-Work')">🎮 Study-Work</button>
+      <button class="filter-btn" onclick="filterRadios('electro')">⚡ Electrónica</button>
+      <button class="filter-btn" onclick="filterRadios('psy')">🔀 Goa / Psytrance</button>
+    </div>
+    <div id="genre-title">🎶 Estás a explorar: Todos os géneros</div>
+    <div id="now-playing">🎶 Nenhuma rádio em reprodução</div>
+    <div class="genre-columns" id="radio-groups"></div>
+  </div>
+
+  <script src="https://unpkg.com/webamp@1.5.0/built/webamp.bundle.min.js"></script>
+  <script src="https://unpkg.com/butterchurn@2.6.7/lib/butterchurn.min.js"></script>
+  <script src="https://unpkg.com/butterchurn-presets@2.4.7/lib/butterchurnPresets.min.js"></script>
+  <script>
+    const radios = {
+      rock: [
+        ['Radio Paradise - Rock Mix', 'https://stream.radioparadise.com/rock-128'],
+        ['70`SRock', 'https://stream.rockantenne.de/70er-rock/stream/mp3'],
+        ['Rock Antenne', 'https://s1-webradio.rockantenne.de/rockantenne/stream/mp3']
+      ],
+      jazz: [
+        ['TSF Jazz', 'https://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3'],
+        ['Smooth Jazz', 'https://smoothjazz.cdnstream1.com/2586_320.mp3'],
+        ['Radio Swiss Jazz', 'https://stream.srg-ssr.ch/m/rsj/mp3_128']
+      ],
+      chill: [
+        ['SomaFM Drone Zone', 'https://ice1.somafm.com/dronezone-128-mp3'],
+        ['Chillout–styleJazz', 'https://smoothjazz.cdnstream1.com/2586_320.mp3'],
+        ['Chilltrax', 'https://icecast.omroep.nl/radio2-bb-mp3']
+      ],
+      pop: [
+        ['RFM Pop Rock', 'https://rfm.lmn.fm/rfm-wr10.mp3'],
+        ['Anti Radio POP/DH', 'https://stream.antiradio.net/radio/8000/mp3'],
+        ['Capital FM UK', 'http://media-ice.musicradio.com/CapitalMP3']
+      ],
+      'Study-Work': [
+        ['SomaFM Groove Salad', 'https://ice1.somafm.com/groovesalad-128-mp3'],
+        ['Radio Swiss Classic', 'https://stream.srg-ssr.ch/m/rsc_de/mp3_128'],
+        ['Jazz24 instrumental', 'https://live.amperwave.net/direct/ppm-jazz24mp3-ibc1']
+      ],
+      electro: [
+        ['TechnoBase.FM DE', 'http://listen.technobase.fm/tunein-mp3'],
+        ['Techno Base Radio GR', 'https://stream.zeno.fm/erzpzalnqeitv'],
+        ['Frisky Radio EUA', 'https://stream2.friskyradio.com/frisky_mp3_hi']
+      ],
+      psy: [
+        ['Goa-Base Trance', 'https://goa-base.stream.laut.fm/goa-base'],
+        ['Hirschmilch-psy', 'http://hirschmilch.de:7000/psytrance.mp3'],
+        ['BOM Psytrance', 'http://strm112.1.fm/psytrance_mobile_mp3']
+      ]
+    };
+
+    const genreNames = {
+      rock: '🎸 Rock / Alternativo',
+      jazz: '🎷 Jazz',
+      chill: '🌿 Chill / Ambiente',
+      pop: '🎶 Pop',
+      'Study-Work': '🎮 Study / Lo-Fi',
+      electro: '⚡ Electrónica / Dance',
+      psy: '🔀 Goa Trance / Psytrance'
+    };
+
+    const container = document.getElementById('radio-groups');
+    for (const [genre, stations] of Object.entries(radios)) {
+      const group = document.createElement('div');
+      group.className = 'radio-group';
+      group.dataset.genre = genre;
+      group.innerHTML = `<h2>${genreNames[genre]}</h2>`;
+      for (const [name, url] of stations) {
+        const card = document.createElement('div');
+        card.className = 'radio-card';
+        card.innerHTML = `<h3>${name}</h3><button onclick="handleClick(event, '${url}', '${name}')">🎧 Ouvir agora</button>`;
+        group.appendChild(card);
+      }
+      container.appendChild(group);
+    }
+
+    let webampInstance = null;
+    const webamp = new Webamp({
+      initialTracks: [],
+      __butterchurnOptions: {
+        importButterchurn: () => Promise.resolve(window.butterchurn),
+        getPresets: () => {
+          const presets = window.butterchurnPresets.getPresets();
+          return Object.keys(presets).map((name) => ({
+            name,
+            butterchurnPresetObject: presets[name],
+          }));
+        },
+        butterchurnOpen: true,
+      },
+      windowLayout: {
+        main: { position: { top: 0, left: 0 } },
+        equalizer: { position: { top: 116, left: 0 } },
+        playlist: {
+          position: { top: 232, left: 0 },
+          size: { extraWidth: 0, extraHeight: 4 },
+        },
+        milkdrop: {
+          position: { top: 0, left: 275 },
+          size: { extraHeight: 12, extraWidth: 7 },
+        },
+      },
+    });
+
+    webamp.renderWhenReady(document.getElementById("winamp")).then(() => {
+      webampInstance = webamp;
+    });
+
+    function handleClick(event, url, name) {
+      event.preventDefault();
+      if (!webampInstance) {
+        alert("O player ainda não está pronto. Tenta novamente em 1 segundo.");
+        return;
+      }
+      document.getElementById("now-playing").textContent = `🎶 A tocar agora: ${name}`;
+      webampInstance.appendTracks([{ url: url, metaData: { artist: name, title: "ao Vivo" } }]).then(() => {
+        webampInstance.play();
+      });
+    }
+
+    function filterRadios(genre) {
+      const groups = document.querySelectorAll(".radio-group");
+      const buttons = document.querySelectorAll(".filter-btn");
+      const genreTitle = document.getElementById("genre-title");
+
+      groups.forEach(group => {
+        group.style.display = (genre === "all" || group.dataset.genre === genre) ? "block" : "none";
+      });
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      const activeBtn = Array.from(buttons).find(btn => btn.onclick?.toString().includes(genre));
+      if (activeBtn) activeBtn.classList.add("active");
+
+      genreTitle.textContent = `🎶 Estás a explorar: ${genre === 'all' ? 'Todos os gêneros' : genreNames[genre]}`;
+    }
+  </script>
+
+  <footer style="margin-bottom: 20px; text-align: center; font-size: 14px; color: #00ffcc99;">
+    <p>
+      Visualizador baseado em <a href="https://github.com/jberg/butterchurn" target="_blank" style="color:#00ccff;">Butterchurn</a> ·
+      Player baseado em <a href="https://github.com/captbaritone/webamp" target="_blank" style="color:#00ccff;">Webamp</a><br>
+      Pulsar FM — <em>Codificado com alma portuguesa ❤️</em> · <span style="opacity: 0.5;">por F. Martins</span>
+    </p>
+  </footer>
+</body>
+</html>

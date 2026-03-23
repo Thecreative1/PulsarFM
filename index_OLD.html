@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+<<<<<<< HEAD
+  <title>Rádios Internacionais com Webamp</title>
+=======
+  <title>Webamp com Visualizações</title>
+  <script src="js/butterchurn.js"></script>
+  <script src="js/butterchurnPresets.js"></script>
+  <script src="js/webamp-butterchurn.min.js"></script>
+>>>>>>> 2562d5c5a4d6717a77c9dbae329ad02b25b0455b
+  <script src="https://unpkg.com/webamp"></script>
+  <script src="https://unpkg.com/butterchurn"></script>
+  <script src="https://unpkg.com/butterchurn-presets"></script>
+  <script src="https://unpkg.com/webamp-butterchurn"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #eee;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #00ffcc;
+      margin: 10px 0;
+    }
+    #visualizer {
+      width: 640px;
+      height: 480px;
+      background: black;
+    }
+    #now-playing {
+      font-size: 18px;
+      color: #00ffcc;
+      margin: 5px 0;
+    }
+    #winamp {
+      width: 100%;
+      height: 0;
+      position: relative;
+    }
+    #winamp > div {
+      position: absolute !important;
+      top: 620px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+    .radio-card {
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .radio-card:hover {
+      transform: scale(1.02);
+      background-color: #222;
+    }
+    .radio-card h3 {
+      margin: 0 0 10px 0;
+      color: #00ccff;
+      font-size: 1.2em;
+    }
+    .radio-card button {
+      background-color: #00ccff;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .radio-card button:hover {
+      background-color: #00aaff;
+    }
+    .filter-btn {
+      background-color: #00ccff;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      margin: 0 5px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+    .filter-btn:hover {
+      background-color: #00aaff;
+      transform: scale(1.05);
+    }
+    .filter-btn.active {
+      background-color: #007799;
+      color: white;
+      box-shadow: 0 0 5px #00ccff;
+    }
+    .genre-columns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+      max-width: 1200px;
+    }
+    .radio-group {
+      flex: 1 1 300px;
+      max-width: 320px;
+    }
+    .radio-group h2 {
+      font-size: 1.5em;
+      color: #00ffcc;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌐 Estações de Rádio Online</h1>
+    <div style="margin: 10px 0;">
+    <button class="filter-btn active" onclick="filterRadios('all')">🎧 Todos</button>
+    <button class="filter-btn" onclick="filterRadios('rock')">🎸 Rock</button>
+    <button class="filter-btn" onclick="filterRadios('jazz')">🎷 Jazz</button>
+    <button class="filter-btn" onclick="filterRadios('chill')">🌿 Chill</button>
+  </div>
+
+  <div id="genre-title" style="margin: 5px 0; font-size: 1.2em; color: #00ffcc;">
+    🎶 Estás a explorar: Todos os géneros
+  </div>
+  <div id="now-playing">🎶 Nenhuma rádio em reprodução</div>
+
+  <div class="genre-columns">
+    <div class="radio-group" data-genre="rock">
+      <h2>🎸 Rock / Alternativo</h2>
+      <div class="radio-card"><h3>Radio Paradise - Rock Mix</h3><button onclick="handleClick(event, 'https://stream.radioparadise.com/rock-128', 'Radio Paradise - Rock Mix')">🎧 Ouvir agora</button></div>
+      <div class="radio-card"><h3>Radio Paradise - Mellow Mix</h3><button onclick="handleClick(event, 'https://stream.radioparadise.com/mellow-128', 'Radio Paradise - Mellow Mix')">🎧 Ouvir agora</button></div>
+      <div class="radio-card"><h3>Radio Paradise - Main Mix</h3><button onclick="handleClick(event, 'https://stream.radioparadise.com/main-128', 'Radio Paradise - Main Mix')">🎧 Ouvir agora</button></div>
+    </div>
+
+    <div class="radio-group" data-genre="chill">
+      <h2>🌿 Chill / Ambiente</h2>
+      <div class="radio-card"><h3>SomaFM Groove Salad</h3><button onclick="handleClick(event, 'https://ice2.somafm.com/groovesalad-128-mp3', 'SomaFM Groove Salad')">🎧 Ouvir agora</button></div>
+      <div class="radio-card"><h3>SomaFM Mission Control</h3><button onclick="handleClick(event, 'https://ice2.somafm.com/missioncontrol-128-mp3', 'SomaFM Mission Control')">🎧 Ouvir agora</button></div>
+      <div class="radio-card"><h3>SomaFM Drone Zone</h3><button onclick="handleClick(event, 'https://ice1.somafm.com/dronezone-128-mp3', 'SomaFM Drone Zone')">🎧 Ouvir agora</button></div>
+    </div>
+
+    <div class="radio-group" data-genre="jazz">
+      <h2>🎷 Jazz</h2>
+      <div class="radio-card"><h3>Jazz Radio Classic</h3><button onclick="handleClick(event, 'https://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3', 'Jazz Radio Classic')">🎧 Ouvir agora</button></div>
+      <div class="radio-card"><h3>TSF Jazz (Paris)</h3><button onclick="handleClick(event, 'https://playerservices.streamtheworld.com/api/livestream-redirect/TSFJAZZ.mp3', 'TSF Jazz (Paris)')">🎧 Ouvir agora</button></div>
+      <div class="radio-card"><h3>Jazz & Blues</h3><button onclick="handleClick(event, 'https://jazzblues.ice.infomaniak.ch/jazzblues-128.mp3', 'Jazz & Blues')">🎧 Ouvir agora</button></div>
+    </div>
+  </div>
+
+  <div id="winamp"></div>
+
+  <script>
+    const visualizerCanvas = document.getElementById("visualizer");
+    const nowPlayingText = document.getElementById("now-playing");
+    let webampInstance = null;
+
+    const webamp = new Webamp({
+<<<<<<< HEAD
+      initialTracks: [],
+      initialSkin: {
+        url: "https://cdn.jsdelivr.net/npm/webamp@1.5.0/skins/classic.wsz"
+      },
+      enableButterchurn: true,
+      __butterchurnOptions: {
+        importButterchurn: () => Promise.resolve(window.butterchurn),
+        getPresets: () => window.butterchurnPresets.getPresets(),
+        butterchurnOpen: true,
+        getVisualizerCanvas: () => visualizerCanvas
+=======
+      initialTracks: [
+        {
+          metaData: { artist: "RFM", title: "RFM ao Vivo" },
+          url: "https://21223.live.streamtheworld.com/RFMAAC.aac",
+          duration: 0
+        },
+        {
+          metaData: { artist: "Comercial", title: "Comercial ao Vivo" },
+          url: "https://mcrscast.mcr.iol.pt/comercial.mp3",
+          duration: 0
+        }
+      ],
+      initialSkin: {
+        url: "milkyway.wsz"
+>>>>>>> 2562d5c5a4d6717a77c9dbae329ad02b25b0455b
+      },
+      filePickers: []
+    });
+
+    webamp.renderWhenReady(document.getElementById("winamp")).then(() => {
+<<<<<<< HEAD
+      webampInstance = webamp;
+    });
+
+    function handleClick(event, url, name) {
+      event.preventDefault();
+      if (!webampInstance) {
+        alert("O player ainda não está pronto. Tenta novamente em 1 segundo.");
+        return;
+      }
+      nowPlayingText.textContent = `🎶 A tocar agora: ${name}`;
+      webampInstance.appendTracks([
+        { url, metaData: { artist: name, title: "ao Vivo" } }
+      ]).then(() => {
+        webampInstance.play();
+      });
+    }
+
+    function filterRadios(genre) {
+      const groups = document.querySelectorAll(".radio-group");
+      const buttons = document.querySelectorAll(".filter-btn");
+      const genreTitle = document.getElementById("genre-title");
+
+      groups.forEach(group => {
+        const groupGenre = group.getAttribute("data-genre");
+        group.style.display = (genre === "all" || groupGenre === genre) ? "block" : "none";
+      });
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      const activeBtn = Array.from(buttons).find(btn => btn.onclick?.toString().includes(genre));
+      if (activeBtn) activeBtn.classList.add("active");
+
+      let texto = "Todos os géneros";
+      if (genre === "rock") texto = "Rock / Alternativo";
+      else if (genre === "jazz") texto = "Jazz";
+      else if (genre === "chill") texto = "Chill / Ambiente";
+
+      genreTitle.textContent = `🎶 Estás a explorar: ${texto}`;
+    }
+=======
+      const visualizer = window.butterchurn.createVisualizer(
+        webamp.getAudioContext(),
+        visualizerCanvas,
+        { width: 640, height: 480 }
+      );
+
+      visualizer.connectAudio(webamp.getAudioNode());
+
+      const presets = window.butterchurnPresets.getPresets();
+      const preset = presets["Flexi, martin + geiss - dedicated to the sherwin maxawow"];
+      visualizer.loadPreset(preset, 0.0);
+    });
+>>>>>>> 2562d5c5a4d6717a77c9dbae329ad02b25b0455b
+  </script>
+</body>
+</html>
