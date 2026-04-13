@@ -409,7 +409,7 @@
     }
 
     @media (max-width: 560px) {
-      :root { --stack-height: 190px; }
+      :root { --stack-height: 260px; }
 
       body {
         padding-inline: 8px;
@@ -775,7 +775,9 @@
 
     const webamp = new Webamp({
       initialTracks: [],
-      __butterchurnOptions: isMobile ? undefined : {
+      enableMediaSession: true,
+      enableHotkeys: true,
+      __butterchurnOptions: {
         importButterchurn: () => Promise.resolve(window.butterchurn),
         getPresets: () => {
           const presets = window.butterchurnPresets.getPresets();
@@ -785,8 +787,9 @@
       },
       windowLayout: isMobile ? {
         main:      { position: { top: 0,   left: 0 } },
-        equalizer: { position: { top: 116, left: 0 } },
-        playlist:  { position: { top: 232, left: 0 }, size: { extraWidth: 0, extraHeight: 4 } }
+        equalizer: { position: { top: 116, left: 0 }, closed: true },
+        playlist:  { position: { top: 116, left: 0 }, closed: true },
+        milkdrop:  { position: { top: 116, left: 0 }, size: { extraHeight: 6, extraWidth: 0 } }
       } : {
         main:      { position: { top: 0,   left: 0   } },
         equalizer: { position: { top: 116, left: 0   } },
@@ -801,6 +804,20 @@
         playerReady    = true;
         playerStatus.textContent = "Player pronto. Escolhe uma estação para começar.";
         updatePlayerButtons();
+
+        webamp.onTrackDidChange(track => {
+          if (track) {
+            nowPlaying.textContent   = `🎶 A tocar agora: ${track.metaData?.artist ?? track.url}`;
+            playerStatus.textContent = "A reproduzir em direto.";
+          } else {
+            nowPlaying.textContent   = "🎶 Nenhuma rádio em reprodução";
+            playerStatus.textContent = "Player pronto. Escolhe uma estação para começar.";
+          }
+        });
+
+        webamp.onClose(() => {
+          setTimeout(() => webamp.reopen(), 300);
+        });
       })
       .catch(() => {
         playerStatus.textContent = "Não foi possível iniciar o player. Verifica a ligação e recarrega a página.";
