@@ -360,6 +360,26 @@
         inset 0 0 6px rgba(0, 34, 51, 0.65);
     }
 
+    .radio-card.playing {
+      background: linear-gradient(160deg, rgba(180, 0, 200, 0.18), rgba(255, 45, 155, 0.12));
+      border-color: var(--neon-pink);
+      box-shadow:
+        0 0 16px rgba(255, 45, 155, 0.45),
+        0 0 36px rgba(192, 68, 255, 0.25),
+        inset 0 0 10px rgba(255, 45, 155, 0.08);
+    }
+
+    .radio-card.playing h3 {
+      color: var(--neon-pink);
+      text-shadow: 0 0 10px rgba(255, 45, 155, 0.55);
+    }
+
+    .radio-card.playing .play-button {
+      background: linear-gradient(135deg, #b400c8, #ff2d9b);
+      color: #fff0f8;
+      box-shadow: 0 0 12px rgba(255, 45, 155, 0.5);
+    }
+
     .radio-card h3 {
       margin: 0 0 12px;
       color: var(--line-secondary);
@@ -746,6 +766,13 @@
       updateFilterState();
     }
 
+    function setPlayingCard(url) {
+      document.querySelectorAll(".radio-card").forEach(card => {
+        const btn = card.querySelector(".play-button");
+        card.classList.toggle("playing", btn && btn.dataset.url === url);
+      });
+    }
+
     function playStation(url, name) {
       if (!playerReady || !webampInstance) {
         playerStatus.textContent = "O player ainda está a carregar. Tenta novamente daqui a um instante.";
@@ -754,6 +781,7 @@
       nowPlaying.textContent   = `🎶 A tocar agora: ${name}`;
       playerStatus.textContent = "Player pronto e rádio sincronizada no Webamp.";
       webampInstance.setTracksToPlay([{ url, metaData: { artist: name, title: "Ao vivo" } }]);
+      setPlayingCard(url);
     }
 
     filterButtons.addEventListener("click", event => {
@@ -820,9 +848,11 @@
           if (track) {
             nowPlaying.textContent   = `🎶 A tocar agora: ${track.metaData?.artist ?? track.url}`;
             playerStatus.textContent = "A reproduzir em direto.";
+            setPlayingCard(track.url);
           } else {
             nowPlaying.textContent   = "🎶 Nenhuma rádio em reprodução";
             playerStatus.textContent = "Player pronto. Escolhe uma estação para começar.";
+            setPlayingCard(null);
           }
         });
 
