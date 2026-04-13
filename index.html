@@ -447,6 +447,7 @@
           <a href="#radio-groups" class="genre-filter-link" data-genre="study">Rádios para Estudar</a>
           <a href="#radio-groups" class="genre-filter-link" data-genre="electro">Rádios Electrónicas</a>
           <a href="#radio-groups" class="genre-filter-link" data-genre="psy">Rádios Psytrance</a>
+          <a href="#radio-groups" class="genre-filter-link" data-genre="synthwave">Rádios Synthwave</a>
         </div>
       </article>
     </div>
@@ -501,6 +502,11 @@
         ["Goa-Base Trance", "https://goa-base.stream.laut.fm/goa-base"],
         ["Hirschmilch Psy", "https://hirschmilch.de/psytrance.mp3"],
         ["BOM Psytrance",   "https://strm112.1.fm/psytrance_mobile_mp3"]
+      ],
+      synthwave: [
+        ["Nightride FM",     "https://stream.nightride.fm/nightride.mp3"],
+        ["ChillSynth FM",    "https://stream.nightride.fm/chillsynth.mp3"],
+        ["SomaFM Digitalis", "https://ice1.somafm.com/digitalis-128-mp3"]
       ]
     };
 
@@ -510,8 +516,9 @@
       chill:  "🌿 Chill / Ambiente",
       pop:    "🎶 Pop",
       study:  "💻 Study / Lo-Fi",
-      electro:"⚡ Electrónica / Dance",
-      psy:    "🔀 Goa / Psytrance"
+      electro:   "⚡ Electrónica / Dance",
+      psy:       "🔀 Goa / Psytrance",
+      synthwave: "🌆 Synthwave / Retrowave"
     };
 
     const filters = [
@@ -521,8 +528,9 @@
       { genre: "chill",  label: "🌿 Chill" },
       { genre: "pop",    label: "🎶 Pop" },
       { genre: "study",  label: "💻 Study" },
-      { genre: "electro",label: "⚡ Electrónica" },
-      { genre: "psy",    label: "🔀 Psytrance" }
+      { genre: "electro",   label: "⚡ Electrónica" },
+      { genre: "psy",       label: "🔀 Psytrance" },
+      { genre: "synthwave", label: "🌆 Synthwave" }
     ];
 
     const filterButtons = document.getElementById("filter-buttons");
