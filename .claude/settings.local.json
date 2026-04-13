@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:www.pulsarfm.eu)",
       "WebFetch(domain:thecreative1.github.io)",
-      "Bash(git fetch:*)"
+      "Bash(git fetch:*)",
+      "WebFetch(domain:pulsarfm.eu)"
     ]
   }
 }
