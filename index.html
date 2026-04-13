@@ -39,10 +39,15 @@
       --line-primary: #00ffcc;
       --line-secondary: #00ccff;
       --line-secondary-strong: #1ed9ff;
+      --neon-pink: #ff2d9b;
+      --neon-pink-soft: rgba(255, 45, 155, 0.22);
+      --neon-purple: #c044ff;
+      --neon-purple-soft: rgba(192, 68, 255, 0.18);
       --text-primary: #ecfffb;
       --text-muted: #9ad9d3;
       --text-dim: rgba(236, 255, 251, 0.72);
       --shadow-glow: 0 0 25px rgba(0, 255, 204, 0.22);
+      --shadow-glow-pink: 0 0 28px rgba(255, 45, 155, 0.28);
       --shadow-card: 0 0 16px rgba(0, 204, 255, 0.18);
       --radius-panel: 24px;
       --radius-card: 16px;
@@ -62,8 +67,10 @@
       flex-direction: column;
       align-items: center;
       background:
-        radial-gradient(circle at top, rgba(0, 255, 204, 0.12), transparent 34%),
-        radial-gradient(circle at bottom, rgba(0, 153, 255, 0.15), transparent 30%),
+        radial-gradient(circle at top left,  rgba(192, 68, 255, 0.13), transparent 40%),
+        radial-gradient(circle at top right, rgba(255, 45, 155, 0.10), transparent 38%),
+        radial-gradient(circle at top,       rgba(0, 255, 204, 0.09), transparent 34%),
+        radial-gradient(circle at bottom,    rgba(0, 153, 255, 0.12), transparent 30%),
         linear-gradient(180deg, #02080b 0%, #031317 48%, #010507 100%);
       color: var(--text-primary);
       font-family: Arial, sans-serif;
@@ -106,7 +113,9 @@
       box-sizing: border-box;
       box-shadow:
         var(--shadow-glow),
-        0 0 50px rgba(0, 255, 204, 0.12),
+        var(--shadow-glow-pink),
+        0 0 50px rgba(0, 255, 204, 0.10),
+        0 0 80px rgba(192, 68, 255, 0.08),
         inset 0 0 8px rgba(0, 34, 34, 0.6);
       backdrop-filter: blur(8px);
       margin-top: -8px;
@@ -122,7 +131,10 @@
       width: min(82%, 300px);
       margin: 0 auto 12px;
       display: block;
-      filter: drop-shadow(0 0 18px rgba(0, 255, 204, 0.5));
+      filter:
+        drop-shadow(0 0 14px rgba(0, 255, 204, 0.55))
+        drop-shadow(0 0 28px rgba(255, 45, 155, 0.30))
+        drop-shadow(0 0 42px rgba(192, 68, 255, 0.18));
     }
 
     .eyebrow {
@@ -137,7 +149,10 @@
       margin: 0;
       color: var(--line-primary);
       font-size: clamp(2rem, 4vw, 3rem);
-      text-shadow: 0 0 18px rgba(0, 255, 204, 0.18);
+      text-shadow:
+        0 0 18px rgba(0, 255, 204, 0.35),
+        0 0 40px rgba(255, 45, 155, 0.20),
+        0 0 60px rgba(192, 68, 255, 0.14);
     }
 
     .intro {
@@ -181,9 +196,9 @@
     }
 
     .filter-btn.active {
-      background-color: #006f7d;
-      color: #f5ffff;
-      box-shadow: 0 0 14px rgba(0, 204, 255, 0.28);
+      background: linear-gradient(135deg, #b400c8, #ff2d9b);
+      color: #fff0f8;
+      box-shadow: 0 0 16px rgba(255, 45, 155, 0.45), 0 0 32px rgba(192, 68, 255, 0.25);
     }
 
     .status-panel {
@@ -324,8 +339,11 @@
     .radio-card:hover {
       transform: translateY(-2px);
       background-color: rgba(10, 18, 22, 0.92);
-      border-color: var(--line-primary);
-      box-shadow: 0 0 20px rgba(0, 204, 255, 0.22), inset 0 0 6px rgba(0, 34, 51, 0.65);
+      border-color: var(--neon-pink);
+      box-shadow:
+        0 0 18px rgba(255, 45, 155, 0.30),
+        0 0 36px rgba(192, 68, 255, 0.16),
+        inset 0 0 6px rgba(0, 34, 51, 0.65);
     }
 
     .radio-card h3 {
@@ -362,6 +380,7 @@
       text-align: center;
       font-size: 0.92rem;
       color: rgba(0, 255, 204, 0.7);
+      text-shadow: 0 0 10px rgba(255, 45, 155, 0.20);
     }
 
     .site-footer p {
