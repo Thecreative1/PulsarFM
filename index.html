@@ -127,6 +127,7 @@
     .hero {
       text-align: center;
       margin-bottom: 18px;
+      padding-top: 32px;
     }
 
     .hero-logo {
@@ -385,19 +386,24 @@
       opacity: 0.62;
     }
 
-    .scan-btn {
+    .scan-btn, .lang-switcher {
       position: absolute;
       top: 16px;
-      left: 20px;
       background: transparent;
-      border: 1px solid rgba(57, 255, 20, 0.35);
-      color: var(--neon-green);
-      padding: 5px 12px;
       border-radius: 999px;
       font-size: 0.78rem;
       font-weight: bold;
       letter-spacing: 0.1em;
       cursor: pointer;
+      padding: 6px 14px;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .scan-btn {
+      left: 20px;
+      border: 1px solid rgba(57, 255, 20, 0.35);
+      color: var(--neon-green);
       transition: border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
     }
 
@@ -406,9 +412,7 @@
       box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
     }
 
-    .scan-btn:active:not(:disabled) {
-      transform: scale(0.95);
-    }
+    .scan-btn:active:not(:disabled) { transform: scale(0.95); }
 
     .scan-btn:disabled {
       opacity: 0.35;
@@ -416,18 +420,9 @@
     }
 
     .lang-switcher {
-      position: absolute;
-      top: 16px;
       right: 20px;
-      background: transparent;
       border: 1px solid rgba(0, 255, 204, 0.35);
       color: var(--line-primary);
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: bold;
-      letter-spacing: 0.1em;
-      cursor: pointer;
       transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -484,12 +479,15 @@
 
       #container {
         margin-top: -4px;
-        padding: 18px 14px;
+        padding: 12px 14px 18px;
         border-radius: 18px;
         overflow-x: hidden;
       }
 
-      .hero { margin-bottom: 16px; }
+      .hero {
+        margin-bottom: 16px;
+        padding-top: 36px;
+      }
 
       .hero-logo {
         width: min(60%, 200px);
@@ -537,7 +535,6 @@
       }
 
       .radio-card {
-        min-height: 90px;
         padding: 14px;
       }
 
@@ -758,6 +755,7 @@
     let webampInstance = null;
     let playerReady    = false;
     let activeGenre    = "all";
+    let playingUrl     = null;
 
     function renderFilters() {
       const t = translations[currentLang];
@@ -849,6 +847,7 @@ function updatePlayerButtons() {
       updateFilterState();
       renderStations();
       updatePlayerButtons();
+      setPlayingCard(playingUrl);
       renderSeoBlocks();
     }
 
@@ -875,6 +874,7 @@ function updatePlayerButtons() {
     }
 
     function setPlayingCard(url) {
+      playingUrl = url;
       document.querySelectorAll(".radio-card").forEach(card => {
         const btn = card.querySelector(".play-button");
         card.classList.toggle("playing", btn && btn.dataset.url === url);
@@ -892,6 +892,9 @@ function updatePlayerButtons() {
       if (!button) return;
       filterRadios(button.dataset.genre);
       button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+      if (window.innerWidth < 820) {
+        setTimeout(() => radioGroups.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+      }
     });
 
     document.addEventListener("click", event => {
