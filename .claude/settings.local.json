@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.pulsarfm.eu)",
-      "WebFetch(domain:thecreative1.github.io)"
+      "WebFetch(domain:thecreative1.github.io)",
+      "Bash(git fetch:*)"
     ]
   }
 }
