@@ -385,6 +385,36 @@
       opacity: 0.62;
     }
 
+    .scan-btn {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      background: transparent;
+      border: 1px solid rgba(57, 255, 20, 0.35);
+      color: var(--neon-green);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .scan-btn:hover:not(:disabled) {
+      border-color: var(--neon-green);
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+    }
+
+    .scan-btn:active:not(:disabled) {
+      transform: scale(0.95);
+    }
+
+    .scan-btn:disabled {
+      opacity: 0.35;
+      cursor: wait;
+    }
+
     .lang-switcher {
       position: absolute;
       top: 16px;
@@ -543,6 +573,7 @@
 
   <div id="container">
     <button class="lang-switcher" id="lang-switcher">EN</button>
+    <button class="scan-btn" id="scan-btn">⚡ SCAN</button>
 
     <div class="hero">
       <img src="img/pulsar.png" alt="Logótipo Pulsar FM" class="hero-logo">
@@ -837,6 +868,12 @@ function updatePlayerButtons() {
       updateFilterState();
     }
 
+    function playRandom() {
+      const all = Object.entries(radios).flatMap(([, stations]) => stations);
+      const [name, url] = all[Math.floor(Math.random() * all.length)];
+      playStation(url, name);
+    }
+
     function setPlayingCard(url) {
       document.querySelectorAll(".radio-card").forEach(card => {
         const btn = card.querySelector(".play-button");
@@ -870,11 +907,16 @@ function updatePlayerButtons() {
       if (button) playStation(button.dataset.url, button.dataset.name);
     });
 
+    const scanBtn = document.getElementById("scan-btn");
+    scanBtn.disabled = true;
+
     applyLanguage(currentLang);
 
     document.getElementById("lang-switcher").addEventListener("click", () => {
       applyLanguage(currentLang === "pt" ? "en" : "pt");
     });
+
+    scanBtn.addEventListener("click", playRandom);
 
     const isMobile = window.innerWidth < 600;
 
@@ -907,6 +949,7 @@ function updatePlayerButtons() {
       .then(() => {
         webampInstance = webamp;
         playerReady    = true;
+        scanBtn.disabled = false;
         updatePlayerButtons();
 
         webamp.onTrackDidChange(track => {
