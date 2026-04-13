@@ -205,35 +205,6 @@
       box-shadow: 0 0 16px rgba(57, 255, 20, 0.5), 0 0 32px rgba(57, 255, 20, 0.25);
     }
 
-    .status-panel {
-      display: grid;
-      gap: 8px;
-      margin: 0 auto 24px;
-      padding: 18px;
-      max-width: 760px;
-      border: 1px solid rgba(0, 255, 204, 0.2);
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.42));
-      text-align: center;
-    }
-
-    #genre-title,
-    #now-playing,
-    #player-status {
-      margin: 0;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
-    }
-
-    #genre-title,
-    #now-playing {
-      color: var(--line-primary);
-      font-size: 1rem;
-    }
-
-    #player-status {
-      color: var(--text-dim);
-      font-size: 0.95rem;
-    }
 
     .seo-blocks {
       display: grid;
@@ -512,12 +483,7 @@
         opacity: 0.85;
       }
 
-      .status-panel {
-        padding: 12px 14px;
-        margin-bottom: 16px;
-      }
-
-      .genre-columns {
+.genre-columns {
         grid-template-columns: 1fr;
         gap: 14px;
       }
@@ -568,13 +534,7 @@
 
     <div class="filter-bar" id="filter-buttons"></div>
 
-    <div class="status-panel">
-      <p id="genre-title">🎶 Estás a explorar: Todos os géneros</p>
-      <p id="now-playing">🎶 Nenhuma rádio em reprodução</p>
-      <p id="player-status">A iniciar o player retro...</p>
-    </div>
-
-    <div id="radio-groups" class="genre-columns"></div>
+<div id="radio-groups" class="genre-columns"></div>
 
     <div class="seo-blocks">
       <article class="seo-card">
@@ -681,9 +641,6 @@
 
     const filterButtons = document.getElementById("filter-buttons");
     const radioGroups   = document.getElementById("radio-groups");
-    const genreTitle    = document.getElementById("genre-title");
-    const nowPlaying    = document.getElementById("now-playing");
-    const playerStatus  = document.getElementById("player-status");
     const catalogStats  = document.getElementById("catalog-stats");
 
     let webampInstance = null;
@@ -762,8 +719,6 @@
         btn.classList.toggle("active", isActive);
         btn.setAttribute("aria-pressed", String(isActive));
       });
-      const label = activeGenre === "all" ? "Todos os géneros" : genreNames[activeGenre];
-      genreTitle.textContent = `🎶 Estás a explorar: ${label}`;
     }
 
     function filterRadios(genre) {
@@ -779,12 +734,7 @@
     }
 
     function playStation(url, name) {
-      if (!playerReady || !webampInstance) {
-        playerStatus.textContent = "O player ainda está a carregar. Tenta novamente daqui a um instante.";
-        return;
-      }
-      nowPlaying.textContent   = `🎶 A tocar agora: ${name}`;
-      playerStatus.textContent = "Player pronto e rádio sincronizada no Webamp.";
+      if (!playerReady || !webampInstance) return;
       webampInstance.setTracksToPlay([{ url, metaData: { artist: name, title: "Ao vivo" } }]);
       setPlayingCard(url);
     }
@@ -846,28 +796,17 @@
       .then(() => {
         webampInstance = webamp;
         playerReady    = true;
-        playerStatus.textContent = "Player pronto. Escolhe uma estação para começar.";
         updatePlayerButtons();
 
         webamp.onTrackDidChange(track => {
-          if (track) {
-            nowPlaying.textContent   = `🎶 A tocar agora: ${track.metaData?.artist ?? track.url}`;
-            playerStatus.textContent = "A reproduzir em direto.";
-            setPlayingCard(track.url);
-          } else {
-            nowPlaying.textContent   = "🎶 Nenhuma rádio em reprodução";
-            playerStatus.textContent = "Player pronto. Escolhe uma estação para começar.";
-            setPlayingCard(null);
-          }
+          setPlayingCard(track ? track.url : null);
         });
 
         webamp.onClose(() => {
           setTimeout(() => webamp.reopen(), 300);
         });
       })
-      .catch(() => {
-        playerStatus.textContent = "Não foi possível iniciar o player. Verifica a ligação e recarrega a página.";
-      });
+      .catch(() => {});
   </script>
 </body>
 </html>
