@@ -411,7 +411,10 @@
     @media (max-width: 560px) {
       :root { --stack-height: 190px; }
 
-      body { padding-inline: 8px; }
+      body {
+        padding-inline: 8px;
+        overflow-x: hidden;
+      }
 
       #winamp > div {
         top: 2px;
@@ -422,6 +425,7 @@
         margin-top: -4px;
         padding: 18px 14px;
         border-radius: 18px;
+        overflow-x: hidden;
       }
 
       .hero { margin-bottom: 16px; }
@@ -442,19 +446,28 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-bottom: 6px;
+        padding-bottom: 8px;
         gap: 8px;
         scrollbar-width: none;
         -ms-overflow-style: none;
         margin-bottom: 14px;
+        -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+        mask-image: linear-gradient(to right, black 80%, transparent 100%);
       }
 
       .filter-bar::-webkit-scrollbar { display: none; }
 
       .filter-btn {
-        padding: 9px 14px;
+        padding: 10px 15px;
         font-size: 0.9rem;
         flex-shrink: 0;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      .filter-btn:active {
+        transform: scale(0.94);
+        opacity: 0.85;
       }
 
       .status-panel {
@@ -472,6 +485,10 @@
         padding: 14px;
       }
 
+      .radio-card:hover {
+        transform: none;
+      }
+
       .group-heading {
         flex-direction: column;
         align-items: flex-start;
@@ -480,7 +497,15 @@
       .play-button {
         width: 100%;
         text-align: center;
-        padding: 11px 16px;
+        padding: 13px 16px;
+        font-size: 1rem;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      .play-button:active:enabled {
+        transform: scale(0.97);
+        opacity: 0.88;
       }
 
       .seo-blocks { margin: 16px 0 20px; }
@@ -722,7 +747,9 @@
 
     filterButtons.addEventListener("click", event => {
       const button = event.target.closest("button[data-genre]");
-      if (button) filterRadios(button.dataset.genre);
+      if (!button) return;
+      filterRadios(button.dataset.genre);
+      button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
     });
 
     document.addEventListener("click", event => {
@@ -744,9 +771,11 @@
     updateFilterState();
     updatePlayerButtons();
 
+    const isMobile = window.innerWidth < 600;
+
     const webamp = new Webamp({
       initialTracks: [],
-      __butterchurnOptions: {
+      __butterchurnOptions: isMobile ? undefined : {
         importButterchurn: () => Promise.resolve(window.butterchurn),
         getPresets: () => {
           const presets = window.butterchurnPresets.getPresets();
@@ -754,7 +783,11 @@
         },
         butterchurnOpen: true
       },
-      windowLayout: {
+      windowLayout: isMobile ? {
+        main:      { position: { top: 0,   left: 0 } },
+        equalizer: { position: { top: 116, left: 0 } },
+        playlist:  { position: { top: 232, left: 0 }, size: { extraWidth: 0, extraHeight: 4 } }
+      } : {
         main:      { position: { top: 0,   left: 0   } },
         equalizer: { position: { top: 116, left: 0   } },
         playlist:  { position: { top: 232, left: 0   }, size: { extraWidth: 0, extraHeight: 4  } },
