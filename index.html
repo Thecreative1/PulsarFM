@@ -107,6 +107,7 @@
     }
 
     #container {
+      position: relative;
       width: min(1200px, calc(100% - 16px));
       background-color: var(--bg-panel);
       border: 2px solid var(--line-primary);
@@ -389,6 +390,28 @@
       opacity: 0.62;
     }
 
+    .lang-switcher {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: transparent;
+      border: 1px solid rgba(0, 255, 204, 0.35);
+      color: var(--line-primary);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lang-switcher:hover {
+      border-color: var(--neon-green);
+      color: var(--neon-green);
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+    }
+
     .site-footer {
       margin-top: 20px;
       text-align: center;
@@ -524,11 +547,13 @@
   <div id="winamp"></div>
 
   <div id="container">
+    <button class="lang-switcher" id="lang-switcher">EN</button>
+
     <div class="hero">
       <img src="img/pulsar.png" alt="Logótipo Pulsar FM" class="hero-logo">
       <p class="eyebrow">Pulsar FM</p>
-      <h1>Sintoniza. Visualiza. Vibra.</h1>
-      <p class="intro">24 estações ao vivo. 8 géneros. Com Milkdrop — o lendário visualizador do Winamp, agora no browser.</p>
+      <h1 id="hero-h1">Sintoniza. Visualiza. Vibra.</h1>
+      <p class="intro" id="hero-intro">24 estações ao vivo. 8 géneros. Com Milkdrop — o lendário visualizador do Winamp, agora no browser.</p>
       <p class="catalog-stats" id="catalog-stats"></p>
     </div>
 
@@ -536,36 +561,11 @@
 
 <div id="radio-groups" class="genre-columns"></div>
 
-    <div class="seo-blocks">
-      <article class="seo-card">
-        <h2>Uma experiência de rádio online diferente</h2>
-        <p>O Pulsar FM não é apenas mais uma lista de rádios online. É uma experiência completa que combina <strong>rádio em direto</strong> com o charme nostálgico do Winamp e as visualizações psicodélicas do Butterchurn.</p>
-      </article>
-      <article class="seo-card">
-        <h2>Para quem sente saudades do Winamp e das visualizações clássicas</h2>
-        <p>Se usaste Winamp no passado, conheces bem aquela sensação. O Pulsar FM traz isso de volta, diretamente no browser, sem instalações.</p>
-      </article>
-      <article class="seo-card">
-        <h2>Explora rádios online por género</h2>
-        <p>Escolhe o ambiente certo para cada momento — rock, jazz, chill, electrónica ou psytrance.</p>
-        <div class="genre-links">
-          <a href="#radio-groups" class="genre-filter-link" data-genre="rock">Rádios Rock</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="jazz">Rádios Jazz</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="chill">Rádios Chill</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="study">Rádios para Estudar</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="electro">Rádios Electrónicas</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="psy">Rádios Psytrance</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="synthwave">Rádios Synthwave</a>
-        </div>
-      </article>
-    </div>
+    <div class="seo-blocks" id="seo-blocks"></div>
 
     <footer class="site-footer">
-      <p>
-        Visualizador baseado em <a href="https://github.com/jberg/butterchurn" target="_blank">Butterchurn</a> ·
-        Player baseado em <a href="https://github.com/captbaritone/webamp" target="_blank">Webamp</a>
-      </p>
-      <p>Pulsar FM — <em>Codificado com alma portuguesa ❤️</em> · <span style="opacity:0.5;">por F. Martins</span></p>
+      <p id="footer-line1"></p>
+      <p id="footer-line2"></p>
     </footer>
   </div>
 
@@ -616,28 +616,118 @@
       ]
     };
 
-    const genreNames = {
-      rock:   "🎸 Rock / Alternativo",
-      jazz:   "🎷 Jazz",
-      chill:  "🌿 Chill / Ambiente",
-      pop:    "🎶 Pop",
-      study:  "💻 Study / Lo-Fi",
-      electro:   "⚡ Electrónica / Dance",
-      psy:       "🔀 Goa / Psytrance",
-      synthwave: "🌆 Synthwave / Retrowave"
+    const translations = {
+      pt: {
+        h1:    "Sintoniza. Visualiza. Vibra.",
+        intro: "24 estações ao vivo. 8 géneros. Com Milkdrop — o lendário visualizador do Winamp, agora no browser.",
+        catalogStats: (t, g) => `${t} estações · ${g} géneros`,
+        playBtn:    "🎧 Ouvir agora",
+        loadingBtn: "⌛ A carregar player",
+        langBtn: "EN",
+        filters: [
+          { genre: "all",       label: "🎧 Todos" },
+          { genre: "rock",      label: "🎸 Rock" },
+          { genre: "jazz",      label: "🎷 Jazz" },
+          { genre: "chill",     label: "🌿 Chill" },
+          { genre: "pop",       label: "🎶 Pop" },
+          { genre: "study",     label: "💻 Study" },
+          { genre: "electro",   label: "⚡ Electrónica" },
+          { genre: "psy",       label: "🔀 Psytrance" },
+          { genre: "synthwave", label: "🌆 Synthwave" }
+        ],
+        genreNames: {
+          rock:      "🎸 Rock / Alternativo",
+          jazz:      "🎷 Jazz",
+          chill:     "🌿 Chill / Ambiente",
+          pop:       "🎶 Pop",
+          study:     "💻 Study / Lo-Fi",
+          electro:   "⚡ Electrónica / Dance",
+          psy:       "🔀 Goa / Psytrance",
+          synthwave: "🌆 Synthwave / Retrowave"
+        },
+        seo: [
+          {
+            h2: "Uma experiência de rádio online diferente",
+            p:  `O Pulsar FM não é apenas mais uma lista de rádios online. É uma experiência completa que combina <strong>rádio em direto</strong> com o charme nostálgico do Winamp e as visualizações psicodélicas do Butterchurn.`
+          },
+          {
+            h2: "Para quem sente saudades do Winamp",
+            p:  "Se usaste Winamp no passado, conheces bem aquela sensação. O Pulsar FM traz isso de volta, diretamente no browser, sem instalações."
+          },
+          {
+            h2: "Explora rádios online por género",
+            p:  "Escolhe o ambiente certo para cada momento — rock, jazz, chill, electrónica ou psytrance.",
+            links: [
+              { genre: "rock",      label: "Rádios Rock" },
+              { genre: "jazz",      label: "Rádios Jazz" },
+              { genre: "chill",     label: "Rádios Chill" },
+              { genre: "study",     label: "Rádios para Estudar" },
+              { genre: "electro",   label: "Rádios Electrónicas" },
+              { genre: "psy",       label: "Rádios Psytrance" },
+              { genre: "synthwave", label: "Rádios Synthwave" }
+            ]
+          }
+        ],
+        footer1: `Visualizador baseado em <a href="https://github.com/jberg/butterchurn" target="_blank">Butterchurn</a> · Player baseado em <a href="https://github.com/captbaritone/webamp" target="_blank">Webamp</a>`,
+        footer2: `Pulsar FM — <em>Codificado com alma portuguesa ❤️</em> · <span style="opacity:0.5;">por F. Martins</span>`
+      },
+      en: {
+        h1:    "Tune in. Visualize. Vibe.",
+        intro: "24 live stations. 8 genres. With Milkdrop — the legendary Winamp visualizer, now in your browser.",
+        catalogStats: (t, g) => `${t} stations · ${g} genres`,
+        playBtn:    "🎧 Listen now",
+        loadingBtn: "⌛ Loading player",
+        langBtn: "PT",
+        filters: [
+          { genre: "all",       label: "🎧 All" },
+          { genre: "rock",      label: "🎸 Rock" },
+          { genre: "jazz",      label: "🎷 Jazz" },
+          { genre: "chill",     label: "🌿 Chill" },
+          { genre: "pop",       label: "🎶 Pop" },
+          { genre: "study",     label: "💻 Study" },
+          { genre: "electro",   label: "⚡ Electronic" },
+          { genre: "psy",       label: "🔀 Psytrance" },
+          { genre: "synthwave", label: "🌆 Synthwave" }
+        ],
+        genreNames: {
+          rock:      "🎸 Rock / Alternative",
+          jazz:      "🎷 Jazz",
+          chill:     "🌿 Chill / Ambient",
+          pop:       "🎶 Pop",
+          study:     "💻 Study / Lo-Fi",
+          electro:   "⚡ Electronic / Dance",
+          psy:       "🔀 Goa / Psytrance",
+          synthwave: "🌆 Synthwave / Retrowave"
+        },
+        seo: [
+          {
+            h2: "A different online radio experience",
+            p:  `Pulsar FM is not just another radio list. It's a full experience combining <strong>live radio</strong> with the nostalgic charm of Winamp and the psychedelic visuals of Butterchurn.`
+          },
+          {
+            h2: "For those who miss Winamp",
+            p:  "If you used Winamp in the past, you know the feeling. Pulsar FM brings it back, directly in the browser — no installation needed."
+          },
+          {
+            h2: "Explore online radio by genre",
+            p:  "Pick the right vibe for any moment — rock, jazz, chill, electronic or psytrance.",
+            links: [
+              { genre: "rock",      label: "Rock Radios" },
+              { genre: "jazz",      label: "Jazz Radios" },
+              { genre: "chill",     label: "Chill Radios" },
+              { genre: "study",     label: "Study Radios" },
+              { genre: "electro",   label: "Electronic Radios" },
+              { genre: "psy",       label: "Psytrance Radios" },
+              { genre: "synthwave", label: "Synthwave Radios" }
+            ]
+          }
+        ],
+        footer1: `Visualizer based on <a href="https://github.com/jberg/butterchurn" target="_blank">Butterchurn</a> · Player based on <a href="https://github.com/captbaritone/webamp" target="_blank">Webamp</a>`,
+        footer2: `Pulsar FM — <em>Coded with Portuguese soul ❤️</em> · <span style="opacity:0.5;">by F. Martins</span>`
+      }
     };
 
-    const filters = [
-      { genre: "all",    label: "🎧 Todos" },
-      { genre: "rock",   label: "🎸 Rock" },
-      { genre: "jazz",   label: "🎷 Jazz" },
-      { genre: "chill",  label: "🌿 Chill" },
-      { genre: "pop",    label: "🎶 Pop" },
-      { genre: "study",  label: "💻 Study" },
-      { genre: "electro",   label: "⚡ Electrónica" },
-      { genre: "psy",       label: "🔀 Psytrance" },
-      { genre: "synthwave", label: "🌆 Synthwave" }
-    ];
+    let currentLang = localStorage.getItem("pulsarfm-lang") || "pt";
 
     const filterButtons = document.getElementById("filter-buttons");
     const radioGroups   = document.getElementById("radio-groups");
@@ -648,7 +738,9 @@
     let activeGenre    = "all";
 
     function renderFilters() {
-      filters.forEach(({ genre, label }) => {
+      const t = translations[currentLang];
+      filterButtons.innerHTML = "";
+      t.filters.forEach(({ genre, label }) => {
         const button = document.createElement("button");
         button.type = "button";
         button.className = "filter-btn";
@@ -661,6 +753,7 @@
     }
 
     function createStationCard(name, url) {
+      const t      = translations[currentLang];
       const card   = document.createElement("article");
       card.className = "radio-card";
       const title  = document.createElement("h3");
@@ -671,12 +764,14 @@
       button.dataset.url  = url;
       button.dataset.name = name;
       button.disabled     = !playerReady;
-      button.textContent  = playerReady ? "🎧 Ouvir agora" : "⌛ A carregar player";
+      button.textContent  = playerReady ? t.playBtn : t.loadingBtn;
       card.append(title, button);
       return card;
     }
 
     function renderStations() {
+      const t = translations[currentLang];
+      radioGroups.innerHTML = "";
       Object.entries(radios).forEach(([genre, stations]) => {
         const group   = document.createElement("section");
         group.className = "radio-group";
@@ -686,7 +781,7 @@
         heading.className = "group-heading";
 
         const title = document.createElement("h2");
-        title.textContent = genreNames[genre];
+        title.textContent = t.genreNames[genre];
 
         const list = document.createElement("div");
         list.className = "station-list";
@@ -699,15 +794,47 @@
     }
 
     function updateCatalogStats() {
+      const t = translations[currentLang];
       const total = Object.values(radios).reduce((sum, s) => sum + s.length, 0);
-      catalogStats.textContent = `${total} estações distribuídas por ${filters.length - 1} géneros.`;
+      catalogStats.textContent = t.catalogStats(total, t.filters.length - 1);
     }
 
     function updatePlayerButtons() {
+      const t = translations[currentLang];
       document.querySelectorAll(".play-button").forEach(btn => {
         btn.disabled    = !playerReady;
-        btn.textContent = playerReady ? "🎧 Ouvir agora" : "⌛ A carregar player";
+        btn.textContent = playerReady ? t.playBtn : t.loadingBtn;
       });
+    }
+
+    function renderSeoBlocks() {
+      const t = translations[currentLang];
+      const seoBlocks = document.getElementById("seo-blocks");
+      seoBlocks.innerHTML = t.seo.map(card => {
+        const links = card.links
+          ? `<div class="genre-links">${card.links.map(l =>
+              `<a href="#radio-groups" class="genre-filter-link" data-genre="${l.genre}">${l.label}</a>`
+            ).join("")}</div>`
+          : "";
+        return `<article class="seo-card"><h2>${card.h2}</h2><p>${card.p}</p>${links}</article>`;
+      }).join("");
+    }
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem("pulsarfm-lang", lang);
+      const t = translations[lang];
+      document.getElementById("hero-h1").textContent    = t.h1;
+      document.getElementById("hero-intro").textContent = t.intro;
+      document.getElementById("lang-switcher").textContent = t.langBtn;
+      document.getElementById("footer-line1").innerHTML = t.footer1;
+      document.getElementById("footer-line2").innerHTML = t.footer2;
+      updateCatalogStats();
+      renderFilters();
+      updateFilterState();
+      renderStations();
+      updatePlayerButtons();
+      renderSeoBlocks();
     }
 
     function updateFilterState() {
@@ -722,7 +849,7 @@
     }
 
     function filterRadios(genre) {
-      activeGenre = (genre === "all" || Object.prototype.hasOwnProperty.call(genreNames, genre)) ? genre : "all";
+      activeGenre = (genre === "all" || Object.prototype.hasOwnProperty.call(translations[currentLang].genreNames, genre)) ? genre : "all";
       updateFilterState();
     }
 
@@ -759,11 +886,11 @@
       if (button) playStation(button.dataset.url, button.dataset.name);
     });
 
-    renderFilters();
-    renderStations();
-    updateCatalogStats();
-    updateFilterState();
-    updatePlayerButtons();
+    applyLanguage(currentLang);
+
+    document.getElementById("lang-switcher").addEventListener("click", () => {
+      applyLanguage(currentLang === "pt" ? "en" : "pt");
+    });
 
     const isMobile = window.innerWidth < 600;
 
