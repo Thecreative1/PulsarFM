@@ -338,13 +338,7 @@
       font-size: 1.25rem;
     }
 
-    .station-count {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
-
-    .station-list { display: grid; gap: 14px; }
+.station-list { display: grid; gap: 14px; }
 
     .radio-card {
       background-color: var(--bg-card);
@@ -565,7 +559,7 @@
       <img src="img/pulsar.png" alt="Logótipo Pulsar FM" class="hero-logo">
       <p class="eyebrow">Pulsar FM</p>
       <h1>Sintoniza. Visualiza. Vibra.</h1>
-      <p class="intro">24 estações ao vivo. 8 géneros. Visualizações retro no browser — sem instalar nada.</p>
+      <p class="intro">24 estações ao vivo. 8 géneros. Com Milkdrop — o lendário visualizador do Winamp, agora no browser.</p>
       <p class="catalog-stats" id="catalog-stats"></p>
     </div>
 
@@ -734,15 +728,11 @@
         const title = document.createElement("h2");
         title.textContent = genreNames[genre];
 
-        const count = document.createElement("span");
-        count.className = "station-count";
-        count.textContent = `${stations.length} estações`;
-
         const list = document.createElement("div");
         list.className = "station-list";
         stations.forEach(([name, url]) => list.appendChild(createStationCard(name, url)));
 
-        heading.append(title, count);
+        heading.append(title);
         group.append(heading, list);
         radioGroups.appendChild(group);
       });
