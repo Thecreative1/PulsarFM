@@ -11,6 +11,7 @@
   gtag('config', 'G-YRD1BYXB78');
 </script>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Título da página -->
@@ -215,13 +216,13 @@
       ],
       chill: [
         ['SomaFM Drone Zone', 'https://ice1.somafm.com/dronezone-128-mp3'],
-        ['Chillout–styleJazz', 'https://smoothjazz.cdnstream1.com/2586_320.mp3'],
-        ['Chilltrax', 'https://icecast.omroep.nl/radio2-bb-mp3']
+        ['Chillout–styleJazz', 'https://ice1.somafm.com/missioncontrol-128-mp3'],
+        ['Chilltrax', 'https://playerservices.streamtheworld.com/api/livestream-redirect/CHILLTRAX.mp3']
       ],
       pop: [
         ['RFM Pop Rock', 'https://rfm.lmn.fm/rfm-wr10.mp3'],
         ['Anti Radio POP/DH', 'https://stream.antiradio.net/radio/8000/mp3'],
-        ['Capital FM UK', 'http://media-ice.musicradio.com/CapitalMP3']
+        ['Capital FM UK', 'https://media-ice.musicradio.com/CapitalMP3']
       ],
       'Study-Work': [
         ['SomaFM Groove Salad', 'https://ice1.somafm.com/groovesalad-128-mp3'],
@@ -229,14 +230,14 @@
         ['Jazz24 instrumental', 'https://live.amperwave.net/direct/ppm-jazz24mp3-ibc1']
       ],
       electro: [
-        ['TechnoBase.FM DE', 'http://listen.technobase.fm/tunein-mp3'],
+        ['TechnoBase.FM DE', 'https://listen.technobase.fm/tunein-mp3'],
         ['Techno Base Radio GR', 'https://stream.zeno.fm/erzpzalnqeitv'],
         ['Frisky Radio EUA', 'https://stream2.friskyradio.com/frisky_mp3_hi']
       ],
       psy: [
         ['Goa-Base Trance', 'https://goa-base.stream.laut.fm/goa-base'],
-        ['Hirschmilch-psy', 'http://hirschmilch.de:7000/psytrance.mp3'],
-        ['BOM Psytrance', 'http://strm112.1.fm/psytrance_mobile_mp3']
+        ['Hirschmilch-psy', 'https://hirschmilch.de/psytrance.mp3'],
+        ['BOM Psytrance', 'https://strm112.1.fm/psytrance_mobile_mp3']
       ]
     };
 
@@ -304,9 +305,7 @@
         return;
       }
       document.getElementById("now-playing").textContent = `🎶 A tocar agora: ${name}`;
-      webampInstance.appendTracks([{ url: url, metaData: { artist: name, title: "ao Vivo" } }]).then(() => {
-        webampInstance.play();
-      });
+      webampInstance.setTracksToPlay([{ url: url, metaData: { artist: name, title: "ao Vivo" } }]);
     }
 
     function filterRadios(genre) {
@@ -322,7 +321,7 @@
       const activeBtn = Array.from(buttons).find(btn => btn.onclick?.toString().includes(genre));
       if (activeBtn) activeBtn.classList.add("active");
 
-      genreTitle.textContent = `🎶 Estás a explorar: ${genre === 'all' ? 'Todos os gêneros' : genreNames[genre]}`;
+      genreTitle.textContent = `🎶 Estás a explorar: ${genre === 'all' ? 'Todos os géneros' : genreNames[genre]}`;
     }
   </script>
 
