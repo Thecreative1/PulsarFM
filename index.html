@@ -317,7 +317,7 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 14px;
     }
 
     .radio-group[hidden] { display: none; }
@@ -394,6 +394,9 @@
       color: var(--line-secondary);
       font-size: 1.08rem;
       line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .play-button {
