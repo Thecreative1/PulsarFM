@@ -423,6 +423,74 @@
       cursor: wait;
     }
 
+    .skin-btn {
+      left: 90px;
+      border: 1px solid rgba(0, 204, 255, 0.35);
+      color: var(--line-secondary);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .skin-btn:hover {
+      border-color: var(--line-secondary);
+      box-shadow: 0 0 10px rgba(0, 204, 255, 0.4);
+    }
+
+    .skin-btn:active { transform: scale(0.95); }
+
+    .skin-drawer {
+      position: fixed;
+      top: 52px;
+      left: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      max-width: 320px;
+      background: rgba(0, 10, 18, 0.92);
+      border: 1px solid rgba(0, 204, 255, 0.2);
+      border-radius: 10px;
+      padding: 10px;
+      z-index: 999;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.1);
+      transform-origin: top left;
+      transform: scale(0.92);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .skin-drawer.open {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: all;
+    }
+
+    .skin-pill {
+      background: transparent;
+      border: 1px solid rgba(0, 204, 255, 0.25);
+      color: rgba(0, 204, 255, 0.7);
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
+    }
+
+    .skin-pill:hover {
+      border-color: var(--line-secondary);
+      color: var(--line-secondary);
+      box-shadow: 0 0 8px rgba(0, 204, 255, 0.3);
+    }
+
+    .skin-pill.active {
+      border-color: var(--line-secondary);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0, 204, 255, 0.45);
+    }
+
     .lang-switcher {
       right: 20px;
       border: 1px solid rgba(0, 255, 204, 0.35);
@@ -575,6 +643,9 @@
   <div id="container">
     <button class="lang-switcher" id="lang-switcher">EN</button>
     <button class="scan-btn" id="scan-btn">⚡ SCAN</button>
+    <button class="scan-btn skin-btn" id="skin-btn">🎨 SKINS</button>
+
+    <div class="skin-drawer" id="skin-drawer"></div>
 
     <div class="hero">
       <img src="img/pulsar.png" alt="Logótipo Pulsar FM" class="hero-logo">
@@ -925,6 +996,52 @@ function updatePlayerButtons() {
 
     scanBtn.addEventListener("click", playRandom);
 
+    // Skin picker
+    const skins = [
+      { label: "Classic",       file: "skins/classic.wsz" },
+      { label: "Base 2.91",     file: "skins/base-2.91.wsz" },
+      { label: "NapsterAmp",    file: "skins/NapsterAmp.wsz" },
+      { label: "Midnight Rain", file: "skins/Midnight_Rain.wsz" },
+      { label: "DIGITOOL",      file: "skins/DIGITOOL.wsz" },
+      { label: "Star Trek",     file: "skins/Star_Trek_2294.wsz" },
+      { label: "Ganja Amp",     file: "skins/Ganja_Amp[1].wsz" },
+      { label: "LCARS 5.0",     file: "skins/LCARSAmp_5.0.wsz" },
+      { label: "VLi3N",         file: "skins/VLi3N_upd.wsz" },
+      { label: "SB",            file: "skins/SB.wsz" },
+      { label: "Korea",         file: "skins/_Korea.wsz" },
+    ];
+
+    const skinBtn    = document.getElementById("skin-btn");
+    const skinDrawer = document.getElementById("skin-drawer");
+    let activeSkin   = localStorage.getItem("pulsarfm-skin") || null;
+
+    skins.forEach(({ label, file }) => {
+      const pill = document.createElement("button");
+      pill.className = "skin-pill" + (activeSkin === file ? " active" : "");
+      pill.textContent = label;
+      pill.addEventListener("click", () => {
+        if (!webampInstance) return;
+        webampInstance.setSkinFromUrl(file);
+        localStorage.setItem("pulsarfm-skin", file);
+        activeSkin = file;
+        skinDrawer.querySelectorAll(".skin-pill").forEach(p => p.classList.remove("active"));
+        pill.classList.add("active");
+        skinDrawer.classList.remove("open");
+      });
+      skinDrawer.appendChild(pill);
+    });
+
+    skinBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      skinDrawer.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!skinDrawer.contains(e.target) && e.target !== skinBtn) {
+        skinDrawer.classList.remove("open");
+      }
+    });
+
     const isMobile = window.innerWidth < 600;
 
     const webamp = new Webamp({
@@ -958,6 +1075,7 @@ function updatePlayerButtons() {
         playerReady    = true;
         scanBtn.disabled = false;
         updatePlayerButtons();
+        if (activeSkin) webamp.setSkinFromUrl(activeSkin);
 
         webamp.onTrackDidChange(track => {
           setPlayingCard(track ? track.url : null);
