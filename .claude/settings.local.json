@@ -6,7 +6,8 @@
       "Bash(git fetch:*)",
       "WebFetch(domain:pulsarfm.eu)",
       "WebFetch(domain:github.com)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(git rm:*)"
     ]
   }
 }
