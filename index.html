@@ -440,8 +440,6 @@
 
     .skin-drawer {
       position: fixed;
-      top: 90px;
-      left: 20px;
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
@@ -731,22 +729,6 @@
     <button class="lang-switcher trip-btn" id="trip-btn">✦ TRIP</button>
     <button class="scan-btn" id="scan-btn">⚡ SCAN</button>
     <button class="scan-btn skin-btn" id="skin-btn">🎨 SKINS</button>
-
-    <div class="skin-drawer" id="skin-drawer"></div>
-
-    <div class="trip-overlay" id="trip-overlay">
-      <div class="trip-modal">
-        <h2>✦ Trip Mode</h2>
-        <ol>
-          <li>Right-click on the MilkDrop visualizer</li>
-          <li>Choose <strong>Desktop Mode</strong></li>
-          <li>Press <strong>F11</strong> for browser fullscreen</li>
-          <li>Let the music take over</li>
-        </ol>
-        <p class="trip-note">Best used with headphones, low lights and zero responsibilities.</p>
-        <button class="trip-close" id="trip-close">CLOSE</button>
-      </div>
-    </div>
 
     <div class="hero">
       <img src="img/pulsar.png" alt="Logótipo Pulsar FM" class="hero-logo">
@@ -1133,6 +1115,12 @@ function updatePlayerButtons() {
 
     skinBtn.addEventListener("click", (e) => {
       e.stopPropagation();
+      const isOpen = skinDrawer.classList.contains("open");
+      if (!isOpen) {
+        const r = skinBtn.getBoundingClientRect();
+        skinDrawer.style.top  = (r.bottom + 6) + "px";
+        skinDrawer.style.left = r.left + "px";
+      }
       skinDrawer.classList.toggle("open");
     });
 
@@ -1198,5 +1186,20 @@ function updatePlayerButtons() {
       })
       .catch(() => {});
   </script>
+  <div class="skin-drawer" id="skin-drawer"></div>
+
+  <div class="trip-overlay" id="trip-overlay">
+    <div class="trip-modal">
+      <h2>✦ Trip Mode</h2>
+      <ol>
+        <li>Right-click on the MilkDrop visualizer</li>
+        <li>Choose <strong>Desktop Mode</strong></li>
+        <li>Press <strong>F11</strong> for browser fullscreen</li>
+        <li>Let the music take over</li>
+      </ol>
+      <p class="trip-note">Best used with headphones, low lights and zero responsibilities.</p>
+      <button class="trip-close" id="trip-close">CLOSE</button>
+    </div>
+  </div>
 </body>
 </html>
