@@ -10,7 +10,8 @@
       "Bash(git rm:*)",
       "Bash(curl:*)",
       "WebSearch",
-      "WebFetch(domain:hirschmilch.de)"
+      "WebFetch(domain:hirschmilch.de)",
+      "Bash(echo \"pulsar.png: $?\")"
     ]
   }
 }
