@@ -646,16 +646,19 @@
       padding-top: calc(var(--stack-height) + 8px);
     }
 
-    /* DOCK: #winamp becomes a fixed header panel */
+    /* DOCK: #winamp becomes a fixed header panel.
+       IMPORTANT: no transform here — transform would make #winamp a containing
+       block for position:fixed children, breaking Webamp's internal layout. */
     body:not(.player-floating) #winamp {
       position: fixed;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
+      margin-inline: auto;
       width: min(1200px, calc(100% - 16px));
       height: var(--stack-height);
       z-index: 999;
-      background: rgba(0, 10, 14, 0.86);
+      background: rgba(0, 10, 14, 0.92);
       border: 2px solid var(--line-primary);
       border-bottom: none;
       border-radius: var(--radius-panel) var(--radius-panel) 0 0;
@@ -663,7 +666,7 @@
         0 0 25px rgba(0, 255, 204, 0.18),
         0 0 50px rgba(0, 255, 204, 0.08),
         0 0 28px rgba(255, 45, 155, 0.15);
-      backdrop-filter: blur(8px);
+      /* no backdrop-filter — can cause compositing issues with fixed children */
     }
 
     /* DOCK: #container connects visually below the panel */
