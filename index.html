@@ -648,7 +648,8 @@
 
     /* DOCK: #winamp becomes a fixed header panel.
        IMPORTANT: no transform here — transform would make #winamp a containing
-       block for position:fixed children, breaking Webamp's internal layout. */
+       block for position:fixed children, breaking Webamp's internal layout.
+       IMPORTANT: no backdrop-filter — can also create compositing issues. */
     body:not(.player-floating) #winamp {
       position: fixed;
       top: 0;
@@ -658,15 +659,45 @@
       width: min(1200px, calc(100% - 16px));
       height: var(--stack-height);
       z-index: 999;
-      background: rgba(0, 10, 14, 0.92);
+      /* Layered atmospheric background:
+         scanlines → center glow → purple left → pink right → dark base */
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent, transparent 3px,
+          rgba(0, 0, 0, 0.045) 3px, rgba(0, 0, 0, 0.045) 4px
+        ),
+        radial-gradient(ellipse 55% 90% at 50% 5%,  rgba(0, 204, 255, 0.09) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 65% at 14% 55%, rgba(192, 68, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 65% at 86% 55%, rgba(255, 45, 155, 0.07) 0%, transparent 60%),
+        #010a0e;
       border: 2px solid var(--line-primary);
       border-bottom: none;
       border-radius: var(--radius-panel) var(--radius-panel) 0 0;
       box-shadow:
-        0 0 25px rgba(0, 255, 204, 0.18),
-        0 0 50px rgba(0, 255, 204, 0.08),
-        0 0 28px rgba(255, 45, 155, 0.15);
-      /* no backdrop-filter — can cause compositing issues with fixed children */
+        0 0 28px rgba(0, 255, 204, 0.20),
+        0 0 56px rgba(0, 255, 204, 0.09),
+        0 0 32px rgba(255, 45, 155, 0.16);
+    }
+
+    /* Rainbow separator at the panel/container junction */
+    body:not(.player-floating) #winamp::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 7%;
+      right: 7%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--neon-purple) 20%,
+        var(--line-primary) 50%,
+        var(--neon-pink) 80%,
+        transparent
+      );
+      box-shadow: 0 0 12px rgba(0, 255, 204, 0.35), 0 0 24px rgba(255, 45, 155, 0.18);
+      pointer-events: none;
     }
 
     /* DOCK: #container connects visually below the panel */
@@ -1454,7 +1485,7 @@ function updatePlayerButtons() {
         main:      { position: { top: 0,   left: 0   } },
         equalizer: { position: { top: 116, left: 0   } },
         playlist:  { position: { top: 232, left: 0   }, size: { extraWidth: 0, extraHeight: 4  } },
-        milkdrop:  { position: { top: 0,   left: 275 }, size: { extraHeight: 12, extraWidth: 7 } }
+        milkdrop:  { position: { top: 0,   left: 275 }, size: { extraHeight: 148, extraWidth: 7 } }
       }
     });
 
