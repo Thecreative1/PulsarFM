@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) with Consent Mode v2 — default: everything denied -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRD1BYXB78"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    if (localStorage.getItem('pulsarfm-consent') === 'granted') {
+      gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted'
+      });
+    }
     gtag('js', new Date());
     gtag('config', 'G-YRD1BYXB78');
   </script>
@@ -13,6 +28,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="img/icon-180.png">
 
   <title>Rádios Online Grátis com Visualizador Retro estilo Winamp | Pulsar FM</title>
 
@@ -65,6 +82,24 @@
       "name": "Pulsar FM",
       "url": "https://www.pulsarfm.eu/"
     }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Rádios online por género",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Rádios Rock",          "url": "https://www.pulsarfm.eu/radios-rock/" },
+      { "@type": "ListItem", "position": 2, "name": "Rádios Jazz",          "url": "https://www.pulsarfm.eu/radios-jazz/" },
+      { "@type": "ListItem", "position": 3, "name": "Rádios Chill",         "url": "https://www.pulsarfm.eu/radios-chill/" },
+      { "@type": "ListItem", "position": 4, "name": "Rádios Pop",           "url": "https://www.pulsarfm.eu/radios-pop/" },
+      { "@type": "ListItem", "position": 5, "name": "Rádios para Estudar",  "url": "https://www.pulsarfm.eu/radios-study/" },
+      { "@type": "ListItem", "position": 6, "name": "Rádios Electrónicas",  "url": "https://www.pulsarfm.eu/radios-electronica/" },
+      { "@type": "ListItem", "position": 7, "name": "Rádios Psytrance",     "url": "https://www.pulsarfm.eu/radios-psytrance/" },
+      { "@type": "ListItem", "position": 8, "name": "Rádios Synthwave",     "url": "https://www.pulsarfm.eu/radios-synthwave/" }
+    ]
   }
   </script>
 
@@ -644,6 +679,168 @@
       line-height: 1.7;
     }
 
+    .site-footer .privacy-link {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+
+    /* ── Consent banner (GDPR / Consent Mode v2) ── */
+    .consent-banner {
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translate(-50%, calc(100% + 24px));
+      width: min(560px, calc(100% - 24px));
+      background: rgba(2, 10, 16, 0.96);
+      border: 1px solid rgba(0, 255, 204, 0.4);
+      border-radius: 16px;
+      padding: 18px 20px;
+      z-index: 2000;
+      box-sizing: border-box;
+      backdrop-filter: blur(10px);
+      box-shadow:
+        0 0 24px rgba(0, 255, 204, 0.18),
+        0 0 48px rgba(255, 45, 155, 0.10);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--text-dim);
+      transition: transform 0.35s ease;
+    }
+
+    .consent-banner.visible { transform: translate(-50%, 0); }
+
+    .consent-banner h2 {
+      margin: 0 0 6px;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--line-primary);
+      text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+    }
+
+    .consent-banner p { margin: 0 0 12px; }
+
+    .consent-banner a { color: var(--line-secondary); }
+
+    .consent-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .consent-btn {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-weight: bold;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: transform 0.14s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .consent-btn:active { transform: scale(0.95); }
+
+    .consent-accept {
+      background: var(--neon-green);
+      border: 0;
+      color: #001a00;
+      box-shadow: 0 0 14px rgba(57, 255, 20, 0.4);
+    }
+
+    .consent-accept:hover { box-shadow: 0 0 20px rgba(57, 255, 20, 0.6); }
+
+    .consent-reject {
+      background: transparent;
+      border: 1px solid rgba(236, 255, 251, 0.3);
+      color: var(--text-dim);
+    }
+
+    .consent-reject:hover { border-color: var(--text-primary); color: var(--text-primary); }
+
+    /* ── Ko-fi floating button ── */
+    .kofi-float {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1500;
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(3, 10, 22, 0.9);
+      border: 1px solid rgba(255, 45, 155, 0.55);
+      color: var(--neon-pink);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 14px rgba(255, 45, 155, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+      animation: kofi-pulse 3.2s ease-in-out infinite;
+    }
+
+    .kofi-float:hover {
+      color: var(--neon-pink);
+      transform: translateY(-2px);
+      box-shadow: 0 0 22px rgba(255, 45, 155, 0.6), 0 0 44px rgba(255, 45, 155, 0.25);
+      animation-play-state: paused;
+    }
+
+    @keyframes kofi-pulse {
+      0%, 100% { box-shadow: 0 0 12px rgba(255, 45, 155, 0.30); }
+      50%      { box-shadow: 0 0 22px rgba(255, 45, 155, 0.55); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .kofi-float { animation: none; }
+    }
+
+    body.trip-active .kofi-float,
+    body.trip-active .consent-banner { display: none; }
+
+    /* ── Share button (corner cluster, mirrors FLOAT on the right) ── */
+    .share-btn {
+      right: 20px;
+      left: auto;
+      top: 88px;
+      border: 1px solid rgba(0, 204, 255, 0.35);
+      color: var(--line-secondary);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      min-width: 70px;
+      text-align: center;
+    }
+
+    .share-btn:hover {
+      border-color: var(--line-secondary);
+      box-shadow: 0 0 10px rgba(0, 204, 255, 0.4);
+    }
+
+    .share-btn:active { transform: scale(0.95); }
+
+    /* ── Ad slot (neon-framed, ready for AdSense) ── */
+    .ad-slot {
+      margin: 26px auto 0;
+      max-width: 728px;
+      border: 1px solid rgba(192, 68, 255, 0.25);
+      border-radius: 14px;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 16px rgba(192, 68, 255, 0.10), inset 0 0 8px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .ad-slot .ad-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(236, 255, 251, 0.35);
+    }
+
     /* ── Player dock / float toggle ── */
 
     /* DOCK: push page content below the fixed panel */
@@ -820,9 +1017,12 @@
       }
 
       .hero-logo {
-        width: min(60%, 200px);
+        /* narrow enough to clear the absolute corner buttons on both sides */
+        width: min(40%, 150px);
         margin-bottom: 8px;
       }
+
+      .hero { padding-top: 44px; }
 
       h1 { font-size: 1.5rem; }
 
@@ -904,6 +1104,7 @@
     <button class="scan-btn" id="scan-btn">⚡ SCAN</button>
     <button class="scan-btn skin-btn" id="skin-btn">🎨 SKINS</button>
     <button class="scan-btn player-lock-btn" id="player-lock-btn">🔓 FLOAT</button>
+    <button class="lang-switcher share-btn" id="share-btn">📡 SHARE</button>
 
     <div class="hero">
       <picture>
@@ -984,6 +1185,22 @@
   </section>
 </div>
 
+    <!-- Ad slot — descomentar quando a conta AdSense for aprovada:
+         1. Adicionar no <head>: <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+         2. Substituir ca-pub-XXXX e data-ad-slot abaixo pelos valores reais.
+         O anúncio só personaliza com consentimento (Consent Mode v2 já configurado).
+    <div class="ad-slot">
+      <span class="ad-label">Publicidade</span>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    -->
+
     <div class="seo-blocks" id="seo-blocks">
       <article class="seo-card">
         <h2>Uma experiência de rádio diferente</h2>
@@ -997,13 +1214,14 @@
         <h2>Rádio online por género musical</h2>
         <p>De rock a psytrance, de jazz a synthwave — escolhe o género, carrega e deixa tocar.</p>
         <div class="genre-links">
-          <a href="#radio-groups" class="genre-filter-link" data-genre="rock">Rádios Rock</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="jazz">Rádios Jazz</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="chill">Rádios Chill</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="study">Rádios para Estudar</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="electro">Rádios Electrónicas</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="psy">Rádios Psytrance</a>
-          <a href="#radio-groups" class="genre-filter-link" data-genre="synthwave">Rádios Synthwave</a>
+          <a href="radios-rock/" class="genre-filter-link" data-genre="rock">Rádios Rock</a>
+          <a href="radios-jazz/" class="genre-filter-link" data-genre="jazz">Rádios Jazz</a>
+          <a href="radios-chill/" class="genre-filter-link" data-genre="chill">Rádios Chill</a>
+          <a href="radios-pop/" class="genre-filter-link" data-genre="pop">Rádios Pop</a>
+          <a href="radios-study/" class="genre-filter-link" data-genre="study">Rádios para Estudar</a>
+          <a href="radios-electronica/" class="genre-filter-link" data-genre="electro">Rádios Electrónicas</a>
+          <a href="radios-psytrance/" class="genre-filter-link" data-genre="psy">Rádios Psytrance</a>
+          <a href="radios-synthwave/" class="genre-filter-link" data-genre="synthwave">Rádios Synthwave</a>
         </div>
       </article>
     </div>
@@ -1011,7 +1229,19 @@
     <footer class="site-footer">
       <p id="footer-line1">Visualizador baseado em <a href="https://github.com/jberg/butterchurn" target="_blank" rel="noopener">Butterchurn</a> · Player baseado em <a href="https://github.com/captbaritone/webamp" target="_blank" rel="noopener">Webamp</a></p>
       <p id="footer-line2">Pulsar FM é grátis. <em>Neon nights, Winamp vibes, internet estranha.</em> · Se gostas, <a href="https://ko-fi.com/pfm80" target="_blank" rel="noopener" style="opacity:0.8;">paga-me uma cerveja 🍺</a></p>
+      <p><a href="privacidade.html" class="privacy-link" id="privacy-link">Privacidade &amp; Cookies</a></p>
     </footer>
+  </div>
+
+  <a class="kofi-float" id="kofi-float" href="https://ko-fi.com/pfm80" target="_blank" rel="noopener">🍺 Apoia o Pulsar</a>
+
+  <div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookies">
+    <h2 id="consent-title">🍪 Cookies &amp; boas vibrações</h2>
+    <p id="consent-text">Usamos o Google Analytics para perceber que rádios fazem vibrar mais gente. Só ativamos com o teu OK. <a href="privacidade.html" id="consent-link">Saber mais</a>.</p>
+    <div class="consent-actions">
+      <button class="consent-btn consent-accept" id="consent-accept">ACEITAR</button>
+      <button class="consent-btn consent-reject" id="consent-reject">RECUSAR</button>
+    </div>
   </div>
 
   <div class="skin-drawer" id="skin-drawer"></div>
@@ -1087,6 +1317,15 @@
         loadingBtn: "⌛ A carregar player",
         liveLabel:  "Ao vivo",
         langBtn: "EN",
+        consentTitle:  "🍪 Cookies & boas vibrações",
+        consentText:   `Usamos o Google Analytics para perceber que rádios fazem vibrar mais gente. Só ativamos com o teu OK. <a href="privacidade.html">Saber mais</a>.`,
+        consentAccept: "ACEITAR",
+        consentReject: "RECUSAR",
+        kofiFloat:     "🍺 Apoia o Pulsar",
+        privacyLink:   "Privacidade & Cookies",
+        shareListening: "🎧 A ouvir {station} no Pulsar FM — rádio retro com visualizador Winamp",
+        shareDefault:   "Pulsar FM — rádio online retro com visualizador Winamp. Neon nights incluídas.",
+        shareCopied:    "✓ COPIADO",
         filters: [
           { genre: "all",       label: "🎧 Todos" },
           { genre: "rock",      label: "🎸 Rock" },
@@ -1124,6 +1363,7 @@
               { genre: "rock",      label: "Rádios Rock" },
               { genre: "jazz",      label: "Rádios Jazz" },
               { genre: "chill",     label: "Rádios Chill" },
+              { genre: "pop",       label: "Rádios Pop" },
               { genre: "study",     label: "Rádios para Estudar" },
               { genre: "electro",   label: "Rádios Electrónicas" },
               { genre: "psy",       label: "Rádios Psytrance" },
@@ -1141,6 +1381,15 @@
         loadingBtn: "⌛ Loading player",
         liveLabel:  "Live",
         langBtn: "PT",
+        consentTitle:  "🍪 Cookies & good vibes",
+        consentText:   `We use Google Analytics to learn which radios make people vibe. Only enabled with your OK. <a href="privacidade.html">Learn more</a>.`,
+        consentAccept: "ACCEPT",
+        consentReject: "DECLINE",
+        kofiFloat:     "🍺 Support Pulsar",
+        privacyLink:   "Privacy & Cookies",
+        shareListening: "🎧 Listening to {station} on Pulsar FM — retro radio with the Winamp visualizer",
+        shareDefault:   "Pulsar FM — retro online radio with the Winamp visualizer. Neon nights included.",
+        shareCopied:    "✓ COPIED",
         filters: [
           { genre: "all",       label: "🎧 All" },
           { genre: "rock",      label: "🎸 Rock" },
@@ -1178,6 +1427,7 @@
               { genre: "rock",      label: "Rock Radios" },
               { genre: "jazz",      label: "Jazz Radios" },
               { genre: "chill",     label: "Chill Radios" },
+              { genre: "pop",       label: "Pop Radios" },
               { genre: "study",     label: "Study Radios" },
               { genre: "electro",   label: "Electronic Radios" },
               { genre: "psy",       label: "Psytrance Radios" },
@@ -1188,6 +1438,18 @@
         footer1: `Visualizer based on <a href="https://github.com/jberg/butterchurn" target="_blank" rel="noopener">Butterchurn</a> · Player based on <a href="https://github.com/captbaritone/webamp" target="_blank" rel="noopener">Webamp</a>`,
         footer2: `Pulsar FM is free. <em>Neon nights, Winamp vibes, weird internet.</em> · If you dig it, <a href="https://ko-fi.com/pfm80" target="_blank" rel="noopener" style="opacity:0.8;">buy me a beer 🍺</a>`
       }
+    };
+
+    // SEO landing pages per genre (crawlers follow the href; JS intercepts for in-app filtering)
+    const genrePages = {
+      rock:      "radios-rock/",
+      jazz:      "radios-jazz/",
+      chill:     "radios-chill/",
+      pop:       "radios-pop/",
+      study:     "radios-study/",
+      electro:   "radios-electronica/",
+      psy:       "radios-psytrance/",
+      synthwave: "radios-synthwave/"
     };
 
     let currentLang = localStorage.getItem("pulsarfm-lang") || "pt";
@@ -1270,7 +1532,7 @@ function updatePlayerButtons() {
       seoBlocks.innerHTML = t.seo.map(card => {
         const links = card.links
           ? `<div class="genre-links">${card.links.map(l =>
-              `<a href="#radio-groups" class="genre-filter-link" data-genre="${l.genre}">${l.label}</a>`
+              `<a href="${genrePages[l.genre] || "#radio-groups"}" class="genre-filter-link" data-genre="${l.genre}">${l.label}</a>`
             ).join("")}</div>`
           : "";
         return `<article class="seo-card"><h2>${card.h2}</h2><p>${card.p}</p>${links}</article>`;
@@ -1287,6 +1549,12 @@ function updatePlayerButtons() {
       document.getElementById("lang-switcher").textContent = t.langBtn;
       document.getElementById("footer-line1").innerHTML = t.footer1;
       document.getElementById("footer-line2").innerHTML = t.footer2;
+      document.getElementById("privacy-link").textContent   = t.privacyLink;
+      document.getElementById("kofi-float").textContent     = t.kofiFloat;
+      document.getElementById("consent-title").textContent  = t.consentTitle;
+      document.getElementById("consent-text").innerHTML     = t.consentText;
+      document.getElementById("consent-accept").textContent = t.consentAccept;
+      document.getElementById("consent-reject").textContent = t.consentReject;
       renderFilters();
       renderStations();
       updateFilterState();
@@ -1309,6 +1577,8 @@ function updatePlayerButtons() {
     function filterRadios(genre) {
       activeGenre = (genre === "all" || Object.prototype.hasOwnProperty.call(translations[currentLang].genreNames, genre)) ? genre : "all";
       updateFilterState();
+      // Keep the URL shareable without adding history entries
+      history.replaceState(null, "", activeGenre === "all" ? location.pathname : "?genre=" + activeGenre);
     }
 
     function playRandom() {
@@ -1364,6 +1634,57 @@ function updatePlayerButtons() {
     });
 
     scanBtn.addEventListener("click", playRandom);
+
+    // ── Consent banner (Consent Mode v2) ──
+    const consentBanner = document.getElementById("consent-banner");
+
+    function closeConsent(choice) {
+      localStorage.setItem("pulsarfm-consent", choice);
+      consentBanner.classList.remove("visible");
+    }
+
+    document.getElementById("consent-accept").addEventListener("click", () => {
+      gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted'
+      });
+      closeConsent("granted");
+    });
+
+    document.getElementById("consent-reject").addEventListener("click", () => closeConsent("denied"));
+
+    if (!localStorage.getItem("pulsarfm-consent")) {
+      setTimeout(() => consentBanner.classList.add("visible"), 1200);
+    }
+
+    // ── Share button ──
+    const shareBtn = document.getElementById("share-btn");
+
+    shareBtn.addEventListener("click", async () => {
+      const t       = translations[currentLang];
+      const playing = document.querySelector(".radio-card.playing h3");
+      const text    = playing ? t.shareListening.replace("{station}", playing.textContent) : t.shareDefault;
+      const url     = "https://www.pulsarfm.eu/" + (activeGenre !== "all" ? "?genre=" + activeGenre : "");
+
+      if (navigator.share) {
+        try { await navigator.share({ title: "Pulsar FM", text, url }); return; }
+        catch (err) { if (err.name === "AbortError") return; }
+      }
+      try {
+        await navigator.clipboard.writeText(text + " " + url);
+        shareBtn.textContent = t.shareCopied;
+        setTimeout(() => { shareBtn.textContent = "📡 SHARE"; }, 1600);
+      } catch (err) { /* clipboard blocked — nothing else to do */ }
+    });
+
+    // ── Genre deep links (?genre=rock or #rock) ──
+    const urlGenre = new URLSearchParams(location.search).get("genre") || location.hash.slice(1);
+    if (urlGenre && Object.prototype.hasOwnProperty.call(radios, urlGenre)) {
+      filterRadios(urlGenre);
+      setTimeout(() => radioGroups.scrollIntoView({ behavior: "smooth", block: "start" }), 500);
+    }
 
     // Skin picker
     const skins = [
@@ -1472,7 +1793,7 @@ function updatePlayerButtons() {
       const store = webampInstance && webampInstance.store;
       if (!store) return;
       const vw = window.innerWidth;
-      if (isMobile) {
+      if (vw < 760) {
         // Stack: main on top, milkdrop below (eq/playlist start closed)
         const x = Math.round((vw - 275) / 2);
         store.dispatch({ type: "WINDOW_SIZE_CHANGED", windowId: "milkdrop", size: [0, 2] });
@@ -1537,6 +1858,14 @@ function updatePlayerButtons() {
         updatePlayerButtons();
         layoutPlayerWindows();
         if (activeSkin) webamp.setSkinFromUrl(activeSkin);
+
+        // Re-dock the windows when the viewport changes (rotation, resize)
+        let layoutResizeTimer;
+        window.addEventListener("resize", () => {
+          if (document.body.classList.contains("trip-active")) return;
+          clearTimeout(layoutResizeTimer);
+          layoutResizeTimer = setTimeout(layoutPlayerWindows, 200);
+        });
 
         webamp.onTrackDidChange(track => {
           setPlayingCard(track ? track.url : null);

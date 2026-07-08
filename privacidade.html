@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) with Consent Mode v2 — default: everything denied -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRD1BYXB78"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    if (localStorage.getItem('pulsarfm-consent') === 'granted') {
+      gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted'
+      });
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-YRD1BYXB78');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <title>Privacidade &amp; Cookies | Pulsar FM</title>
+  <meta name="description" content="Política de privacidade e cookies do Pulsar FM — o que guardamos, o que não guardamos, e como controlas tudo." />
+  <link rel="canonical" href="https://www.pulsarfm.eu/privacidade.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#031317" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #031317;
+      --line-primary: #00ffcc;
+      --line-secondary: #00ccff;
+      --neon-pink: #ff2d9b;
+      --neon-green: #39ff14;
+      --text-primary: #ecfffb;
+      --text-muted: #9ad9d3;
+      --text-dim: rgba(236, 255, 251, 0.72);
+    }
+
+    html { color-scheme: dark; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 32px 16px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background:
+        radial-gradient(circle at top left,  rgba(192, 68, 255, 0.13), transparent 40%),
+        radial-gradient(circle at top right, rgba(255, 45, 155, 0.10), transparent 38%),
+        linear-gradient(180deg, #02080b 0%, #031317 48%, #010507 100%);
+      color: var(--text-primary);
+      font-family: 'Share Tech Mono', 'Courier New', monospace;
+    }
+
+    main {
+      width: min(760px, 100%);
+      background-color: rgba(0, 10, 14, 0.78);
+      border: 2px solid var(--line-primary);
+      border-radius: 24px;
+      padding: 36px 28px;
+      box-sizing: border-box;
+      box-shadow:
+        0 0 25px rgba(0, 255, 204, 0.22),
+        0 0 28px rgba(255, 45, 155, 0.18);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: var(--line-primary);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      text-shadow: 0 0 18px rgba(0, 255, 204, 0.35);
+    }
+
+    .updated {
+      color: var(--text-dim);
+      font-size: 0.78rem;
+      margin: 0 0 26px;
+    }
+
+    h2 {
+      color: var(--line-secondary);
+      font-size: 1.05rem;
+      margin: 28px 0 8px;
+      text-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
+    }
+
+    p, li {
+      color: var(--text-dim);
+      line-height: 1.75;
+      font-size: 0.9rem;
+    }
+
+    ul { padding-left: 20px; }
+
+    a { color: var(--line-secondary); }
+    a:hover { color: var(--line-primary); }
+
+    strong { color: var(--text-muted); }
+
+    code {
+      background: rgba(0, 204, 255, 0.08);
+      border: 1px solid rgba(0, 204, 255, 0.15);
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-size: 0.82em;
+    }
+
+    .back-link, .reset-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .back-link {
+      background: var(--line-secondary);
+      color: #001114;
+      border: 0;
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: var(--neon-pink);
+      color: #1a0010;
+      box-shadow: 0 0 14px rgba(255, 45, 155, 0.5);
+    }
+
+    .reset-btn {
+      background: transparent;
+      border: 1px solid rgba(57, 255, 20, 0.4);
+      color: var(--neon-green);
+      margin-left: 10px;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .reset-btn:hover {
+      border-color: var(--neon-green);
+      box-shadow: 0 0 12px rgba(57, 255, 20, 0.4);
+    }
+
+    .en-note {
+      margin-top: 34px;
+      padding: 16px 18px;
+      border: 1px solid rgba(0, 255, 204, 0.15);
+      border-radius: 14px;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacidade &amp; Cookies</h1>
+    <p class="updated">Última atualização: 8 de julho de 2026</p>
+
+    <p>O <strong>Pulsar FM</strong> (pulsarfm.eu) é um projeto independente de rádio online. Levamos a tua privacidade a sério — aqui está, sem rodeios, o que acontece aos teus dados.</p>
+
+    <h2>📊 Google Analytics (só com o teu OK)</h2>
+    <p>Usamos o Google Analytics 4 para perceber quantas pessoas visitam o site e que rádios têm mais sucesso. Funciona em <strong>Consent Mode v2</strong>:</p>
+    <ul>
+      <li>Por defeito, <strong>tudo recusado</strong> — sem cookies de análise nem de publicidade.</li>
+      <li>Só depois de carregares em «Aceitar» no banner é que o Analytics guarda cookies.</li>
+      <li>Se recusares, respeitamos — e não voltamos a chatear-te.</li>
+    </ul>
+    <p>Mais sobre como a Google trata os dados: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com</a>.</p>
+
+    <h2>💾 O que fica guardado no teu browser</h2>
+    <p>Guardamos algumas preferências em <code>localStorage</code> — ficam <strong>só no teu dispositivo</strong>, nunca são enviadas para nós:</p>
+    <ul>
+      <li><code>pulsarfm-lang</code> — idioma escolhido (PT/EN)</li>
+      <li><code>pulsarfm-skin</code> — skin do Winamp escolhida</li>
+      <li><code>pulsarfm-floating</code> — modo do player (dock/float)</li>
+      <li><code>pulsarfm-consent</code> — a tua escolha de cookies</li>
+    </ul>
+
+    <h2>📻 Streams de rádio</h2>
+    <p>Quando carregas em «Ouvir agora», o teu browser liga-se <strong>diretamente ao servidor da estação de rádio</strong> (SomaFM, Radio Paradise, etc.). Esse servidor vê o teu endereço IP — como em qualquer rádio online. Nós não intermediamos nem registamos nada disso.</p>
+
+    <h2>🍺 Ko-fi</h2>
+    <p>O botão de apoio leva-te para o <a href="https://ko-fi.com/pfm80" target="_blank" rel="noopener">Ko-fi</a>, um serviço externo com a sua própria <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">política de privacidade</a>.</p>
+
+    <h2>⚖️ Os teus direitos (RGPD)</h2>
+    <p>Tens direito a aceder, corrigir ou apagar dados pessoais. Como praticamente não recolhemos nada identificável, o mais provável é não haver nada para apagar — mas podes sempre escrever para <a href="mailto:flavio.martins@gmail.com">flavio.martins@gmail.com</a>.</p>
+
+    <a class="back-link" href="/">← VOLTAR AO PULSAR FM</a><button class="reset-btn" id="reset-consent">REPOR COOKIES</button>
+
+    <div class="en-note">
+      <strong>EN:</strong> Pulsar FM uses Google Analytics 4 with Consent Mode v2 — everything is denied by default until you accept the cookie banner. Preferences (language, skin, player mode, consent choice) are stored in your browser's localStorage only and never sent to us. Radio streams connect your browser directly to each station's server. Questions or GDPR requests: <a href="mailto:flavio.martins@gmail.com">flavio.martins@gmail.com</a>.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('reset-consent').addEventListener('click', () => {
+      localStorage.removeItem('pulsarfm-consent');
+      window.location.href = '/';
+    });
+  </script>
+</body>
+</html>
