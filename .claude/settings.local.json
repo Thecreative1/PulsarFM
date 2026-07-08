@@ -11,7 +11,19 @@
       "Bash(curl:*)",
       "WebSearch",
       "WebFetch(domain:hirschmilch.de)",
-      "Bash(echo \"pulsar.png: $?\")"
+      "Bash(echo \"pulsar.png: $?\")",
+      "Bash(python -)",
+      "Bash(mv -f favicon-new.ico favicon.ico)",
+      "Bash(curl -sI \"https://unpkg.com/webamp@2.2.0/built/webamp.bundle.min.js\")",
+      "Bash(curl -s \"https://unpkg.com/webamp@latest/package.json\")",
+      "Bash(curl -sI \"https://unpkg.com/webamp@2.3.1/built/webamp.bundle.min.js\")",
+      "Bash(curl -s \"https://unpkg.com/webamp@2.3.1/?meta\")",
+      "Bash(curl -s \"https://unpkg.com/webamp@2.3.1/built/webamp.bundle.js\" -o webamp-full.js)",
+      "PowerShell($c = Get-Content \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\webamp-full.js\" -Raw; $i = $c.IndexOf\\('windowLayout'\\); $c.Substring\\([Math]::Max\\(0,$i-400\\), 1200\\))",
+      "PowerShell($c = Get-Content \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\webamp-full.js\" -Raw; $i = $c.IndexOf\\('function setWindowLayout'\\); if \\($i -lt 0\\) { $i = $c.IndexOf\\('setWindowLayout ='\\) }; $c.Substring\\([Math]::Max\\(0,$i-100\\), 1600\\))",
+      "PowerShell($c = Get-Content \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\webamp-full.js\" -Raw; foreach \\($pat in @\\('renderWhenReady\\(','centerWindowsInDiv','centerWindows\\(','_bufferInitialWindowLayout'\\)\\) { $i = $c.IndexOf\\($pat\\); Write-Output \"=== $pat @ $i ===\"; if \\($i -ge 0\\) { $c.Substring\\($i, 900\\) } })",
+      "PowerShell($c = Get-Content \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\webamp-full.js\" -Raw; $i = $c.IndexOf\\('function updateWindowPositions'\\); $c.Substring\\($i, 700\\); $j = $c.IndexOf\\('UPDATE_WINDOW_POSITIONS'\\); $c.Substring\\([Math]::Max\\(0,$j-200\\), 500\\))",
+      "PowerShell($c = Get-Content \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\webamp-full.js\" -Raw; $i = $c.IndexOf\\('function setWindowSize'\\); $c.Substring\\($i, 400\\))"
     ]
   }
 }
