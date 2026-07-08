@@ -347,6 +347,16 @@
       gap: 20px;
     }
 
+    /* Single genre filtered: the group takes the full width
+       and its stations spread out in a responsive grid */
+    .genre-columns.single-genre { grid-template-columns: 1fr; }
+
+    .genre-columns.single-genre .radio-group .station-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      align-items: stretch;
+    }
+
     .radio-group {
       background-color: rgba(0, 0, 0, 0.18);
       border: 1px solid rgba(0, 255, 204, 0.12);
@@ -1593,6 +1603,7 @@ function updatePlayerButtons() {
     }
 
     function updateFilterState() {
+      radioGroups.classList.toggle("single-genre", activeGenre !== "all");
       document.querySelectorAll(".radio-group").forEach(group => {
         group.hidden = activeGenre !== "all" && group.dataset.genre !== activeGenre;
       });
