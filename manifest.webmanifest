@@ -1,7 +1,7 @@
 {
   "name": "Pulsar FM — Retro Online Radio",
   "short_name": "Pulsar FM",
-  "description": "Rádio online grátis com visualizador retro estilo Winamp. 24 estações, 8 géneros.",
+  "description": "Rádio online grátis com visualizador retro estilo Winamp. 40 estações, 8 géneros.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
