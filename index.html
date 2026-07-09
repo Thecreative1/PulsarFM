@@ -2131,6 +2131,9 @@ function updatePlayerButtons() {
       localStorage.setItem('pulsarfm-floating', floating);
       document.body.classList.toggle('player-floating', floating);
       playerLockBtn.textContent = floating ? '🔒 DOCK' : '🔓 FLOAT';
+      // Re-docking: windows may have been dragged anywhere while floating —
+      // snap them back into the dock panel or they end up stuck behind #container
+      if (!floating) layoutPlayerWindows();
     }
 
     applyPlayerMode(playerIsFloating);
