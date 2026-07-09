@@ -25,7 +25,12 @@
       "PowerShell($c = Get-Content \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\webamp-full.js\" -Raw; $i = $c.IndexOf\\('function updateWindowPositions'\\); $c.Substring\\($i, 700\\); $j = $c.IndexOf\\('UPDATE_WINDOW_POSITIONS'\\); $c.Substring\\([Math]::Max\\(0,$j-200\\), 500\\))",
       "PowerShell($c = Get-Content \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\webamp-full.js\" -Raw; $i = $c.IndexOf\\('function setWindowSize'\\); $c.Substring\\($i, 400\\))",
       "Bash(python \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-PulsarFM\\\\f604ec82-847b-4e33-808e-db773f5c8df9\\\\scratchpad\\\\gen_genre_pages.py\")",
-      "Bash(awk -F: '$1 > 1230 && $1 < 1260')"
+      "Bash(awk -F: '$1 > 1230 && $1 < 1260')",
+      "Bash(curl -sI \"https://pulsarfm.eu/sitemap.xml\")",
+      "Bash(curl -sI \"https://www.pulsarfm.eu/sitemap.xml\")",
+      "Bash(curl -s \"https://pulsarfm.eu/sitemap.xml\")",
+      "Bash(sed -i 's|https://www\\\\.pulsarfm\\\\.eu|https://pulsarfm.eu|g' gen_genre_pages.py)",
+      "Bash(python gen_genre_pages.py)"
     ]
   }
 }

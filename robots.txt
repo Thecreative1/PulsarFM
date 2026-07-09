@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.pulsarfm.eu/sitemap.xml
+Sitemap: https://pulsarfm.eu/sitemap.xml
