@@ -42,7 +42,8 @@
       "Bash(curl -s \"https://api.github.com/repos/Thecreative1/PulsarFM/deployments?per_page=3\")",
       "Bash(python -c ' *)",
       "Bash(curl -s \"https://raw.githubusercontent.com/Thecreative1/PulsarFM/main/index.html\")",
-      "Bash(curl -s -H \"Pragma: no-cache\" -H \"Cache-Control: no-cache\" \"https://pulsarfm.eu/\")"
+      "Bash(curl -s -H \"Pragma: no-cache\" -H \"Cache-Control: no-cache\" \"https://pulsarfm.eu/\")",
+      "Bash(curl -s \"https://pulsarfm.eu/robots.txt\")"
     ]
   }
 }
