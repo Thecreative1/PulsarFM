@@ -30,7 +30,19 @@
       "Bash(curl -sI \"https://www.pulsarfm.eu/sitemap.xml\")",
       "Bash(curl -s \"https://pulsarfm.eu/sitemap.xml\")",
       "Bash(sed -i 's|https://www\\\\.pulsarfm\\\\.eu|https://pulsarfm.eu|g' gen_genre_pages.py)",
-      "Bash(python gen_genre_pages.py)"
+      "Bash(python gen_genre_pages.py)",
+      "Bash(curl -s \"https://pulsarfm.eu/\")",
+      "Bash(git fetch *)",
+      "Bash(curl -sI \"https://pulsarfm.eu/\")",
+      "Bash(gh api *)",
+      "Bash(curl -s \"https://pulsarfm.eu/?nc=$\\(date +%s\\)\")",
+      "Bash(curl -s \"https://pulsarfm.eu/index.html?nc=$\\(date +%s\\)2\")",
+      "Bash(curl -s \"https://api.github.com/repos/Thecreative1/PulsarFM/commits/main\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d['sha'][:7], d['commit']['committer']['date']\\)\")",
+      "Bash(curl -s \"https://api.github.com/repos/Thecreative1/PulsarFM/deployments?per_page=3\")",
+      "Bash(python -c ' *)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Thecreative1/PulsarFM/main/index.html\")",
+      "Bash(curl -s -H \"Pragma: no-cache\" -H \"Cache-Control: no-cache\" \"https://pulsarfm.eu/\")"
     ]
   }
 }
