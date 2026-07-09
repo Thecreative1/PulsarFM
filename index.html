@@ -251,6 +251,60 @@
       margin-bottom: 18px;
     }
 
+    /* ── Resume last station chip ── */
+    .resume-chip {
+      display: block;
+      margin: 0 auto 16px;
+      background: transparent;
+      border: 1px solid rgba(57, 255, 20, 0.4);
+      color: var(--neon-green);
+      border-radius: 999px;
+      padding: 9px 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.15);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.14s ease;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .resume-chip:hover {
+      border-color: var(--neon-green);
+      box-shadow: 0 0 16px rgba(57, 255, 20, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .resume-chip:active { transform: scale(0.96); }
+
+    .resume-chip[hidden] { display: none; }
+
+    /* ── Sleep timer button (right column, under SHARE) ──
+       .scan-btn.sleep-btn beats the base .scan-btn rule regardless of order */
+    .scan-btn.sleep-btn {
+      top: 124px;
+      left: auto;
+      right: 20px;
+      min-width: 70px;
+      text-align: center;
+      border: 1px solid rgba(255, 217, 59, 0.3);
+      color: rgba(255, 217, 59, 0.7);
+      transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .scan-btn.sleep-btn:hover {
+      border-color: rgba(255, 217, 59, 0.8);
+      box-shadow: 0 0 10px rgba(255, 217, 59, 0.35);
+    }
+
+    .scan-btn.sleep-btn:active { transform: scale(0.95); }
+
+    .scan-btn.sleep-btn.active {
+      border-color: var(--neon-green);
+      color: var(--neon-green);
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+    }
+
     .filter-btn {
       background-color: var(--line-secondary);
       color: #001114;
@@ -396,6 +450,7 @@
 .station-list { display: grid; gap: 14px; }
 
     .radio-card {
+      position: relative;
       background-color: var(--bg-card);
       border: 1px solid var(--line-secondary);
       border-radius: var(--radius-card);
@@ -407,6 +462,46 @@
       justify-content: space-between;
       transition: transform 0.18s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
+
+    .radio-card[hidden] { display: none; }
+
+    /* ── Favorite star ── */
+    .fav-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 1.05rem;
+      line-height: 1;
+      padding: 4px 6px;
+      color: rgba(0, 204, 255, 0.4);
+      transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .fav-btn:hover {
+      color: #ffd93b;
+      transform: scale(1.2);
+    }
+
+    .fav-btn.faved {
+      color: #ffd93b;
+      text-shadow: 0 0 10px rgba(255, 217, 59, 0.75), 0 0 22px rgba(255, 217, 59, 0.35);
+    }
+
+    .favs-empty {
+      text-align: center;
+      color: var(--text-dim);
+      padding: 28px 16px;
+      border: 1px dashed rgba(255, 217, 59, 0.3);
+      border-radius: 16px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .favs-empty[hidden] { display: none; }
 
     .radio-card:hover {
       transform: translateY(-2px);
@@ -440,6 +535,7 @@
 
     .radio-card h3 {
       margin: 0 0 12px;
+      padding-right: 26px; /* clear the favorite star */
       color: var(--line-secondary);
       font-size: 1.08rem;
       line-height: 1.4;
@@ -471,6 +567,7 @@
     .scan-btn, .lang-switcher {
       position: absolute;
       top: 16px;
+      z-index: 2; /* above the hero logo so corner buttons stay clickable on mobile */
       background: transparent;
       border-radius: 999px;
       font-size: 0.78rem;
@@ -1112,6 +1209,7 @@
     <button class="scan-btn skin-btn" id="skin-btn">🎨 SKINS</button>
     <button class="scan-btn player-lock-btn" id="player-lock-btn">🔓 FLOAT</button>
     <button class="lang-switcher share-btn" id="share-btn">📡 SHARE</button>
+    <button class="scan-btn sleep-btn" id="sleep-btn">😴 SLEEP</button>
 
     <div class="hero">
       <picture>
@@ -1122,6 +1220,8 @@
       <h1 id="hero-h1">Sintoniza. Visualiza. Vibra.</h1>
       <p class="intro" id="hero-intro">40 estações ao vivo. 8 géneros. Com Milkdrop — o lendário visualizador do Winamp, agora no browser.</p>
     </div>
+
+    <button class="resume-chip" id="resume-chip" hidden></button>
 
     <div class="filter-bar" id="filter-buttons"></div>
 
@@ -1207,6 +1307,8 @@
     </div>
   </section>
 </div>
+
+    <div class="favs-empty" id="favs-empty" hidden></div>
 
     <!-- Ad slot — descomentar quando a conta AdSense for aprovada:
          1. Adicionar no <head>: <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
@@ -1365,8 +1467,12 @@
         shareListening: "🎧 A ouvir {station} no Pulsar FM — rádio retro com visualizador Winamp",
         shareDefault:   "Pulsar FM — rádio online retro com visualizador Winamp. Neon nights incluídas.",
         shareCopied:    "✓ COPIADO",
+        favLabel:      "Adicionar aos favoritos",
+        favsEmpty:     "☆ Ainda não tens favoritos.<br>Carrega na estrela de uma rádio para a guardares aqui.",
+        resumeLabel:   "▶ Continuar a ouvir",
         filters: [
           { genre: "all",       label: "🎧 Todos" },
+          { genre: "favs",      label: "⭐ Favoritos" },
           { genre: "rock",      label: "🎸 Rock" },
           { genre: "jazz",      label: "🎷 Jazz" },
           { genre: "chill",     label: "🌿 Chill" },
@@ -1429,8 +1535,12 @@
         shareListening: "🎧 Listening to {station} on Pulsar FM — retro radio with the Winamp visualizer",
         shareDefault:   "Pulsar FM — retro online radio with the Winamp visualizer. Neon nights included.",
         shareCopied:    "✓ COPIED",
+        favLabel:      "Add to favorites",
+        favsEmpty:     "☆ No favorites yet.<br>Tap the star on any station to keep it here.",
+        resumeLabel:   "▶ Continue listening",
         filters: [
           { genre: "all",       label: "🎧 All" },
+          { genre: "favs",      label: "⭐ Favorites" },
           { genre: "rock",      label: "🎸 Rock" },
           { genre: "jazz",      label: "🎷 Jazz" },
           { genre: "chill",     label: "🌿 Chill" },
@@ -1501,6 +1611,9 @@
     let activeGenre    = "all";
     let playingUrl     = null;
 
+    let favorites  = new Set(JSON.parse(localStorage.getItem("pulsarfm-favs") || "[]"));
+    let lastPlayed = JSON.parse(localStorage.getItem("pulsarfm-last") || "null");
+
     function renderFilters() {
       const t = translations[currentLang];
       filterButtons.innerHTML = "";
@@ -1529,8 +1642,30 @@
       button.dataset.name = name;
       button.disabled     = !playerReady;
       button.textContent  = playerReady ? t.playBtn : t.loadingBtn;
-      card.append(title, button);
+      const fav = document.createElement("button");
+      fav.type = "button";
+      fav.className = "fav-btn" + (favorites.has(url) ? " faved" : "");
+      fav.dataset.favUrl = url;
+      fav.textContent = favorites.has(url) ? "★" : "☆";
+      fav.title = t.favLabel;
+      fav.setAttribute("aria-label", t.favLabel + ": " + name);
+      fav.setAttribute("aria-pressed", String(favorites.has(url)));
+      card.append(title, button, fav);
       return card;
+    }
+
+    function toggleFavorite(url) {
+      if (favorites.has(url)) favorites.delete(url);
+      else favorites.add(url);
+      localStorage.setItem("pulsarfm-favs", JSON.stringify([...favorites]));
+      const btn = document.querySelector(`.fav-btn[data-fav-url="${CSS.escape(url)}"]`);
+      if (btn) {
+        const faved = favorites.has(url);
+        btn.classList.toggle("faved", faved);
+        btn.textContent = faved ? "★" : "☆";
+        btn.setAttribute("aria-pressed", String(faved));
+      }
+      if (activeGenre === "favs") updateFilterState();
     }
 
     function renderStations() {
@@ -1594,6 +1729,10 @@ function updatePlayerButtons() {
       document.getElementById("consent-text").innerHTML     = t.consentText;
       document.getElementById("consent-accept").textContent = t.consentAccept;
       document.getElementById("consent-reject").textContent = t.consentReject;
+      document.getElementById("favs-empty").innerHTML = t.favsEmpty;
+      if (typeof refreshResumeChip === "function" && !document.getElementById("resume-chip").hidden) {
+        document.getElementById("resume-chip").textContent = t.resumeLabel + ": " + (lastPlayed ? lastPlayed.name : "");
+      }
       renderFilters();
       renderStations();
       updateFilterState();
@@ -1603,10 +1742,20 @@ function updatePlayerButtons() {
     }
 
     function updateFilterState() {
+      const favsMode = activeGenre === "favs";
       radioGroups.classList.toggle("single-genre", activeGenre !== "all");
-      document.querySelectorAll(".radio-group").forEach(group => {
-        group.hidden = activeGenre !== "all" && group.dataset.genre !== activeGenre;
+      document.querySelectorAll(".radio-card").forEach(card => {
+        const btn = card.querySelector(".play-button");
+        card.hidden = favsMode && !(btn && favorites.has(btn.dataset.url));
       });
+      document.querySelectorAll(".radio-group").forEach(group => {
+        if (favsMode) {
+          group.hidden = ![...group.querySelectorAll(".play-button")].some(b => favorites.has(b.dataset.url));
+        } else {
+          group.hidden = activeGenre !== "all" && group.dataset.genre !== activeGenre;
+        }
+      });
+      document.getElementById("favs-empty").hidden = !(favsMode && favorites.size === 0);
       document.querySelectorAll(".filter-btn").forEach(btn => {
         const isActive = btn.dataset.genre === activeGenre;
         btn.classList.toggle("active", isActive);
@@ -1615,7 +1764,9 @@ function updatePlayerButtons() {
     }
 
     function filterRadios(genre) {
-      activeGenre = (genre === "all" || Object.prototype.hasOwnProperty.call(translations[currentLang].genreNames, genre)) ? genre : "all";
+      const valid = genre === "all" || genre === "favs" ||
+        Object.prototype.hasOwnProperty.call(translations[currentLang].genreNames, genre);
+      activeGenre = valid ? genre : "all";
       updateFilterState();
       // Keep the URL shareable without adding history entries
       history.replaceState(null, "", activeGenre === "all" ? location.pathname : "?genre=" + activeGenre);
@@ -1639,7 +1790,23 @@ function updatePlayerButtons() {
       if (!playerReady || !webampInstance) return;
       webampInstance.setTracksToPlay([{ url, metaData: { artist: name, title: translations[currentLang].liveLabel } }]);
       setPlayingCard(url);
+      lastPlayed = { url, name };
+      localStorage.setItem("pulsarfm-last", JSON.stringify(lastPlayed));
+      document.getElementById("resume-chip").hidden = true;
     }
+
+    // ── Resume last station chip ──
+    const resumeChip = document.getElementById("resume-chip");
+
+    function refreshResumeChip() {
+      if (!lastPlayed || playingUrl || !playerReady) return;
+      resumeChip.textContent = translations[currentLang].resumeLabel + ": " + lastPlayed.name;
+      resumeChip.hidden = false;
+    }
+
+    resumeChip.addEventListener("click", () => {
+      if (lastPlayed) playStation(lastPlayed.url, lastPlayed.name);
+    });
 
     filterButtons.addEventListener("click", event => {
       const button = event.target.closest("button[data-genre]");
@@ -1660,6 +1827,8 @@ function updatePlayerButtons() {
     });
 
     radioGroups.addEventListener("click", event => {
+      const favBtn = event.target.closest(".fav-btn");
+      if (favBtn) { toggleFavorite(favBtn.dataset.favUrl); return; }
       const button = event.target.closest("button[data-url]");
       if (button) playStation(button.dataset.url, button.dataset.name);
     });
@@ -1719,12 +1888,38 @@ function updatePlayerButtons() {
       } catch (err) { /* clipboard blocked — nothing else to do */ }
     });
 
-    // ── Genre deep links (?genre=rock or #rock) ──
+    // ── Genre deep links (?genre=rock, ?genre=favs or #rock) ──
     const urlGenre = new URLSearchParams(location.search).get("genre") || location.hash.slice(1);
-    if (urlGenre && Object.prototype.hasOwnProperty.call(radios, urlGenre)) {
+    if (urlGenre && (urlGenre === "favs" || Object.prototype.hasOwnProperty.call(radios, urlGenre))) {
       filterRadios(urlGenre);
       setTimeout(() => radioGroups.scrollIntoView({ behavior: "smooth", block: "start" }), 500);
     }
+
+    // ── Sleep timer (cycles OFF → 15 → 30 → 60 min, then pauses the player) ──
+    const sleepBtn   = document.getElementById("sleep-btn");
+    const sleepSteps = [0, 15, 30, 60];
+    let sleepIndex   = 0;
+    let sleepTimeout = null;
+
+    function updateSleepBtn() {
+      const mins = sleepSteps[sleepIndex];
+      sleepBtn.textContent = mins ? "😴 " + mins + "m" : "😴 SLEEP";
+      sleepBtn.classList.toggle("active", mins > 0);
+    }
+
+    sleepBtn.addEventListener("click", () => {
+      sleepIndex = (sleepIndex + 1) % sleepSteps.length;
+      clearTimeout(sleepTimeout);
+      const mins = sleepSteps[sleepIndex];
+      if (mins) {
+        sleepTimeout = setTimeout(() => {
+          if (webampInstance) webampInstance.pause();
+          sleepIndex = 0;
+          updateSleepBtn();
+        }, mins * 60000);
+      }
+      updateSleepBtn();
+    });
 
     // Skin picker
     const skins = [
@@ -1897,6 +2092,7 @@ function updatePlayerButtons() {
         scanBtn.disabled = false;
         updatePlayerButtons();
         layoutPlayerWindows();
+        refreshResumeChip();
         if (activeSkin) webamp.setSkinFromUrl(activeSkin);
 
         // Re-dock the windows when the viewport changes (rotation, resize)
