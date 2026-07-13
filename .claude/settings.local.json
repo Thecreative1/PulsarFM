@@ -43,7 +43,17 @@
       "Bash(python -c ' *)",
       "Bash(curl -s \"https://raw.githubusercontent.com/Thecreative1/PulsarFM/main/index.html\")",
       "Bash(curl -s -H \"Pragma: no-cache\" -H \"Cache-Control: no-cache\" \"https://pulsarfm.eu/\")",
-      "Bash(curl -s \"https://pulsarfm.eu/robots.txt\")"
+      "Bash(curl -s \"https://pulsarfm.eu/robots.txt\")",
+      "Bash(curl -sS -D - -o /dev/null \"https://pulsarfm.eu/sitemap.xml\")",
+      "Bash(curl -sS \"https://pulsarfm.eu/sitemap.xml\")",
+      "Bash(curl -sS \"https://pulsarfm.eu/robots.txt\")",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code} %{content_type}\\\\n\" -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" \"https://pulsarfm.eu/sitemap.xml\")",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code} -> %{redirect_url}\\\\n\" \"https://www.pulsarfm.eu/sitemap.xml\")",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__browser_batch",
+      "mcp__claude-in-chrome__read_page"
     ]
   }
 }
