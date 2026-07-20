@@ -29,18 +29,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <title>Rádios de Música Electrónica Online Grátis | Pulsar FM</title>
-  <meta name="description" content="Rádios de electrónica e dance em direto: TechnoBase.FM, HouseTime.FM e Frisky Radio. Techno, house e progressive, grátis no browser." />
+  <title>Rádio de Música Eletrónica Online Grátis — Ao Vivo | Pulsar FM</title>
+  <meta name="description" content="Rádios de música eletrónica e dance ao vivo: TechnoBase.FM, Radio FG de Paris e HouseTime.FM. Techno, house e progressive em direto, grátis no browser." />
   <link rel="canonical" href="https://pulsarfm.eu/radios-electronica/" />
   <meta name="theme-color" content="#031317" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pulsarfm.eu/radios-electronica/" />
-  <meta property="og:title" content="Rádios Electrónicas Online | Pulsar FM" />
-  <meta property="og:description" content="Rádios de electrónica e dance em direto: TechnoBase.FM, HouseTime.FM e Frisky Radio. Techno, house e progressive, grátis no browser." />
+  <meta property="og:title" content="Rádios de Música Eletrónica Online | Pulsar FM" />
+  <meta property="og:description" content="Rádios de música eletrónica e dance ao vivo: TechnoBase.FM, Radio FG de Paris e HouseTime.FM. Techno, house e progressive em direto, grátis no browser." />
   <meta property="og:image" content="https://pulsarfm.eu/img/pulsar-og.jpg" />
   <meta property="og:site_name" content="Pulsar FM" />
   <meta property="og:locale" content="pt_PT" />
+  <meta property="og:locale:alternate" content="pt_BR" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,13 +51,14 @@
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Rádios Electrónicas Online",
+    "name": "Rádios de Música Eletrónica Online",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "item": { "@type": "RadioStation", "name": "TechnoBase.FM DE", "description": "Techno e hands up direto da Alemanha, com comunidade enorme." } },
       { "@type": "ListItem", "position": 2, "item": { "@type": "RadioStation", "name": "HouseTime.FM", "description": "House 24 horas por dia, da mesma família do TechnoBase." } },
       { "@type": "ListItem", "position": 3, "item": { "@type": "RadioStation", "name": "Frisky Radio EUA", "description": "Deep house e progressive com DJs residentes." } },
       { "@type": "ListItem", "position": 4, "item": { "@type": "RadioStation", "name": "Sunshine Live", "description": "A maior rádio de eletrónica da Alemanha — sets e festivais." } },
-      { "@type": "ListItem", "position": 5, "item": { "@type": "RadioStation", "name": "Hirschmilch Electronic", "description": "Eletrónica alemã sem interrupções." } }
+      { "@type": "ListItem", "position": 5, "item": { "@type": "RadioStation", "name": "Hirschmilch Electronic", "description": "Eletrónica alemã sem interrupções." } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "RadioStation", "name": "Radio FG Paris", "description": "House e electro direto de Paris — a rádio dos clubes." } }
     ]
   }
   </script>
@@ -67,7 +69,19 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Pulsar FM", "item": "https://pulsarfm.eu/" },
-      { "@type": "ListItem", "position": 2, "name": "Rádios Electrónicas Online", "item": "https://pulsarfm.eu/radios-electronica/" }
+      { "@type": "ListItem", "position": 2, "name": "Rádios de Música Eletrónica Online", "item": "https://pulsarfm.eu/radios-electronica/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Como ouvir música eletrónica online grátis?", "acceptedAnswer": { "@type": "Answer", "text": "Abre o Pulsar FM no navegador, escolhe uma estação e carrega em play — techno, house e progressive em direto (ao vivo), 100% grátis." } },
+      { "@type": "Question", "name": "Que estilos de eletrónica posso ouvir?", "acceptedAnswer": { "@type": "Answer", "text": "Techno e hands up na TechnoBase.FM, house 24 horas na HouseTime.FM, deep e progressive na Frisky Radio e sets de festivais na Sunshine Live." } },
+      { "@type": "Question", "name": "Posso ouvir rádio eletrônica no celular?", "acceptedAnswer": { "@type": "Answer", "text": "Sim — o Pulsar FM funciona em qualquer navegador, no computador ou no celular (telemóvel), em Portugal, no Brasil ou em qualquer parte do mundo." } }
     ]
   }
   </script>
@@ -248,6 +262,27 @@
       box-shadow: 0 0 24px rgba(57, 255, 20, 0.6);
     }
 
+    .faq { margin-bottom: 6px; }
+
+    .faq-item {
+      border-left: 2px solid rgba(0, 204, 255, 0.35);
+      padding: 2px 0 2px 14px;
+      margin-bottom: 16px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 6px;
+      color: var(--line-secondary);
+      font-size: 0.95rem;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--text-dim);
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+
     footer {
       margin-top: 26px;
       font-size: 0.78rem;
@@ -259,9 +294,9 @@
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › ⚡ Electrónica / Dance</nav>
+    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › ⚡ Eletrónica / Dance</nav>
 
-    <h1>⚡ Rádios Electrónicas Online</h1>
+    <h1>⚡ Rádios de Música Eletrónica Online</h1>
     <p class="intro">Techno, house e progressive em direto, 24 horas por dia. Sobe o volume, ativa o Milkdrop e transforma o quarto numa pista.</p>
 
     <div class="station-list">
@@ -290,9 +325,30 @@
         <p>Eletrónica alemã sem interrupções.</p>
         <a class="play-cta" href="/?genre=electro">🎧 Ouvir no player</a>
       </article>
+      <article class="radio-card">
+        <h3>Radio FG Paris</h3>
+        <p>House e electro direto de Paris — a rádio dos clubes.</p>
+        <a class="play-cta" href="/?genre=electro">🎧 Ouvir no player</a>
+      </article>
     </div>
 
     <a class="home-cta" href="/?genre=electro">▶ OUVIR TUDO NO PULSAR FM</a>
+
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Como ouvir música eletrónica online grátis?</h3>
+        <p>Abre o Pulsar FM no navegador, escolhe uma estação e carrega em play — techno, house e progressive em direto (ao vivo), 100% grátis.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Que estilos de eletrónica posso ouvir?</h3>
+        <p>Techno e hands up na TechnoBase.FM, house 24 horas na HouseTime.FM, deep e progressive na Frisky Radio e sets de festivais na Sunshine Live.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Posso ouvir rádio eletrônica no celular?</h3>
+        <p>Sim — o Pulsar FM funciona em qualquer navegador, no computador ou no celular (telemóvel), em Portugal, no Brasil ou em qualquer parte do mundo.</p>
+      </div>
+    </div>
 
     <h2>Outros géneros</h2>
     <div class="genre-links">

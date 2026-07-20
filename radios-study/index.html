@@ -29,18 +29,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <title>Rádios para Estudar — Lo-Fi e Foco em Direto | Pulsar FM</title>
-  <meta name="description" content="Música para estudar e trabalhar: SomaFM Groove Salad, clássica sem interrupções e chillhop lo-fi. Grátis, em direto, no browser." />
+  <title>Rádios para Estudar — Lo-Fi e Clássica ao Vivo | Pulsar FM</title>
+  <meta name="description" content="Música para estudar e trabalhar: SomaFM Groove Salad, clássica sem interrupções e chillhop lo-fi. Grátis, ao vivo, no browser." />
   <link rel="canonical" href="https://pulsarfm.eu/radios-study/" />
   <meta name="theme-color" content="#031317" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pulsarfm.eu/radios-study/" />
   <meta property="og:title" content="Rádios para Estudar | Pulsar FM" />
-  <meta property="og:description" content="Música para estudar e trabalhar: SomaFM Groove Salad, clássica sem interrupções e chillhop lo-fi. Grátis, em direto, no browser." />
+  <meta property="og:description" content="Música para estudar e trabalhar: SomaFM Groove Salad, clássica sem interrupções e chillhop lo-fi. Grátis, ao vivo, no browser." />
   <meta property="og:image" content="https://pulsarfm.eu/img/pulsar-og.jpg" />
   <meta property="og:site_name" content="Pulsar FM" />
   <meta property="og:locale" content="pt_PT" />
+  <meta property="og:locale:alternate" content="pt_BR" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +57,8 @@
       { "@type": "ListItem", "position": 2, "item": { "@type": "RadioStation", "name": "Radio Swiss Classic", "description": "Música clássica sem interrupções nem publicidade." } },
       { "@type": "ListItem", "position": 3, "item": { "@type": "RadioStation", "name": "I Love Chillhop", "description": "Lo-fi e chillhop — o clássico do estudo, em rádio." } },
       { "@type": "ListItem", "position": 4, "item": { "@type": "RadioStation", "name": "SomaFM Deep Space One", "description": "Ambient espacial profundo para concentração máxima." } },
-      { "@type": "ListItem", "position": 5, "item": { "@type": "RadioStation", "name": "Venice Classic Radio", "description": "Clássica intemporal, de Itália com amor." } }
+      { "@type": "ListItem", "position": 5, "item": { "@type": "RadioStation", "name": "Venice Classic Radio", "description": "Clássica intemporal, de Itália com amor." } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "RadioStation", "name": "Lofi Radio", "description": "Lo-fi beats 24 horas por dia, para estudar ou relaxar." } }
     ]
   }
   </script>
@@ -68,6 +70,18 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Pulsar FM", "item": "https://pulsarfm.eu/" },
       { "@type": "ListItem", "position": 2, "name": "Rádios para Estudar", "item": "https://pulsarfm.eu/radios-study/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Qual é a melhor música para estudar?", "acceptedAnswer": { "@type": "Answer", "text": "Lo-fi, chillhop, downtempo e clássica — música sem letra que ajuda a manter o foco. As cinco estações desta página foram escolhidas exatamente para isso." } },
+      { "@type": "Question", "name": "Como ouvir rádio lo-fi online grátis?", "acceptedAnswer": { "@type": "Answer", "text": "Abre o Pulsar FM no navegador, escolhe a I Love Chillhop ou a SomaFM Groove Salad e carrega em play — grátis e sem distrações." } },
+      { "@type": "Question", "name": "Posso estudar com o Pulsar FM no telemóvel ou no celular?", "acceptedAnswer": { "@type": "Answer", "text": "Sim — funciona em qualquer navegador, no computador, tablet, telemóvel ou celular, em Portugal, no Brasil ou em qualquer parte do mundo." } }
     ]
   }
   </script>
@@ -248,6 +262,27 @@
       box-shadow: 0 0 24px rgba(57, 255, 20, 0.6);
     }
 
+    .faq { margin-bottom: 6px; }
+
+    .faq-item {
+      border-left: 2px solid rgba(0, 204, 255, 0.35);
+      padding: 2px 0 2px 14px;
+      margin-bottom: 16px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 6px;
+      color: var(--line-secondary);
+      font-size: 0.95rem;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--text-dim);
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+
     footer {
       margin-top: 26px;
       font-size: 0.78rem;
@@ -290,9 +325,30 @@
         <p>Clássica intemporal, de Itália com amor.</p>
         <a class="play-cta" href="/?genre=study">🎧 Ouvir no player</a>
       </article>
+      <article class="radio-card">
+        <h3>Lofi Radio</h3>
+        <p>Lo-fi beats 24 horas por dia, para estudar ou relaxar.</p>
+        <a class="play-cta" href="/?genre=study">🎧 Ouvir no player</a>
+      </article>
     </div>
 
     <a class="home-cta" href="/?genre=study">▶ OUVIR TUDO NO PULSAR FM</a>
+
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Qual é a melhor música para estudar?</h3>
+        <p>Lo-fi, chillhop, downtempo e clássica — música sem letra que ajuda a manter o foco. As cinco estações desta página foram escolhidas exatamente para isso.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Como ouvir rádio lo-fi online grátis?</h3>
+        <p>Abre o Pulsar FM no navegador, escolhe a I Love Chillhop ou a SomaFM Groove Salad e carrega em play — grátis e sem distrações.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Posso estudar com o Pulsar FM no telemóvel ou no celular?</h3>
+        <p>Sim — funciona em qualquer navegador, no computador, tablet, telemóvel ou celular, em Portugal, no Brasil ou em qualquer parte do mundo.</p>
+      </div>
+    </div>
 
     <h2>Outros géneros</h2>
     <div class="genre-links">
@@ -300,7 +356,7 @@
           <a href="/radios-jazz/" class="genre-filter-link">🎷 Jazz</a>
           <a href="/radios-chill/" class="genre-filter-link">🌿 Chill / Ambiente</a>
           <a href="/radios-pop/" class="genre-filter-link">🎶 Pop</a>
-          <a href="/radios-electronica/" class="genre-filter-link">⚡ Electrónica / Dance</a>
+          <a href="/radios-electronica/" class="genre-filter-link">⚡ Eletrónica / Dance</a>
           <a href="/radios-psytrance/" class="genre-filter-link">🔀 Goa / Psytrance</a>
           <a href="/radios-synthwave/" class="genre-filter-link">🌆 Synthwave / Retrowave</a>
     </div>

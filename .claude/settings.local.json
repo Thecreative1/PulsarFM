@@ -53,7 +53,8 @@
       "mcp__claude-in-chrome__tabs_context_mcp",
       "mcp__claude-in-chrome__computer",
       "mcp__claude-in-chrome__browser_batch",
-      "mcp__claude-in-chrome__read_page"
+      "mcp__claude-in-chrome__read_page",
+      "Bash(python tools/gen_genre_pages.py)"
     ]
   }
 }

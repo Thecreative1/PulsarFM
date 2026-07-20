@@ -1,7 +1,8 @@
 # PulsarFM — AI Assistant Guide
 
 Neon retro web radio: single-page app with the Webamp player (Winamp clone) +
-Butterchurn (Milkdrop) visualizer. 40 curated live stations in 8 genres, PT/EN
+Butterchurn (Milkdrop) visualizer. 48 curated live stations in 8 genres (6 per
+genre — keep the per-genre count equal so the grid stays uniform), PT/EN
 bilingual, hosted on **GitHub Pages**. The owner's goal is to monetize (AdSense)
 while preserving the neon/synthwave aesthetic.
 
@@ -99,10 +100,12 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
 2. Update the `radios` object in `index.html` (name + URL).
 3. Update the matching static `<article class="radio-card"><h3>Name</h3></article>` in `index.html`.
 4. Update `GENRES` in `tools/gen_genre_pages.py` (name + one-line PT
-   description) and run `python tools/gen_genre_pages.py`.
-5. If the total station count changed, update "40 estações/40 live stations"
-   in: hero intro (static + both translations), og:description, JSON-LD
-   description, `manifest.webmanifest`.
+   description; each genre also has a `faq` list of 3 (question, answer)
+   tuples rendered as a visible FAQ section + FAQPage JSON-LD) and run
+   `python tools/gen_genre_pages.py`.
+5. If the total station count changed, update "48 estações/48 live stations"
+   in: `<title>`, meta description, hero intro (static + both translations),
+   og:description, JSON-LD description, `manifest.webmanifest`.
 6. Bump `<lastmod>` in `sitemap.xml`.
 
 ## Layout rules learned the hard way
@@ -132,6 +135,11 @@ All user-facing strings live in the `translations` object (`pt` / `en`) in
 `index.html`. `applyLanguage()` re-renders everything and must update any new
 translatable element — add your element's update line there. Static HTML holds
 the PT version (also the SEO fallback). Genre pages are PT-only by design.
+
+SEO copy deliberately mixes pt-PT and pt-BR vocabulary ("em direto" + "ao
+vivo", "telemóvel" + "celular", "eletrónica" + "eletrônica") to capture
+Brazilian searches — keep both variants when editing titles, descriptions
+and the genre-page FAQs.
 
 ## localStorage keys
 
