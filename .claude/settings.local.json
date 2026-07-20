@@ -54,7 +54,8 @@
       "mcp__claude-in-chrome__computer",
       "mcp__claude-in-chrome__browser_batch",
       "mcp__claude-in-chrome__read_page",
-      "Bash(python tools/gen_genre_pages.py)"
+      "Bash(python tools/gen_genre_pages.py)",
+      "WebFetch(domain:ondecortar.com)"
     ]
   }
 }
