@@ -1,0 +1,22 @@
+{
+  "slug": "novo-guia",
+  "category": "Equipamento para música",
+  "title": "Título editorial do guia",
+  "summary": "Uma frase sobre a necessidade que este guia ajuda a resolver.",
+  "intro": "Define o público, o contexto de utilização e os critérios de comparação.",
+  "updatedAt": "2026-09-29",
+  "sections": [
+    {
+      "heading": "Como escolher",
+      "paragraphs": ["Explica os critérios, as limitações e a origem da informação. Não apresentar como testado um produto que não foi testado pela redação."],
+      "checklist": ["Compatibilidade", "Conforto ou espaço", "Orçamento total"],
+      "productLinks": []
+    },
+    {
+      "heading": "O que comparar",
+      "paragraphs": ["Compara alternativas para a mesma utilização. Identifica para quem cada escolha faz sentido e para quem não faz."]
+    }
+  ],
+  "productIds": [],
+  "closing": "Resume o critério mais útil para a decisão, sem urgência artificial."
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "awin": {
+    "publisherId": ""
+  },
+  "merchants": {
+    "worten-pt": {
+      "name": "Worten",
+      "network": "awin",
+      "advertiserId": "",
+      "allowedDestinationHosts": [
+        "www.worten.pt",
+        "worten.pt"
+      ],
+      "cta": "Ver na Worten"
+    }
+  },
+  "products": [
+    {
+      "id": "sony-wh-ch520",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Sony WH-CH520 · Preto",
+      "description": "Auscultadores Bluetooth on-ear com microfone, para quem procura um formato de escuta pessoal sem fios. Antes de escolher, considera se preferes almofadas apoiadas sobre a orelha ou um formato que a envolva.",
+      "image": "https://www.worten.pt/i/352ce7cdb47f2bc85f835f34beb270eafa55be28",
+      "imageAlt": "Sony WH-CH520 · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch520-on-ear-microfone-preto-7721305",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch520-on-ear-microfone-preto-7721305"
+      }
+    },
+    {
+      "id": "jbl-go-4",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "JBL Go 4 · Azul",
+      "description": "Uma coluna Bluetooth compacta para levar a música entre espaços. A ficha indica autonomia de até 7 horas; compara o tamanho e as condições dessa autonomia com a tua rotina antes de comprar.",
+      "image": "https://www.worten.pt/i/97ae453a9ffa8fb3942f1a213b31f2275bc95f92",
+      "imageAlt": "JBL Go 4 · Azul",
+      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-4-7-w-autonomia-7-horas-azul-8031117",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-4-7-w-autonomia-7-horas-azul-8031117"
+      }
+    },
+    {
+      "id": "jbl-bar-2-all-in-one",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "JBL Bar 2.0 All-In-One",
+      "description": "Uma soundbar de 2.0 canais para considerar numa instalação de som na sala. Confirma as ligações do teu televisor e as dimensões disponíveis no móvel antes de decidir.",
+      "image": "https://www.worten.pt/i/60813e77a6826ff37388bf6e718a888da89f8294",
+      "imageAlt": "JBL Bar 2.0 All-In-One",
+      "destinationUrl": "https://www.worten.pt/produtos/soundbar-jbl-bar-2-0-all-in-one-2-0-canais-40-w-mrkean-6925281925313",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/soundbar-jbl-bar-2-0-all-in-one-2-0-canais-40-w-mrkean-6925281925313"
+      }
+    },
+    {
+      "id": "audio-technica-at-lp60xusb",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Audio-Technica AT-LP60XUSBGM",
+      "description": "Gira-discos automático de transmissão por correia, com velocidades de 33⅓ e 45 rpm. Uma opção a comparar para começar no vinil: verifica também as ligações e o equipamento de amplificação que vais utilizar.",
+      "image": "https://www.worten.pt/i/976513e62fec3f8dc8986d3832c9f102fd3e05c1",
+      "imageAlt": "Audio-Technica AT-LP60XUSBGM",
+      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-audio-technica-at-lp60xusbgm-automatico-correia-velocidade-33-1-3-45-6936975",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-audio-technica-at-lp60xusbgm-automatico-correia-velocidade-33-1-3-45-6936975"
+      }
+    }
+  ]
+}

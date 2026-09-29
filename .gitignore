@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+# Downloaded feeds can contain private download URLs. Keep them out of GitHub Pages.
+private-feeds/

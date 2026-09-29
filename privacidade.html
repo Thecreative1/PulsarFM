@@ -173,7 +173,7 @@
 <body>
   <main>
     <h1>Privacidade &amp; Cookies</h1>
-    <p class="updated">Última atualização: 8 de julho de 2026</p>
+    <p class="updated">Última atualização: 29 de setembro de 2026</p>
 
     <p>O <strong>Pulsar FM</strong> (pulsarfm.eu) é um projeto independente de rádio online. Levamos a tua privacidade a sério — aqui está, sem rodeios, o que acontece aos teus dados.</p>
 
@@ -204,6 +204,12 @@
     <h2>⚖️ Os teus direitos (RGPD)</h2>
     <p>Tens direito a aceder, corrigir ou apagar dados pessoais. Como praticamente não recolhemos nada identificável, o mais provável é não haver nada para apagar — mas podes sempre escrever para <a href="mailto:flavio.martins@gmail.com">flavio.martins@gmail.com</a>.</p>
 
+    <h2 id="afiliados">Recomendações e links de afiliado</h2>
+    <p>Alguns conteúdos editoriais podem incluir links de afiliado da rede Awin, incluindo para a Worten PT quando os respetivos links estiverem ativos. A PulsarFM poderá receber uma comissão se efetuares uma compra através desses links, sem custo adicional para ti. Identificamos esses conteúdos com uma divulgação junto dos links.</p>
+    <p>Ao seguir um link de afiliado, sais da PulsarFM e passas pela rede Awin para chegar à loja. A rede e a loja podem tratar dados associados à visita e à compra de acordo com as suas próprias políticas. Consulta a <a href="https://www.awin.com/gb/privacy" target="_blank" rel="noopener">política de privacidade da Awin</a> e a política da loja de destino.</p>
+    <p>Com o teu consentimento de análise, registamos no Google Analytics o evento <code>affiliate_click</code>, com o anunciante, nome do produto, caminho da página e posição do link. Este evento não inclui os parâmetros de pesquisa do endereço da página. A recusa de cookies impede este evento na PulsarFM; não impede a abertura voluntária do link externo nem controla o tratamento de dados no destino.</p>
+    <p>Não instalamos um script de tracking da Awin no site. Imagens de produtos alojadas por fornecedores externos podem ligar o teu browser a esses fornecedores. Nas páginas de recomendações podes alterar a escolha em «Preferências de cookies».</p>
+
     <a class="back-link" href="/">← VOLTAR AO PULSAR FM</a><button class="reset-btn" id="reset-consent">REPOR COOKIES</button>
 
     <div class="en-note">
@@ -214,6 +220,7 @@
   <script>
     document.getElementById('reset-consent').addEventListener('click', () => {
       localStorage.removeItem('pulsarfm-consent');
+      gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
       window.location.href = '/';
     });
   </script>

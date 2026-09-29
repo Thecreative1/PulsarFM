@@ -1372,6 +1372,7 @@
     <footer class="site-footer">
       <p id="footer-line1">Visualizador baseado em <a href="https://github.com/jberg/butterchurn" target="_blank" rel="noopener">Butterchurn</a> · Player baseado em <a href="https://github.com/captbaritone/webamp" target="_blank" rel="noopener">Webamp</a></p>
       <p id="footer-line2">Pulsar FM é grátis. <em>Neon nights, Winamp vibes, internet estranha.</em> · Se gostas, <a href="https://ko-fi.com/pfm80" target="_blank" rel="noopener" style="opacity:0.8;">paga-me uma cerveja 🍺</a></p>
+      <p><a href="recomendacoes/" target="_blank" rel="noopener" id="recommendations-link" aria-label="Recomendações PulsarFM (nova aba)">Recomendações PulsarFM ↗</a></p>
       <p><a href="privacidade.html" class="privacy-link" id="privacy-link">Privacidade &amp; Cookies</a></p>
     </footer>
   </div>
@@ -1490,6 +1491,8 @@
         consentReject: "RECUSAR",
         kofiFloat:     "🍺 Apoia o Pulsar",
         privacyLink:   "Privacidade & Cookies",
+        recommendationsLink: "Recomendações PulsarFM ↗",
+        recommendationsLabel: "Recomendações PulsarFM (nova aba)",
         shareListening: "🎧 A ouvir {station} no Pulsar FM — rádio retro com visualizador Winamp",
         shareDefault:   "Pulsar FM — rádio online retro com visualizador Winamp. Neon nights incluídas.",
         shareCopied:    "✓ COPIADO",
@@ -1558,6 +1561,8 @@
         consentReject: "DECLINE",
         kofiFloat:     "🍺 Support Pulsar",
         privacyLink:   "Privacy & Cookies",
+        recommendationsLink: "PulsarFM recommendations (PT) ↗",
+        recommendationsLabel: "PulsarFM recommendations in Portuguese (new tab)",
         shareListening: "🎧 Listening to {station} on Pulsar FM — retro radio with the Winamp visualizer",
         shareDefault:   "Pulsar FM — retro online radio with the Winamp visualizer. Neon nights included.",
         shareCopied:    "✓ COPIED",
@@ -1750,6 +1755,8 @@ function updatePlayerButtons() {
       document.getElementById("footer-line1").innerHTML = t.footer1;
       document.getElementById("footer-line2").innerHTML = t.footer2;
       document.getElementById("privacy-link").textContent   = t.privacyLink;
+      document.getElementById("recommendations-link").textContent = t.recommendationsLink;
+      document.getElementById("recommendations-link").setAttribute("aria-label", t.recommendationsLabel);
       document.getElementById("kofi-float").textContent     = t.kofiFloat;
       document.getElementById("consent-title").textContent  = t.consentTitle;
       document.getElementById("consent-text").innerHTML     = t.consentText;

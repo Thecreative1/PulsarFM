@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "title": "Recomendações PulsarFM",
+  "description": "Guias de equipamento para ouvir, descobrir e criar música. Auscultadores, colunas, vinil e home studio, com o espírito da PulsarFM.",
+  "updatedAt": "2026-09-29",
+  "articles": [
+    {
+      "slug": "melhores-auscultadores",
+      "category": "Escuta pessoal",
+      "title": "Melhores auscultadores: começa pela tua forma de ouvir",
+      "summary": "Em casa, no comboio ou pela noite dentro. O conforto e o contexto contam tanto como o som.",
+      "intro": "Os melhores auscultadores são os que fazem sentido na tua rotina. Antes de comparares modelos, decide onde vais ouvir música, durante quanto tempo e a que dispositivo os vais ligar.",
+      "updatedAt": "2026-09-29",
+      "sections": [
+        {
+          "heading": "Uma escolha para cada sessão",
+          "paragraphs": [
+            "Para ouvir rádio à secretária, começa pelo conforto: peso, pressão da haste e tamanho das almofadas. Se possível, experimenta o formato antes de comprar. Uma sessão curta na loja não revela tudo sobre várias horas de utilização.",
+            "Nos transportes, compara o isolamento e a facilidade de controlar a reprodução. Em casa, pensa também em quem está à tua volta: auscultadores abertos deixam passar som e podem incomodar outras pessoas."
+          ],
+          "checklist": [
+            "Confirma se precisas de cabo, Bluetooth ou das duas opções.",
+            "Verifica a ligação do teu computador ou telemóvel e eventuais adaptadores.",
+            "Procura almofadas substituíveis e informação sobre assistência."
+          ]
+        },
+        {
+          "heading": "O que comparar além do preço",
+          "paragraphs": [
+            "Autonomia anunciada, autonomia com cancelamento de ruído e tempo de carregamento não são a mesma coisa. Consulta as condições indicadas pelo fabricante. Para chamadas, procura avaliações do microfone no ambiente em que o vais usar.",
+            "Define um orçamento total, incluindo acessórios necessários. Um desconto só é útil se o modelo, a versão e as condições de compra corresponderem ao que procuras."
+          ]
+        }
+      ],
+      "productIds": [
+        "sony-wh-ch520"
+      ],
+      "closing": "Escolhe primeiro o formato e o conforto. Depois compara dois ou três modelos que resolvam a mesma necessidade."
+    },
+    {
+      "slug": "colunas-bluetooth",
+      "category": "Música em companhia",
+      "title": "Colunas Bluetooth para levar a música contigo",
+      "summary": "Da cozinha ao fim de tarde no jardim: como escolher o tamanho, a autonomia e as ligações.",
+      "intro": "Uma coluna portátil deve encaixar no espaço e na forma como a transportas. Começa por distinguir uma coluna para mudar de divisão de uma que vais levar todos os dias na mochila.",
+      "updatedAt": "2026-09-29",
+      "sections": [
+        {
+          "heading": "Onde vai tocar?",
+          "paragraphs": [
+            "Em casa, considera o espaço disponível e a possibilidade de ouvir a baixo volume. No exterior, pensa no peso, na pega de transporte e na autonomia. Compara produtos de tamanho semelhante para perceber melhor o que ganhas e o que sacrificas.",
+            "Resistência à água depende da classificação e das condições indicadas pelo fabricante. Não assumes que uma coluna adequada a salpicos pode ficar submersa ou exposta a água salgada."
+          ],
+          "checklist": [
+            "Confirma as condições da autonomia anunciada.",
+            "Verifica o carregador e o cabo incluídos.",
+            "Se queres ligar duas colunas, confirma a compatibilidade entre os modelos exatos."
+          ]
+        },
+        {
+          "heading": "Ligações que fazem falta",
+          "paragraphs": [
+            "Uma entrada auxiliar pode ser útil para equipamentos antigos. Se pretendes usar a coluna com vídeo ou jogos, procura informação sobre atraso de áudio com o teu dispositivo.",
+            "Confirma se as funções essenciais dependem de uma aplicação, de uma conta ou de uma ligação à internet. A experiência diária deve ser tão simples como escolher a próxima estação."
+          ]
+        }
+      ],
+      "productIds": [
+        "jbl-go-4"
+      ],
+      "closing": "Prioriza a facilidade de utilização e o local de escuta. Mais potência anunciada, por si só, não resolve todas as necessidades."
+    },
+    {
+      "slug": "soundbars",
+      "category": "Som na sala",
+      "title": "Soundbars: dá espaço ao som, sem complicar a sala",
+      "summary": "Diálogos, concertos e cinema. Um guia para verificar ligações e espaço antes da compra.",
+      "intro": "Antes de escolher uma soundbar, olha para as ligações do televisor e mede o móvel. A melhor opção para a tua sala começa pela compatibilidade, pelo espaço e pelo tipo de conteúdo que mais ouves.",
+      "updatedAt": "2026-09-29",
+      "sections": [
+        {
+          "heading": "Começa pelo televisor",
+          "paragraphs": [
+            "Confirma no manual as portas disponíveis e os formatos de áudio suportados pelo televisor e pela soundbar. Não basta que ambos tenham HDMI: verifica as funções ARC ou eARC necessárias à ligação que pretendes.",
+            "Mede a altura da barra para evitar tapar a imagem ou o recetor do comando. Se existir subwoofer, reserva espaço e uma tomada para ele."
+          ],
+          "checklist": [
+            "Verifica se o cabo necessário está incluído.",
+            "Confirma se consegues controlar o volume com o comando habitual.",
+            "Considera os cabos e tomadas necessários para eventuais colunas traseiras."
+          ]
+        },
+        {
+          "heading": "Ouve o que costumas ver",
+          "paragraphs": [
+            "Experimenta diálogos e música, de preferência ao volume que usas em casa. Um modo noturno ou ajustes de voz podem ser mais úteis para a tua rotina do que uma lista longa de efeitos.",
+            "Se também vais ouvir rádio a partir do telemóvel, verifica a ligação sem fios pretendida. Não assumes que todas as funções de streaming estão presentes em todas as versões do mesmo produto."
+          ]
+        }
+      ],
+      "productIds": [
+        "jbl-bar-2-all-in-one"
+      ],
+      "closing": "Faz uma lista das ligações e das medidas antes de comparar ofertas. A instalação deve caber na tua sala e na tua rotina."
+    },
+    {
+      "slug": "gira-discos",
+      "category": "Ritual do vinil",
+      "title": "Gira-discos: prepara o teu primeiro lado A",
+      "summary": "Do disco às colunas, percebe o que precisas para montar um sistema de vinil.",
+      "intro": "Ouvir vinil envolve um conjunto de peças. Antes de escolher o gira-discos, identifica o que já tens e como vais fazer chegar o som às colunas ou aos auscultadores.",
+      "updatedAt": "2026-09-29",
+      "sections": [
+        {
+          "heading": "Pensa no sistema completo",
+          "paragraphs": [
+            "Confirma se o gira-discos tem pré-amplificador phono integrado ou se precisas de um externo ou de uma entrada phono compatível no amplificador. Uma entrada de linha não substitui automaticamente uma entrada phono.",
+            "Verifica se as colunas são ativas ou se necessitam de amplificador. Faz as contas ao conjunto completo, incluindo cabos e uma superfície estável para o gira-discos."
+          ],
+          "checklist": [
+            "Confirma as velocidades de reprodução de que precisas.",
+            "Consulta o manual para perceber a montagem e os ajustes iniciais.",
+            "Verifica a disponibilidade de agulhas de substituição compatíveis."
+          ]
+        },
+        {
+          "heading": "Manual ou automático?",
+          "paragraphs": [
+            "Pensa no gesto de ouvir: queres colocar e recolher o braço manualmente ou preferes automatismos? Compara as funções do modelo exato, pois nem todos os mecanismos automáticos fazem as mesmas operações.",
+            "Reserva parte do orçamento para conservar os discos e a agulha segundo as instruções do fabricante. Uma boa compra inclui também a possibilidade de manter o equipamento ao longo do tempo."
+          ]
+        }
+      ],
+      "productIds": [
+        "audio-technica-at-lp60xusb"
+      ],
+      "closing": "Desenha o percurso do som, do gira-discos até às colunas. Assim evitas descobrir uma ligação em falta depois da compra."
+    },
+    {
+      "slug": "home-studio",
+      "category": "Do ouvir ao criar",
+      "title": "Home studio: começa pelo que queres gravar",
+      "summary": "Voz, guitarra ou primeiras demos. Monta um conjunto pequeno que faça sentido para o teu projeto.",
+      "intro": "Um home studio começa com uma pergunta simples: o que vais gravar e quantas fontes precisam de entrar ao mesmo tempo? A resposta ajuda a escolher a interface, o microfone e a monitorização.",
+      "updatedAt": "2026-09-29",
+      "sections": [
+        {
+          "heading": "Liga as peças certas",
+          "paragraphs": [
+            "Confirma a compatibilidade da interface com o computador, o sistema operativo e o programa de gravação. Conta as entradas de microfone e instrumento de que precisas em simultâneo, sem te guiares apenas pelo número total de ligações.",
+            "Para um microfone XLR, verifica a entrada necessária e, quando aplicável, a alimentação indicada pelo fabricante. Inclui cabo, suporte e auscultadores no orçamento."
+          ],
+          "checklist": [
+            "Verifica os requisitos do software incluído e a duração de eventuais licenças.",
+            "Confirma as saídas para auscultadores e colunas.",
+            "Procura informação sobre monitorização direta se vais gravar voz ou instrumentos."
+          ]
+        },
+        {
+          "heading": "O quarto também entra na gravação",
+          "paragraphs": [
+            "Escuta o ruído do espaço antes de comprar. Ventoinhas, trânsito e reflexões da divisão influenciam o resultado. Experimentar a posição do microfone e o horário de gravação pode ajudar a perceber o que realmente falta.",
+            "Começa com uma cadeia simples que consigas aprender a usar. Acrescenta equipamento quando identificares uma limitação concreta no teu trabalho."
+          ]
+        }
+      ],
+      "productIds": [],
+      "closing": "Planeia uma primeira gravação possível, com todas as ligações necessárias. O objetivo é começar a criar."
+    },
+    {
+      "slug": "tecnologia-acessorios",
+      "category": "Pequenos ajustes",
+      "title": "Tecnologia e acessórios para a tua rotina musical",
+      "summary": "Adaptadores, suportes e ligações: pequenas escolhas que tornam a escuta mais simples.",
+      "intro": "Nem sempre precisas de substituir o equipamento principal. Um acessório bem escolhido pode resolver a ligação em falta, arrumar a secretária ou tornar as sessões de música mais confortáveis.",
+      "updatedAt": "2026-09-29",
+      "sections": [
+        {
+          "heading": "Compatibilidade antes de tudo",
+          "paragraphs": [
+            "Identifica o problema antes de procurar um acessório. Anota os modelos dos dispositivos, as portas disponíveis e a função de que precisas. Dois conectores com a mesma forma podem suportar funções diferentes.",
+            "Nos adaptadores de áudio, confirma a compatibilidade com o sistema operativo e com microfone, se o utilizas. Nos hubs, verifica também a alimentação e as limitações das portas."
+          ],
+          "checklist": [
+            "Mede o comprimento de cabo necessário sem criar tensão nas ligações.",
+            "Confirma a carga e as dimensões suportadas por braços ou suportes.",
+            "Consulta as condições de devolução e a identificação do vendedor."
+          ]
+        },
+        {
+          "heading": "Compra para resolver uma necessidade",
+          "paragraphs": [
+            "Dá prioridade ao que utilizas todos os dias: acesso aos controlos, organização dos cabos e posição dos auscultadores. Evita acumular adaptadores sem confirmar o percurso completo do sinal.",
+            "Compara o custo final, incluindo portes. Um acessório pequeno deixa de ser uma boa solução se precisares de várias peças adicionais para o fazer funcionar."
+          ]
+        }
+      ],
+      "productIds": [],
+      "closing": "Escolhe um problema da tua rotina e resolve-o de cada vez. A música deve continuar a ser o centro da experiência."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "produto-exemplo",
+  "status": "draft",
+  "linkType": "affiliate",
+  "merchant": "worten-pt",
+  "name": "Nome do produto confirmado",
+  "description": "Descrição editorial curta: para quem serve e qual a principal limitação.",
+  "image": "/img/gear-editorial.svg",
+  "imageAlt": "Ilustração de equipamento de áudio; substituir por fotografia autorizada do produto",
+  "destinationUrl": "",
+  "affiliateUrl": "",
+  "price": null,
+  "source": {
+    "type": "manual",
+    "merchantProductId": "",
+    "awinProductId": "",
+    "updatedAt": ""
+  }
+}
