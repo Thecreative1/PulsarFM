@@ -7,35 +7,140 @@
     {
       "slug": "melhores-auscultadores",
       "category": "Escuta pessoal",
-      "title": "Melhores auscultadores: começa pela tua forma de ouvir",
-      "summary": "Em casa, no comboio ou pela noite dentro. O conforto e o contexto contam tanto como o som.",
-      "intro": "Os melhores auscultadores são os que fazem sentido na tua rotina. Antes de comparares modelos, decide onde vais ouvir música, durante quanto tempo e a que dispositivo os vais ligar.",
+      "title": "Melhores auscultadores em 2026: uma escolha para cada orçamento",
+      "summary": "Auscultadores Bluetooth para estudar, viajar ou ouvir rádio à secretária: cinco escolhas, da gama económica ao premium, e como decidir.",
+      "intro": "Os melhores auscultadores são os que fazem sentido na tua rotina. Separámos cinco modelos à venda em Portugal, da entrada ao premium, e explicamos para quem serve cada um. Antes de comparares, decide onde vais ouvir música, durante quanto tempo e a que dispositivo os vais ligar.",
       "updatedAt": "2026-09-29",
       "sections": [
         {
-          "heading": "Uma escolha para cada sessão",
+          "heading": "Começa pela tua forma de ouvir",
           "paragraphs": [
-            "Para ouvir rádio à secretária, começa pelo conforto: peso, pressão da haste e tamanho das almofadas. Se possível, experimenta o formato antes de comprar. Uma sessão curta na loja não revela tudo sobre várias horas de utilização.",
-            "Nos transportes, compara o isolamento e a facilidade de controlar a reprodução. Em casa, pensa também em quem está à tua volta: auscultadores abertos deixam passar som e podem incomodar outras pessoas."
+            "Para ouvir rádio à secretária, o conforto vem primeiro: peso, pressão da haste e tamanho das almofadas. Uma sessão curta na loja não revela tudo sobre várias horas de utilização, por isso dá prioridade a modelos leves se contas passar a tarde com eles.",
+            "Nos transportes, o isolamento e a autonomia pesam mais. Em casa, pensa também em quem está à tua volta: auscultadores abertos deixam passar som e podem incomodar outras pessoas."
           ],
           "checklist": [
+            "On-ear (sobre a orelha) é mais compacto; over-ear (à volta da orelha) costuma ser mais confortável em sessões longas.",
             "Confirma se precisas de cabo, Bluetooth ou das duas opções.",
-            "Verifica a ligação do teu computador ou telemóvel e eventuais adaptadores.",
-            "Procura almofadas substituíveis e informação sobre assistência."
+            "Procura multiponto se alternas entre computador e telemóvel.",
+            "Almofadas substituíveis prolongam a vida dos auscultadores."
+          ]
+        },
+        {
+          "heading": "Cancelamento de ruído: quando vale a pena",
+          "paragraphs": [
+            "O cancelamento de ruído ativo reduz sons constantes e graves, como o motor de um comboio, um avião ou o ar condicionado do escritório. É menos eficaz com vozes e ruídos súbitos.",
+            "Se ouves sobretudo em casa e em silêncio, podes poupar e investir em conforto ou qualidade de som. Se passas horas em transportes, é provavelmente a característica que mais vais notar no dia a dia."
+          ]
+        },
+        {
+          "heading": "Para estudar e trabalhar",
+          "paragraphs": [
+            "Em longas sessões com Lo-Fi ou Chill a tocar, o peso e a pressão sobre a cabeça contam mais do que os graves. Uns auscultadores leves com cancelamento de ruído moderado ajudam a isolar o barulho de fundo sem cansar ao fim de duas horas.",
+            "Se também fazes videochamadas, confirma o microfone: os modelos desta lista têm microfone integrado, mas nenhum substitui um microfone dedicado para gravar."
+          ],
+          "productLinks": [
+            {
+              "productId": "sony-wh-ch720n",
+              "label": "Ver os Sony WH-CH720N na Worten"
+            }
+          ]
+        },
+        {
+          "heading": "Para ouvir e para criar",
+          "paragraphs": [
+            "Muitos auscultadores de consumo reforçam os graves porque soa bem à primeira audição. Para produzir música, gravar ou simplesmente ouvir a mistura como foi pensada, procura uma assinatura mais neutra e a possibilidade de usar cabo, que elimina a latência do Bluetooth."
           ]
         },
         {
           "heading": "O que comparar além do preço",
           "paragraphs": [
-            "Autonomia anunciada, autonomia com cancelamento de ruído e tempo de carregamento não são a mesma coisa. Consulta as condições indicadas pelo fabricante. Para chamadas, procura avaliações do microfone no ambiente em que o vais usar.",
-            "Define um orçamento total, incluindo acessórios necessários. Um desconto só é útil se o modelo, a versão e as condições de compra corresponderem ao que procuras."
+            "Autonomia anunciada, autonomia com cancelamento de ruído e tempo de carregamento não são a mesma coisa. Os números dos fabricantes são medidos em condições favoráveis; conta com menos a volume alto.",
+            "Um desconto só é útil se o modelo, a cor e a versão corresponderem ao que procuras. Na Worten, confirma também se o vendedor é a própria loja ou um parceiro do Marketplace."
           ]
         }
       ],
       "productIds": [
-        "sony-wh-ch520"
+        "sony-wh-ch520",
+        "sony-wh-ch720n",
+        "jbl-tune-770nc",
+        "audio-technica-ath-m50xbt2",
+        "sony-wh-1000xm5"
       ],
-      "closing": "Escolhe primeiro o formato e o conforto. Depois compara dois ou três modelos que resolvam a mesma necessidade."
+      "badges": {
+        "sony-wh-ch520": "Até 50€",
+        "sony-wh-ch720n": "50–150€ · Para estudar",
+        "jbl-tune-770nc": "50–150€ · Autonomia",
+        "audio-technica-ath-m50xbt2": "Premium · Para criar",
+        "sony-wh-1000xm5": "Premium · Silêncio"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Comparação dos cinco auscultadores recomendados: formato, cancelamento de ruído, autonomia e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Formato",
+          "Cancelamento de ruído",
+          "Autonomia (fabricante)",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "Sony WH-CH520",
+            "On-ear",
+            "Não",
+            "Até 50 h",
+            "Primeira compra, uso casual"
+          ],
+          [
+            "Sony WH-CH720N",
+            "Over-ear",
+            "Sim",
+            "Até 35 h com cancelamento",
+            "Estudar e trabalhar"
+          ],
+          [
+            "JBL Tune 770NC",
+            "Over-ear",
+            "Sim, adaptativo",
+            "Até 70 h (44 h com cancelamento)",
+            "Graves e muita autonomia"
+          ],
+          [
+            "Audio-Technica ATH-M50xBT2",
+            "Over-ear",
+            "Não",
+            "Até 50 h",
+            "Som neutro, produzir música"
+          ],
+          [
+            "Sony WH-1000XM5",
+            "Over-ear",
+            "Sim, topo de gama",
+            "Até 30 h com cancelamento",
+            "Viagens e máximo silêncio"
+          ]
+        ],
+        "note": "Valores indicados pelos fabricantes. A autonomia real depende do volume, do codec e do uso do cancelamento de ruído."
+      },
+      "faq": [
+        {
+          "q": "Quais são os melhores auscultadores baratos?",
+          "a": "Até 50€, os Sony WH-CH520 são uma boa porta de entrada sem fios: leves e com muita autonomia. Não têm cancelamento de ruído, por isso são mais indicados para casa do que para transportes."
+        },
+        {
+          "q": "Vale a pena pagar mais por cancelamento de ruído?",
+          "a": "Vale se ouves música em transportes, open spaces ou viagens. Em casa e em ambientes calmos, o dinheiro rende mais em conforto ou qualidade de som."
+        },
+        {
+          "q": "Que auscultadores escolher para estudar?",
+          "a": "Dá prioridade ao peso e ao conforto, com cancelamento de ruído moderado. Os Sony WH-CH720N são leves e isolam o barulho de fundo em sessões longas."
+        },
+        {
+          "q": "Posso usar auscultadores Bluetooth para ouvir rádio online no computador?",
+          "a": "Sim. Qualquer modelo desta lista liga ao computador por Bluetooth, e com multiponto podes alternar entre o portátil e o telemóvel sem voltar a emparelhar. Para produzir música, prefere a ligação por cabo."
+        }
+      ],
+      "closing": "Escolhe primeiro o formato e o conforto, depois decide se o cancelamento de ruído compensa na tua rotina. Com isso definido, basta comparar dois ou três modelos da mesma gama."
     },
     {
       "slug": "colunas-bluetooth",

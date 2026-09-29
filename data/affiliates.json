@@ -22,8 +22,8 @@
       "linkType": "direct",
       "merchant": "worten-pt",
       "name": "Sony WH-CH520 · Preto",
-      "description": "Auscultadores Bluetooth on-ear com microfone, para quem procura um formato de escuta pessoal sem fios. Antes de escolher, considera se preferes almofadas apoiadas sobre a orelha ou um formato que a envolva.",
-      "image": "https://www.worten.pt/i/352ce7cdb47f2bc85f835f34beb270eafa55be28",
+      "description": "A porta de entrada sem fios: leves, on-ear e com até 50 horas de autonomia segundo a Sony. Não têm cancelamento de ruído e as almofadas apoiam-se sobre a orelha, o que nem todas as pessoas acham confortável em sessões muito longas.",
+      "image": "https://www.worten.pt/i/bbf891ce8f3ca67e5baea7084e0f4dadadb764ea",
       "imageAlt": "Sony WH-CH520 · Preto",
       "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch520-on-ear-microfone-preto-7721305",
       "affiliateUrl": "",
@@ -86,6 +86,78 @@
         "type": "manual",
         "updatedAt": "2026-09-29",
         "referenceUrl": "https://www.worten.pt/produtos/gira-discos-audio-technica-at-lp60xusbgm-automatico-correia-velocidade-33-1-3-45-6936975"
+      }
+    },
+    {
+      "id": "sony-wh-ch720n",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Sony WH-CH720N · Preto",
+      "description": "Over-ear com cancelamento de ruído e um dos pesos mais baixos da categoria, o que conta muito em horas seguidas de estudo ou trabalho. A Sony indica até 35 horas com o cancelamento ativo. O isolamento fica abaixo dos modelos premium.",
+      "image": "https://www.worten.pt/i/1e26e2dc6ff079915dc4d42345d6d91007dacc47",
+      "imageAlt": "Sony WH-CH720N · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch720n-over-ear-microfone-noise-cancelling-preto-7721309",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch720n-over-ear-microfone-noise-cancelling-preto-7721309"
+      }
+    },
+    {
+      "id": "jbl-tune-770nc",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "JBL Tune 770NC · Preto",
+      "description": "Para quem quer carregar o mínimo possível: a JBL anuncia até 70 horas sem cancelamento de ruído e cerca de 44 horas com ele ligado. Assinatura sonora com graves marcados, que combina com eletrónica e pop; quem procura um som mais neutro pode preferir outra opção.",
+      "image": "https://www.worten.pt/i/bb66e27a7047d346e99cbb1608ce2756ba8af23d",
+      "imageAlt": "JBL Tune 770NC · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-jbl-t-770nc-over-ear-microfone-noise-cancelling-preto-7815002",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-jbl-t-770nc-over-ear-microfone-noise-cancelling-preto-7815002"
+      }
+    },
+    {
+      "id": "audio-technica-ath-m50xbt2",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Audio-Technica ATH-M50xBT2 · Azul",
+      "description": "A versão Bluetooth de uns auscultadores de estúdio muito usados por músicos e produtores. Som equilibrado, até 50 horas de autonomia segundo a marca e ligação por cabo para quando quiseres produzir. Não têm cancelamento de ruído ativo.",
+      "image": "https://www.worten.pt/i/218439c3a06d99949f3db5d3fcc041fb1c657f2e",
+      "imageAlt": "Audio-Technica ATH-M50xBT2 · Azul",
+      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-audio-technica-ath-m50xbt2ds-over-ear-azul-7646605",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-audio-technica-ath-m50xbt2ds-over-ear-azul-7646605"
+      }
+    },
+    {
+      "id": "sony-wh-1000xm5",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Sony WH-1000XM5 · Preto",
+      "description": "A referência para quem quer silêncio: cancelamento de ruído de topo, conforto para viagens longas e até 30 horas de autonomia com o cancelamento ativo, segundo a Sony. Não dobram como a geração anterior, o que ocupa mais espaço na mochila.",
+      "image": "https://www.worten.pt/i/6f688135b65171acfaa8561e2e24f33f76008590",
+      "imageAlt": "Sony WH-1000XM5 · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-1000xm5-headband-premium-over-ear-microfone-noise-cancelling-preto-7588185",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-29",
+        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-1000xm5-headband-premium-over-ear-microfone-noise-cancelling-preto-7588185"
       }
     }
   ]

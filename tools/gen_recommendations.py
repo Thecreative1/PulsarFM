@@ -184,8 +184,10 @@ def render_price(price, today=None):
             'Preço e disponibilidade podem mudar. Confirma na loja.</small></div>')
 
 
-def render_product(catalog, product, position, today=None):
-    return template("product.html", id=esc(product["id"]), image=esc(image_url(product["image"])),
+def render_product(catalog, product, position, today=None, badge=""):
+    badge_html = f'<p class="product-badge">{esc(badge)}</p>' if badge else ""
+    return template("product.html", id=esc(product["id"]), badge=badge_html,
+                    image=esc(image_url(product["image"])),
                     image_alt=esc(product["imageAlt"]), name=esc(product["name"]),
                     merchant=esc(catalog["merchants"][product["merchant"]]["name"]),
                     description=esc(product["description"]), price=render_price(product.get("price"), today),
@@ -204,6 +206,34 @@ def guide_link(article, index=None):
 def page(title, description, path, content, article=False):
     return template("page.html", title=esc(title), description=esc(description), path=esc(path),
                     og_type="article" if article else "website", content=content)
+
+
+def render_comparison(comparison):
+    """Optional table: {"caption", "columns": [...], "rows": [[...], ...]}; plain escaped text."""
+    columns = comparison["columns"]
+    if any(len(row) != len(columns) for row in comparison["rows"]):
+        raise ValueError("Every comparison row needs one cell per column")
+    head = "".join(f'<th scope="col">{esc(col)}</th>' for col in columns)
+    body = "".join('<tr><th scope="row">' + esc(row[0]) + '</th>' +
+                   "".join(f'<td>{esc(cell)}</td>' for cell in row[1:]) + '</tr>'
+                   for row in comparison["rows"])
+    note = f'<p class="article-meta">{esc(comparison["note"])}</p>' if comparison.get("note") else ""
+    return ('<section class="guide-comparison" aria-labelledby="comparacao">'
+            f'<h2 id="comparacao">{esc(comparison.get("heading", "Comparação rápida"))}</h2>'
+            f'<div class="table-scroll" tabindex="0"><table><caption class="sr-only">{esc(comparison["caption"])}</caption>'
+            f'<thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>{note}</section>')
+
+
+def render_faq(faq):
+    """Optional FAQ: visible section + FAQPage JSON-LD built from the same text."""
+    items = "".join(f'<div class="faq-item"><h3>{esc(item["q"])}</h3><p>{esc(item["a"])}</p></div>'
+                    for item in faq)
+    ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": item["q"],
+         "acceptedAnswer": {"@type": "Answer", "text": item["a"]}} for item in faq]},
+        ensure_ascii=False).replace("</", "<\\/")  # never close the script tag early
+    return ('<section class="guide-faq" aria-labelledby="faq"><h2 id="faq">Perguntas frequentes</h2>'
+            f'{items}</section><script type="application/ld+json">{ld}</script>')
 
 
 def render_article(article, articles, catalog, products):
@@ -230,8 +260,13 @@ def render_article(article, articles, catalog, products):
         parts.append('</section>')
         sections.append("\n".join(parts))
     product_html = ""
+    badges = article.get("badges", {})
+    for product_id in badges:
+        if product_id not in article["productIds"]:
+            raise ValueError("Badge for a product that is not in this article: " + product_id)
     if selected:
-        cards = "\n".join(render_product(catalog, product, f"recommendation-{i}")
+        cards = "\n".join(render_product(catalog, product, f"recommendation-{i}",
+                                         badge=badges.get(product["id"], ""))
                           for i, product in enumerate(selected, 1))
         product_html = ('<section class="product-selection" aria-labelledby="selecao">'
                         '<h2 id="selecao">Produtos para comparar</h2>' +
@@ -246,6 +281,8 @@ def render_article(article, articles, catalog, products):
                        updated_label=updated.strftime("%d/%m/%Y"),
                        disclosure=template("disclosure.html") if has_affiliates else "",
                        sections="\n".join(sections), products=product_html,
+                       extras=(render_comparison(article["comparison"]) if article.get("comparison") else "") +
+                              (render_faq(article["faq"]) if article.get("faq") else ""),
                        closing=esc(article["closing"]), related="\n".join(guide_link(item) for item in others))
     return page(article["title"], article["summary"], f'/recomendacoes/{article["slug"]}/', content, True)
 

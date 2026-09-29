@@ -43,7 +43,31 @@ class AffiliateTests(unittest.TestCase):
         self.catalog, self.product = fixture()
         self.editorial = copy.deepcopy(gen.read_json(gen.ROOT / 'data/recommendations.json'))
         for article in self.editorial['articles']:
+            # The fixture catalog only has one product: drop every real reference
             article['productIds'] = []
+            article.pop('badges', None)
+            for section in article['sections']:
+                section.pop('productLinks', None)
+
+    def test_badge_comparison_and_faq(self):
+        article = self.editorial['articles'][0]
+        article['productIds'] = [self.product['id']]
+        article['badges'] = {self.product['id']: 'Até 50€ <b>'}
+        article['comparison'] = {'caption': 'Tabela', 'columns': ['Modelo', 'Nota'],
+                                 'rows': [['A', 'x < y']]}
+        article['faq'] = [{'q': 'Pergunta?', 'a': 'Resposta </script> segura'}]
+        html = gen.generate(self.catalog, self.editorial)['recomendacoes/melhores-auscultadores/index.html']
+        self.assertIn('<p class="product-badge">Até 50€ &lt;b&gt;</p>', html)
+        self.assertIn('<td>x &lt; y</td>', html)
+        self.assertIn('"@type": "FAQPage"', html)
+        self.assertNotIn('Resposta </script>', html)
+        article['comparison']['rows'] = [['A']]
+        with self.assertRaises(ValueError):
+            gen.generate(self.catalog, self.editorial)
+        article.pop('comparison')
+        article['badges'] = {'not-in-article': 'x'}
+        with self.assertRaises(ValueError):
+            gen.generate(self.catalog, self.editorial)
 
     def test_deep_link_roundtrip_and_clickref(self):
         url = gen.affiliate_url(self.catalog, self.product)

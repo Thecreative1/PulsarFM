@@ -2,7 +2,7 @@
 
 ## Estado e integração
 
-Catálogo inicial com quatro produtos da Worten e links diretos não remunerados: Sony WH-CH520, JBL Go 4, JBL Bar 2.0 All-In-One e Audio-Technica AT-LP60XUSBGM. Os links e imagens vêm das páginas indicadas em `source.referenceUrl`. Não mostramos preços nem apresentamos estes produtos como testes da redação. A disponibilidade e o vendedor, incluindo ofertas Marketplace, devem ser confirmados na loja.
+Catálogo com oito produtos da Worten e links diretos não remunerados (candidatura ao programa Worten na Awin pendente desde 29/09/2026). O guia de auscultadores tem cinco: Sony WH-CH520, Sony WH-CH720N, JBL Tune 770NC, Audio-Technica ATH-M50xBT2 e Sony WH-1000XM5. Os restantes guias têm um cada: JBL Go 4, JBL Bar 2.0 All-In-One e Audio-Technica AT-LP60XUSBGM. Os links e imagens vêm das páginas indicadas em `source.referenceUrl`. Não mostramos preços nem apresentamos estes produtos como testes da redação. A disponibilidade e o vendedor, incluindo ofertas Marketplace, devem ser confirmados na loja.
 
 Cada produto tem `linkType: "direct"` ou `"affiliate"`. Os atuais usam `direct`: abrem `destinationUrl` com `rel="noopener"`, sem exigir IDs Awin e sem evento `affiliate_click`, `data-affiliate-link` ou divulgação de comissão. A nota junto dos produtos explica que não há comissão.
 
@@ -82,6 +82,24 @@ Dentro de uma entrada de `sections`, usar referências ao mesmo catálogo:
 ```
 
 O gerador renderiza os links em parágrafos do artigo e aplica os mesmos atributos, tracking e divulgação. Os parágrafos são texto simples e escapado, não HTML livre.
+
+## Etiquetas, tabela comparativa e FAQ
+
+Campos opcionais de cada artigo em `data/recommendations.json` (texto simples, sempre escapado):
+
+```json
+"badges": { "sony-wh-ch520": "Até 50€" },
+"comparison": {
+  "heading": "Comparação rápida",
+  "caption": "Descrição da tabela para leitores de ecrã",
+  "columns": ["Modelo", "Formato", "..."],
+  "rows": [["Sony WH-CH520", "On-ear", "..."]],
+  "note": "Valores indicados pelos fabricantes."
+},
+"faq": [{ "q": "Pergunta?", "a": "Resposta." }]
+```
+
+`badges` só aceita IDs presentes em `productIds` do mesmo artigo; cada linha de `rows` tem de ter uma célula por coluna (a primeira é o cabeçalho da linha). A FAQ gera a secção visível e o JSON-LD `FAQPage` a partir do mesmo texto. As etiquetas de gama de preço refletem os preços à data de `updatedAt`: rever quando atualizares o artigo.
 
 ## Novos anunciantes e artigos
 
