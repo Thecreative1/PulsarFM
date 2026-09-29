@@ -306,6 +306,24 @@
       box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
     }
 
+    /* ── GEAR link (left column, under FLOAT) → recommendation guides.
+       An <a>, opens in a new tab so the radio keeps playing. */
+    .scan-btn.gear-btn {
+      top: 124px;
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid rgba(255, 45, 155, 0.4);
+      color: var(--neon-pink);
+      background: linear-gradient(90deg, rgba(0, 255, 204, 0.06), rgba(255, 45, 155, 0.08));
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .scan-btn.gear-btn:hover {
+      border-color: var(--neon-pink);
+      color: var(--neon-pink);
+      box-shadow: 0 0 10px rgba(255, 45, 155, 0.45), 0 0 18px rgba(0, 255, 204, 0.15);
+    }
+
     .filter-btn {
       background-color: var(--line-secondary);
       color: #001114;
@@ -1349,7 +1367,7 @@
 
       .hero-logo {
         /* narrow enough to clear the absolute corner buttons on both sides */
-        width: min(40%, 150px);
+        width: min(34%, 150px); /* 34%: the 4th left button (GEAR) sits beside it */
         margin-bottom: 8px;
       }
 
@@ -1449,6 +1467,7 @@
     <button class="scan-btn" id="scan-btn">⚡ SCAN</button>
     <button class="scan-btn skin-btn" id="skin-btn">🎨 SKINS</button>
     <button class="scan-btn player-lock-btn" id="player-lock-btn">🔓 FLOAT</button>
+    <a class="scan-btn gear-btn" id="gear-btn" href="recomendacoes/" target="_blank" rel="noopener" aria-label="Gear: guias de equipamento de som (nova aba)">🎧 GEAR</a>
     <button class="lang-switcher share-btn" id="share-btn">📡 SHARE</button>
     <button class="scan-btn sleep-btn" id="sleep-btn">😴 SLEEP</button>
 
@@ -1724,6 +1743,7 @@
         privacyLink:   "Privacidade & Cookies",
         recommendationsLink: "Recomendações PulsarFM ↗",
         recommendationsLabel: "Recomendações PulsarFM (nova aba)",
+        gearLabel: "Gear: guias de equipamento de som (nova aba)",
         shareListening: "🎧 A ouvir {station} no Pulsar FM — rádio retro com visualizador Winamp",
         shareDefault:   "Pulsar FM — rádio online retro com visualizador Winamp. Neon nights incluídas.",
         shareCopied:    "✓ COPIADO",
@@ -1800,6 +1820,7 @@
         privacyLink:   "Privacy & Cookies",
         recommendationsLink: "PulsarFM recommendations (PT) ↗",
         recommendationsLabel: "PulsarFM recommendations in Portuguese (new tab)",
+        gearLabel: "Gear: audio equipment guides in Portuguese (new tab)",
         shareListening: "🎧 Listening to {station} on Pulsar FM — retro radio with the Winamp visualizer",
         shareDefault:   "Pulsar FM — retro online radio with the Winamp visualizer. Neon nights included.",
         shareCopied:    "✓ COPIED",
@@ -2000,6 +2021,7 @@ function updatePlayerButtons() {
       document.getElementById("privacy-link").textContent   = t.privacyLink;
       document.getElementById("recommendations-link").textContent = t.recommendationsLink;
       document.getElementById("recommendations-link").setAttribute("aria-label", t.recommendationsLabel);
+      document.getElementById("gear-btn").setAttribute("aria-label", t.gearLabel);
       document.getElementById("kofi-float").textContent     = t.kofiFloat;
       document.getElementById("consent-title").textContent  = t.consentTitle;
       document.getElementById("consent-text").innerHTML     = t.consentText;

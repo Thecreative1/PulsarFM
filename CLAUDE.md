@@ -122,7 +122,7 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
 - Single-genre filter view: `#radio-groups.single-genre` makes the visible
   group full-width with a responsive station grid (`auto-fill, minmax(220px, 1fr)`).
   The class is toggled in `updateFilterState()`.
-- Corner buttons (SCAN/SKINS/FLOAT left; PT-EN/TRIP/SHARE/SLEEP right) are
+- Corner buttons (SCAN/SKINS/FLOAT/GEAR left; PT-EN/TRIP/SHARE/SLEEP right) are
   absolute in `#container`, base rule `.scan-btn, .lang-switcher` sets
   `top:16px` and `z-index:2` (must stay above the hero logo or mobile taps
   fail). A new corner button needs `.scan-btn.<yourclass>` specificity to
@@ -189,4 +189,15 @@ PT/EN switch · consent banner · PWA manifest · 8 SEO genre pages ·
 `?genre=` deep links with URL sync · dock bezel + side wings (now playing,
 clock; ≥1180px) · idle Milkdrop overlay (`.md-idle`, injected next to the
 Butterchurn canvas and re-attached by a MutationObserver; click = resume
-last station or random).
+last station or random) · GEAR corner link → `/recomendacoes/` (new tab so
+the radio keeps playing; mobile logo is `min(34%,150px)` to clear 4-high
+columns) · per-genre GEAR box on genre pages (`GEAR` dict in the generator
+maps each genre page to a `/recomendacoes/<guide>/`).
+
+## Affiliates / recommendations
+
+`recomendacoes/` = content hub with 6 guides (the "product categories").
+Strategy (agreed with owner): editorial guides with affiliate links inside —
+NOT a product-grid "loja" (thin affiliate content hurts SEO/AdSense). When
+affiliate links go live, the hub disclaimer "A PulsarFM não recebe comissão"
+MUST be changed, and links need `rel="sponsored noopener"`.

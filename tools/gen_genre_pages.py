@@ -166,7 +166,35 @@ GA = '''  <!-- Google tag (gtag.js) with Consent Mode v2 - default: everything d
     gtag('config', 'G-YRD1BYXB78');
   </script>'''
 
+# Genre → matching /recomendacoes/ guide (contextual GEAR block on each page).
+# (guide slug, headline, one-line pitch)
+GEAR = {
+ "radios-rock":      ("soundbars", "Concertos ao vivo na sala",
+                      "Riffs e baterias pedem espaço: vê o que conta numa soundbar antes de comprar."),
+ "radios-jazz":      ("gira-discos", "Jazz soa ainda melhor em vinil",
+                      "Do disco às colunas: o que precisas para montar o teu primeiro gira-discos."),
+ "radios-chill":     ("colunas-bluetooth", "Chill em qualquer lado",
+                      "Da cozinha ao fim de tarde no jardim: como escolher uma coluna Bluetooth."),
+ "radios-pop":       ("colunas-bluetooth", "Leva os hits contigo",
+                      "Tamanho, autonomia e ligações: o guia das colunas Bluetooth."),
+ "radios-study":     ("melhores-auscultadores", "Foco total para estudar",
+                      "Auscultadores para longas sessões de estudo ou trabalho — conforto primeiro."),
+ "radios-electronica": ("home-studio", "Da pista ao estúdio",
+                      "Queres começar a produzir? Monta um home studio pequeno que faça sentido."),
+ "radios-psytrance":  ("melhores-auscultadores", "Graves a sério, sem incomodar ninguém",
+                      "Como escolher auscultadores para ouvires psytrance como deve ser."),
+ "radios-synthwave": ("gira-discos", "Retro até ao fim",
+                      "Synthwave em vinil é outro ritual: prepara o teu primeiro lado A."),
+}
+
 def page(slug, g):
+    gear_slug, gear_h, gear_p = GEAR[slug]
+    gear_html = '''    <a class="gear-box" href="/recomendacoes/{}/">
+      <span class="gear-tag">\U0001F3A7 GEAR</span>
+      <strong>{}</strong>
+      <span>{}</span>
+      <span class="gear-go">Ler o guia →</span>
+    </a>'''.format(gear_slug, gear_h, gear_p)
     others = "\n".join(
         '          <a href="/{}/" class="genre-filter-link">{} {}</a>'.format(s, d["emoji"], d["nome"])
         for s, d in GENRES.items() if s != slug)
@@ -422,6 +450,32 @@ def page(slug, g):
       box-shadow: 0 0 24px rgba(57, 255, 20, 0.6);
     }}
 
+    .gear-box {{
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 26px 0 8px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 1px solid rgba(255, 45, 155, 0.35);
+      background: linear-gradient(90deg, rgba(0, 255, 204, 0.05), rgba(255, 45, 155, 0.08));
+      color: var(--text-dim);
+      font-size: 0.87rem;
+      line-height: 1.6;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.14s ease;
+    }}
+
+    .gear-box:hover {{
+      border-color: var(--neon-pink);
+      box-shadow: 0 0 16px rgba(255, 45, 155, 0.3);
+      transform: translateY(-2px);
+    }}
+
+    .gear-box strong {{ color: var(--line-primary); font-size: 1rem; }}
+    .gear-tag {{ color: var(--neon-pink); font-size: 0.72rem; letter-spacing: 0.18em; }}
+    .gear-go {{ color: var(--neon-pink); font-weight: bold; }}
+
     .faq {{ margin-bottom: 6px; }}
 
     .faq-item {{
@@ -465,6 +519,8 @@ def page(slug, g):
 
     <a class="home-cta" href="/?genre={genre}">▶ OUVIR TUDO NO PULSAR FM</a>
 
+{gear_html}
+
     <h2>Perguntas frequentes</h2>
     <div class="faq">
 {faq_html}
@@ -480,7 +536,7 @@ def page(slug, g):
 </body>
 </html>
 '''.format(GA=GA, slug=slug, cards=cards, others=others, stations_ld=stations_ld,
-           faq_html=faq_html, faq_ld=faq_ld,
+           faq_html=faq_html, faq_ld=faq_ld, gear_html=gear_html,
            title=g["title"], desc=g["desc"], h1=g["h1"], intro=g["intro"],
            emoji=g["emoji"], nome=g["nome"], genre=g["genre"])
 
