@@ -186,4 +186,7 @@ station) · SKINS drawer (10 .wsz, persisted) · dock/float player modes ·
 TRIP mode (fullscreen visualizer) · SLEEP timer (15/30/60 min → pause) ·
 resume-last-station chip · SHARE button (Web Share API + clipboard fallback) ·
 PT/EN switch · consent banner · PWA manifest · 8 SEO genre pages ·
-`?genre=` deep links with URL sync.
+`?genre=` deep links with URL sync · dock bezel + side wings (now playing,
+clock; ≥1180px) · idle Milkdrop overlay (`.md-idle`, injected next to the
+Butterchurn canvas and re-attached by a MutationObserver; click = resume
+last station or random).

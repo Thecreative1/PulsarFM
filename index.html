@@ -1146,7 +1146,72 @@
       text-shadow: 0 0 12px rgba(0, 255, 204, 0.55), 0 0 26px rgba(255, 45, 155, 0.25);
     }
 
+    /* Idle Milkdrop overlay: injected next to the Butterchurn canvas (it moves
+       with the window in float mode). Hidden once a station is selected. */
+    #webamp .gen-window div:has(> canvas) { position: relative; }
+
+    .md-idle {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      padding: 12px;
+      font-family: 'Share Tech Mono', 'Courier New', monospace;
+      text-align: center;
+      cursor: pointer;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0, 255, 204, 0.03) 3px, rgba(0, 255, 204, 0.03) 4px),
+        radial-gradient(ellipse at center, rgba(192, 68, 255, 0.18), transparent 70%),
+        #000;
+      color: var(--text-dim);
+    }
+
+    body.is-playing .md-idle,
+    body.trip-active .md-idle { display: none; }
+
+    .md-idle-play {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: 2px solid var(--line-primary);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      color: var(--line-primary);
+      text-shadow: 0 0 10px var(--line-primary);
+      box-shadow: 0 0 18px rgba(0, 255, 204, 0.35), inset 0 0 14px rgba(255, 45, 155, 0.25);
+      animation: md-idle-pulse 2.2s ease-in-out infinite;
+    }
+
+    .md-idle-title {
+      color: var(--line-primary);
+      font-size: 0.95rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px rgba(0, 255, 204, 0.55);
+    }
+
+    .md-idle-sub { font-size: 0.72rem; letter-spacing: 0.08em; max-width: 90%; }
+
+    .md-idle:hover .md-idle-play { box-shadow: 0 0 26px rgba(0, 255, 204, 0.6), inset 0 0 18px rgba(255, 45, 155, 0.4); }
+
+    @keyframes md-idle-pulse {
+      50% { transform: scale(1.07); box-shadow: 0 0 28px rgba(0, 255, 204, 0.5), inset 0 0 18px rgba(255, 45, 155, 0.35); }
+    }
+
+    /* stacked mobile milkdrop is only ~150px tall */
+    @media (max-width: 760px) {
+      .md-idle { gap: 6px; }
+      .md-idle-play { width: 40px; height: 40px; font-size: 1rem; }
+      .md-idle-sub { display: none; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
+      .md-idle-play,
       body.is-playing .dock-bars span,
       body.is-playing .dock-live-dot { animation: none; }
     }
@@ -1669,6 +1734,8 @@
         dockIdle:       "Escolhe uma estação ↓",
         dockClock:      "Hora local",
         dockTagline:    "48 estações · 24/7",
+        mdIdleTitle:    "Carrega para tocar",
+        mdIdleSub:      "O visualizador acorda com a música",
         filters: [
           { genre: "all",       label: "🎧 Todos" },
           { genre: "favs",      label: "⭐ Favoritos" },
@@ -1743,6 +1810,8 @@
         dockIdle:       "Pick a station ↓",
         dockClock:      "Local time",
         dockTagline:    "48 stations · 24/7",
+        mdIdleTitle:    "Press to play",
+        mdIdleSub:      "The visualizer wakes up with the music",
         filters: [
           { genre: "all",       label: "🎧 All" },
           { genre: "favs",      label: "⭐ Favorites" },
@@ -2006,6 +2075,27 @@ function updatePlayerButtons() {
       document.getElementById("dock-genre").textContent    = found ? t.genreNames[found.genre] : "";
       document.getElementById("dock-clock-label").textContent = t.dockClock;
       document.getElementById("dock-tagline").textContent     = t.dockTagline;
+      mdIdle.querySelector(".md-idle-title").textContent = t.mdIdleTitle;
+      mdIdle.querySelector(".md-idle-sub").textContent   = t.mdIdleSub;
+      mdIdle.setAttribute("aria-label", t.mdIdleTitle);
+    }
+
+    // ── Idle Milkdrop overlay (black canvas before the first station) ──
+    const mdIdle = document.createElement("button");
+    mdIdle.type = "button";
+    mdIdle.className = "md-idle";
+    mdIdle.innerHTML = '<span class="md-idle-play" aria-hidden="true">▶</span><span class="md-idle-title"></span><span class="md-idle-sub"></span>';
+    mdIdle.addEventListener("click", () => {
+      if (lastPlayed) playStation(lastPlayed.url, lastPlayed.name);
+      else playRandom();
+    });
+
+    // Webamp owns the DOM around the canvas — (re)attach the overlay whenever
+    // it is missing (first render, canvas re-created, window re-opened).
+    function attachMilkdropIdle() {
+      if (mdIdle.isConnected) return;
+      const canvas = document.querySelector("#webamp .gen-window canvas");
+      if (canvas) canvas.parentElement.appendChild(mdIdle);
     }
 
     function tickDockClock() {
@@ -2325,6 +2415,11 @@ function updatePlayerButtons() {
         updatePlayerButtons();
         layoutPlayerWindows();
         refreshResumeChip();
+        attachMilkdropIdle();
+        // Butterchurn creates its canvas asynchronously; marquee updates make
+        // this fire often, but the isConnected check keeps it a no-op
+        new MutationObserver(attachMilkdropIdle)
+          .observe(document.getElementById("webamp"), { childList: true, subtree: true });
         if (activeSkin) webamp.setSkinFromUrl(activeSkin);
 
         // Re-dock the windows when the viewport changes (rotation, resize)
