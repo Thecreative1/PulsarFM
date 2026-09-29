@@ -9,4 +9,20 @@ The editorial area extends the existing radio site. Listeners may open a guide b
 - Shape: rounded panels, thin borders, subtle glow. Avoid adding decorative animation to reading surfaces.
 - Editorial body measure: about 68 characters. Generous heading spacing, smaller metadata.
 - Recommendations: image and copy in a horizontal row, stacked on phones, with a single affiliate CTA and nearby disclosure.
-- Home integration: one bilingual footer link opening the editorial section in another tab so playback continues.
+- Home integration: a neon GEAR corner button (left column, under FLOAT) plus the bilingual footer link, both opening the editorial section in another tab so playback continues. Each genre page also has a GEAR box linking to its matching guide.
+
+## Neon on the frame, calm on the text
+
+Rule agreed with the owner (29/09/2026): the editorial pages must feel like part of PulsarFM, but neon never touches reading surfaces. Too little neon makes the section look like another site; too much tires the eyes and makes recommendations look like ads.
+
+Neon allowed on the page frame (all in `assets/recommendations.css`, "Brand edges" block):
+
+- Header bottom line: purple → cyan → pink gradient with glow (same as the radio's dock separator).
+- Brand name and hub `h1`: soft cyan text glow.
+- Hub illustration: cyan border with outer glow.
+- Guide list: on hover/focus only, a cyan→pink bar on the left and a glowing pink number. At rest it stays flat.
+- Policy panel: faint purple border.
+- Product badges: pink pill with a faint glow.
+- Body background: the same faint radial glows as the radio home page (purple top-left, pink top-right, blue bottom).
+
+Keep calm: article body text, checklists, product cards, the comparison table and FAQs — no glow, no animation. Transitions respect `prefers-reduced-motion`.

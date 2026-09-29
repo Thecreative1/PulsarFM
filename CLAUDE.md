@@ -206,3 +206,6 @@ to `linkType: "affiliate"` automatically swaps the no-commission note for the
 disclosure and adds `rel="sponsored nofollow noopener"`. Worten product IDs
 containing `mrkean` are Marketplace sellers — prefer Worten-sold ones.
 Tests: `python -m pytest -q tests` + `node --test tests/affiliate-analytics.test.cjs`.
+Design rule for these pages: neon on the frame, calm on the text — see
+`docs/DESIGN.md` before adding any glow. CSS-only changes need no regeneration,
+but `/assets/recommendations.css` is cached hard: cache-bust when testing.
