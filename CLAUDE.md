@@ -57,6 +57,12 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
   directly under `<body>`. Selectors like `#winamp > div` match nothing.
   The `#winamp` div is only used by Webamp to compute initial centering,
   and by us as the visual "dock panel" (fixed, opaque, `z-index: 999`).
+  Webamp **empties** that node on render — never put children in `#winamp`.
+  Dock decorations (now-playing/clock wings) live in the sibling `#dock-deco`,
+  which shares the dock's geometry rule. The dock width must equal
+  `#container`'s (`calc(100% - 48px)`, `- 32px` ≤560px, border-box) and
+  `layoutPlayerWindows()` centers on `documentElement.clientWidth` (not
+  `innerWidth`, which includes the scrollbar) so the bezel lines up.
 - **z-index layering (dock mode):** dock panel `#winamp` = 999, `#webamp`
   (player) = 1000 (via the `zIndex` constructor option + CSS `!important`),
   `#container` = 1001 (so corner buttons stay clickable). Consequence: any

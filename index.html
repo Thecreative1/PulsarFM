@@ -948,24 +948,35 @@
 
     /* ── Player dock / float toggle ── */
 
-    /* DOCK: push page content below the fixed panel */
+    /* DOCK: push page content below the fixed panel — exactly its height, any
+       gap shows #container's glow as a grey seam at the junction */
     body:not(.player-floating) {
-      padding-top: calc(var(--stack-height) + 8px);
+      padding-top: var(--stack-height);
     }
 
     /* DOCK: #winamp becomes a fixed header panel.
        IMPORTANT: no transform here — transform would make #winamp a containing
        block for position:fixed children, breaking Webamp's internal layout.
        IMPORTANT: no backdrop-filter — can also create compositing issues. */
-    body:not(.player-floating) #winamp {
+    body:not(.player-floating) #winamp,
+    body:not(.player-floating) #dock-deco {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       margin-inline: auto;
-      width: min(1200px, calc(100% - 16px));
+      /* must equal #container's width: body padding (2×16) + container inset (16) */
+      width: min(1200px, calc(100% - 48px));
       height: var(--stack-height);
+      box-sizing: border-box;
       z-index: 999;
+    }
+
+    /* #dock-deco (side wings) overlays the panel; later in DOM, so it paints
+       above #winamp's background at the same z-index */
+    #dock-deco { display: none; pointer-events: none; }
+
+    body:not(.player-floating) #winamp {
       /* Layered atmospheric background:
          scanlines → center glow → purple left → pink right → dark base */
       background:
@@ -1005,6 +1016,139 @@
       );
       box-shadow: 0 0 12px rgba(0, 255, 204, 0.35), 0 0 24px rgba(255, 45, 155, 0.18);
       pointer-events: none;
+    }
+
+    /* Bezel: frames the 725×348 player cluster so it sits in a "rack"
+       instead of floating in the void. A transform on the pseudo is fine —
+       only #winamp itself must stay transform-free. */
+    body:not(.player-floating) #winamp::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 743px;
+      height: 366px;
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 255, 204, 0.16);
+      border-radius: 8px;
+      background:
+        linear-gradient(var(--line-primary), var(--line-primary)) top left / 18px 2px no-repeat,
+        linear-gradient(var(--line-primary), var(--line-primary)) top left / 2px 18px no-repeat,
+        linear-gradient(var(--neon-pink), var(--neon-pink)) top right / 18px 2px no-repeat,
+        linear-gradient(var(--neon-pink), var(--neon-pink)) top right / 2px 18px no-repeat,
+        linear-gradient(var(--neon-purple), var(--neon-purple)) bottom left / 18px 2px no-repeat,
+        linear-gradient(var(--neon-purple), var(--neon-purple)) bottom left / 2px 18px no-repeat,
+        linear-gradient(var(--line-primary), var(--line-primary)) bottom right / 18px 2px no-repeat,
+        linear-gradient(var(--line-primary), var(--line-primary)) bottom right / 2px 18px no-repeat,
+        rgba(0, 0, 0, 0.35);
+      box-shadow:
+        0 0 22px rgba(0, 255, 204, 0.10),
+        0 0 40px rgba(192, 68, 255, 0.08),
+        inset 0 0 30px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+    }
+
+    /* Side wings: now-playing (left) + clock (right) fill the empty panel
+       flanks on wide screens. Only where there's room beside the 743px bezel. */
+    .dock-wing { display: none; }
+
+    @media (min-width: 1180px) {
+      body:not(.player-floating) #dock-deco { display: block; }
+      body:not(.player-floating) .dock-wing {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc((100% - 743px) / 2 - 48px);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+      }
+      .dock-wing-left  { left: 28px; align-items: flex-start; text-align: left; }
+      .dock-wing-right { right: 28px; align-items: flex-end; text-align: right; }
+    }
+
+    .dock-wing-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--line-primary);
+      text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+    }
+
+    .dock-live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 45, 155, 0.35);
+    }
+
+    body.is-playing .dock-live-dot {
+      background: var(--neon-pink);
+      box-shadow: 0 0 10px var(--neon-pink);
+      animation: dock-pulse 1.4s ease-in-out infinite;
+    }
+
+    @keyframes dock-pulse {
+      50% { opacity: 0.35; }
+    }
+
+    .dock-station {
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: none;
+      color: var(--text-primary);
+      text-shadow: 0 0 10px rgba(0, 255, 204, 0.35);
+      overflow-wrap: anywhere;
+    }
+
+    body:not(.is-playing) .dock-station { color: var(--text-dim); font-size: 0.85rem; }
+
+    .dock-genre { letter-spacing: 0.1em; color: var(--neon-purple); text-shadow: 0 0 8px rgba(192, 68, 255, 0.45); }
+
+    .dock-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 22px;
+    }
+
+    .dock-bars span {
+      width: 4px;
+      height: 3px;
+      background: linear-gradient(to top, var(--line-primary), var(--neon-pink));
+      border-radius: 1px;
+      opacity: 0.4;
+    }
+
+    body.is-playing .dock-bars span {
+      opacity: 1;
+      animation: dock-bar 0.9s ease-in-out infinite alternate;
+    }
+    body.is-playing .dock-bars span:nth-child(2) { animation-delay: -0.3s; animation-duration: 0.7s; }
+    body.is-playing .dock-bars span:nth-child(3) { animation-delay: -0.6s; animation-duration: 1.1s; }
+    body.is-playing .dock-bars span:nth-child(4) { animation-delay: -0.2s; animation-duration: 0.8s; }
+    body.is-playing .dock-bars span:nth-child(5) { animation-delay: -0.5s; animation-duration: 1s; }
+
+    @keyframes dock-bar {
+      from { height: 3px; }
+      to   { height: 22px; }
+    }
+
+    .dock-clock {
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: var(--line-primary);
+      text-shadow: 0 0 12px rgba(0, 255, 204, 0.55), 0 0 26px rgba(255, 45, 155, 0.25);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body.is-playing .dock-bars span,
+      body.is-playing .dock-live-dot { animation: none; }
     }
 
     /* DOCK: #container connects visually below the panel */
@@ -1109,6 +1253,8 @@
     /* Below 760px the player switches to the stacked mobile layout (main + milkdrop) */
     @media (max-width: 760px) {
       :root { --stack-height: 300px; }
+      /* stacked 275px player: no room for the desktop bezel */
+      body:not(.player-floating) #winamp::before { display: none; }
     }
 
     @media (max-width: 560px) {
@@ -1116,6 +1262,12 @@
       body {
         padding-inline: 8px;
         overflow-x: hidden;
+      }
+
+      /* keep matching #container: body padding (2×8) + container inset (16) */
+      body:not(.player-floating) #winamp,
+      body:not(.player-floating) #dock-deco {
+        width: calc(100% - 32px);
       }
 
       #container {
@@ -1211,6 +1363,20 @@
 </head>
 <body>
   <div id="winamp"></div>
+  <!-- Sibling overlay, NOT inside #winamp: Webamp empties its render node -->
+  <div id="dock-deco">
+    <div class="dock-wing dock-wing-left" aria-live="polite">
+      <div class="dock-wing-label"><span class="dock-live-dot"></span><span id="dock-np-label">A tocar</span></div>
+      <div class="dock-station" id="dock-station">Escolhe uma estação ↓</div>
+      <div class="dock-genre" id="dock-genre"></div>
+      <div class="dock-bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="dock-wing dock-wing-right" aria-hidden="true">
+      <div class="dock-wing-label" id="dock-clock-label">Hora local</div>
+      <div class="dock-clock" id="dock-clock">--:--</div>
+      <div class="dock-genre" id="dock-tagline">48 estações · 24/7</div>
+    </div>
+  </div>
 
   <div id="container">
     <button class="lang-switcher" id="lang-switcher">EN</button>
@@ -1499,6 +1665,10 @@
         favLabel:      "Adicionar aos favoritos",
         favsEmpty:     "☆ Ainda não tens favoritos.<br>Carrega na estrela de uma rádio para a guardares aqui.",
         resumeLabel:   "▶ Continuar a ouvir",
+        dockNowPlaying: "A tocar",
+        dockIdle:       "Escolhe uma estação ↓",
+        dockClock:      "Hora local",
+        dockTagline:    "48 estações · 24/7",
         filters: [
           { genre: "all",       label: "🎧 Todos" },
           { genre: "favs",      label: "⭐ Favoritos" },
@@ -1569,6 +1739,10 @@
         favLabel:      "Add to favorites",
         favsEmpty:     "☆ No favorites yet.<br>Tap the star on any station to keep it here.",
         resumeLabel:   "▶ Continue listening",
+        dockNowPlaying: "Now playing",
+        dockIdle:       "Pick a station ↓",
+        dockClock:      "Local time",
+        dockTagline:    "48 stations · 24/7",
         filters: [
           { genre: "all",       label: "🎧 All" },
           { genre: "favs",      label: "⭐ Favorites" },
@@ -1763,6 +1937,7 @@ function updatePlayerButtons() {
       document.getElementById("consent-accept").textContent = t.consentAccept;
       document.getElementById("consent-reject").textContent = t.consentReject;
       document.getElementById("favs-empty").innerHTML = t.favsEmpty;
+      if (typeof updateDockNowPlaying === "function") updateDockNowPlaying();
       if (typeof refreshResumeChip === "function" && !document.getElementById("resume-chip").hidden) {
         document.getElementById("resume-chip").textContent = t.resumeLabel + ": " + (lastPlayed ? lastPlayed.name : "");
       }
@@ -1817,7 +1992,29 @@ function updatePlayerButtons() {
         const btn = card.querySelector(".play-button");
         card.classList.toggle("playing", btn && btn.dataset.url === url);
       });
+      updateDockNowPlaying();
     }
+
+    // ── Dock side wings (now playing + clock) ──
+    function updateDockNowPlaying() {
+      const t = translations[currentLang];
+      const found = playingUrl && Object.entries(radios).flatMap(([genre, stations]) =>
+        stations.filter(([, u]) => u === playingUrl).map(([name]) => ({ name, genre })))[0];
+      document.body.classList.toggle("is-playing", !!found);
+      document.getElementById("dock-np-label").textContent = t.dockNowPlaying;
+      document.getElementById("dock-station").textContent  = found ? found.name : t.dockIdle;
+      document.getElementById("dock-genre").textContent    = found ? t.genreNames[found.genre] : "";
+      document.getElementById("dock-clock-label").textContent = t.dockClock;
+      document.getElementById("dock-tagline").textContent     = t.dockTagline;
+    }
+
+    function tickDockClock() {
+      const now = new Date();
+      document.getElementById("dock-clock").textContent =
+        String(now.getHours()).padStart(2, "0") + ":" + String(now.getMinutes()).padStart(2, "0");
+    }
+    tickDockClock();
+    setInterval(tickDockClock, 15000);
 
     function playStation(url, name) {
       if (!playerReady || !webampInstance) return;
@@ -2061,9 +2258,11 @@ function updatePlayerButtons() {
       const store = webampInstance && webampInstance.store;
       if (!store) return;
       const vw = window.innerWidth;
+      // Center on the layout viewport (excludes the scrollbar), like the dock panel
+      const cw = document.documentElement.clientWidth;
       if (vw < 760) {
         // Stack: main on top, milkdrop below (eq/playlist start closed)
-        const x = Math.round((vw - 275) / 2);
+        const x = Math.round((cw - 275) / 2);
         store.dispatch({ type: "WINDOW_SIZE_CHANGED", windowId: "milkdrop", size: [0, 2] });
         store.dispatch({
           type: "UPDATE_WINDOW_POSITIONS",
@@ -2077,7 +2276,7 @@ function updatePlayerButtons() {
         });
       } else {
         // Column of main/eq/playlist (275w) + big milkdrop on the right (450w)
-        const x = Math.round((vw - 725) / 2);
+        const x = Math.round((cw - 725) / 2);
         store.dispatch({ type: "WINDOW_SIZE_CHANGED", windowId: "milkdrop", size: [7, 8] });
         store.dispatch({
           type: "UPDATE_WINDOW_POSITIONS",
