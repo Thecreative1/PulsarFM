@@ -107,7 +107,7 @@ Para outro anunciante Awin, acrescentar uma entrada em `merchants` com um ID pr�
 
 Os domínios de destino são uma lista exata: incluir apenas os domínios reais do anunciante. O gerador rejeita protocolos inseguros, credenciais em URLs, IDs duplicados e deep links que não correspondam ao anunciante ou publisher configurados. Links curtos precisam de verificação manual do destino na Awin.
 
-Para um novo artigo, copiar `templates/article.json` para `articles` em `data/recommendations.json`, preencher o conteúdo, escolher um `slug` único e executar o gerador. Os seis guias iniciais servem de exemplos por categoria. O índice e o sitemap são atualizados automaticamente. Ao remover ou mudar um slug, remover também o respetivo HTML antigo ou preparar o redirecionamento: o gerador não apaga diretórios.
+Para um novo artigo, copiar `templates/article.json` para `articles` em `data/recommendations.json`, preencher o conteúdo seguindo a voz editorial de `docs/VOZ.md`, escolher um `slug` único e executar o gerador. Os seis guias iniciais servem de exemplos por categoria. O índice e o sitemap são atualizados automaticamente. Ao remover ou mudar um slug, remover também o respetivo HTML antigo ou preparar o redirecionamento: o gerador não apaga diretórios.
 
 ## Preparação para feeds
 

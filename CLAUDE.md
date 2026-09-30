@@ -135,6 +135,17 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
 - In `applyLanguage()`, `updateFilterState()` must run AFTER
   `renderStations()` (rendering recreates the groups unhidden).
 
+## Editorial voice
+
+Any copy written for PulsarFM (guides, product descriptions, FAQs, hub and
+genre-page text) follows the persona in **`docs/VOZ.md`**: someone born in the
+early/mid 80s who lived the Winamp/MP3/rave era and loves modern tech. Useful
+information first, personality second; dry humour, short sentences, at most
+one or two retro references per guide. Never marketing clichés, never
+invented personal experiences or product tests. Legal text (affiliate
+disclosure, privacy) stays neutral. Keep SEO titles and FAQ questions
+search-shaped; the voice goes in the answers.
+
 ## i18n
 
 All user-facing strings live in the `translations` object (`pt` / `en`) in

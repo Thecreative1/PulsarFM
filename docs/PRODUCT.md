@@ -10,7 +10,7 @@ Listeners use PulsarFM for free online radio, a retro Webamp player and Milkdrop
 
 ## Brand personality
 
-Neon, retro, independent. Preserve the existing synthwave identity, Share Tech Mono typography and informal Portuguese voice documented in CLAUDE.md.
+Neon, retro, independent. Preserve the existing synthwave identity, Share Tech Mono typography and informal Portuguese voice. All editorial copy follows the persona in `docs/VOZ.md`: useful information first, dry humour and the occasional 80s/90s reference second, never marketing-speak or invented tests.
 
 ## Design principles
 
