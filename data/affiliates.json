@@ -36,7 +36,7 @@
     },
     {
       "id": "jbl-go-4",
-      "status": "published",
+      "status": "draft",
       "linkType": "direct",
       "merchant": "worten-pt",
       "name": "JBL Go 4 · Azul",
@@ -54,7 +54,7 @@
     },
     {
       "id": "jbl-bar-2-all-in-one",
-      "status": "published",
+      "status": "draft",
       "linkType": "direct",
       "merchant": "worten-pt",
       "name": "JBL Bar 2.0 All-In-One",
@@ -72,7 +72,7 @@
     },
     {
       "id": "audio-technica-at-lp60xusb",
-      "status": "published",
+      "status": "draft",
       "linkType": "direct",
       "merchant": "worten-pt",
       "name": "Audio-Technica AT-LP60XUSBGM",
@@ -230,6 +230,204 @@
         "type": "manual",
         "updatedAt": "2026-09-30",
         "referenceUrl": "https://www.worten.pt/produtos/suporte-auscultadores-trust-gxt-260-preto-7072147"
+      }
+    },
+    {
+      "id": "jbl-go-5",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "JBL Go 5 · Preto",
+      "description": "Cabe na palma da mão e aguenta água e pó (IP68). A JBL anuncia até 10 horas de autonomia e emparelhamento com outras colunas compatíveis via Auracast. Não esperes graves que façam tremer a mesa: é para ouvir perto, não para animar uma festa.",
+      "image": "https://www.worten.pt/i/a1ebae5c5f9253724d1e58bd80338ad15d856ca3",
+      "imageAlt": "JBL Go 5 · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-5-4-8-w-rms-autonomia-ate-10h-preto-8830544",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-5-4-8-w-rms-autonomia-ate-10h-preto-8830544"
+      }
+    },
+    {
+      "id": "jbl-flip-7",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "JBL Flip 7 · Preto",
+      "description": "O formato garrafa de sempre, agora com IP68 contra água e pó. A JBL indica até 16 horas com o Playtime Boost ligado, e liga-se a outras colunas JBL compatíveis com Auracast. É o meio-termo sensato entre levar no bolso e encher um jardim de som.",
+      "image": "https://www.worten.pt/i/e060e464098ff0071914861fdaebed65a05a0a44",
+      "imageAlt": "JBL Flip 7 · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-flip7-preto-8469941",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-flip7-preto-8469941"
+      }
+    },
+    {
+      "id": "marshall-emberton-ii",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Marshall Emberton II · Preto",
+      "description": "Mais de 30 horas de autonomia segundo a Marshall, IP67 e o visual de amplificador de guitarra em miniatura. Pesa 0,7 kg. Só tem Bluetooth: não há entrada por cabo para aparelhos antigos.",
+      "image": "https://www.worten.pt/i/ac0821f9d84a48ced8f0b57df0c419ef7cacda9a",
+      "imageAlt": "Marshall Emberton II · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-emberton-ii-autonomia-ate-30-h-preto-7624347",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-emberton-ii-autonomia-ate-30-h-preto-7624347"
+      }
+    },
+    {
+      "id": "marshall-acton-iv",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Marshall Acton IV · Black and Brass",
+      "description": "Não tem bateria: vive ligada à corrente, na sala ou no escritório. Em troca, tem Bluetooth 5.3 com Auracast, entrada auxiliar de 3,5 mm e, novidade nesta geração, entrada RCA para um leitor de CD ou um gira-discos com pré-amplificador phono. A app da Marshall ajusta o som à divisão.",
+      "image": "https://www.worten.pt/i/4ca108d7a10d6a934d18f2f1eaf7fcf85ca5a530",
+      "imageAlt": "Marshall Acton IV · Black and Brass",
+      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-acton-iv-black-and-brass-30-w-rms-alimentacao-ac-preto-8961021",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-acton-iv-black-and-brass-30-w-rms-alimentacao-ac-preto-8961021"
+      }
+    },
+    {
+      "id": "lenco-ls300",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Lenco LS300 + colunas · Madeira",
+      "description": "O sistema completo numa caixa: gira-discos de correia a 33 e 45 rpm, cápsula magnética, auto-stop no fim do disco e duas colunas separadas. É a forma mais simples de começar sem juntar peças de marcas diferentes. O braço pousa-se à mão.",
+      "image": "https://www.worten.pt/i/afe1ccc588e05f7901a151534c210c7f72e74bde",
+      "imageAlt": "Lenco LS300 + colunas · Madeira",
+      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-lenco-ls300-colunas-automatico-correia-7291509",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-lenco-ls300-colunas-automatico-correia-7291509"
+      }
+    },
+    {
+      "id": "sony-ps-lx3bt",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Sony PS-LX3BT · Cinzento",
+      "description": "Automático do princípio ao fim: pousas o disco, carregas no play e o braço faz o resto, incluindo voltar a casa no fim. Tem pré-amplificador phono integrado, por isso liga-se diretamente a colunas ativas, e Bluetooth com aptX Adaptive para colunas ou auscultadores sem fios.",
+      "image": "https://www.worten.pt/i/ed081cf3ed86f9c7adc111081d3d5a6c257eacc5",
+      "imageAlt": "Sony PS-LX3BT · Cinzento",
+      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-bluetooth-sony-ps-lx3bt-cinzento-automatico-velocidade-33-1-3-45-8705430",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-bluetooth-sony-ps-lx3bt-cinzento-automatico-velocidade-33-1-3-45-8705430"
+      }
+    },
+    {
+      "id": "jbl-spinner-bt",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "JBL Spinner BT · Laranja",
+      "description": "Para quem gosta do ritual: manual, de correia, com prato e braço em alumínio. Tem pré-amplificador phono integrado e saídas analógicas para o sistema que já tens, mais Bluetooth com aptX HD para quando o cabo não chega.",
+      "image": "https://www.worten.pt/i/409a61db859b8a0ef3c1432a94be1545e3773f8a",
+      "imageAlt": "JBL Spinner BT · Laranja",
+      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-jbl-spinner-bt-manual-correia-33-1-3-45-laranja-8007417",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-jbl-spinner-bt-manual-correia-33-1-3-45-laranja-8007417"
+      }
+    },
+    {
+      "id": "sony-ht-sf150",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Sony HT-SF150",
+      "description": "Uma barra só, sem subwoofer separado, para TVs pequenas ou para o quarto. Liga por HDMI ARC ou ótico e tem Bluetooth para pôr a rádio a tocar a partir do telemóvel. Segundo a Sony, tem 90 cm de largura e 6,4 cm de altura: mede o móvel antes.",
+      "image": "https://www.worten.pt/i/0dc287e85c6f2dd553f6b0a5ac370f38e9231c4d",
+      "imageAlt": "Sony HT-SF150",
+      "destinationUrl": "https://www.worten.pt/produtos/soundbar-sony-htsf150-2-0-30-w-6468464",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/soundbar-sony-htsf150-2-0-30-w-6468464"
+      }
+    },
+    {
+      "id": "lg-s40t",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "LG S40T · 2.1",
+      "description": "Subwoofer sem fios: mais graves sem mais um cabo a atravessar a sala, embora o subwoofer precise de uma tomada. HDMI ARC, ótico, Bluetooth e USB. A barra tem 72 cm de largura, segundo a LG, o que a torna boa companhia para TVs médias.",
+      "image": "https://www.worten.pt/i/5e14d1b38c3f0e24e6dee299fccd5dc5fa0a3921",
+      "imageAlt": "LG S40T · 2.1",
+      "destinationUrl": "https://www.worten.pt/produtos/soundbar-lg-s40t-2-1-canais-300-w-subwoofer-sem-fios-8031271",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/soundbar-lg-s40t-2-1-canais-300-w-subwoofer-sem-fios-8031271"
+      }
+    },
+    {
+      "id": "bose-tv-speaker",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Bose TV Speaker · Preto",
+      "description": "Pensada para uma coisa: perceber o que os atores dizem. Barra única com HDMI ARC, ótico (cabo incluído), entrada auxiliar e Bluetooth, com pouco mais de 5 cm de altura. Aceita um subwoofer Bose opcional, vendido à parte, se um dia os graves fizerem falta.",
+      "image": "https://www.worten.pt/i/89bc6a025a2c0b5ed344ddee522d314ed079c3dc",
+      "imageAlt": "Bose TV Speaker · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/soundbar-bose-tv-speaker-3-0-100-w-preto-7200343",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/soundbar-bose-tv-speaker-3-0-100-w-preto-7200343"
+      }
+    },
+    {
+      "id": "sony-ht-s40r",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Sony HT-S40R · 5.1",
+      "description": "Som surround sem passar cabos até ao sofá: as colunas traseiras ligam sem fios a um pequeno amplificador, que precisa de uma tomada perto delas. Inclui barra, subwoofer com fios e cabo HDMI. HDMI ARC, ótico, Bluetooth e USB, com modo noturno e modo de voz.",
+      "image": "https://www.worten.pt/i/e92e932d4d9b88f3eae988d15b46bfb36f5c2ac7",
+      "imageAlt": "Sony HT-S40R · 5.1",
+      "destinationUrl": "https://www.worten.pt/produtos/soundbar-sony-5-1-ht-s40r-5-1-canais-600-w-7407096",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/soundbar-sony-5-1-ht-s40r-5-1-canais-600-w-7407096"
       }
     }
   ]

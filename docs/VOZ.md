@@ -87,3 +87,7 @@ anos 90 (Nightwave Plaza), vizinhos que se adaptem (eletrónica).
 Na página inicial: player saído de 1999, arrastar um .wsz para a pasta Skins,
 o lama do Winamp. Nos produtos: encosto da cadeira (suporte Trust),
 aparelhagem que nasceu antes do Bluetooth (Fonestar).
+
+Reforço de colunas/gira-discos/soundbars: graves que façam tremer a mesa (Go 5),
+amplificador de guitarra em miniatura (Emberton II), braço que volta a casa
+(PS-LX3BT), puristas que não perdoam o Bluetooth (FAQ gira-discos).

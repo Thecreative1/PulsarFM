@@ -167,13 +167,88 @@
           "paragraphs": [
             "Uma entrada auxiliar ainda dá jeito para aparelhos mais antigos. Sim, o leitor de MP3 esquecido na gaveta conta. Se vais usar a coluna com vídeo ou jogos, procura informação sobre o atraso de áudio com o teu dispositivo.",
             "Vê se as funções essenciais dependem de uma app, de uma conta ou de internet. Ligar uma coluna devia ser tão simples como mudar de estação, não um processo de registo com palavra-passe e termos e condições."
+          ],
+          "productLinks": [
+            {
+              "productId": "marshall-acton-iv",
+              "label": "Ver a Marshall Acton IV na Worten"
+            }
           ]
         }
       ],
       "productIds": [
-        "jbl-go-4"
+        "jbl-go-5",
+        "jbl-flip-7",
+        "marshall-emberton-ii",
+        "marshall-acton-iv"
       ],
-      "closing": "Escolhe pela facilidade de uso e pelo sítio onde vai tocar. Mais watts no papel, sozinhos, não resolvem nada."
+      "closing": "Escolhe pela facilidade de uso e pelo sítio onde vai tocar. Mais watts no papel, sozinhos, não resolvem nada.",
+      "badges": {
+        "jbl-go-5": "Bolso",
+        "jbl-flip-7": "Praia e jardim",
+        "marshall-emberton-ii": "Autonomia",
+        "marshall-acton-iv": "Casa · Entrada RCA"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Comparação das quatro colunas recomendadas: bateria, autonomia, proteção e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Bateria",
+          "Autonomia (fabricante)",
+          "Proteção",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "JBL Go 5",
+            "Sim",
+            "Até 10 h",
+            "IP68",
+            "Levar no bolso"
+          ],
+          [
+            "JBL Flip 7",
+            "Sim",
+            "Até 16 h com Playtime Boost",
+            "IP68",
+            "Praia, piscina, jardim"
+          ],
+          [
+            "Marshall Emberton II",
+            "Sim",
+            "Mais de 30 h",
+            "IP67",
+            "Fins de semana fora"
+          ],
+          [
+            "Marshall Acton IV",
+            "Não, liga à corrente",
+            "—",
+            "—",
+            "Sala, com gira-discos ou CD"
+          ]
+        ],
+        "note": "Valores indicados pelos fabricantes. A autonomia real depende do volume e das funções ligadas."
+      },
+      "faq": [
+        {
+          "q": "Qual é a melhor coluna Bluetooth portátil?",
+          "a": "Depende de onde vai tocar. Para levar no bolso, a JBL Go 5. Para a praia ou o jardim, a JBL Flip 7. Se a prioridade é passar dias sem carregador, a Marshall Emberton II, com mais de 30 horas anunciadas."
+        },
+        {
+          "q": "Posso levar uma coluna Bluetooth para a praia ou para a piscina?",
+          "a": "As classificações IP67 e IP68 indicam proteção contra pó e imersão temporária, nas condições testadas pelo fabricante. Areia, sal e cloro são outra conversa: segue as instruções de limpeza do manual depois de um dia de praia."
+        },
+        {
+          "q": "Dá para ligar duas colunas ao mesmo tempo?",
+          "a": "Muitas colunas recentes permitem-no. A JBL Go 5 e a JBL Flip 7 usam Auracast para emparelhar com outras colunas JBL compatíveis. Confirma sempre a compatibilidade entre os modelos exatos antes de comprar a segunda."
+        },
+        {
+          "q": "Posso ligar um gira-discos a uma coluna?",
+          "a": "Sim, se a coluna tiver entrada por cabo. A Marshall Acton IV tem entrada RCA e auxiliar de 3,5 mm, mas o gira-discos precisa de ter pré-amplificador phono. Outra opção é um gira-discos com Bluetooth, que envia o som sem fios."
+        }
+      ]
     },
     {
       "slug": "soundbars",
@@ -200,13 +275,88 @@
           "paragraphs": [
             "Experimenta diálogos e música, ao volume a que costumas ouvir em casa. Um modo noturno ou um reforço de voz fazem mais pela tua rotina do que uma dúzia de efeitos com nomes de sala de cinema.",
             "Se também vais pôr a rádio a tocar a partir do telemóvel, confirma a ligação sem fios de que precisas. Nem todas as versões do mesmo produto têm as mesmas funções de streaming."
+          ],
+          "productLinks": [
+            {
+              "productId": "bose-tv-speaker",
+              "label": "Ver a Bose TV Speaker na Worten"
+            }
           ]
         }
       ],
       "productIds": [
-        "jbl-bar-2-all-in-one"
+        "sony-ht-sf150",
+        "lg-s40t",
+        "bose-tv-speaker",
+        "sony-ht-s40r"
       ],
-      "closing": "Faz a lista de ligações e medidas antes de olhar para promoções. A soundbar tem de caber no móvel e na tua rotina; o resto é conversa de folheto."
+      "closing": "Faz a lista de ligações e medidas antes de olhar para promoções. A soundbar tem de caber no móvel e na tua rotina; o resto é conversa de folheto.",
+      "badges": {
+        "sony-ht-sf150": "Compacta",
+        "lg-s40t": "Graves sem fios",
+        "bose-tv-speaker": "Diálogos",
+        "sony-ht-s40r": "Surround 5.1"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Comparação das quatro soundbars recomendadas: canais, subwoofer, ligações e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Configuração",
+          "Subwoofer",
+          "Ligações",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "Sony HT-SF150",
+            "2.0",
+            "Não (barra única)",
+            "HDMI ARC, ótico, Bluetooth, USB",
+            "TV pequena ou quarto"
+          ],
+          [
+            "LG S40T",
+            "2.1",
+            "Sem fios",
+            "HDMI ARC, ótico, Bluetooth, USB",
+            "Mais graves sem cabos"
+          ],
+          [
+            "Bose TV Speaker",
+            "Barra única",
+            "Opcional, vendido à parte",
+            "HDMI ARC, ótico, AUX, Bluetooth",
+            "Diálogos claros"
+          ],
+          [
+            "Sony HT-S40R",
+            "5.1",
+            "Com fios; traseiras sem fios",
+            "HDMI ARC, ótico, Bluetooth, USB",
+            "Som surround"
+          ]
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma as portas do teu televisor antes de comprar."
+      },
+      "faq": [
+        {
+          "q": "Qual é a diferença entre HDMI ARC e eARC?",
+          "a": "As duas deixam o televisor enviar o som para a soundbar pelo mesmo cabo HDMI. O eARC tem mais largura de banda, para formatos sem compressão como o Dolby Atmos de alta resolução. Para Dolby Digital, o ARC chega, e é o que usam as quatro barras desta lista."
+        },
+        {
+          "q": "Posso ligar a soundbar por cabo ótico?",
+          "a": "Sim, todas as soundbars desta lista têm entrada ótica. A diferença é que, por ótico, normalmente perdes o controlo do volume pelo comando do televisor, que por HDMI ARC costuma funcionar sem configurações extra."
+        },
+        {
+          "q": "Preciso de subwoofer?",
+          "a": "Para diálogos e notícias, não. Para filmes de ação e música eletrónica, faz diferença. A LG S40T traz um sem fios; a Bose TV Speaker aceita um opcional; a Sony HT-SF150 fica-se pela barra, o que poupa espaço e uma tomada."
+        },
+        {
+          "q": "Uma soundbar ajuda a perceber os diálogos?",
+          "a": "Sim, é das melhorias mais notórias em relação às colunas do televisor. A Bose TV Speaker foi pensada para isso, e a Sony HT-S40R tem modo de voz. Experimenta ao volume a que costumas ver televisão, não ao volume da loja."
+        }
+      ]
     },
     {
       "slug": "gira-discos",
@@ -226,6 +376,12 @@
             "Confirma as velocidades de reprodução de que precisas.",
             "Consulta o manual para perceber a montagem e os ajustes iniciais.",
             "Verifica a disponibilidade de agulhas de substituição compatíveis."
+          ],
+          "productLinks": [
+            {
+              "productId": "lenco-ls300",
+              "label": "Ver o Lenco LS300 com colunas na Worten"
+            }
           ]
         },
         {
@@ -233,13 +389,79 @@
           "paragraphs": [
             "Pensa no gesto. Há quem goste de pousar a agulha à mão e há quem prefira que a máquina trate disso. Compara as funções do modelo exato: nem todos os mecanismos automáticos fazem as mesmas operações.",
             "Guarda parte do orçamento para cuidar dos discos e da agulha, seguindo as instruções do fabricante. Uma boa compra é também uma que consegues manter a tocar durante anos."
+          ],
+          "productLinks": [
+            {
+              "productId": "sony-ps-lx3bt",
+              "label": "Ver o Sony PS-LX3BT na Worten"
+            }
           ]
         }
       ],
       "productIds": [
-        "audio-technica-at-lp60xusb"
+        "lenco-ls300",
+        "sony-ps-lx3bt",
+        "jbl-spinner-bt"
       ],
-      "closing": "Desenha o caminho do som, do disco até às colunas. É a melhor forma de não descobrir, já com o disco no prato, que falta um cabo ou um pré-amplificador."
+      "closing": "Desenha o caminho do som, do disco até às colunas. É a melhor forma de não descobrir, já com o disco no prato, que falta um cabo ou um pré-amplificador.",
+      "badges": {
+        "lenco-ls300": "Sistema completo",
+        "sony-ps-lx3bt": "Automático",
+        "jbl-spinner-bt": "Manual"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Comparação dos três gira-discos recomendados: funcionamento, colunas, ligação sem fios e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Funcionamento",
+          "Colunas incluídas",
+          "Sem fios",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "Lenco LS300",
+            "Manual, com auto-stop",
+            "Sim",
+            "Não",
+            "Começar sem juntar peças"
+          ],
+          [
+            "Sony PS-LX3BT",
+            "Automático",
+            "Não",
+            "Bluetooth (aptX Adaptive)",
+            "Primeiro gira-discos sem complicações"
+          ],
+          [
+            "JBL Spinner BT",
+            "Manual",
+            "Não",
+            "Bluetooth (aptX HD)",
+            "Quem gosta do ritual"
+          ]
+        ],
+        "note": "Características indicadas pelos fabricantes e pela loja. Confirma as ligações do teu sistema antes de comprar."
+      },
+      "faq": [
+        {
+          "q": "O que é um pré-amplificador phono e preciso de um?",
+          "a": "O sinal que sai da agulha é muito fraco e precisa de ser amplificado e equalizado antes de chegar às colunas. Se o gira-discos não tiver pré-amplificador integrado, precisas de um externo ou de um amplificador com entrada phono. O Sony PS-LX3BT e o JBL Spinner BT já o trazem."
+        },
+        {
+          "q": "Gira-discos automático ou manual: qual escolher?",
+          "a": "O automático pousa e recolhe o braço sozinho, o que protege os discos de mãos menos firmes. O manual pede mais cuidado, mas há quem ache que é essa a graça. Para um primeiro gira-discos, o automático poupa sustos."
+        },
+        {
+          "q": "Posso ouvir vinil em colunas ou auscultadores Bluetooth?",
+          "a": "Sim, com um gira-discos com Bluetooth, como o Sony PS-LX3BT ou o JBL Spinner BT. O som passa a digital pelo caminho, o que alguns puristas não perdoam. Para ouvir à noite sem acordar a casa, é difícil de bater."
+        },
+        {
+          "q": "Os gira-discos baratos estragam os discos?",
+          "a": "Alguns modelos tudo-em-um muito baratos usam cápsulas cerâmicas e braços pouco ajustáveis, que desgastam mais os discos. Cápsula magnética e pressão de agulha ajustável são bons sinais. Se tens discos de que gostas, vale a pena olhar para isso antes do preço."
+        }
+      ]
     },
     {
       "slug": "home-studio",
