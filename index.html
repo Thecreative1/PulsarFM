@@ -1445,6 +1445,18 @@
 
       .seo-blocks { margin: 20px 0 8px; }
     }
+
+    /* Very small phones (320px): the gap between the two button columns is
+       only ~64px, so shrink both the buttons and the logo to clear it. */
+    @media (max-width: 360px) {
+      .scan-btn, .lang-switcher {
+        min-width: 80px;
+        padding-inline: 6px;
+        letter-spacing: 0.06em;
+      }
+
+      .hero-logo { width: 72px; }
+    }
   </style>
 </head>
 <body>
