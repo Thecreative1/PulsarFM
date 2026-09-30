@@ -159,6 +159,78 @@
         "updatedAt": "2026-09-29",
         "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-1000xm5-headband-premium-over-ear-microfone-noise-cancelling-preto-7588185"
       }
+    },
+    {
+      "id": "hyperx-quadcast-2",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "HyperX QuadCast 2 · Preto/Vermelho",
+      "description": "Microfone USB-C que dispensa interface: ligas ao computador e gravas. Segundo a HyperX, grava a 24 bits/96 kHz, tem quatro padrões polares, mute por toque no topo e saída de auscultadores para te ouvires enquanto gravas. Foi pensado para voz e streaming; para ligar uma guitarra ou um segundo microfone continuas a precisar de uma interface.",
+      "image": "https://www.worten.pt/i/a46646c8e6de859ecfb9838800ba1b9e27839c50",
+      "imageAlt": "HyperX QuadCast 2 · Preto/Vermelho",
+      "destinationUrl": "https://www.worten.pt/produtos/microfone-hyperx-quadcast-2-preto-vermelho-8123946",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/microfone-hyperx-quadcast-2-preto-vermelho-8123946"
+      }
+    },
+    {
+      "id": "apple-usb-c-jack-35",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Adaptador Apple USB-C para jack 3,5 mm",
+      "description": "Devolve o jack a um telemóvel, tablet ou portátil que o perdeu pelo caminho. Pequeno, sem bateria e sem emparelhamentos: ligas os auscultadores com fio e pronto. Foi feito para equipamentos Apple; em Android costuma funcionar, mas confirma a compatibilidade com o teu modelo.",
+      "image": "https://www.worten.pt/i/26557da53318784c1c4a91910c8bbe253522d426",
+      "imageAlt": "Adaptador Apple USB-C para jack 3,5 mm",
+      "destinationUrl": "https://www.worten.pt/produtos/adaptador-apple-usb-c-para-jack-3-5-mm-para-auscultadores-8430434",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/adaptador-apple-usb-c-para-jack-3-5-mm-para-auscultadores-8430434"
+      }
+    },
+    {
+      "id": "fonestar-bluetooth-2-em-1",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Fonestar Bluetooth 2 em 1 · transmissor e recetor",
+      "description": "Dá Bluetooth a uma aparelhagem que nasceu antes dele, ou envia o som da TV para auscultadores sem fios. Funciona como recetor ou como transmissor, suporta aptX e traz cabos jack 3,5 mm e RCA na caixa. A Fonestar indica até 14 horas de bateria. Para a baixa latência do aptX, o outro aparelho também tem de o suportar.",
+      "image": "https://www.worten.pt/i/37f1e04a31fa73a3aa68b43cc01a269a8a5c9e96",
+      "imageAlt": "Fonestar Bluetooth 2 em 1 · transmissor e recetor",
+      "destinationUrl": "https://www.worten.pt/produtos/transmissor-e-recetor-de-audio-fonestar-bluetooth-2-em-1-7355514",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/transmissor-e-recetor-de-audio-fonestar-bluetooth-2-em-1-7355514"
+      }
+    },
+    {
+      "id": "trust-gxt-260",
+      "status": "published",
+      "linkType": "direct",
+      "merchant": "worten-pt",
+      "name": "Suporte para auscultadores Trust GXT 260 · Preto",
+      "description": "Um sítio para pousar os auscultadores que não seja o encosto da cadeira. Tem apoios de borracha em cima e na base, cerca de 25 cm de altura e 185 g. É de plástico e tem estética gaming, mas cumpre o essencial: a haste mantém a forma e a secretária fica arrumada.",
+      "image": "https://www.worten.pt/i/3741e2de486627f4d16ca3825d031874b4428a1a",
+      "imageAlt": "Suporte para auscultadores Trust GXT 260 · Preto",
+      "destinationUrl": "https://www.worten.pt/produtos/suporte-auscultadores-trust-gxt-260-preto-7072147",
+      "affiliateUrl": "",
+      "price": null,
+      "source": {
+        "type": "manual",
+        "updatedAt": "2026-09-30",
+        "referenceUrl": "https://www.worten.pt/produtos/suporte-auscultadores-trust-gxt-260-preto-7072147"
+      }
     }
   ]
 }

@@ -83,3 +83,7 @@ cheia de equipamento (home studio).
 Nas páginas de género: cassete do carro sem a fita enrolar (M80), MP3 a
 320 kbps na era do 56k (jazz), NASA/Houston (chill), pop-ups da internet dos
 anos 90 (Nightwave Plaza), vizinhos que se adaptem (eletrónica).
+
+Na página inicial: player saído de 1999, arrastar um .wsz para a pasta Skins,
+o lama do Winamp. Nos produtos: encosto da cadeira (suporte Trust),
+aparelhagem que nasceu antes do Bluetooth (Fonestar).

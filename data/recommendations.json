@@ -262,6 +262,19 @@
           ]
         },
         {
+          "heading": "O atalho USB",
+          "paragraphs": [
+            "Se só vais gravar voz, seja podcast, locução ou a guia da próxima demo, um microfone USB dispensa a interface. Ligas ao computador e está feito.",
+            "O preço é a flexibilidade: não dá para ligar uma guitarra nem um segundo microfone ao mesmo tempo. Se isso já está nos planos, começa pela interface. Se não está, o atalho poupa dinheiro e cabos."
+          ],
+          "productLinks": [
+            {
+              "productId": "hyperx-quadcast-2",
+              "label": "Ver o HyperX QuadCast 2 na Worten"
+            }
+          ]
+        },
+        {
           "heading": "O quarto também entra na gravação",
           "paragraphs": [
             "Ouve o silêncio do quarto antes de comprar. Ventoinhas, trânsito e as reflexões das paredes entram na gravação. Mudar o microfone de sítio ou gravar a outra hora pode mostrar-te o que realmente falta.",
@@ -269,8 +282,15 @@
           ]
         }
       ],
-      "productIds": [],
-      "closing": "Planeia uma primeira gravação possível, com todas as ligações resolvidas. Uma demo imperfeita gravada vale mais do que o estúdio perfeito que continua no carrinho."
+      "productIds": [
+        "hyperx-quadcast-2",
+        "audio-technica-ath-m50xbt2"
+      ],
+      "closing": "Planeia uma primeira gravação possível, com todas as ligações resolvidas. Uma demo imperfeita gravada vale mais do que o estúdio perfeito que continua no carrinho.",
+      "badges": {
+        "hyperx-quadcast-2": "Voz sem interface",
+        "audio-technica-ath-m50xbt2": "Para monitorizar"
+      }
     },
     {
       "slug": "tecnologia-acessorios",
@@ -290,6 +310,25 @@
             "Mede o comprimento de cabo necessário sem criar tensão nas ligações.",
             "Confirma a carga e as dimensões suportadas por braços ou suportes.",
             "Consulta as condições de devolução e a identificação do vendedor."
+          ],
+          "productLinks": [
+            {
+              "productId": "apple-usb-c-jack-35",
+              "label": "Ver o adaptador Apple USB-C para jack na Worten"
+            }
+          ]
+        },
+        {
+          "heading": "Bluetooth para o que não o tem",
+          "paragraphs": [
+            "Uma aparelhagem antiga com boas colunas não precisa de ir para a reforma. Um recetor Bluetooth ligado à entrada auxiliar põe-na a tocar a partir do telemóvel.",
+            "O mesmo tipo de aparelho, em modo transmissor, faz o caminho inverso: envia o som da TV ou do portátil para auscultadores sem fios. Confirma as saídas do equipamento de origem antes de comprar."
+          ],
+          "productLinks": [
+            {
+              "productId": "fonestar-bluetooth-2-em-1",
+              "label": "Ver o Fonestar Bluetooth 2 em 1 na Worten"
+            }
           ]
         },
         {
@@ -300,8 +339,17 @@
           ]
         }
       ],
-      "productIds": [],
-      "closing": "Escolhe um problema da tua rotina e resolve-o. Depois outro. A música é o centro; os acessórios só têm de sair do caminho."
+      "productIds": [
+        "apple-usb-c-jack-35",
+        "fonestar-bluetooth-2-em-1",
+        "trust-gxt-260"
+      ],
+      "closing": "Escolhe um problema da tua rotina e resolve-o. Depois outro. A música é o centro; os acessórios só têm de sair do caminho.",
+      "badges": {
+        "apple-usb-c-jack-35": "Ligação",
+        "fonestar-bluetooth-2-em-1": "Bluetooth",
+        "trust-gxt-260": "Arrumação"
+      }
     }
   ]
 }
