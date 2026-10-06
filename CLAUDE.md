@@ -109,9 +109,15 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
    `crossOrigin = "anonymous"` must fire `loadeddata` (Milkdrop needs CORS).
    Redirecting URLs can pass the Python check and still fail in the browser:
    laut.fm must use the direct `https://<name>.stream.laut.fm/<name>` form,
-   never `stream.laut.fm/<name>`. A Python certificate error on
-   stream.nightride.fm is local (the browser accepts it); SomaFM answers 403
-   to scripts but plays in browsers.
+   never `stream.laut.fm/<name>`. **Every redirect hop needs CORS**: if the
+   first URL answers 302 without `Access-Control-Allow-Origin`, the browser
+   blocks the whole chain (this broke Lofi Radio, NRJ France and Radio FG
+   until 2026-10-06) — point at the hop that has CORS, never at a URL with an
+   expiring token. A Python certificate error on stream.nightride.fm is local
+   (the browser accepts it). SomaFM blocks short/script user agents and the
+   in-app browser (its UA contains "Claude/"), but serves real Chrome,
+   Firefox and Safari with CORS — check it with a full browser UA, not by
+   playing it in the in-app browser.
 2. Update the `radios` object in `index.html` (name + URL).
 3. Update the matching static `<article class="radio-card"><h3>Name</h3></article>` in `index.html`.
 4. Update `GENRES` in `tools/gen_genre_pages.py` (name + one-line PT
