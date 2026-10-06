@@ -2,18 +2,18 @@
   "id": "produto-exemplo",
   "status": "draft",
   "linkType": "affiliate",
-  "merchant": "worten-pt",
+  "merchant": "amazon-es",
+  "asin": "B0BTJD6LCL",
   "name": "Nome do produto confirmado",
-  "description": "Descrição editorial curta: para quem serve e qual a principal limitação.",
-  "image": "/img/gear-editorial.svg",
-  "imageAlt": "Ilustração de equipamento de áudio; substituir por fotografia autorizada do produto",
-  "destinationUrl": "",
-  "affiliateUrl": "",
+  "category": "Auscultadores",
+  "description": "Descrição editorial curta: para quem serve, porque foi escolhido e qual a principal limitação.",
+  "bestFor": "Uso ideal numa frase (só nos dados, não aparece na página)",
+  "pros": ["Vantagem confirmada na ficha do fabricante"],
+  "cons": ["Limitação principal"],
   "price": null,
   "source": {
     "type": "manual",
-    "merchantProductId": "",
-    "awinProductId": "",
-    "updatedAt": ""
+    "checkedAt": "",
+    "referenceUrl": ""
   }
 }

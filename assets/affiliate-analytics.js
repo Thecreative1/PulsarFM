@@ -75,15 +75,18 @@
     if (event.defaultPrevented || (event.type === 'auxclick' ? event.button !== 1 : event.button !== 0)) return;
     const link = event.target.closest?.('a[data-affiliate-link]');
     if (!link || readConsent() !== 'granted') return;
-    const { merchant, productName, position } = link.dataset;
-    if (!merchant || !productName || !position) return;
+    const { affiliatePlatform, trackingId, productName, productCategory, position } = link.dataset;
+    if (!affiliatePlatform || !productName || !position) return;
     const parameters = {
-      merchant,
+      affiliate_platform: affiliatePlatform,
       product_name: productName,
-      page: window.location.pathname, // Deliberately excludes query strings and personal identifiers.
+      product_category: productCategory || '',
+      page_path: window.location.pathname, // Deliberately excludes query strings and personal identifiers.
+      destination_url: link.href,
       position,
       transport_type: 'beacon'
     };
+    if (trackingId) parameters.tracking_id = trackingId;
     if (new URLSearchParams(window.location.search).get('affiliate_debug') === '1') {
       parameters.debug_mode = true;
       console.info('[PulsarFM] affiliate_click', parameters);

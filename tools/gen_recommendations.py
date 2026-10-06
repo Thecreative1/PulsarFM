@@ -1,7 +1,7 @@
 """Generate editorial HTML for GitHub Pages using only the Python standard library.
 
 Edit data/ and templates/, then run python tools/gen_recommendations.py.
-No Awin account credentials, network access or JS build pipeline required.
+No affiliate account credentials, network access or JS build pipeline required.
 """
 from datetime import date
 from decimal import Decimal, InvalidOperation
@@ -18,6 +18,14 @@ TEMPLATES = ROOT / "templates" / "recommendations"
 AWIN_HOSTS = {"awin1.com", "www.awin1.com", "tidd.ly"}
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 PRICE_MAX_AGE_DAYS = 7
+# The only Amazon Associates tag allowed on PulsarFM (never another site's tag).
+AMAZON_TRACKING_ID = "pulsarfm-21"
+ASIN = re.compile(r"[A-Z0-9]{10}\Z")
+# Amazon images need PA-API or Amazon-provided links; until then cards use the local illustration.
+DEFAULT_IMAGE = "/img/gear-editorial.svg"
+DEFAULT_IMAGE_ALT = "Ilustração de equipamento de áudio nas cores néon da PulsarFM"
+NETWORKS = ("awin", "amazon")
+AMAZON_STATEMENT = "Como Afiliado da Amazon, a PulsarFM recebe por compras elegíveis."
 
 
 def esc(value):
@@ -68,8 +76,21 @@ def product_url(catalog, product):
     return https_url(product.get("destinationUrl", ""), merchant["allowedDestinationHosts"])
 
 
+def amazon_url(merchant, product):
+    """Build the link from the ASIN so every Amazon URL carries the PulsarFM tag."""
+    if merchant.get("trackingId") != AMAZON_TRACKING_ID:
+        raise ValueError("Amazon merchants must use the PulsarFM tracking ID " + AMAZON_TRACKING_ID)
+    asin = product.get("asin", "")
+    if not isinstance(asin, str) or not ASIN.fullmatch(asin):
+        raise ValueError("Amazon products need a 10-character ASIN")
+    url = f'https://{merchant["allowedDestinationHosts"][0]}/dp/{asin}/?tag={AMAZON_TRACKING_ID}'
+    return https_url(url, merchant["allowedDestinationHosts"])
+
+
 def affiliate_url(catalog, product):
     merchant = catalog["merchants"][product["merchant"]]
+    if merchant["network"] == "amazon":
+        return amazon_url(merchant, product)
     if merchant["network"] != "awin":
         raise ValueError("Unsupported affiliate network")
     ready_link = product.get("affiliateUrl", "")
@@ -116,7 +137,7 @@ def validate_catalog(catalog):
     for key, merchant in catalog["merchants"].items():
         if not SLUG.fullmatch(key) or not merchant.get("name"):
             raise ValueError("Merchants need a slug ID and a name")
-        if merchant.get("network") != "awin" or not merchant.get("allowedDestinationHosts"):
+        if merchant.get("network") not in NETWORKS or not merchant.get("allowedDestinationHosts"):
             raise ValueError("Configure network and destination hosts for each merchant")
     products = {}
     for product in catalog["products"]:
@@ -130,10 +151,23 @@ def validate_catalog(catalog):
         if product.get("merchant") not in catalog["merchants"]:
             raise ValueError("Unknown merchant: " + str(product.get("merchant")))
         if product["status"] == "published":
-            for field in ("name", "description", "image", "imageAlt"):
+            required = ["name", "description"]
+            if product.get("image"):
+                required.append("imageAlt")  # Without an image the local illustration is used.
+            if catalog["merchants"][product["merchant"]]["network"] == "amazon":
+                required.append("category")
+            for field in required:
                 if not isinstance(product.get(field), str) or not product[field].strip():
                     raise ValueError(f"Published product {product_id} needs {field}")
-            image_url(product["image"])
+            if product.get("image"):
+                image_url(product["image"])
+            # Editorial notes kept in the data only; never rendered.
+            if not isinstance(product.get("bestFor", ""), str):
+                raise ValueError(f"Product {product_id}: bestFor must be text")
+            for field in ("pros", "cons"):
+                items = product.get(field, [])
+                if not isinstance(items, list) or not all(isinstance(item, str) for item in items):
+                    raise ValueError(f"Product {product_id}: {field} must be a list of text")
             product_url(catalog, product)
             if product.get("price") is not None:
                 validate_price(product["price"])
@@ -162,9 +196,12 @@ def render_affiliate_link(catalog, product, position, label=None, css_class="aff
         return (f'<a class="{esc(css_class)}" href="{esc(url)}" target="_blank" rel="noopener" '
                 f'data-product-link="direct">{esc(label)} <span aria-hidden="true">↗</span>'
                 '<span class="sr-only"> (abre numa nova aba)</span></a>')
+    tracking = f' data-tracking-id="{esc(merchant["trackingId"])}"' if merchant.get("trackingId") else ""
     return (f'<a class="{esc(css_class)}" href="{esc(url)}" target="_blank" '
-            f'rel="sponsored nofollow noopener" data-affiliate-link '
+            f'rel="sponsored nofollow noopener noreferrer" data-affiliate-link '
+            f'data-affiliate-platform="{esc(merchant["network"])}"{tracking} '
             f'data-merchant="{esc(product["merchant"])}" data-product-name="{esc(product["name"])}" '
+            f'data-product-category="{esc(product.get("category", ""))}" '
             f'data-position="{esc(position)}">{esc(label)} <span aria-hidden="true">↗</span>'
             '<span class="sr-only"> (link de afiliado, abre numa nova aba)</span></a>')
 
@@ -186,9 +223,11 @@ def render_price(price, today=None):
 
 def render_product(catalog, product, position, today=None, badge=""):
     badge_html = f'<p class="product-badge">{esc(badge)}</p>' if badge else ""
+    image = product.get("image")
     return template("product.html", id=esc(product["id"]), badge=badge_html,
-                    image=esc(image_url(product["image"])),
-                    image_alt=esc(product["imageAlt"]), name=esc(product["name"]),
+                    image=esc(image_url(image) if image else DEFAULT_IMAGE),
+                    image_alt=esc(product["imageAlt"] if image else DEFAULT_IMAGE_ALT),
+                    name=esc(product["name"]),
                     merchant=esc(catalog["merchants"][product["merchant"]]["name"]),
                     description=esc(product["description"]), price=render_price(product.get("price"), today),
                     link=render_affiliate_link(catalog, product, position))
@@ -236,6 +275,16 @@ def render_faq(faq):
             f'{items}</section><script type="application/ld+json">{ld}</script>')
 
 
+def uses_amazon(catalog, products):
+    return any(is_affiliate(product) and
+               catalog["merchants"][product["merchant"]]["network"] == "amazon" for product in products)
+
+
+def disclosure(catalog, products):
+    amazon = f'<p>{AMAZON_STATEMENT}</p>' if uses_amazon(catalog, products) else ""
+    return template("disclosure.html", amazon=amazon)
+
+
 def render_article(article, articles, catalog, products):
     selected = []
     for product_id in article["productIds"]:
@@ -243,6 +292,7 @@ def render_article(article, articles, catalog, products):
         if product["status"] == "published":
             selected.append(product)
     sections = []
+    linked = list(selected)
     has_affiliates = any(is_affiliate(product) for product in selected)
     for index, section in enumerate(article["sections"], 1):
         parts = [f'<section><h2>{esc(section["heading"])}</h2>']
@@ -254,6 +304,7 @@ def render_article(article, articles, catalog, products):
         for link_index, link in enumerate(section.get("productLinks", []), 1):
             product = products[link["productId"]]
             if product["status"] == "published":
+                linked.append(product)
                 has_affiliates = has_affiliates or is_affiliate(product)
                 parts.append('<p>' + render_affiliate_link(catalog, product,
                              f"inline-{index}-{link_index}", link.get("label"), "affiliate-inline") + '</p>')
@@ -270,7 +321,9 @@ def render_article(article, articles, catalog, products):
                           for i, product in enumerate(selected, 1))
         product_html = ('<section class="product-selection" aria-labelledby="selecao">'
                         '<h2 id="selecao">Produtos para comparar</h2>' +
-                        (template("disclosure.html") if any(is_affiliate(product) for product in selected) else
+                        ('<p class="article-meta">Não mostramos preços: mudam várias vezes por dia. '
+                         'Confirma o preço, a disponibilidade e o vendedor na loja.</p>'
+                         if any(is_affiliate(product) for product in selected) else
                          '<p class="article-meta">Links diretos para a loja, sem comissão para a PulsarFM. '
                          'Confirma o preço, a disponibilidade e o vendedor na loja; pode tratar-se de uma oferta Marketplace.</p>') +
                         cards + '</section>')
@@ -279,7 +332,7 @@ def render_article(article, articles, catalog, products):
     content = template("article.html", category=esc(article["category"]), title=esc(article["title"]),
                        intro=esc(article["intro"]), updated_at=updated.isoformat(),
                        updated_label=updated.strftime("%d/%m/%Y"),
-                       disclosure=template("disclosure.html") if has_affiliates else "",
+                       disclosure=disclosure(catalog, linked) if has_affiliates else "",
                        sections="\n".join(sections), products=product_html,
                        extras=(render_comparison(article["comparison"]) if article.get("comparison") else "") +
                               (render_faq(article["faq"]) if article.get("faq") else ""),
@@ -288,10 +341,13 @@ def render_article(article, articles, catalog, products):
 
 
 def render_hub(editorial, catalog):
-    has_affiliates = any(product['status'] == 'published' and is_affiliate(product)
-                         for product in catalog['products'])
-    link_note = ('Uma compra através de um link de afiliado poderá apoiar a PulsarFM, sem custo adicional para ti.'
+    published = [product for product in catalog['products'] if product['status'] == 'published']
+    has_affiliates = any(is_affiliate(product) for product in published)
+    link_note = ('Alguns links nos guias são links de afiliado. Se comprares através deles, '
+                 'a PulsarFM pode receber uma pequena comissão, sem custo adicional para ti.'
                  if has_affiliates else 'Os produtos apresentados usam links diretos para a loja. A PulsarFM não recebe comissão por estas compras.')
+    if uses_amazon(catalog, published):
+        link_note += ' ' + AMAZON_STATEMENT
     content = ('<section class="editorial-hero"><div><p class="eyebrow">Gear / Tecnologia</p>'
                f'<h1>{esc(editorial["title"])}</h1>'
                '<p class="lead">A música é o ponto de partida.<br>O equipamento vem a seguir.</p>'

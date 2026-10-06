@@ -1,4 +1,4 @@
-/* Isolated analytics contract tests: no requests reach GA4 or Awin. */
+/* Isolated analytics contract tests: no requests reach GA4 or the affiliate store. */
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -29,7 +29,11 @@ function setup({ consent = null, blocked = false, writeBlocked = false, existing
   };
   if (existingTag) window.gtag = (...args) => entries.push(args);
   vm.runInNewContext(source, { window, document, localStorage: storage, URLSearchParams, console: { info(...args) { logs.push(args); } } });
-  const link = { dataset: { merchant: 'worten-pt', productName: 'Auscultadores', position: 'recommendation-1' } };
+  const link = {
+    href: 'https://www.amazon.es/dp/B0BTJD6LCL/?tag=pulsarfm-21',
+    dataset: { affiliatePlatform: 'amazon', trackingId: 'pulsarfm-21', productName: 'Sony WH-CH520',
+      productCategory: 'Auscultadores', position: 'recommendation-1' }
+  };
   const target = { closest: () => link };
   const click = (type = 'click', button = 0, extras = {}) => events[type]({ type, button, target, ...extras });
   const affiliateEvents = () => (window.dataLayer || entries).filter(item => item[0] === 'event' && item[1] === 'affiliate_click');
@@ -47,15 +51,16 @@ test('no consent and denied consent send no affiliate events or GA requests', ()
   }
 });
 
-test('accepted click sends the four parameters and one event; query is excluded', () => {
+test('accepted click sends the Amazon parameters and one event; page query is excluded', () => {
   const state = setup({ consent: 'granted', debug: true });
   state.click();
   const events = state.affiliateEvents();
   assert.equal(events.length, 1);
   assert.deepEqual(JSON.parse(JSON.stringify(events[0][2])), {
-    merchant: 'worten-pt', product_name: 'Auscultadores',
-    page: '/recomendacoes/melhores-auscultadores/', position: 'recommendation-1',
-    transport_type: 'beacon', debug_mode: true
+    affiliate_platform: 'amazon', tracking_id: 'pulsarfm-21', product_name: 'Sony WH-CH520',
+    product_category: 'Auscultadores', page_path: '/recomendacoes/melhores-auscultadores/',
+    destination_url: 'https://www.amazon.es/dp/B0BTJD6LCL/?tag=pulsarfm-21',
+    position: 'recommendation-1', transport_type: 'beacon', debug_mode: true
   });
   assert.equal(state.appended.length, 1);
   assert.equal(state.logs.length, 1);

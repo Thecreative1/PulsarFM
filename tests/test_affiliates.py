@@ -12,12 +12,26 @@ from import_awin_feed import import_rows, normalize_row
 
 
 def fixture():
+    """Awin catalog used to keep the generic Awin support covered; the live catalog is Amazon-only."""
     catalog = copy.deepcopy(gen.read_json(gen.ROOT / 'data/affiliates.json'))
-    catalog['awin']['publisherId'] = '123'
-    catalog['merchants']['worten-pt']['advertiserId'] = '456'
+    catalog['awin'] = {'publisherId': '123'}
+    catalog['merchants']['worten-pt'] = {
+        'name': 'Worten', 'network': 'awin', 'advertiserId': '456',
+        'allowedDestinationHosts': ['www.worten.pt', 'worten.pt'], 'cta': 'Ver na Worten'}
+    product = {
+        'id': 'produto-exemplo', 'status': 'published', 'linkType': 'affiliate', 'merchant': 'worten-pt',
+        'name': 'Auscultadores de teste <A&B>', 'description': 'Descrição editorial curta.',
+        'image': '/img/gear-editorial.svg', 'imageAlt': 'Ilustração de equipamento de áudio',
+        'destinationUrl': 'https://www.worten.pt/produtos/teste?color=preto&size=M',
+        'affiliateUrl': '', 'price': None}
+    catalog['products'] = [product]
+    return catalog, product
+
+
+def amazon_fixture():
+    catalog = copy.deepcopy(gen.read_json(gen.ROOT / 'data/affiliates.json'))
     product = gen.read_json(gen.ROOT / 'templates/product.json')
-    product.update(status='published', name='Auscultadores de teste <A&B>',
-                   destinationUrl='https://www.worten.pt/produtos/teste?color=preto&size=M')
+    product.update(status='published', name='Auscultadores <A&B>')
     catalog['products'] = [product]
     return catalog, product
 
@@ -131,7 +145,7 @@ class AffiliateTests(unittest.TestCase):
         html = gen.render_product(self.catalog, self.product, 'recommendation-1')
         parsed = HTMLInventory(html)
         link = parsed.links[0]
-        self.assertEqual(link['rel'], 'sponsored nofollow noopener')
+        self.assertEqual(link['rel'], 'sponsored nofollow noopener noreferrer')
         self.assertEqual(link['target'], '_blank')
         self.assertEqual(link['data-product-name'], self.product['name'])
         self.assertEqual(link['data-merchant'], 'worten-pt')
@@ -202,6 +216,78 @@ class AffiliateTests(unittest.TestCase):
                     self.assertTrue(target.exists(), str(target))
         home = HTMLInventory((gen.ROOT / 'index.html').read_text(encoding='utf-8'))
         self.assertEqual(home.ids.count('recommendations-link'), 1)
+
+
+class AmazonTests(unittest.TestCase):
+    def setUp(self):
+        self.catalog, self.product = amazon_fixture()
+
+    def test_link_is_built_from_asin_with_the_pulsarfm_tag(self):
+        url = gen.product_url(self.catalog, self.product)
+        self.assertEqual(url, f'https://www.amazon.es/dp/{self.product["asin"]}/?tag=pulsarfm-21')
+        link = HTMLInventory(gen.render_product(self.catalog, self.product, 'recommendation-1')).links[0]
+        self.assertEqual(link['href'], url)
+        self.assertEqual(link['rel'], 'sponsored nofollow noopener noreferrer')
+        self.assertEqual(link['target'], '_blank')
+        self.assertEqual(link['data-affiliate-platform'], 'amazon')
+        self.assertEqual(link['data-tracking-id'], 'pulsarfm-21')
+        self.assertEqual(link['data-product-category'], self.product['category'])
+        self.assertEqual(link['data-product-name'], 'Auscultadores <A&B>')
+
+    def test_other_tags_and_invalid_asins_fail_closed(self):
+        merchant = self.catalog['merchants']['amazon-es']
+        for tag in ('ondecortar-21', '', None):
+            merchant['trackingId'] = tag
+            with self.subTest(tag=tag), self.assertRaises(ValueError):
+                gen.product_url(self.catalog, self.product)
+        merchant['trackingId'] = 'pulsarfm-21'
+        for asin in ('', 'b0btjd6lcl', 'B0BTJD6LC', 'B0BTJD6LCL/?tag=x', None):
+            with self.subTest(asin=asin), self.assertRaises(ValueError):
+                gen.product_url(self.catalog, dict(self.product, asin=asin))
+
+    def test_category_required_and_image_defaults_to_local_illustration(self):
+        self.product.pop('image', None)
+        html = gen.render_product(self.catalog, self.product, 'recommendation-1')
+        self.assertEqual(HTMLInventory(html).images[0]['src'], gen.DEFAULT_IMAGE)
+        self.assertNotIn('amazon.com/images', html)
+        self.product['category'] = ''
+        with self.assertRaises(ValueError):
+            gen.validate_catalog(self.catalog)
+        self.product['category'] = 'Auscultadores'
+        self.product['pros'] = 'not a list of text'
+        with self.assertRaises(ValueError):
+            gen.validate_catalog(self.catalog)
+
+    def test_notes_stay_in_data_and_disclosure_is_shown(self):
+        self.product.update(pros=['Pró editorial único'], cons=['Contra editorial único'],
+                            bestFor='Uso ideal editorial único')
+        editorial = gen.read_json(gen.ROOT / 'data/recommendations.json')
+        for article in editorial['articles']:
+            article['productIds'] = []
+            article.pop('badges', None)
+            for section in article['sections']:
+                section.pop('productLinks', None)
+        editorial['articles'][0]['productIds'] = [self.product['id']]
+        html = gen.generate(self.catalog, editorial)['recomendacoes/melhores-auscultadores/index.html']
+        for note in ('Pró editorial único', 'Contra editorial único', 'Uso ideal editorial único'):
+            self.assertNotIn(note, html)
+        self.assertIn('pode receber uma pequena comissão, sem custo adicional para ti', html)
+        self.assertIn(gen.AMAZON_STATEMENT, html)
+        self.assertIn('Ver preço na Amazon', html)
+
+    def test_published_pages_only_link_to_amazon_es_with_the_pulsarfm_tag(self):
+        catalog = gen.read_json(gen.ROOT / 'data/affiliates.json')
+        pages = gen.generate(catalog, gen.read_json(gen.ROOT / 'data/recommendations.json'))
+        self.assertIn(gen.AMAZON_STATEMENT, pages['recomendacoes/index.html'])
+        for path, html in pages.items():
+            self.assertNotIn('não recebe comissão', html, path)
+            self.assertNotIn('sem comissão', html, path)
+            for link in HTMLInventory(html).links:
+                if 'data-affiliate-link' in link:
+                    url = urlsplit(link['href'])
+                    self.assertEqual(url.hostname, 'www.amazon.es', path)
+                    self.assertEqual(parse_qs(url.query), {'tag': ['pulsarfm-21']}, path)
+                    self.assertEqual(link['rel'], 'sponsored nofollow noopener noreferrer', path)
 
 
 class FeedTests(unittest.TestCase):

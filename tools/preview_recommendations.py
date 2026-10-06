@@ -1,4 +1,4 @@
-"""Local-only product demo. Synthetic links and analytics never contact Awin or Google.
+"""Local-only product demo. Synthetic links and analytics never contact Amazon or Google.
 
 python tools/preview_recommendations.py
 Open http://127.0.0.1:4174/__preview__/?affiliate_debug=1
@@ -14,18 +14,16 @@ from gen_recommendations import ROOT, affiliate_url, generate, read_json, esc
 def demo_page():
     catalog = read_json(ROOT / 'data/affiliates.json')
     editorial = read_json(ROOT / 'data/recommendations.json')
-    # Synthetic IDs are used only in memory and the generated link is replaced below.
-    catalog['awin']['publisherId'] = '123'
-    catalog['merchants']['worten-pt']['advertiserId'] = '456'
+    # The template product lives only in memory and its Amazon link is replaced below.
     product = read_json(ROOT / 'templates/product.json')
     product.update(status='published', name='Produto de demonstração',
-                   description='Exemplo visual do componente. Substitui por um produto revisto pela redação, com fotografia e link Awin reais.',
-                   destinationUrl='https://www.worten.pt/',
+                   description='Exemplo visual do componente. Substitui por um produto revisto pela redação.',
                    price={'amount': '99.90', 'currency': 'EUR', 'checkedAt': date.today().isoformat()})
     catalog['products'] = [product]
     # Keep the demo independent of any real product selections added later.
     for guide in editorial['articles']:
         guide['productIds'] = []
+        guide.pop('badges', None)
         for section in guide['sections']:
             section['productLinks'] = []
     article = editorial['articles'][0]
@@ -47,7 +45,7 @@ def demo_page():
     html = html.replace('<script src="/assets/affiliate-analytics.js"', sink + '<script src="/assets/affiliate-analytics.js"')
     notice = """<aside class="affiliate-disclosure"><h2>Demonstração local</h2>
       <p>Produto e preço fictícios, apenas para testar o componente. Os botões abrem um destino local.
-      Aceita os cookies e clica num link para ver o evento abaixo. Nenhum evento é enviado à Google ou à Awin.</p>
+      Aceita os cookies e clica num link para ver o evento abaixo. Nenhum evento é enviado à Google e nenhum clique chega à Amazon.</p>
       <pre id="demo-events" style="white-space:pre-wrap;overflow-wrap:anywhere">Ainda sem eventos.</pre></aside>"""
     return html.replace('<article class="guide">', notice + '<article class="guide">')
 
@@ -58,7 +56,7 @@ class PreviewHandler(SimpleHTTPRequestHandler):
         if path.rstrip('/') == '/__preview__':
             content = demo_page()
         elif path == '/__preview__/destino':
-            content = '<!doctype html><html lang="pt"><meta charset="utf-8"><title>Destino de teste</title><h1>Link de demonstração aberto</h1><p>Não foi feita nenhuma ligação à Awin ou à Worten. Podes fechar esta aba.</p></html>'
+            content = '<!doctype html><html lang="pt"><meta charset="utf-8"><title>Destino de teste</title><h1>Link de demonstração aberto</h1><p>Não foi feita nenhuma ligação à Amazon. Podes fechar esta aba.</p></html>'
         else:
             return super().do_GET()
         body = content.encode('utf-8')

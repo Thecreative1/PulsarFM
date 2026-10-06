@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "title": "Recomendações PulsarFM",
   "description": "Guias de equipamento para ouvir, descobrir e criar música: auscultadores, colunas, vinil e home studio. Informação útil primeiro, conversa de folheto nunca.",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-06",
   "articles": [
     {
       "slug": "melhores-auscultadores",
       "category": "Escuta pessoal",
       "title": "Melhores auscultadores em 2026: uma escolha para cada orçamento",
       "summary": "Auscultadores Bluetooth para estudar, viajar ou ouvir rádio à secretária: cinco escolhas, da gama económica ao premium, e como decidir.",
-      "intro": "Não há melhores auscultadores em abstrato. Há os melhores para a tua cabeça, o teu orçamento e o sítio onde passas as horas a ouvir. Escolhemos cinco modelos à venda em Portugal, da entrada ao premium, e dizemos para quem serve cada um. Antes de comparar, responde a três perguntas: onde, durante quanto tempo e ligados a quê.",
-      "updatedAt": "2026-09-30",
+      "intro": "Não há melhores auscultadores em abstrato. Há os melhores para a tua cabeça, o teu orçamento e o sítio onde passas as horas a ouvir. Escolhemos cinco modelos disponíveis na Amazon.es, da entrada ao premium, e dizemos para quem serve cada um. Antes de comparar, responde a três perguntas: onde, durante quanto tempo e ligados a quê.",
+      "updatedAt": "2026-10-06",
       "sections": [
         {
           "heading": "Começa pela tua forma de ouvir",
@@ -41,7 +41,7 @@
           "productLinks": [
             {
               "productId": "sony-wh-ch720n",
-              "label": "Ver os Sony WH-CH720N na Worten"
+              "label": "Ver os Sony WH-CH720N na Amazon"
             }
           ]
         },
@@ -55,22 +55,22 @@
           "heading": "O que comparar além do preço",
           "paragraphs": [
             "Autonomia anunciada, autonomia com cancelamento ligado e tempo de carga são três números diferentes. Os fabricantes medem em condições simpáticas; a volume alto, conta com menos. Mesmo assim, falamos de dezenas de horas. As pilhas de reserva no bolso do casaco podem finalmente reformar-se.",
-            "Um desconto só interessa se o modelo, a cor e a versão forem os que procuras. Na Worten, vê também se quem vende é a própria loja ou um parceiro do Marketplace."
+            "Um desconto só interessa se o modelo, a cor e a versão forem os que procuras. Na Amazon, vê também quem vende e quem envia: a própria Amazon ou um vendedor externo."
           ]
         }
       ],
       "productIds": [
         "sony-wh-ch520",
         "sony-wh-ch720n",
-        "jbl-tune-770nc",
+        "soundcore-space-one",
         "audio-technica-ath-m50xbt2",
         "sony-wh-1000xm5"
       ],
       "badges": {
-        "sony-wh-ch520": "Até 50€",
-        "sony-wh-ch720n": "50–150€ · Para estudar",
-        "jbl-tune-770nc": "50–150€ · Autonomia",
-        "audio-technica-ath-m50xbt2": "Premium · Para criar",
+        "sony-wh-ch520": "Económico",
+        "sony-wh-ch720n": "Gama média · Para estudar",
+        "soundcore-space-one": "Gama média · Autonomia",
+        "audio-technica-ath-m50xbt2": "Gama média-alta · Para criar",
         "sony-wh-1000xm5": "Premium · Silêncio"
       },
       "comparison": {
@@ -99,11 +99,11 @@
             "Estudar e trabalhar"
           ],
           [
-            "JBL Tune 770NC",
+            "Soundcore Space One",
             "Over-ear",
             "Sim, adaptativo",
-            "Até 70 h (44 h com cancelamento)",
-            "Graves e muita autonomia"
+            "Até 55 h (40 h com cancelamento)",
+            "Cancelamento e bateria na gama média"
           ],
           [
             "Audio-Technica ATH-M50xBT2",
@@ -125,7 +125,7 @@
       "faq": [
         {
           "q": "Quais são os melhores auscultadores baratos?",
-          "a": "Até 50€, os Sony WH-CH520 são uma boa porta de entrada sem fios: leves e com bateria para dias. Não têm cancelamento de ruído, por isso rendem mais em casa do que no metro."
+          "a": "Na gama económica, os Sony WH-CH520 são uma boa porta de entrada sem fios: leves e com bateria para dias. Não têm cancelamento de ruído, por isso rendem mais em casa do que no metro."
         },
         {
           "q": "Vale a pena pagar mais por cancelamento de ruído?",
@@ -148,7 +148,7 @@
       "title": "Colunas Bluetooth para levar a música contigo",
       "summary": "Da cozinha ao fim de tarde no jardim: tamanho, autonomia e ligações, sem cair no culto dos watts.",
       "intro": "Uma coluna portátil tem de caber no sítio onde vai tocar e na forma como a vais carregar. Há duas espécies: a que muda de divisão de vez em quando e a que vive na mochila. Descobre primeiro qual é a tua.",
-      "updatedAt": "2026-09-30",
+      "updatedAt": "2026-10-06",
       "sections": [
         {
           "heading": "Onde vai tocar?",
@@ -171,7 +171,7 @@
           "productLinks": [
             {
               "productId": "marshall-acton-iv",
-              "label": "Ver a Marshall Acton IV na Worten"
+              "label": "Ver a Marshall Acton IV na Amazon"
             }
           ]
         }
@@ -179,15 +179,15 @@
       "productIds": [
         "jbl-go-5",
         "jbl-flip-7",
-        "marshall-emberton-ii",
+        "marshall-emberton-iii",
         "marshall-acton-iv"
       ],
       "closing": "Escolhe pela facilidade de uso e pelo sítio onde vai tocar. Mais watts no papel, sozinhos, não resolvem nada.",
       "badges": {
-        "jbl-go-5": "Bolso",
-        "jbl-flip-7": "Praia e jardim",
-        "marshall-emberton-ii": "Autonomia",
-        "marshall-acton-iv": "Casa · Entrada RCA"
+        "jbl-go-5": "Económica · Bolso",
+        "jbl-flip-7": "Gama média · Praia e jardim",
+        "marshall-emberton-iii": "Gama média · Autonomia",
+        "marshall-acton-iv": "Premium · Casa"
       },
       "comparison": {
         "heading": "Comparação rápida",
@@ -215,9 +215,9 @@
             "Praia, piscina, jardim"
           ],
           [
-            "Marshall Emberton II",
+            "Marshall Emberton III",
             "Sim",
-            "Mais de 30 h",
+            "Mais de 32 h",
             "IP67",
             "Fins de semana fora"
           ],
@@ -234,7 +234,7 @@
       "faq": [
         {
           "q": "Qual é a melhor coluna Bluetooth portátil?",
-          "a": "Depende de onde vai tocar. Para levar no bolso, a JBL Go 5. Para a praia ou o jardim, a JBL Flip 7. Se a prioridade é passar dias sem carregador, a Marshall Emberton II, com mais de 30 horas anunciadas."
+          "a": "Depende de onde vai tocar. Para levar no bolso, a JBL Go 5. Para a praia ou o jardim, a JBL Flip 7. Se a prioridade é passar dias sem carregador, a Marshall Emberton III, com mais de 32 horas anunciadas."
         },
         {
           "q": "Posso levar uma coluna Bluetooth para a praia ou para a piscina?",
@@ -256,7 +256,7 @@
       "title": "Soundbars: dá espaço ao som, sem complicar a sala",
       "summary": "Diálogos, concertos e cinema. Um guia para verificar ligações e espaço antes da compra.",
       "intro": "Antes de escolher uma soundbar, espreita as ligações atrás do televisor e mede o móvel. A opção certa para a tua sala começa pela compatibilidade e pelo espaço, não pela lista de modos de som.",
-      "updatedAt": "2026-09-30",
+      "updatedAt": "2026-10-06",
       "sections": [
         {
           "heading": "Começa pelo televisor",
@@ -279,27 +279,29 @@
           "productLinks": [
             {
               "productId": "bose-tv-speaker",
-              "label": "Ver a Bose TV Speaker na Worten"
+              "label": "Ver a Bose TV Speaker na Amazon"
             }
           ]
         }
       ],
       "productIds": [
-        "sony-ht-sf150",
-        "lg-s40t",
+        "samsung-hw-b400f",
+        "samsung-hw-b46cf",
         "bose-tv-speaker",
-        "sony-ht-s40r"
+        "sony-ht-s40r",
+        "sonos-beam-gen-2"
       ],
       "closing": "Faz a lista de ligações e medidas antes de olhar para promoções. A soundbar tem de caber no móvel e na tua rotina; o resto é conversa de folheto.",
       "badges": {
-        "sony-ht-sf150": "Compacta",
-        "lg-s40t": "Graves sem fios",
+        "samsung-hw-b400f": "Económica · Compacta",
+        "samsung-hw-b46cf": "Gama média · Graves sem fios",
         "bose-tv-speaker": "Diálogos",
-        "sony-ht-s40r": "Surround 5.1"
+        "sony-ht-s40r": "Surround 5.1",
+        "sonos-beam-gen-2": "Premium · Dolby Atmos"
       },
       "comparison": {
         "heading": "Comparação rápida",
-        "caption": "Comparação das quatro soundbars recomendadas: canais, subwoofer, ligações e utilização ideal",
+        "caption": "Comparação das cinco soundbars recomendadas: canais, subwoofer, ligações e utilização ideal",
         "columns": [
           "Modelo",
           "Configuração",
@@ -309,17 +311,17 @@
         ],
         "rows": [
           [
-            "Sony HT-SF150",
+            "Samsung HW-B400F",
             "2.0",
-            "Não (barra única)",
-            "HDMI ARC, ótico, Bluetooth, USB",
+            "Não (woofers na barra)",
+            "HDMI ARC, ótico, Bluetooth",
             "TV pequena ou quarto"
           ],
           [
-            "LG S40T",
+            "Samsung HW-B46CF",
             "2.1",
             "Sem fios",
-            "HDMI ARC, ótico, Bluetooth, USB",
+            "HDMI ARC, ótico, Bluetooth",
             "Mais graves sem cabos"
           ],
           [
@@ -335,6 +337,13 @@
             "Com fios; traseiras sem fios",
             "HDMI ARC, ótico, Bluetooth, USB",
             "Som surround"
+          ],
+          [
+            "Sonos Beam (Gen 2)",
+            "Dolby Atmos",
+            "Opcional, Sonos",
+            "HDMI eARC, Wi-Fi",
+            "Atmos e streaming"
           ]
         ],
         "note": "Características indicadas pelos fabricantes. Confirma as portas do teu televisor antes de comprar."
@@ -342,19 +351,23 @@
       "faq": [
         {
           "q": "Qual é a diferença entre HDMI ARC e eARC?",
-          "a": "As duas deixam o televisor enviar o som para a soundbar pelo mesmo cabo HDMI. O eARC tem mais largura de banda, para formatos sem compressão como o Dolby Atmos de alta resolução. Para Dolby Digital, o ARC chega, e é o que usam as quatro barras desta lista."
+          "a": "As duas deixam o televisor enviar o som para a soundbar pelo mesmo cabo HDMI. O eARC tem mais largura de banda, para formatos sem compressão como o Dolby Atmos de alta resolução. Para Dolby Digital, o ARC chega. Nesta lista, a Sonos Beam é a que tira partido do eARC."
         },
         {
           "q": "Posso ligar a soundbar por cabo ótico?",
-          "a": "Sim, todas as soundbars desta lista têm entrada ótica. A diferença é que, por ótico, normalmente perdes o controlo do volume pelo comando do televisor, que por HDMI ARC costuma funcionar sem configurações extra."
+          "a": "Na maioria das soundbars desta lista, sim. A Sonos Beam é a exceção: liga por HDMI eARC e, para ótico, precisa de um adaptador. Por ótico, normalmente perdes o controlo do volume pelo comando do televisor, que por HDMI ARC costuma funcionar sem configurações extra."
         },
         {
           "q": "Preciso de subwoofer?",
-          "a": "Para diálogos e notícias, não. Para filmes de ação e música eletrónica, faz diferença. A LG S40T traz um sem fios; a Bose TV Speaker aceita um opcional; a Sony HT-SF150 fica-se pela barra, o que poupa espaço e uma tomada."
+          "a": "Para diálogos e notícias, não. Para filmes de ação e música eletrónica, faz diferença. A Samsung HW-B46CF traz um sem fios; a Bose TV Speaker aceita um opcional; a Samsung HW-B400F fica-se pelos woofers integrados na barra, o que poupa espaço e uma tomada."
         },
         {
           "q": "Uma soundbar ajuda a perceber os diálogos?",
           "a": "Sim, é das melhorias mais notórias em relação às colunas do televisor. A Bose TV Speaker foi pensada para isso, e a Sony HT-S40R tem modo de voz. Experimenta ao volume a que costumas ver televisão, não ao volume da loja."
+        },
+        {
+          "q": "Vale a pena uma soundbar com Dolby Atmos?",
+          "a": "Vale, se vês muitos filmes e séries com Atmos em streaming e o televisor tem eARC. O efeito de altura depende da sala: tetos altos ou irregulares diluem-no. Para notícias, futebol e rádio, uma barra mais simples faz o mesmo trabalho."
         }
       ]
     },
@@ -364,7 +377,7 @@
       "title": "Gira-discos: prepara o teu primeiro lado A",
       "summary": "Do disco às colunas, percebe o que precisas para montar um sistema de vinil.",
       "intro": "O vinil tem uma característica que o streaming nos fez esquecer: é um sistema, não um botão. Antes de escolher o gira-discos, vê o que já tens em casa e por onde o som vai chegar às colunas ou aos auscultadores.",
-      "updatedAt": "2026-09-30",
+      "updatedAt": "2026-10-06",
       "sections": [
         {
           "heading": "Pensa no sistema completo",
@@ -380,7 +393,7 @@
           "productLinks": [
             {
               "productId": "lenco-ls300",
-              "label": "Ver o Lenco LS300 com colunas na Worten"
+              "label": "Ver o Lenco LS-300 com colunas na Amazon"
             }
           ]
         },
@@ -393,25 +406,29 @@
           "productLinks": [
             {
               "productId": "sony-ps-lx3bt",
-              "label": "Ver o Sony PS-LX3BT na Worten"
+              "label": "Ver o Sony PS-LX3BT na Amazon"
             }
           ]
         }
       ],
       "productIds": [
+        "audio-technica-at-lp60x",
         "lenco-ls300",
         "sony-ps-lx3bt",
+        "audio-technica-at-lp120x",
         "jbl-spinner-bt"
       ],
       "closing": "Desenha o caminho do som, do disco até às colunas. É a melhor forma de não descobrir, já com o disco no prato, que falta um cabo ou um pré-amplificador.",
       "badges": {
+        "audio-technica-at-lp60x": "Entrada · Automático",
         "lenco-ls300": "Sistema completo",
-        "sony-ps-lx3bt": "Automático",
-        "jbl-spinner-bt": "Manual"
+        "sony-ps-lx3bt": "Automático · Bluetooth",
+        "audio-technica-at-lp120x": "Intermédio · Ajustável",
+        "jbl-spinner-bt": "Manual · Bluetooth"
       },
       "comparison": {
         "heading": "Comparação rápida",
-        "caption": "Comparação dos três gira-discos recomendados: funcionamento, colunas, ligação sem fios e utilização ideal",
+        "caption": "Comparação dos cinco gira-discos recomendados: funcionamento, colunas, ligação sem fios e utilização ideal",
         "columns": [
           "Modelo",
           "Funcionamento",
@@ -421,10 +438,17 @@
         ],
         "rows": [
           [
-            "Lenco LS300",
+            "Audio-Technica AT-LP60X",
+            "Automático",
+            "Não",
+            "Não",
+            "Primeiro gira-discos, colunas ativas"
+          ],
+          [
+            "Lenco LS-300",
             "Manual, com auto-stop",
             "Sim",
-            "Não",
+            "Recetor Bluetooth",
             "Começar sem juntar peças"
           ],
           [
@@ -432,7 +456,14 @@
             "Automático",
             "Não",
             "Bluetooth (aptX Adaptive)",
-            "Primeiro gira-discos sem complicações"
+            "Vinil sem fios, sem complicações"
+          ],
+          [
+            "Audio-Technica AT-LP120X USB",
+            "Manual, tração direta",
+            "Não",
+            "Não (saída USB)",
+            "Afinar o sistema e digitalizar discos"
           ],
           [
             "JBL Spinner BT",
@@ -447,7 +478,7 @@
       "faq": [
         {
           "q": "O que é um pré-amplificador phono e preciso de um?",
-          "a": "O sinal que sai da agulha é muito fraco e precisa de ser amplificado e equalizado antes de chegar às colunas. Se o gira-discos não tiver pré-amplificador integrado, precisas de um externo ou de um amplificador com entrada phono. O Sony PS-LX3BT e o JBL Spinner BT já o trazem."
+          "a": "O sinal que sai da agulha é muito fraco e precisa de ser amplificado e equalizado antes de chegar às colunas. Se o gira-discos não tiver pré-amplificador integrado, precisas de um externo ou de um amplificador com entrada phono. Os Audio-Technica AT-LP60X e AT-LP120X, o Sony PS-LX3BT e o JBL Spinner BT já o trazem."
         },
         {
           "q": "Gira-discos automático ou manual: qual escolher?",
@@ -469,7 +500,7 @@
       "title": "Home studio: começa pelo que queres gravar",
       "summary": "Voz, guitarra ou primeiras demos. Monta um conjunto pequeno que faça sentido para o teu projeto.",
       "intro": "Um home studio começa com uma pergunta simples: o que vais gravar, e quantas coisas entram ao mesmo tempo? A resposta escolhe por ti a interface, o microfone e a monitorização. O resto é catálogo.",
-      "updatedAt": "2026-09-30",
+      "updatedAt": "2026-10-06",
       "sections": [
         {
           "heading": "Liga as peças certas",
@@ -491,8 +522,8 @@
           ],
           "productLinks": [
             {
-              "productId": "hyperx-quadcast-2",
-              "label": "Ver o HyperX QuadCast 2 na Worten"
+              "productId": "samson-q2u",
+              "label": "Ver o Samson Q2U na Amazon"
             }
           ]
         },
@@ -505,13 +536,23 @@
         }
       ],
       "productIds": [
-        "hyperx-quadcast-2",
-        "audio-technica-ath-m50xbt2"
+        "samson-q2u",
+        "focusrite-scarlett-solo-4",
+        "audio-technica-ath-m20x",
+        "audio-technica-ath-m50xbt2",
+        "presonus-eris-3-5",
+        "rode-psa1",
+        "adam-hall-pad-eco-2"
       ],
       "closing": "Planeia uma primeira gravação possível, com todas as ligações resolvidas. Uma demo imperfeita gravada vale mais do que o estúdio perfeito que continua no carrinho.",
       "badges": {
-        "hyperx-quadcast-2": "Voz sem interface",
-        "audio-technica-ath-m50xbt2": "Para monitorizar"
+        "samson-q2u": "Microfone · USB e XLR",
+        "focusrite-scarlett-solo-4": "Interface",
+        "audio-technica-ath-m20x": "Monitorização · Económico",
+        "audio-technica-ath-m50xbt2": "Monitorização · Gama média-alta",
+        "presonus-eris-3-5": "Monitores",
+        "rode-psa1": "Braço de microfone",
+        "adam-hall-pad-eco-2": "Isolamento"
       }
     },
     {
@@ -520,7 +561,7 @@
       "title": "Tecnologia e acessórios para a tua rotina musical",
       "summary": "Adaptadores, suportes e ligações: pequenas escolhas que tornam a escuta mais simples.",
       "intro": "Nem sempre é preciso trocar o equipamento principal. Às vezes o problema resolve-se com um adaptador, um suporte ou um cabo com o comprimento certo.",
-      "updatedAt": "2026-09-30",
+      "updatedAt": "2026-10-06",
       "sections": [
         {
           "heading": "Compatibilidade antes de tudo",
@@ -536,7 +577,7 @@
           "productLinks": [
             {
               "productId": "apple-usb-c-jack-35",
-              "label": "Ver o adaptador Apple USB-C para jack na Worten"
+              "label": "Ver o adaptador Apple USB-C para jack na Amazon"
             }
           ]
         },
@@ -548,8 +589,8 @@
           ],
           "productLinks": [
             {
-              "productId": "fonestar-bluetooth-2-em-1",
-              "label": "Ver o Fonestar Bluetooth 2 em 1 na Worten"
+              "productId": "ugreen-bluetooth-2-em-1",
+              "label": "Ver o UGREEN Bluetooth 2 em 1 na Amazon"
             }
           ]
         },
@@ -563,14 +604,18 @@
       ],
       "productIds": [
         "apple-usb-c-jack-35",
-        "fonestar-bluetooth-2-em-1",
-        "trust-gxt-260"
+        "ugreen-bluetooth-2-em-1",
+        "ugreen-jack-rca-1m",
+        "fiio-ka11",
+        "new-bee-suporte-auscultadores"
       ],
       "closing": "Escolhe um problema da tua rotina e resolve-o. Depois outro. A música é o centro; os acessórios só têm de sair do caminho.",
       "badges": {
-        "apple-usb-c-jack-35": "Ligação",
-        "fonestar-bluetooth-2-em-1": "Bluetooth",
-        "trust-gxt-260": "Arrumação"
+        "apple-usb-c-jack-35": "Adaptador",
+        "ugreen-bluetooth-2-em-1": "Bluetooth",
+        "ugreen-jack-rca-1m": "Cabo",
+        "fiio-ka11": "DAC",
+        "new-bee-suporte-auscultadores": "Arrumação"
       }
     }
   ]

@@ -1,433 +1,769 @@
 {
   "schemaVersion": 1,
-  "awin": {
-    "publisherId": ""
-  },
   "merchants": {
-    "worten-pt": {
-      "name": "Worten",
-      "network": "awin",
-      "advertiserId": "",
+    "amazon-es": {
+      "name": "Amazon.es",
+      "network": "amazon",
+      "trackingId": "pulsarfm-21",
       "allowedDestinationHosts": [
-        "www.worten.pt",
-        "worten.pt"
+        "www.amazon.es"
       ],
-      "cta": "Ver na Worten"
+      "cta": "Ver preço na Amazon"
     }
   },
   "products": [
     {
       "id": "sony-wh-ch520",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Sony WH-CH520 · Preto",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0BTJD6LCL",
+      "name": "Sony WH-CH520",
+      "category": "Auscultadores",
       "description": "A porta de entrada sem fios: leves, on-ear e com até 50 horas de autonomia segundo a Sony. Não têm cancelamento de ruído e as almofadas apoiam-se sobre a orelha, o que nem todas as pessoas acham confortável em sessões muito longas.",
-      "image": "https://www.worten.pt/i/bbf891ce8f3ca67e5baea7084e0f4dadadb764ea",
-      "imageAlt": "Sony WH-CH520 · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch520-on-ear-microfone-preto-7721305",
-      "affiliateUrl": "",
+      "bestFor": "Primeira compra sem fios, uso casual em casa",
+      "pros": [
+        "Leves",
+        "Até 50 h de autonomia segundo a Sony",
+        "Preço de entrada"
+      ],
+      "cons": [
+        "Sem cancelamento de ruído",
+        "On-ear: menos confortáveis em sessões muito longas"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch520-on-ear-microfone-preto-7721305"
-      }
-    },
-    {
-      "id": "jbl-go-4",
-      "status": "draft",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "JBL Go 4 · Azul",
-      "description": "Uma coluna Bluetooth compacta, para levar a música de divisão em divisão. A ficha indica até 7 horas de autonomia; compara o tamanho e as condições dessa autonomia com a tua rotina antes de comprar.",
-      "image": "https://www.worten.pt/i/97ae453a9ffa8fb3942f1a213b31f2275bc95f92",
-      "imageAlt": "JBL Go 4 · Azul",
-      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-4-7-w-autonomia-7-horas-azul-8031117",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-4-7-w-autonomia-7-horas-azul-8031117"
-      }
-    },
-    {
-      "id": "jbl-bar-2-all-in-one",
-      "status": "draft",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "JBL Bar 2.0 All-In-One",
-      "description": "Uma soundbar de 2.0 canais para considerar numa instalação de som na sala. Confirma as ligações do teu televisor e as dimensões disponíveis no móvel antes de decidir.",
-      "image": "https://www.worten.pt/i/60813e77a6826ff37388bf6e718a888da89f8294",
-      "imageAlt": "JBL Bar 2.0 All-In-One",
-      "destinationUrl": "https://www.worten.pt/produtos/soundbar-jbl-bar-2-0-all-in-one-2-0-canais-40-w-mrkean-6925281925313",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/soundbar-jbl-bar-2-0-all-in-one-2-0-canais-40-w-mrkean-6925281925313"
-      }
-    },
-    {
-      "id": "audio-technica-at-lp60xusb",
-      "status": "draft",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Audio-Technica AT-LP60XUSBGM",
-      "description": "Gira-discos automático de transmissão por correia, a 33⅓ e 45 rpm. Um bom ponto de partida no vinil, sem ter de aprender a pousar a agulha à mão. Confirma as ligações e o equipamento de amplificação que vais usar.",
-      "image": "https://www.worten.pt/i/976513e62fec3f8dc8986d3832c9f102fd3e05c1",
-      "imageAlt": "Audio-Technica AT-LP60XUSBGM",
-      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-audio-technica-at-lp60xusbgm-automatico-correia-velocidade-33-1-3-45-6936975",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-audio-technica-at-lp60xusbgm-automatico-correia-velocidade-33-1-3-45-6936975"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0BTJD6LCL/"
       }
     },
     {
       "id": "sony-wh-ch720n",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Sony WH-CH720N · Preto",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0BTDX26B2",
+      "name": "Sony WH-CH720N",
+      "category": "Auscultadores",
       "description": "Over-ear com cancelamento de ruído e um dos pesos mais baixos da categoria, o que conta muito em horas seguidas de estudo ou trabalho. A Sony indica até 35 horas com o cancelamento ativo. O isolamento fica abaixo dos modelos premium.",
-      "image": "https://www.worten.pt/i/1e26e2dc6ff079915dc4d42345d6d91007dacc47",
-      "imageAlt": "Sony WH-CH720N · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch720n-over-ear-microfone-noise-cancelling-preto-7721309",
-      "affiliateUrl": "",
+      "bestFor": "Estudar e trabalhar durante horas",
+      "pros": [
+        "Cancelamento de ruído sem preço premium",
+        "Muito leves",
+        "Até 35 h com cancelamento (Sony)"
+      ],
+      "cons": [
+        "Isolamento abaixo dos modelos premium"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-ch720n-over-ear-microfone-noise-cancelling-preto-7721309"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0BTDX26B2/"
       }
     },
     {
-      "id": "jbl-tune-770nc",
+      "id": "soundcore-space-one",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "JBL Tune 770NC · Preto",
-      "description": "Para quem quer carregar o mínimo possível: a JBL anuncia até 70 horas sem cancelamento de ruído e cerca de 44 horas com ele ligado. Assinatura sonora com graves marcados, que combina com eletrónica e pop; quem procura um som mais neutro pode preferir outra opção.",
-      "image": "https://www.worten.pt/i/bb66e27a7047d346e99cbb1608ce2756ba8af23d",
-      "imageAlt": "JBL Tune 770NC · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-jbl-t-770nc-over-ear-microfone-noise-cancelling-preto-7815002",
-      "affiliateUrl": "",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0C6KFZC9Z",
+      "name": "Soundcore Space One",
+      "category": "Auscultadores",
+      "description": "Cancelamento de ruído adaptativo, suporte LDAC e, segundo a Soundcore, 40 horas com o cancelamento ligado e 55 sem ele. É a alternativa aos Sony da mesma gama para quem dá mais peso à bateria. Vendidos pela loja oficial da Anker na Amazon.es. O LDAC só faz diferença com telemóveis compatíveis, sobretudo Android.",
+      "bestFor": "Cancelamento de ruído e muita autonomia na gama média",
+      "pros": [
+        "Cancelamento adaptativo",
+        "Suporte LDAC",
+        "40 h com cancelamento (fabricante)"
+      ],
+      "cons": [
+        "LDAC depende do telemóvel",
+        "Marca menos conhecida do que Sony ou JBL"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-jbl-t-770nc-over-ear-microfone-noise-cancelling-preto-7815002"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0C6KFZC9Z/"
       }
     },
     {
       "id": "audio-technica-ath-m50xbt2",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Audio-Technica ATH-M50xBT2 · Azul",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B09BYFHL25",
+      "name": "Audio-Technica ATH-M50xBT2",
+      "category": "Auscultadores",
       "description": "A versão Bluetooth de uns auscultadores de estúdio muito usados por músicos e produtores. Som equilibrado, até 50 horas de autonomia segundo a marca e ligação por cabo para quando quiseres produzir. Não têm cancelamento de ruído ativo.",
-      "image": "https://www.worten.pt/i/218439c3a06d99949f3db5d3fcc041fb1c657f2e",
-      "imageAlt": "Audio-Technica ATH-M50xBT2 · Azul",
-      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-audio-technica-ath-m50xbt2ds-over-ear-azul-7646605",
-      "affiliateUrl": "",
+      "bestFor": "Som neutro, ouvir com atenção e produzir",
+      "pros": [
+        "Assinatura equilibrada",
+        "Ligação por cabo para produzir",
+        "Até 50 h (fabricante)"
+      ],
+      "cons": [
+        "Sem cancelamento de ruído ativo"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-audio-technica-ath-m50xbt2ds-over-ear-azul-7646605"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B09BYFHL25/"
       }
     },
     {
       "id": "sony-wh-1000xm5",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Sony WH-1000XM5 · Preto",
-      "description": "A referência para quem quer silêncio: cancelamento de ruído de topo, conforto para viagens longas e até 30 horas com o cancelamento ativo, segundo a Sony. Ao contrário da geração anterior, não dobram, por isso ocupam mais espaço na mochila.",
-      "image": "https://www.worten.pt/i/6f688135b65171acfaa8561e2e24f33f76008590",
-      "imageAlt": "Sony WH-1000XM5 · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-1000xm5-headband-premium-over-ear-microfone-noise-cancelling-preto-7588185",
-      "affiliateUrl": "",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B09Y2MYL5C",
+      "name": "Sony WH-1000XM5",
+      "category": "Auscultadores",
+      "description": "A referência para quem quer silêncio: cancelamento de ruído de topo, conforto para viagens longas e até 30 horas com o cancelamento ativo, segundo a Sony. Já existe o WH-1000XM6, mas para a maioria das pessoas o XM5 continua a chegar e sobrar. Ao contrário da geração anterior, não dobram, por isso ocupam mais espaço na mochila.",
+      "bestFor": "Viagens e máximo silêncio",
+      "pros": [
+        "Cancelamento de ruído de topo",
+        "Conforto em viagens longas"
+      ],
+      "cons": [
+        "Não dobram",
+        "Já existe sucessor (WH-1000XM6)"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-29",
-        "referenceUrl": "https://www.worten.pt/produtos/auscultadores-bluetooth-sony-wh-1000xm5-headband-premium-over-ear-microfone-noise-cancelling-preto-7588185"
-      }
-    },
-    {
-      "id": "hyperx-quadcast-2",
-      "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "HyperX QuadCast 2 · Preto/Vermelho",
-      "description": "Microfone USB-C que dispensa interface: ligas ao computador e gravas. Segundo a HyperX, grava a 24 bits/96 kHz, tem quatro padrões polares, mute por toque no topo e saída de auscultadores para te ouvires enquanto gravas. Foi pensado para voz e streaming; para ligar uma guitarra ou um segundo microfone continuas a precisar de uma interface.",
-      "image": "https://www.worten.pt/i/a46646c8e6de859ecfb9838800ba1b9e27839c50",
-      "imageAlt": "HyperX QuadCast 2 · Preto/Vermelho",
-      "destinationUrl": "https://www.worten.pt/produtos/microfone-hyperx-quadcast-2-preto-vermelho-8123946",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/microfone-hyperx-quadcast-2-preto-vermelho-8123946"
-      }
-    },
-    {
-      "id": "apple-usb-c-jack-35",
-      "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Adaptador Apple USB-C para jack 3,5 mm",
-      "description": "Devolve o jack a um telemóvel, tablet ou portátil que o perdeu pelo caminho. Pequeno, sem bateria e sem emparelhamentos: ligas os auscultadores com fio e pronto. Foi feito para equipamentos Apple; em Android costuma funcionar, mas confirma a compatibilidade com o teu modelo.",
-      "image": "https://www.worten.pt/i/26557da53318784c1c4a91910c8bbe253522d426",
-      "imageAlt": "Adaptador Apple USB-C para jack 3,5 mm",
-      "destinationUrl": "https://www.worten.pt/produtos/adaptador-apple-usb-c-para-jack-3-5-mm-para-auscultadores-8430434",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/adaptador-apple-usb-c-para-jack-3-5-mm-para-auscultadores-8430434"
-      }
-    },
-    {
-      "id": "fonestar-bluetooth-2-em-1",
-      "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Fonestar Bluetooth 2 em 1 · transmissor e recetor",
-      "description": "Dá Bluetooth a uma aparelhagem que nasceu antes dele, ou envia o som da TV para auscultadores sem fios. Funciona como recetor ou como transmissor, suporta aptX e traz cabos jack 3,5 mm e RCA na caixa. A Fonestar indica até 14 horas de bateria. Para a baixa latência do aptX, o outro aparelho também tem de o suportar.",
-      "image": "https://www.worten.pt/i/37f1e04a31fa73a3aa68b43cc01a269a8a5c9e96",
-      "imageAlt": "Fonestar Bluetooth 2 em 1 · transmissor e recetor",
-      "destinationUrl": "https://www.worten.pt/produtos/transmissor-e-recetor-de-audio-fonestar-bluetooth-2-em-1-7355514",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/transmissor-e-recetor-de-audio-fonestar-bluetooth-2-em-1-7355514"
-      }
-    },
-    {
-      "id": "trust-gxt-260",
-      "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Suporte para auscultadores Trust GXT 260 · Preto",
-      "description": "Um sítio para pousar os auscultadores que não seja o encosto da cadeira. Tem apoios de borracha em cima e na base, cerca de 25 cm de altura e 185 g. É de plástico e tem estética gaming, mas cumpre o essencial: a haste mantém a forma e a secretária fica arrumada.",
-      "image": "https://www.worten.pt/i/3741e2de486627f4d16ca3825d031874b4428a1a",
-      "imageAlt": "Suporte para auscultadores Trust GXT 260 · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/suporte-auscultadores-trust-gxt-260-preto-7072147",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/suporte-auscultadores-trust-gxt-260-preto-7072147"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B09Y2MYL5C/"
       }
     },
     {
       "id": "jbl-go-5",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "JBL Go 5 · Preto",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0GPPRPRM5",
+      "name": "JBL Go 5",
+      "category": "Colunas Bluetooth",
       "description": "Cabe na palma da mão e aguenta água e pó (IP68). A JBL anuncia até 10 horas de autonomia e emparelhamento com outras colunas compatíveis via Auracast. Não esperes graves que façam tremer a mesa: é para ouvir perto, não para animar uma festa.",
-      "image": "https://www.worten.pt/i/a1ebae5c5f9253724d1e58bd80338ad15d856ca3",
-      "imageAlt": "JBL Go 5 · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-5-4-8-w-rms-autonomia-ate-10h-preto-8830544",
-      "affiliateUrl": "",
+      "bestFor": "Levar no bolso, ouvir perto",
+      "pros": [
+        "IP68",
+        "Muito compacta",
+        "Auracast"
+      ],
+      "cons": [
+        "Graves limitados pelo tamanho"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-go-5-4-8-w-rms-autonomia-ate-10h-preto-8830544"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0GPPRPRM5/"
       }
     },
     {
       "id": "jbl-flip-7",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "JBL Flip 7 · Preto",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0DXKMXPXW",
+      "name": "JBL Flip 7",
+      "category": "Colunas Bluetooth",
       "description": "O formato garrafa de sempre, agora com IP68 contra água e pó. A JBL indica até 16 horas com o Playtime Boost ligado, e liga-se a outras colunas JBL compatíveis com Auracast. É o meio-termo sensato entre levar no bolso e encher um jardim de som.",
-      "image": "https://www.worten.pt/i/e060e464098ff0071914861fdaebed65a05a0a44",
-      "imageAlt": "JBL Flip 7 · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-flip7-preto-8469941",
-      "affiliateUrl": "",
+      "bestFor": "Praia, piscina e jardim",
+      "pros": [
+        "IP68",
+        "Até 16 h com Playtime Boost (JBL)",
+        "Auracast"
+      ],
+      "cons": [
+        "Maior e mais pesada do que a Go 5"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-jbl-flip7-preto-8469941"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0DXKMXPXW/"
       }
     },
     {
-      "id": "marshall-emberton-ii",
+      "id": "marshall-emberton-iii",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Marshall Emberton II · Preto",
-      "description": "Mais de 30 horas de autonomia segundo a Marshall, IP67 e o visual de amplificador de guitarra em miniatura. Pesa 0,7 kg. Só tem Bluetooth: não há entrada por cabo para aparelhos antigos.",
-      "image": "https://www.worten.pt/i/ac0821f9d84a48ced8f0b57df0c419ef7cacda9a",
-      "imageAlt": "Marshall Emberton II · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-emberton-ii-autonomia-ate-30-h-preto-7624347",
-      "affiliateUrl": "",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0DDCJMDJC",
+      "name": "Marshall Emberton III",
+      "category": "Colunas Bluetooth",
+      "description": "A terceira geração da coluna com cara de amplificador de guitarra em miniatura. Segundo a Marshall, passa as 32 horas de autonomia, aguenta pó e água (IP67) e agora traz microfone para chamadas. Substitui a Emberton II nesta lista: é o modelo atual e a versão que encontras hoje à venda com regularidade.",
+      "bestFor": "Fins de semana fora sem carregador",
+      "pros": [
+        "Mais de 32 h de autonomia (Marshall)",
+        "IP67",
+        "Visual Marshall"
+      ],
+      "cons": [
+        "Na Amazon.es é vendida por um vendedor externo, com envio pela Amazon"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-emberton-ii-autonomia-ate-30-h-preto-7624347"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0DDCJMDJC/"
       }
     },
     {
       "id": "marshall-acton-iv",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Marshall Acton IV · Black and Brass",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0H5CPS4ZQ",
+      "name": "Marshall Acton IV",
+      "category": "Colunas Bluetooth",
       "description": "Não tem bateria: vive ligada à corrente, na sala ou no escritório. Em troca, tem Bluetooth 5.3 com Auracast, entrada auxiliar de 3,5 mm e, novidade nesta geração, entrada RCA para um leitor de CD ou um gira-discos com pré-amplificador phono. A app da Marshall ajusta o som à divisão.",
-      "image": "https://www.worten.pt/i/4ca108d7a10d6a934d18f2f1eaf7fcf85ca5a530",
-      "imageAlt": "Marshall Acton IV · Black and Brass",
-      "destinationUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-acton-iv-black-and-brass-30-w-rms-alimentacao-ac-preto-8961021",
-      "affiliateUrl": "",
+      "bestFor": "Sala ou escritório, com gira-discos ou CD",
+      "pros": [
+        "Entrada RCA e auxiliar",
+        "Bluetooth 5.3 com Auracast"
+      ],
+      "cons": [
+        "Sem bateria: vive ligada à corrente"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/coluna-bluetooth-marshall-acton-iv-black-and-brass-30-w-rms-alimentacao-ac-preto-8961021"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0H5CPS4ZQ/"
       }
     },
     {
-      "id": "lenco-ls300",
+      "id": "samsung-hw-b400f",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Lenco LS300 + colunas · Madeira",
-      "description": "O sistema completo numa caixa: gira-discos de correia a 33 e 45 rpm, cápsula magnética, auto-stop no fim do disco e duas colunas separadas. É a forma mais simples de começar sem juntar peças de marcas diferentes. O braço pousa-se à mão.",
-      "image": "https://www.worten.pt/i/afe1ccc588e05f7901a151534c210c7f72e74bde",
-      "imageAlt": "Lenco LS300 + colunas · Madeira",
-      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-lenco-ls300-colunas-automatico-correia-7291509",
-      "affiliateUrl": "",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0F1D7Y1YG",
+      "name": "Samsung HW-B400F",
+      "category": "Soundbars",
+      "description": "Barra 2.0 com woofers integrados, para sair das colunas do televisor sem dar espaço a um subwoofer. Segundo a Samsung, tem HDMI ARC, entrada ótica, Bluetooth e modo noturno. É a entrada de gama desta lista: chega bem para diálogos e notícias; para cinema com explosões, sobe um degrau.",
+      "bestFor": "TV pequena, quarto, primeira soundbar",
+      "pros": [
+        "Compacta",
+        "HDMI ARC e ótico",
+        "Modo noturno"
+      ],
+      "cons": [
+        "Graves limitados sem subwoofer separado"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-lenco-ls300-colunas-automatico-correia-7291509"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0F1D7Y1YG/"
       }
     },
     {
-      "id": "sony-ps-lx3bt",
+      "id": "samsung-hw-b46cf",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Sony PS-LX3BT · Cinzento",
-      "description": "Automático do princípio ao fim: pousas o disco, carregas no play e o braço faz o resto, incluindo voltar a casa no fim. Tem pré-amplificador phono integrado, por isso liga-se diretamente a colunas ativas, e Bluetooth com aptX Adaptive para colunas ou auscultadores sem fios.",
-      "image": "https://www.worten.pt/i/ed081cf3ed86f9c7adc111081d3d5a6c257eacc5",
-      "imageAlt": "Sony PS-LX3BT · Cinzento",
-      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-bluetooth-sony-ps-lx3bt-cinzento-automatico-velocidade-33-1-3-45-8705430",
-      "affiliateUrl": "",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0F635Z5TS",
+      "name": "Samsung HW-B46CF",
+      "category": "Soundbars",
+      "description": "Sistema 2.1 com subwoofer sem fios: mais graves sem um cabo a atravessar a sala, embora o subwoofer precise de uma tomada. A Samsung indica HDMI ARC, entrada ótica, Bluetooth e ajuste automático do som ao que estás a ver. É o degrau seguinte para quem vê filmes e quer sentir os graves.",
+      "bestFor": "Mais graves sem cabos",
+      "pros": [
+        "Subwoofer sem fios",
+        "HDMI ARC e ótico",
+        "Ajuste automático do som"
+      ],
+      "cons": [
+        "O subwoofer ocupa espaço e precisa de tomada"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-bluetooth-sony-ps-lx3bt-cinzento-automatico-velocidade-33-1-3-45-8705430"
-      }
-    },
-    {
-      "id": "jbl-spinner-bt",
-      "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "JBL Spinner BT · Laranja",
-      "description": "Para quem gosta do ritual: manual, de correia, com prato e braço em alumínio. Tem pré-amplificador phono integrado e saídas analógicas para o sistema que já tens, mais Bluetooth com aptX HD para quando o cabo não chega.",
-      "image": "https://www.worten.pt/i/409a61db859b8a0ef3c1432a94be1545e3773f8a",
-      "imageAlt": "JBL Spinner BT · Laranja",
-      "destinationUrl": "https://www.worten.pt/produtos/gira-discos-jbl-spinner-bt-manual-correia-33-1-3-45-laranja-8007417",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/gira-discos-jbl-spinner-bt-manual-correia-33-1-3-45-laranja-8007417"
-      }
-    },
-    {
-      "id": "sony-ht-sf150",
-      "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Sony HT-SF150",
-      "description": "Uma barra só, sem subwoofer separado, para TVs pequenas ou para o quarto. Liga por HDMI ARC ou ótico e tem Bluetooth para pôr a rádio a tocar a partir do telemóvel. Segundo a Sony, tem 90 cm de largura e 6,4 cm de altura: mede o móvel antes.",
-      "image": "https://www.worten.pt/i/0dc287e85c6f2dd553f6b0a5ac370f38e9231c4d",
-      "imageAlt": "Sony HT-SF150",
-      "destinationUrl": "https://www.worten.pt/produtos/soundbar-sony-htsf150-2-0-30-w-6468464",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/soundbar-sony-htsf150-2-0-30-w-6468464"
-      }
-    },
-    {
-      "id": "lg-s40t",
-      "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "LG S40T · 2.1",
-      "description": "Subwoofer sem fios: mais graves sem mais um cabo a atravessar a sala, embora o subwoofer precise de uma tomada. HDMI ARC, ótico, Bluetooth e USB. A barra tem 72 cm de largura, segundo a LG, o que a torna boa companhia para TVs médias.",
-      "image": "https://www.worten.pt/i/5e14d1b38c3f0e24e6dee299fccd5dc5fa0a3921",
-      "imageAlt": "LG S40T · 2.1",
-      "destinationUrl": "https://www.worten.pt/produtos/soundbar-lg-s40t-2-1-canais-300-w-subwoofer-sem-fios-8031271",
-      "affiliateUrl": "",
-      "price": null,
-      "source": {
-        "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/soundbar-lg-s40t-2-1-canais-300-w-subwoofer-sem-fios-8031271"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0F635Z5TS/"
       }
     },
     {
       "id": "bose-tv-speaker",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Bose TV Speaker · Preto",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B086KKZYP1",
+      "name": "Bose TV Speaker",
+      "category": "Soundbars",
       "description": "Pensada para uma coisa: perceber o que os atores dizem. Barra única com HDMI ARC, ótico (cabo incluído), entrada auxiliar e Bluetooth, com pouco mais de 5 cm de altura. Aceita um subwoofer Bose opcional, vendido à parte, se um dia os graves fizerem falta.",
-      "image": "https://www.worten.pt/i/89bc6a025a2c0b5ed344ddee522d314ed079c3dc",
-      "imageAlt": "Bose TV Speaker · Preto",
-      "destinationUrl": "https://www.worten.pt/produtos/soundbar-bose-tv-speaker-3-0-100-w-preto-7200343",
-      "affiliateUrl": "",
+      "bestFor": "Perceber os diálogos",
+      "pros": [
+        "Diálogos claros",
+        "Barra baixa",
+        "Cabo ótico incluído"
+      ],
+      "cons": [
+        "Subwoofer só opcional, vendido à parte"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/soundbar-bose-tv-speaker-3-0-100-w-preto-7200343"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B086KKZYP1/"
       }
     },
     {
       "id": "sony-ht-s40r",
       "status": "published",
-      "linkType": "direct",
-      "merchant": "worten-pt",
-      "name": "Sony HT-S40R · 5.1",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B08Z4H7L2L",
+      "name": "Sony HT-S40R",
+      "category": "Soundbars",
       "description": "Som surround sem passar cabos até ao sofá: as colunas traseiras ligam sem fios a um pequeno amplificador, que precisa de uma tomada perto delas. Inclui barra, subwoofer com fios e cabo HDMI. HDMI ARC, ótico, Bluetooth e USB, com modo noturno e modo de voz.",
-      "image": "https://www.worten.pt/i/e92e932d4d9b88f3eae988d15b46bfb36f5c2ac7",
-      "imageAlt": "Sony HT-S40R · 5.1",
-      "destinationUrl": "https://www.worten.pt/produtos/soundbar-sony-5-1-ht-s40r-5-1-canais-600-w-7407096",
-      "affiliateUrl": "",
+      "bestFor": "Surround 5.1 real",
+      "pros": [
+        "Traseiras sem fios",
+        "Modo noturno e de voz"
+      ],
+      "cons": [
+        "Amplificador das traseiras precisa de tomada",
+        "Ocupa mais espaço"
+      ],
       "price": null,
       "source": {
         "type": "manual",
-        "updatedAt": "2026-09-30",
-        "referenceUrl": "https://www.worten.pt/produtos/soundbar-sony-5-1-ht-s40r-5-1-canais-600-w-7407096"
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B08Z4H7L2L/"
+      }
+    },
+    {
+      "id": "sonos-beam-gen-2",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B09B13XFGY",
+      "name": "Sonos Beam (Gen 2)",
+      "category": "Soundbars",
+      "description": "A barra para quem quer Dolby Atmos sem montar um sistema inteiro. Liga por HDMI eARC, toca rádio e streaming por Wi-Fi com a TV desligada e pode crescer mais tarde com subwoofer e colunas traseiras Sonos. Não tem Bluetooth: tudo passa pela app e pela rede de casa. Para tirar partido do Atmos, confirma que o televisor tem eARC.",
+      "bestFor": "Dolby Atmos e streaming numa só barra",
+      "pros": [
+        "Dolby Atmos",
+        "HDMI eARC",
+        "Streaming por Wi-Fi",
+        "Expansível com outros Sonos"
+      ],
+      "cons": [
+        "Sem Bluetooth",
+        "Sem entrada ótica direta",
+        "Depende da app Sonos"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B09B13XFGY/"
+      }
+    },
+    {
+      "id": "audio-technica-at-lp60x",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B09J1B8DDS",
+      "name": "Audio-Technica AT-LP60X",
+      "category": "Gira-discos",
+      "description": "O clássico primeiro gira-discos: totalmente automático, de correia, com pré-amplificador phono integrado que se pode desligar. Liga diretamente a colunas ativas hoje e a um amplificador a sério amanhã. Não traz colunas nem Bluetooth: é só o gira-discos, e faz bem essa parte.",
+      "bestFor": "Primeiro gira-discos sem complicações",
+      "pros": [
+        "Totalmente automático",
+        "Pré-amplificador comutável",
+        "Marca de referência no vinil"
+      ],
+      "cons": [
+        "Sem colunas nem Bluetooth",
+        "Pouco ajustável"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B09J1B8DDS/"
+      }
+    },
+    {
+      "id": "lenco-ls300",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07L56L89D",
+      "name": "Lenco LS-300",
+      "category": "Gira-discos",
+      "description": "O sistema completo numa caixa: gira-discos de correia a 33 e 45 rpm, cápsula magnética, auto-stop no fim do disco e duas colunas separadas. Tem também recetor Bluetooth, para usar as colunas com o telemóvel quando o disco descansa. É a forma mais simples de começar sem juntar peças de marcas diferentes. O braço pousa-se à mão.",
+      "bestFor": "Começar no vinil sem juntar peças",
+      "pros": [
+        "Colunas incluídas",
+        "Cápsula magnética",
+        "Recetor Bluetooth para o telemóvel"
+      ],
+      "cons": [
+        "Braço manual",
+        "Vendido por um vendedor externo na Amazon.es"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07L56L89D/"
+      }
+    },
+    {
+      "id": "sony-ps-lx3bt",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0GFG86MCK",
+      "name": "Sony PS-LX3BT",
+      "category": "Gira-discos",
+      "description": "Automático do princípio ao fim: pousas o disco, carregas no play e o braço faz o resto, incluindo voltar a casa no fim. Tem pré-amplificador phono integrado, por isso liga-se diretamente a colunas ativas, e Bluetooth com aptX Adaptive para colunas ou auscultadores sem fios.",
+      "bestFor": "Vinil automático com Bluetooth",
+      "pros": [
+        "Automático",
+        "Pré-amplificador integrado",
+        "Bluetooth aptX Adaptive"
+      ],
+      "cons": [
+        "Sem colunas incluídas"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0GFG86MCK/"
+      }
+    },
+    {
+      "id": "audio-technica-at-lp120x",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07MVY92KZ",
+      "name": "Audio-Technica AT-LP120X USB",
+      "category": "Gira-discos",
+      "description": "Para quem já sabe que o vinil veio para ficar: tração direta, braço em S com contrapeso e anti-skating ajustáveis, pré-amplificador phono comutável e saída USB para digitalizar discos. É manual, por isso pede mão firme. É o degrau entre o primeiro gira-discos e o mundo audiófilo.",
+      "bestFor": "Intermédio, quem quer afinar o sistema",
+      "pros": [
+        "Tração direta",
+        "Braço ajustável",
+        "Pré-amplificador comutável",
+        "Saída USB"
+      ],
+      "cons": [
+        "Manual",
+        "Ocupa mais espaço do que um modelo de entrada"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07MVY92KZ/"
+      }
+    },
+    {
+      "id": "jbl-spinner-bt",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0CQT1MSTR",
+      "name": "JBL Spinner BT",
+      "category": "Gira-discos",
+      "description": "Para quem gosta do ritual: manual, de correia, com prato e braço em alumínio. Tem pré-amplificador phono integrado e saídas analógicas para o sistema que já tens, mais Bluetooth com aptX HD para quando o cabo não chega.",
+      "bestFor": "Quem gosta do ritual manual",
+      "pros": [
+        "Prato e braço em alumínio",
+        "Pré-amplificador integrado",
+        "Bluetooth aptX HD"
+      ],
+      "cons": [
+        "Manual"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0CQT1MSTR/"
+      }
+    },
+    {
+      "id": "samson-q2u",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B001R747SG",
+      "name": "Samson Q2U",
+      "category": "Home Studio",
+      "description": "Microfone dinâmico com USB e XLR no mesmo corpo. Hoje ligas por USB ao computador; quando comprares uma interface, passas para XLR sem trocar de microfone. Os dinâmicos captam menos o quarto do que os condensadores, o que ajuda numa divisão sem tratamento acústico. Na Amazon.es aparece em pack com acessórios: confirma o conteúdo da caixa.",
+      "bestFor": "Voz, podcast e primeiras demos",
+      "pros": [
+        "USB e XLR",
+        "Dinâmico: capta menos o quarto",
+        "Cresce com uma interface"
+      ],
+      "cons": [
+        "Menos detalhe do que um condensador numa sala tratada"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B001R747SG/"
+      }
+    },
+    {
+      "id": "focusrite-scarlett-solo-4",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0C5JSHP7M",
+      "name": "Focusrite Scarlett Solo (4.ª geração)",
+      "category": "Home Studio",
+      "description": "A interface de entrada mais comum nos home studios: uma entrada de microfone XLR e uma de instrumento, para gravar voz e guitarra, com USB-C e saídas para monitores e auscultadores. Se precisares de dois microfones ao mesmo tempo, salta para a Scarlett 2i2.",
+      "bestFor": "Gravar voz e guitarra",
+      "pros": [
+        "Entrada XLR e de instrumento",
+        "USB-C",
+        "Saídas para monitores e auscultadores"
+      ],
+      "cons": [
+        "Só um microfone de cada vez"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0C5JSHP7M/"
+      }
+    },
+    {
+      "id": "audio-technica-ath-m20x",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B00HVLUR18",
+      "name": "Audio-Technica ATH-M20x",
+      "category": "Home Studio",
+      "description": "Auscultadores de monitorização fechados, com fio e sem pretensões. São o ponto de partida da série M da Audio-Technica: isolam o suficiente para gravar voz sem o som do metrónomo passar para o microfone. Para misturar com mais detalhe, os ATH-M50xBT2 sobem a fasquia.",
+      "bestFor": "Monitorizar enquanto gravas, com orçamento curto",
+      "pros": [
+        "Fechados",
+        "Com fio, sem latência",
+        "Preço de entrada"
+      ],
+      "cons": [
+        "Cabo fixo",
+        "Menos detalhe do que os M50x"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B00HVLUR18/"
+      }
+    },
+    {
+      "id": "presonus-eris-3-5",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0CC3BJKGN",
+      "name": "PreSonus Eris 3.5 (Gen 2)",
+      "category": "Home Studio",
+      "description": "Um par de monitores de secretária com woofer de 3,5 polegadas, entradas balanceadas e RCA e saída para auscultadores na frente. Não substituem monitores maiores numa sala tratada, mas são honestos o suficiente para perceber se a mistura está a puxar demais pelos graves.",
+      "bestFor": "Primeiros monitores numa secretária",
+      "pros": [
+        "Compactos",
+        "Entradas balanceadas e RCA",
+        "Saída de auscultadores frontal"
+      ],
+      "cons": [
+        "Graves limitados pelo tamanho"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0CC3BJKGN/"
+      }
+    },
+    {
+      "id": "rode-psa1",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B001D7UYBO",
+      "name": "RØDE PSA1",
+      "category": "Home Studio",
+      "description": "Braço articulado que se prende à secretária. Tira o microfone da mesa, longe do barulho do teclado, e põe-no à altura da boca. É uma referência há anos em rádio e podcasts. Confirma o peso do teu microfone e a espessura do tampo antes de comprar.",
+      "bestFor": "Tirar o microfone da mesa",
+      "pros": [
+        "Robusto",
+        "Referência em rádio e podcasts"
+      ],
+      "cons": [
+        "Confirma peso suportado e tampo"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B001D7UYBO/"
+      }
+    },
+    {
+      "id": "adam-hall-pad-eco-2",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B007YFWUDO",
+      "name": "Adam Hall PAD ECO 2",
+      "category": "Home Studio",
+      "description": "Duas bases de espuma de alta densidade para pôr debaixo dos monitores. Separam as colunas da secretária, que deixa de vibrar com os graves. Barato, discreto e muitas vezes esquecido.",
+      "bestFor": "Desacoplar monitores da secretária",
+      "pros": [
+        "Barato",
+        "Reduz vibrações na secretária"
+      ],
+      "cons": [
+        "Confirma as medidas dos teus monitores"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B007YFWUDO/"
+      }
+    },
+    {
+      "id": "apple-usb-c-jack-35",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0D7MN4W7H",
+      "name": "Apple adaptador USB-C para jack 3,5 mm",
+      "category": "Tecnologia e acessórios",
+      "description": "Devolve o jack a um telemóvel, tablet ou portátil que o perdeu pelo caminho. Pequeno, sem bateria e sem emparelhamentos: ligas os auscultadores com fio e pronto. Foi feito para equipamentos Apple; em Android costuma funcionar, mas confirma a compatibilidade com o teu modelo.",
+      "bestFor": "Auscultadores com fio num telemóvel sem jack",
+      "pros": [
+        "Pequeno",
+        "Sem bateria nem emparelhamento"
+      ],
+      "cons": [
+        "Pensado para Apple; confirma a compatibilidade em Android"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0D7MN4W7H/"
+      }
+    },
+    {
+      "id": "ugreen-bluetooth-2-em-1",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0DCNSZCYT",
+      "name": "UGREEN transmissor e recetor Bluetooth 2 em 1",
+      "category": "Tecnologia e acessórios",
+      "description": "Dá Bluetooth a uma aparelhagem que nasceu antes dele, ou envia o som da TV para auscultadores sem fios. Funciona como recetor ou como transmissor, com Bluetooth 6.0 segundo a UGREEN, e liga por jack de 3,5 mm. Se a aparelhagem só tem entradas RCA, junta-lhe um cabo jack para RCA.",
+      "bestFor": "Dar Bluetooth a equipamento antigo",
+      "pros": [
+        "Recetor e transmissor",
+        "Bluetooth 6.0 (fabricante)",
+        "Vendido pela loja oficial da UGREEN"
+      ],
+      "cons": [
+        "Liga por jack: para RCA precisas de cabo"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0DCNSZCYT/"
+      }
+    },
+    {
+      "id": "fiio-ka11",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0CS62JGW2",
+      "name": "FiiO KA11",
+      "category": "Tecnologia e acessórios",
+      "description": "Um DAC e amplificador do tamanho de uma pen, para ligar entre o telemóvel ou o portátil (USB-C) e uns auscultadores com fio. Dá mais folga a auscultadores exigentes do que um adaptador básico. Se os teus são fáceis de alimentar, o adaptador da Apple chega e sobra.",
+      "bestFor": "Auscultadores com fio exigentes no telemóvel ou portátil",
+      "pros": [
+        "Pequeno",
+        "Mais potência do que um adaptador básico"
+      ],
+      "cons": [
+        "Desnecessário para auscultadores fáceis de alimentar"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0CS62JGW2/"
+      }
+    },
+    {
+      "id": "new-bee-suporte-auscultadores",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B072BV6X1Q",
+      "name": "New Bee suporte de auscultadores",
+      "category": "Tecnologia e acessórios",
+      "description": "Um sítio para pousar os auscultadores que não seja o encosto da cadeira. Base sólida, haste de alumínio e apoio em ABS, segundo o fabricante. Sem luzes nem estética gaming: só arrumação.",
+      "bestFor": "Secretária arrumada",
+      "pros": [
+        "Barato",
+        "Discreto",
+        "Haste de alumínio"
+      ],
+      "cons": [
+        "Marca pouco conhecida"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B072BV6X1Q/"
+      }
+    },
+    {
+      "id": "ugreen-jack-rca-1m",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B015PZ7QO2",
+      "name": "UGREEN cabo jack 3,5 mm para 2 RCA (1 m)",
+      "category": "Tecnologia e acessórios",
+      "description": "O cabo que falta para ligar o telemóvel, o portátil ou um recetor Bluetooth a uma aparelhagem com entradas RCA. Um metro chega para a maioria das secretárias; há versões mais compridas se o equipamento estiver longe.",
+      "bestFor": "Ligar fontes com jack a uma aparelhagem RCA",
+      "pros": [
+        "Barato",
+        "Resolve a ligação mais comum"
+      ],
+      "cons": [
+        "Confirma o comprimento de que precisas"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B015PZ7QO2/"
       }
     }
   ]
