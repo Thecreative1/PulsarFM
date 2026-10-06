@@ -132,6 +132,7 @@ Campos opcionais de cada artigo em `data/recommendations.json` (texto simples, s
 | `publishedAt` | Data de publicação para o JSON-LD `Article` (`updatedAt` é a `dateModified`). |
 | `related` | Os dois guias de "Mais para a tua próxima sessão", escolhidos por tema. Um slug inexistente falha a geração. Garantir que todos os guias recebem pelo menos um link. |
 | `quickPicks` | Caixa "Escolhas rápidas" logo após a divulgação: `[{ "label": "Económico", "productId": "…", "note": "Frase curta." }]`. O produto tem de estar em `productIds`. Cada escolha liga ao cartão (`#product-<id>`) e à Amazon (posição GA4 `quick-N`). |
+| `faq[].productIds` | Produtos de que a resposta fala (têm de estar em `productIds` do guia). Aparecem por baixo da resposta como "Na Amazon: …" (posição GA4 `faq-N-M`). O JSON-LD `FAQPage` fica só com o texto. |
 | `comparison.rowProducts` | Um ID de produto (ou `null`) por linha da tabela: põe "Ver na Amazon" por baixo do nome do modelo (posição `table-N`). |
 
 O gerador acrescenta automaticamente o JSON-LD `BreadcrumbList`, `Article` e `ItemList` (produtos) a cada guia, e `BreadcrumbList` + `ItemList` (guias) ao hub, além do `FAQPage` já existente. Não usamos `Product` com ofertas: sem preço nem avaliações, seria marcação inválida.

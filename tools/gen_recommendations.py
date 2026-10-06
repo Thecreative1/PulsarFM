@@ -315,10 +315,23 @@ def render_comparison(comparison, catalog=None, products=None):
             f'<thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>{note}</section>')
 
 
-def render_faq(faq):
-    """Optional FAQ: visible section + FAQPage JSON-LD built from the same text."""
-    items = "".join(f'<div class="faq-item"><h3>{esc(item["q"])}</h3><p>{esc(item["a"])}</p></div>'
-                    for item in faq)
+def render_faq(faq, catalog=None, products=None):
+    """Optional FAQ: visible section + FAQPage JSON-LD built from the same text.
+
+    An item's optional "productIds" adds a "Na Amazon: …" line under the answer (GA4 position faq-N-M);
+    the JSON-LD answer stays plain text.
+    """
+    items = []
+    for i, item in enumerate(faq, 1):
+        links = [render_affiliate_link(catalog, products[pid], f"faq-{i}-{j}", products[pid]["name"],
+                                       "affiliate-inline")
+                 for j, pid in enumerate(item.get("productIds", []), 1)
+                 if products[pid]["status"] == "published"]
+        merchant = catalog["merchants"][products[item["productIds"][0]]["merchant"]] if links else {}
+        store = (f'<p class="faq-links">Na {esc(merchant.get("shortName") or merchant["name"])}: '
+                 + ' · '.join(links) + '</p>') if links else ""
+        items.append(f'<div class="faq-item"><h3>{esc(item["q"])}</h3><p>{esc(item["a"])}</p>{store}</div>')
+    items = "".join(items)
     ld = json_ld({"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": item["q"],
          "acceptedAnswer": {"@type": "Answer", "text": item["a"]}} for item in faq]})
@@ -445,7 +458,8 @@ def render_article(article, articles, catalog, products):
                        disclosure=disclosure(catalog, linked) if has_affiliates else "",
                        quick_picks=quick_picks,
                        sections="\n".join(sections), products=product_html,
-                       extras=comparison + (render_faq(article["faq"]) if article.get("faq") else "") +
+                       extras=comparison +
+                              (render_faq(article["faq"], catalog, products) if article.get("faq") else "") +
                               article_json_ld(article, selected, description),
                        closing=esc(article["closing"]), related="\n".join(guide_link(item) for item in others))
     return page(article.get("seoTitle") or article["title"], description,
@@ -513,6 +527,10 @@ def validate_article_look(article, slugs, catalog, products):
                  if pid in products and products[pid]["status"] == "published"]
     if published and not article.get("quickPicks"):
         raise ValueError(f"Guide {name} has products, so it needs quickPicks")
+    for item in article.get("faq", []):
+        for pid in item.get("productIds", []):
+            if pid not in article["productIds"]:
+                raise ValueError(f"Guide {name}: FAQ links to {pid}, which is not one of the guide's products")
     images = catalog.get("categoryImages", {})
     for product in published:
         if product.get("category") and not product.get("image") and product["category"] not in images:

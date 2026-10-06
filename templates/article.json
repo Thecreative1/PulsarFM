@@ -14,20 +14,49 @@
   "sections": [
     {
       "heading": "Como escolher",
-      "paragraphs": ["Explica os critérios, as limitações e a origem da informação. Não apresentar como testado um produto que não foi testado pela redação."],
-      "checklist": ["Compatibilidade", "Conforto ou espaço", "Orçamento total"],
-      "productLinks": [{ "productId": "id-do-produto", "label": "Ver o … na Amazon" }]
+      "paragraphs": [
+        "Explica os critérios, as limitações e a origem da informação. Não apresentar como testado um produto que não foi testado pela redação."
+      ],
+      "checklist": [
+        "Compatibilidade",
+        "Conforto ou espaço",
+        "Orçamento total"
+      ],
+      "productLinks": [
+        {
+          "productId": "id-do-produto",
+          "label": "Ver o … na Amazon"
+        }
+      ]
     },
     {
       "heading": "O que comparar",
-      "paragraphs": ["Compara alternativas para a mesma utilização. Identifica para quem cada escolha faz sentido e para quem não faz."]
+      "paragraphs": [
+        "Compara alternativas para a mesma utilização. Identifica para quem cada escolha faz sentido e para quem não faz."
+      ]
     }
   ],
-  "productIds": ["id-economico", "id-gama-media", "id-premium"],
+  "productIds": [
+    "id-economico",
+    "id-gama-media",
+    "id-premium"
+  ],
   "quickPicks": [
-    { "label": "Económico", "productId": "id-economico", "note": "Frase curta: para quem serve." },
-    { "label": "Gama média", "productId": "id-gama-media", "note": "Frase curta: para quem serve." },
-    { "label": "Premium", "productId": "id-premium", "note": "Frase curta: para quem serve." }
+    {
+      "label": "Económico",
+      "productId": "id-economico",
+      "note": "Frase curta: para quem serve."
+    },
+    {
+      "label": "Gama média",
+      "productId": "id-gama-media",
+      "note": "Frase curta: para quem serve."
+    },
+    {
+      "label": "Premium",
+      "productId": "id-premium",
+      "note": "Frase curta: para quem serve."
+    }
   ],
   "badges": {
     "id-economico": "Económico",
@@ -37,20 +66,59 @@
   "comparison": {
     "heading": "Comparação rápida",
     "caption": "Descrição da tabela para leitores de ecrã",
-    "columns": ["Modelo", "Característica", "Característica", "Ideal para"],
-    "rows": [
-      ["Modelo económico", "…", "…", "…"],
-      ["Modelo médio", "…", "…", "…"],
-      ["Modelo premium", "…", "…", "…"]
+    "columns": [
+      "Modelo",
+      "Característica",
+      "Característica",
+      "Ideal para"
     ],
-    "rowProducts": ["id-economico", "id-gama-media", "id-premium"],
+    "rows": [
+      [
+        "Modelo económico",
+        "…",
+        "…",
+        "…"
+      ],
+      [
+        "Modelo médio",
+        "…",
+        "…",
+        "…"
+      ],
+      [
+        "Modelo premium",
+        "…",
+        "…",
+        "…"
+      ]
+    ],
+    "rowProducts": [
+      "id-economico",
+      "id-gama-media",
+      "id-premium"
+    ],
     "note": "Valores indicados pelos fabricantes."
   },
   "faq": [
-    { "q": "Pergunta com a formulação de pesquisa?", "a": "Resposta útil primeiro, personalidade depois (docs/VOZ.md)." },
-    { "q": "Segunda pergunta?", "a": "Resposta." },
-    { "q": "Terceira pergunta?", "a": "Resposta." }
+    {
+      "q": "Pergunta com a formulação de pesquisa?",
+      "a": "Resposta útil primeiro, personalidade depois (docs/VOZ.md).",
+      "productIds": [
+        "id-economico"
+      ]
+    },
+    {
+      "q": "Segunda pergunta?",
+      "a": "Resposta."
+    },
+    {
+      "q": "Terceira pergunta?",
+      "a": "Resposta."
+    }
   ],
-  "related": ["slug-de-um-guia-proximo", "slug-de-outro-guia-proximo"],
+  "related": [
+    "slug-de-um-guia-proximo",
+    "slug-de-outro-guia-proximo"
+  ],
   "closing": "Resume o critério mais útil para a decisão, sem urgência artificial."
 }

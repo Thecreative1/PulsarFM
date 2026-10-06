@@ -184,6 +184,7 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
 .faq-item { border-left: 2px solid var(--neon-purple); padding: 2px 0 2px 16px; margin-bottom: 22px; max-width: 68ch; }
 .faq-item h3 { font-size: 1.05rem; margin: 0 0 8px; color: var(--text-primary); }
 .faq-item p { margin: 0; color: var(--text-dim); }
+.faq-item .faq-links { margin-top: 8px; font-size: .85rem; color: var(--text-muted); }
 /* Quick picks: calm panel near the top for readers who already know what they want. */
 .quick-picks { max-width: 850px; margin: 0 0 40px; padding: 18px 22px 6px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-panel); }
 .quick-picks > h2 { margin: 0 0 4px; font-size: 1.15rem; color: var(--line-primary); }

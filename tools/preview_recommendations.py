@@ -27,6 +27,8 @@ def demo_page():
         guide.pop('quickPicks', None)
         if guide.get('comparison'):
             guide['comparison'].pop('rowProducts', None)
+        for item in guide.get('faq', []):
+            item.pop('productIds', None)
         for section in guide['sections']:
             section['productLinks'] = []
     article = editorial['articles'][0]

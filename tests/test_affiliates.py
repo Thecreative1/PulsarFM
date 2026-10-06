@@ -38,6 +38,8 @@ def strip_products(editorial):
         article.pop('quickPicks', None)
         if article.get('comparison'):
             article['comparison'].pop('rowProducts', None)
+        for item in article.get('faq', []):
+            item.pop('productIds', None)
         for section in article['sections']:
             section.pop('productLinks', None)
     return editorial
@@ -368,6 +370,22 @@ class SeoAndConversionTests(unittest.TestCase):
             self.assertGreater(box, html.index('class="guide-closing"'), article['slug'])
             self.assertEqual(html.count('class="affiliate-disclosure"'), 1, article['slug'])
             self.assertIn(gen.AMAZON_STATEMENT, html[box:])
+
+    def test_faq_answers_link_to_the_store_but_json_ld_stays_plain(self):
+        for article in self.editorial['articles']:
+            html = self.pages[f'recomendacoes/{article["slug"]}/index.html']
+            expected = {f'faq-{i}-{j}' for i, item in enumerate(article.get('faq', []), 1)
+                        for j, _ in enumerate(item.get('productIds', []), 1)}
+            links = [l for l in HTMLInventory(html).links if l.get('data-position', '').startswith('faq-')]
+            self.assertEqual({l['data-position'] for l in links}, expected, article['slug'])
+            for block in self.json_ld(html):
+                if block['@type'] == 'FAQPage':
+                    for question in block['mainEntity']:
+                        self.assertNotIn('<a', question['acceptedAnswer']['text'])
+        broken = copy.deepcopy(self.editorial)
+        headphones(broken)['faq'][0]['productIds'] = ['jbl-go-5']  # not one of the headphones guide's products
+        with self.assertRaisesRegex(ValueError, 'FAQ links to jbl-go-5'):
+            gen.generate(self.catalog, broken)
 
     def test_category_bar_links_every_guide_and_marks_the_current_one(self):
         slugs = [article['slug'] for article in self.editorial['articles']]

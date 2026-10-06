@@ -199,19 +199,37 @@
       "faq": [
         {
           "q": "O que oferecer a quem gosta de música?",
-          "a": "Depende de como a pessoa ouve. Para quem ouve o dia todo, auscultadores; para quem tem vinil, um kit de limpeza ou uma moldura para a capa preferida; para quem quer criar, um controlador de DJ ou um teclado MIDI. Na dúvida, um acessório para algo que a pessoa já usa raramente falha."
+          "a": "Depende de como a pessoa ouve. Para quem ouve o dia todo, auscultadores; para quem tem vinil, um kit de limpeza ou uma moldura para a capa preferida; para quem quer criar, um controlador de DJ ou um teclado MIDI. Na dúvida, um acessório para algo que a pessoa já usa raramente falha.",
+          "productIds": [
+            "pro-ject-cleaning-set-basic",
+            "americanflat-moldura-vinil",
+            "hercules-inpulse-200-mk3",
+            "akai-mpk-mini-iv"
+          ]
         },
         {
           "q": "Que presente dar a quem gosta de música eletrónica?",
-          "a": "Um controlador de DJ de entrada, como o Hercules DJControl Inpulse 200 MK3, para as primeiras misturas no computador, ou um teclado MIDI pequeno, como o Akai MPK Mini IV, para fazer faixas. E uns auscultadores que aguentem graves, para ouvir os sets como deve ser."
+          "a": "Um controlador de DJ de entrada, como o Hercules DJControl Inpulse 200 MK3, para as primeiras misturas no computador, ou um teclado MIDI pequeno, como o Akai MPK Mini IV, para fazer faixas. E uns auscultadores que aguentem graves, para ouvir os sets como deve ser.",
+          "productIds": [
+            "hercules-inpulse-200-mk3",
+            "akai-mpk-mini-iv"
+          ]
         },
         {
           "q": "Um gira-discos é um bom presente?",
-          "a": "É, se a pessoa já fala de vinil e tem onde o pôr. Um automático de entrada, como o Audio-Technica AT-LP60X, evita sustos com a agulha. Confirma antes se há colunas ativas ou um amplificador em casa: sem isso, o gira-discos fica mudo."
+          "a": "É, se a pessoa já fala de vinil e tem onde o pôr. Um automático de entrada, como o Audio-Technica AT-LP60X, evita sustos com a agulha. Confirma antes se há colunas ativas ou um amplificador em casa: sem isso, o gira-discos fica mudo.",
+          "productIds": [
+            "audio-technica-at-lp60x"
+          ]
         },
         {
           "q": "Que presente dar a quem já tem tudo?",
-          "a": "Acessórios para o que já usa: um kit de limpeza para os discos, uma moldura para a capa preferida ou uma coluna pequena para uma divisão onde ainda não há música."
+          "a": "Acessórios para o que já usa: um kit de limpeza para os discos, uma moldura para a capa preferida ou uma coluna pequena para uma divisão onde ainda não há música.",
+          "productIds": [
+            "pro-ject-cleaning-set-basic",
+            "americanflat-moldura-vinil",
+            "jbl-go-5"
+          ]
         }
       ],
       "related": [
@@ -354,7 +372,10 @@
       "faq": [
         {
           "q": "Quais são os melhores auscultadores baratos?",
-          "a": "Na gama económica, os Sony WH-CH520 são uma boa porta de entrada sem fios: leves e com bateria para dias. Não têm cancelamento de ruído, por isso rendem mais em casa do que no metro."
+          "a": "Na gama económica, os Sony WH-CH520 são uma boa porta de entrada sem fios: leves e com bateria para dias. Não têm cancelamento de ruído, por isso rendem mais em casa do que no metro.",
+          "productIds": [
+            "sony-wh-ch520"
+          ]
         },
         {
           "q": "Vale a pena pagar mais por cancelamento de ruído?",
@@ -362,7 +383,10 @@
         },
         {
           "q": "Que auscultadores escolher para estudar?",
-          "a": "Dá prioridade ao peso e ao conforto, com cancelamento de ruído moderado. Os Sony WH-CH720N são leves e isolam o barulho de fundo em sessões longas."
+          "a": "Dá prioridade ao peso e ao conforto, com cancelamento de ruído moderado. Os Sony WH-CH720N são leves e isolam o barulho de fundo em sessões longas.",
+          "productIds": [
+            "sony-wh-ch720n"
+          ]
         },
         {
           "q": "Posso usar auscultadores Bluetooth para ouvir rádio online no computador?",
@@ -577,7 +601,12 @@
       "faq": [
         {
           "q": "Quais são os melhores auriculares Bluetooth qualidade-preço?",
-          "a": "Na gama mais baixa, os Soundcore P20i resolvem o básico sem fios. Se o orçamento esticar um pouco, os Soundcore Liberty 4 NC já trazem cancelamento de ruído adaptativo, e os Sony WF-C710N juntam-lhe a marca e uma app mais completa."
+          "a": "Na gama mais baixa, os Soundcore P20i resolvem o básico sem fios. Se o orçamento esticar um pouco, os Soundcore Liberty 4 NC já trazem cancelamento de ruído adaptativo, e os Sony WF-C710N juntam-lhe a marca e uma app mais completa.",
+          "productIds": [
+            "soundcore-p20i",
+            "soundcore-liberty-4-nc",
+            "sony-wf-c710n"
+          ]
         },
         {
           "q": "Auriculares ou auscultadores: o que escolher?",
@@ -585,7 +614,10 @@
         },
         {
           "q": "Que auriculares usar para correr?",
-          "a": "Na rua, auriculares de ouvido livre, como os Shokz OpenRun, para continuares a ouvir o trânsito. No ginásio, intra-auriculares bem presos e resistentes ao suor. Confirma a classificação IP na ficha."
+          "a": "Na rua, auriculares de ouvido livre, como os Shokz OpenRun, para continuares a ouvir o trânsito. No ginásio, intra-auriculares bem presos e resistentes ao suor. Confirma a classificação IP na ficha.",
+          "productIds": [
+            "shokz-openrun"
+          ]
         },
         {
           "q": "Os AirPods funcionam com Android?",
@@ -702,7 +734,12 @@
       "faq": [
         {
           "q": "Qual é a melhor coluna Bluetooth portátil?",
-          "a": "Depende de onde vai tocar. Para levar no bolso, a JBL Go 5. Para a praia ou o jardim, a JBL Flip 7. Se a prioridade é passar dias sem carregador, a Marshall Emberton III, com mais de 32 horas anunciadas."
+          "a": "Depende de onde vai tocar. Para levar no bolso, a JBL Go 5. Para a praia ou o jardim, a JBL Flip 7. Se a prioridade é passar dias sem carregador, a Marshall Emberton III, com mais de 32 horas anunciadas.",
+          "productIds": [
+            "jbl-go-5",
+            "jbl-flip-7",
+            "marshall-emberton-iii"
+          ]
         },
         {
           "q": "Posso levar uma coluna Bluetooth para a praia ou para a piscina?",
@@ -710,11 +747,18 @@
         },
         {
           "q": "Dá para ligar duas colunas ao mesmo tempo?",
-          "a": "Muitas colunas recentes permitem-no. A JBL Go 5 e a JBL Flip 7 usam Auracast para emparelhar com outras colunas JBL compatíveis. Confirma sempre a compatibilidade entre os modelos exatos antes de comprar a segunda."
+          "a": "Muitas colunas recentes permitem-no. A JBL Go 5 e a JBL Flip 7 usam Auracast para emparelhar com outras colunas JBL compatíveis. Confirma sempre a compatibilidade entre os modelos exatos antes de comprar a segunda.",
+          "productIds": [
+            "jbl-go-5",
+            "jbl-flip-7"
+          ]
         },
         {
           "q": "Posso ligar um gira-discos a uma coluna?",
-          "a": "Sim, se a coluna tiver entrada por cabo. A Marshall Acton IV tem entrada RCA e auxiliar de 3,5 mm, mas o gira-discos precisa de ter pré-amplificador phono. Outra opção é um gira-discos com Bluetooth, que envia o som sem fios."
+          "a": "Sim, se a coluna tiver entrada por cabo. A Marshall Acton IV tem entrada RCA e auxiliar de 3,5 mm, mas o gira-discos precisa de ter pré-amplificador phono. Outra opção é um gira-discos com Bluetooth, que envia o som sem fios.",
+          "productIds": [
+            "marshall-acton-iv"
+          ]
         }
       ],
       "quickPicks": [
@@ -853,7 +897,10 @@
       "faq": [
         {
           "q": "Qual é a diferença entre HDMI ARC e eARC?",
-          "a": "As duas deixam o televisor enviar o som para a soundbar pelo mesmo cabo HDMI. O eARC tem mais largura de banda, para formatos sem compressão como o Dolby Atmos de alta resolução. Para Dolby Digital, o ARC chega. Nesta lista, a Sonos Beam é a que tira partido do eARC."
+          "a": "As duas deixam o televisor enviar o som para a soundbar pelo mesmo cabo HDMI. O eARC tem mais largura de banda, para formatos sem compressão como o Dolby Atmos de alta resolução. Para Dolby Digital, o ARC chega. Nesta lista, a Sonos Beam é a que tira partido do eARC.",
+          "productIds": [
+            "sonos-beam-gen-2"
+          ]
         },
         {
           "q": "Posso ligar a soundbar por cabo ótico?",
@@ -861,15 +908,27 @@
         },
         {
           "q": "Preciso de subwoofer?",
-          "a": "Para diálogos e notícias, não. Para filmes de ação e música eletrónica, faz diferença. A Samsung HW-B46CF traz um sem fios; a Bose TV Speaker aceita um opcional; a Samsung HW-B400F fica-se pelos woofers integrados na barra, o que poupa espaço e uma tomada."
+          "a": "Para diálogos e notícias, não. Para filmes de ação e música eletrónica, faz diferença. A Samsung HW-B46CF traz um sem fios; a Bose TV Speaker aceita um opcional; a Samsung HW-B400F fica-se pelos woofers integrados na barra, o que poupa espaço e uma tomada.",
+          "productIds": [
+            "samsung-hw-b46cf",
+            "bose-tv-speaker",
+            "samsung-hw-b400f"
+          ]
         },
         {
           "q": "Uma soundbar ajuda a perceber os diálogos?",
-          "a": "Sim, é das melhorias mais notórias em relação às colunas do televisor. A Bose TV Speaker foi pensada para isso, e a Sony HT-S40R tem modo de voz. Experimenta ao volume a que costumas ver televisão, não ao volume da loja."
+          "a": "Sim, é das melhorias mais notórias em relação às colunas do televisor. A Bose TV Speaker foi pensada para isso, e a Sony HT-S40R tem modo de voz. Experimenta ao volume a que costumas ver televisão, não ao volume da loja.",
+          "productIds": [
+            "bose-tv-speaker",
+            "sony-ht-s40r"
+          ]
         },
         {
           "q": "Vale a pena uma soundbar com Dolby Atmos?",
-          "a": "Vale, se vês muitos filmes e séries com Atmos em streaming e o televisor tem eARC. O efeito de altura depende da sala: tetos altos ou irregulares diluem-no. Para notícias, futebol e rádio, uma barra mais simples faz o mesmo trabalho."
+          "a": "Vale, se vês muitos filmes e séries com Atmos em streaming e o televisor tem eARC. O efeito de altura depende da sala: tetos altos ou irregulares diluem-no. Para notícias, futebol e rádio, uma barra mais simples faz o mesmo trabalho.",
+          "productIds": [
+            "sonos-beam-gen-2"
+          ]
         }
       ],
       "quickPicks": [
@@ -1014,7 +1073,13 @@
       "faq": [
         {
           "q": "O que é um pré-amplificador phono e preciso de um?",
-          "a": "O sinal que sai da agulha é muito fraco e precisa de ser amplificado e equalizado antes de chegar às colunas. Se o gira-discos não tiver pré-amplificador integrado, precisas de um externo ou de um amplificador com entrada phono. Os Audio-Technica AT-LP60X e AT-LP120X, o Sony PS-LX3BT e o JBL Spinner BT já o trazem."
+          "a": "O sinal que sai da agulha é muito fraco e precisa de ser amplificado e equalizado antes de chegar às colunas. Se o gira-discos não tiver pré-amplificador integrado, precisas de um externo ou de um amplificador com entrada phono. Os Audio-Technica AT-LP60X e AT-LP120X, o Sony PS-LX3BT e o JBL Spinner BT já o trazem.",
+          "productIds": [
+            "audio-technica-at-lp60x",
+            "audio-technica-at-lp120x",
+            "sony-ps-lx3bt",
+            "jbl-spinner-bt"
+          ]
         },
         {
           "q": "Gira-discos automático ou manual: qual escolher?",
@@ -1022,7 +1087,11 @@
         },
         {
           "q": "Posso ouvir vinil em colunas ou auscultadores Bluetooth?",
-          "a": "Sim, com um gira-discos com Bluetooth, como o Sony PS-LX3BT ou o JBL Spinner BT. O som passa a digital pelo caminho, o que alguns puristas não perdoam. Para ouvir à noite sem acordar a casa, é difícil de bater."
+          "a": "Sim, com um gira-discos com Bluetooth, como o Sony PS-LX3BT ou o JBL Spinner BT. O som passa a digital pelo caminho, o que alguns puristas não perdoam. Para ouvir à noite sem acordar a casa, é difícil de bater.",
+          "productIds": [
+            "sony-ps-lx3bt",
+            "jbl-spinner-bt"
+          ]
         },
         {
           "q": "Os gira-discos baratos estragam os discos?",
@@ -1184,15 +1253,26 @@
       "faq": [
         {
           "q": "O que preciso para montar um home studio?",
-          "a": "Para começar: computador, um programa de gravação (DAW), um microfone e auscultadores fechados. Se o microfone for XLR ou quiseres gravar guitarra, junta uma interface de áudio. Os monitores podem esperar pela fase da mistura. Começa pequeno: o resto chega quando bateres numa limitação concreta."
+          "a": "Para começar: computador, um programa de gravação (DAW), um microfone e auscultadores fechados. Se o microfone for XLR ou quiseres gravar guitarra, junta uma interface de áudio. Os monitores podem esperar pela fase da mistura. Começa pequeno: o resto chega quando bateres numa limitação concreta.",
+          "productIds": [
+            "samson-q2u",
+            "focusrite-scarlett-solo-4",
+            "audio-technica-ath-m20x"
+          ]
         },
         {
           "q": "Microfone USB ou XLR: qual escolher?",
-          "a": "O USB liga direto ao computador e é o caminho mais curto para gravar voz. O XLR pede uma interface, mas permite trocar de microfone e gravar várias fontes. O Samson Q2U tem as duas saídas: começas por USB e passas a XLR quando comprares a interface, sem deitar nada fora."
+          "a": "O USB liga direto ao computador e é o caminho mais curto para gravar voz. O XLR pede uma interface, mas permite trocar de microfone e gravar várias fontes. O Samson Q2U tem as duas saídas: começas por USB e passas a XLR quando comprares a interface, sem deitar nada fora.",
+          "productIds": [
+            "samson-q2u"
+          ]
         },
         {
           "q": "Preciso de interface de áudio para gravar guitarra?",
-          "a": "Sim. A guitarra precisa de uma entrada de instrumento (alta impedância), que o computador não tem. A Focusrite Scarlett Solo tem uma, ao lado da entrada de microfone, por isso dá para gravar voz e guitarra com a mesma caixa, uma de cada vez."
+          "a": "Sim. A guitarra precisa de uma entrada de instrumento (alta impedância), que o computador não tem. A Focusrite Scarlett Solo tem uma, ao lado da entrada de microfone, por isso dá para gravar voz e guitarra com a mesma caixa, uma de cada vez.",
+          "productIds": [
+            "focusrite-scarlett-solo-4"
+          ]
         },
         {
           "q": "Auscultadores ou monitores para misturar?",
@@ -1200,7 +1280,10 @@
         },
         {
           "q": "Posso usar auscultadores Bluetooth para gravar?",
-          "a": "Para ouvir, sim. Para gravar, não: o Bluetooth acrescenta atraso e ficas a cantar fora de tempo com o que estás a ouvir. Usa o cabo. Os ATH-M50xBT2 têm as duas ligações, por isso servem para as duas coisas."
+          "a": "Para ouvir, sim. Para gravar, não: o Bluetooth acrescenta atraso e ficas a cantar fora de tempo com o que estás a ouvir. Usa o cabo. Os ATH-M50xBT2 têm as duas ligações, por isso servem para as duas coisas.",
+          "productIds": [
+            "audio-technica-ath-m50xbt2"
+          ]
         }
       ],
       "quickPicks": [
@@ -1346,19 +1429,33 @@
       "faq": [
         {
           "q": "Como ligar auscultadores com fio a um telemóvel sem jack?",
-          "a": "Com um adaptador USB-C para jack de 3,5 mm, como o da Apple. É pequeno, não tem bateria e não pede emparelhamento. Em Android costuma funcionar, mas confirma a compatibilidade com o teu modelo. Para auscultadores mais exigentes, um DAC portátil como o FiiO KA11 dá mais folga."
+          "a": "Com um adaptador USB-C para jack de 3,5 mm, como o da Apple. É pequeno, não tem bateria e não pede emparelhamento. Em Android costuma funcionar, mas confirma a compatibilidade com o teu modelo. Para auscultadores mais exigentes, um DAC portátil como o FiiO KA11 dá mais folga.",
+          "productIds": [
+            "apple-usb-c-jack-35",
+            "fiio-ka11"
+          ]
         },
         {
           "q": "O que é um DAC e preciso de um?",
-          "a": "O DAC converte o som digital em sinal analógico para os auscultadores. Todos os telemóveis e computadores têm um. Um DAC externo compensa quando os auscultadores precisam de mais potência ou quando a saída do aparelho tem ruído. Para auscultadores comuns, o adaptador básico chega."
+          "a": "O DAC converte o som digital em sinal analógico para os auscultadores. Todos os telemóveis e computadores têm um. Um DAC externo compensa quando os auscultadores precisam de mais potência ou quando a saída do aparelho tem ruído. Para auscultadores comuns, o adaptador básico chega.",
+          "productIds": [
+            "fiio-ka11"
+          ]
         },
         {
           "q": "Como pôr Bluetooth numa aparelhagem antiga?",
-          "a": "Com um recetor Bluetooth ligado à entrada auxiliar. O UGREEN 2 em 1 liga por jack de 3,5 mm; se a aparelhagem só tiver entradas RCA, junta um cabo jack para 2 RCA. A partir daí, a aparelhagem dos anos 90 toca o que o telemóvel mandar, incluindo esta rádio."
+          "a": "Com um recetor Bluetooth ligado à entrada auxiliar. O UGREEN 2 em 1 liga por jack de 3,5 mm; se a aparelhagem só tiver entradas RCA, junta um cabo jack para 2 RCA. A partir daí, a aparelhagem dos anos 90 toca o que o telemóvel mandar, incluindo esta rádio.",
+          "productIds": [
+            "ugreen-bluetooth-2-em-1",
+            "ugreen-jack-rca-1m"
+          ]
         },
         {
           "q": "Posso usar auscultadores Bluetooth numa televisão sem Bluetooth?",
-          "a": "Sim, com um transmissor Bluetooth ligado à saída de auscultadores da TV. Confirma primeiro que a TV tem essa saída de 3,5 mm. O atraso entre imagem e som depende do transmissor e dos auscultadores: experimenta com diálogos antes de te habituares a ver filmes dobrados por acidente."
+          "a": "Sim, com um transmissor Bluetooth ligado à saída de auscultadores da TV. Confirma primeiro que a TV tem essa saída de 3,5 mm. O atraso entre imagem e som depende do transmissor e dos auscultadores: experimenta com diálogos antes de te habituares a ver filmes dobrados por acidente.",
+          "productIds": [
+            "ugreen-bluetooth-2-em-1"
+          ]
         }
       ],
       "quickPicks": [

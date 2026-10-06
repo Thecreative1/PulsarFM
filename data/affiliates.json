@@ -3,6 +3,7 @@
   "merchants": {
     "amazon-es": {
       "name": "Amazon.es",
+      "shortName": "Amazon",
       "network": "amazon",
       "trackingId": "pulsarfm-21",
       "allowedDestinationHosts": [
