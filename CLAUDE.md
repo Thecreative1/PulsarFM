@@ -1,8 +1,9 @@
 # PulsarFM — AI Assistant Guide
 
 Neon retro web radio: single-page app with the Webamp player (Winamp clone) +
-Butterchurn (Milkdrop) visualizer. 48 curated live stations in 8 genres (6 per
-genre — keep the per-genre count equal so the grid stays uniform), PT/EN
+Butterchurn (Milkdrop) visualizer. 64 curated live stations in 8 genres (8 per
+genre = two full rows of 4 on desktop — keep the per-genre count equal so the
+grid stays uniform), PT/EN
 bilingual, hosted on **GitHub Pages**. The owner's goal is to monetize (AdSense)
 while preserving the neon/synthwave aesthetic.
 
@@ -104,6 +105,13 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
    urllib.request.urlopen(req, timeout=8)   # want 200/206 + audio/* content type
    ```
    Reject: 4xx, SSL errors, timeouts, `http://` URLs.
+   Then confirm in a real browser what the player does: an `Audio()` with
+   `crossOrigin = "anonymous"` must fire `loadeddata` (Milkdrop needs CORS).
+   Redirecting URLs can pass the Python check and still fail in the browser:
+   laut.fm must use the direct `https://<name>.stream.laut.fm/<name>` form,
+   never `stream.laut.fm/<name>`. A Python certificate error on
+   stream.nightride.fm is local (the browser accepts it); SomaFM answers 403
+   to scripts but plays in browsers.
 2. Update the `radios` object in `index.html` (name + URL).
 3. Update the matching static `<article class="radio-card"><h3>Name</h3></article>` in `index.html`.
 4. Update `GENRES` in `tools/gen_genre_pages.py` (name + one-line PT
@@ -111,7 +119,7 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
    tuples rendered as a visible FAQ section + FAQPage JSON-LD) AND the
    matching entry in `GENRES_EN` (same station order — the generator asserts
    the count), then run `python tools/gen_genre_pages.py`.
-5. If the total station count changed, update "48 estações/48 live stations"
+5. If the total station count changed, update "64 estações/64 live stations"
    in: `<title>`, meta description, hero intro (static + both translations),
    `pageTitle`/`metaDesc` in both translations (applyLanguage sets the tab
    title and meta description; PT must match the static tags),

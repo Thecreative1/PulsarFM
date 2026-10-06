@@ -103,7 +103,11 @@ Já publicados (para não repetir a mesma piada noutro sítio). Atualizado a
   (eletrónica), sol a nascer numa pista (psytrance), fingir que se percebe
   de contrabaixo (jazz), "não é sítio para pedir baladas" (Radio BOB!), lados
   B que a rádio da altura deixava de fora (Underground 80s), psytrance que
-  perde metade dos graves no altifalante do telemóvel. As páginas EN
+  perde metade dos graves no altifalante do telemóvel, "muito Oasis… e
+  nenhuma vergonha disso" (Radio X), "para aquecer antes de sair, ou para não
+  sair de todo" (1.FM Deep House), "synthwave em modo pesadelo: mais
+  distorção, menos pôr do sol" (Nightride Darksynth), "como se ouve no vale"
+  (Radio Ozora). As páginas EN
   reaproveitam estas piadas em inglês; não são piadas novas.
 - **Pergunta "Posso ouvir no telemóvel/celular?" das páginas de género:**
   cada página responde com uma funcionalidade real diferente (rock SCAN,
