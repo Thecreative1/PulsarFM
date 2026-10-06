@@ -5,6 +5,222 @@
   "updatedAt": "2026-10-06",
   "articles": [
     {
+      "slug": "presentes-para-quem-gosta-de-musica",
+      "category": "Ideias para oferecer",
+      "navLabel": "Presentes",
+      "navIcon": "🎁",
+      "illustration": "/img/gear/presentes.svg",
+      "title": "Presentes para quem gosta de música: ideias que não acabam na gaveta",
+      "seoTitle": "Presentes para quem gosta de música: ideias para o Natal 2026",
+      "summary": "Para quem ouve o dia todo, tem vinil, quer começar a criar ou leva a música para todo o lado: presentes úteis, do pequeno ao de sonho.",
+      "metaDescription": "Ideias de presentes para quem gosta de música: auscultadores, colunas, gira-discos, controlador de DJ e acessórios de vinil, do pequeno ao de sonho.",
+      "intro": "O melhor presente para quem gosta de música é o que acaba a tocar, não numa gaveta. Antes de escolher, descobre como essa pessoa ouve: em casa, na rua, em vinil ou já a pensar em fazer a própria música. As ideias abaixo estão organizadas assim, do pequeno presente ao de sonho.",
+      "updatedAt": "2026-10-06",
+      "publishedAt": "2026-10-06",
+      "sections": [
+        {
+          "heading": "Para quem ouve música o dia todo",
+          "paragraphs": [
+            "Auscultadores são o presente seguro para quem passa o dia com música nos ouvidos, desde que acertes no formato. Para quem estuda ou trabalha com som de fundo, leveza e conforto contam mais do que graves. Para quem viaja muito, o cancelamento de ruído é o que vai agradecer.",
+            "Se a pessoa já tem uns auscultadores de que gosta, não insistas. Uma coluna pequena para a cozinha ou para o escritório resolve outro momento do dia."
+          ],
+          "productLinks": [
+            {
+              "productId": "sony-wh-ch720n",
+              "label": "Ver os Sony WH-CH720N na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Para quem tem vinil",
+          "paragraphs": [
+            "Quem tem gira-discos tem sempre uma lista de pequenas coisas que vai adiando: limpar os discos como deve ser, pôr a capa preferida na parede. São presentes pequenos que se usam todas as semanas.",
+            "Se a pessoa ainda não tem gira-discos mas fala de vinil há anos, um modelo automático de entrada é o empurrão certo. Confirma antes se há colunas ativas em casa ou se é preciso juntar umas."
+          ],
+          "productLinks": [
+            {
+              "productId": "pro-ject-cleaning-set-basic",
+              "label": "Ver o Pro-Ject Cleaning Set na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Para quem quer começar a criar",
+          "paragraphs": [
+            "Há quem passe as noites a ouvir sets e a imaginar como seria estar do outro lado. Um controlador de DJ de entrada liga ao computador e chega para as primeiras misturas, sem equipamento de clube. Para quem prefere fazer as próprias faixas, um teclado MIDI pequeno e um programa de produção são o ponto de partida.",
+            "Nos anos 90, começar a fazer música pedia um sampler que custava um ordenado. Hoje o estúdio cabe numa mochila, e o que falta é só tempo."
+          ],
+          "productLinks": [
+            {
+              "productId": "hercules-inpulse-200-mk3",
+              "label": "Ver o Hercules DJControl Inpulse 200 MK3 na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Para levar a música para todo o lado",
+          "paragraphs": [
+            "Uma coluna Bluetooth é dos presentes que mais se usam: praia, piscina, cozinha, fim de tarde no jardim. Para quem já tem uma, a diferença está na autonomia e na resistência à água."
+          ]
+        },
+        {
+          "heading": "Como acertar no presente",
+          "paragraphs": [
+            "Um bom presente encaixa no que a pessoa já tem. Antes de comprar, faz duas ou três perguntas discretas, ou espreita o que está em cima da secretária."
+          ],
+          "checklist": [
+            "Vê como a pessoa liga as coisas: telemóvel sem jack, computador, gira-discos sem pré-amplificador.",
+            "Nos auscultadores, pensa no uso: estudo, transportes ou estúdio.",
+            "Na Amazon, confirma o vendedor e as condições de devolução da época festiva antes de comprar.",
+            "Na dúvida, um acessório para algo que a pessoa já usa raramente falha."
+          ]
+        }
+      ],
+      "productIds": [
+        "pro-ject-cleaning-set-basic",
+        "americanflat-moldura-vinil",
+        "jbl-go-5",
+        "sony-wh-ch720n",
+        "akai-mpk-mini-iv",
+        "hercules-inpulse-200-mk3",
+        "audio-technica-at-lp60x",
+        "marshall-emberton-iii",
+        "sony-wh-1000xm5",
+        "marshall-acton-iv"
+      ],
+      "quickPicks": [
+        {
+          "label": "Pequeno presente",
+          "productId": "pro-ject-cleaning-set-basic",
+          "note": "Para quem tem vinil e ainda o limpa com a manga da camisola."
+        },
+        {
+          "label": "Para o dia a dia",
+          "productId": "sony-wh-ch720n",
+          "note": "Leves e com cancelamento de ruído, para estudar e trabalhar."
+        },
+        {
+          "label": "Para começar a criar",
+          "productId": "hercules-inpulse-200-mk3",
+          "note": "As primeiras misturas no computador, sem equipamento de clube."
+        },
+        {
+          "label": "Presente de sonho",
+          "productId": "marshall-acton-iv",
+          "note": "Som a sério na sala, com entrada para o gira-discos."
+        }
+      ],
+      "badges": {
+        "pro-ject-cleaning-set-basic": "Pequeno presente · Vinil",
+        "americanflat-moldura-vinil": "Pequeno presente · Vinil",
+        "jbl-go-5": "Pequeno presente",
+        "sony-wh-ch720n": "Para o dia a dia",
+        "akai-mpk-mini-iv": "Para criar",
+        "hercules-inpulse-200-mk3": "Para criar · DJ",
+        "audio-technica-at-lp60x": "Para começar no vinil",
+        "marshall-emberton-iii": "Para levar",
+        "sony-wh-1000xm5": "Presente de sonho",
+        "marshall-acton-iv": "Presente de sonho"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Os dez presentes recomendados: para quem são e o que confirmar antes de comprar",
+        "columns": [
+          "Presente",
+          "Para quem",
+          "Confirma antes"
+        ],
+        "rows": [
+          [
+            "Pro-Ject Cleaning Set",
+            "Quem já tem vinil",
+            "Nada: serve qualquer gira-discos"
+          ],
+          [
+            "Moldura Americanflat 32×32",
+            "Quem tem uma capa preferida",
+            "O disco sai da capa para emoldurar"
+          ],
+          [
+            "JBL Go 5",
+            "Música em qualquer divisão",
+            "Que não espera graves de festa"
+          ],
+          [
+            "Sony WH-CH720N",
+            "Quem estuda ou trabalha a ouvir",
+            "Se já tem auscultadores de que gosta"
+          ],
+          [
+            "Akai MPK Mini IV",
+            "Quem quer fazer as próprias faixas",
+            "Precisa de computador"
+          ],
+          [
+            "Hercules DJControl Inpulse 200 MK3",
+            "Quem quer misturar como DJ",
+            "Precisa de computador e de colunas ou auscultadores"
+          ],
+          [
+            "Audio-Technica AT-LP60X",
+            "Quem quer começar no vinil",
+            "Colunas ativas ou amplificador em casa"
+          ],
+          [
+            "Marshall Emberton III",
+            "Quem passa fins de semana fora",
+            "Nada de especial: liga por Bluetooth"
+          ],
+          [
+            "Sony WH-1000XM5",
+            "Quem viaja muito",
+            "Não dobram: ocupam espaço na mala"
+          ],
+          [
+            "Marshall Acton IV",
+            "Quem quer som a sério na sala",
+            "Precisa de tomada: não tem bateria"
+          ]
+        ],
+        "rowProducts": [
+          "pro-ject-cleaning-set-basic",
+          "americanflat-moldura-vinil",
+          "jbl-go-5",
+          "sony-wh-ch720n",
+          "akai-mpk-mini-iv",
+          "hercules-inpulse-200-mk3",
+          "audio-technica-at-lp60x",
+          "marshall-emberton-iii",
+          "sony-wh-1000xm5",
+          "marshall-acton-iv"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma o vendedor e as condições de devolução na Amazon."
+      },
+      "faq": [
+        {
+          "q": "O que oferecer a quem gosta de música?",
+          "a": "Depende de como a pessoa ouve. Para quem ouve o dia todo, auscultadores; para quem tem vinil, um kit de limpeza ou uma moldura para a capa preferida; para quem quer criar, um controlador de DJ ou um teclado MIDI. Na dúvida, um acessório para algo que a pessoa já usa raramente falha."
+        },
+        {
+          "q": "Que presente dar a quem gosta de música eletrónica?",
+          "a": "Um controlador de DJ de entrada, como o Hercules DJControl Inpulse 200 MK3, para as primeiras misturas no computador, ou um teclado MIDI pequeno, como o Akai MPK Mini IV, para fazer faixas. E uns auscultadores que aguentem graves, para ouvir os sets como deve ser."
+        },
+        {
+          "q": "Um gira-discos é um bom presente?",
+          "a": "É, se a pessoa já fala de vinil e tem onde o pôr. Um automático de entrada, como o Audio-Technica AT-LP60X, evita sustos com a agulha. Confirma antes se há colunas ativas ou um amplificador em casa: sem isso, o gira-discos fica mudo."
+        },
+        {
+          "q": "Que presente dar a quem já tem tudo?",
+          "a": "Acessórios para o que já usa: um kit de limpeza para os discos, uma moldura para a capa preferida ou uma coluna pequena para uma divisão onde ainda não há música."
+        }
+      ],
+      "related": [
+        "gira-discos",
+        "melhores-auscultadores"
+      ],
+      "closing": "Pensa primeiro em quando e onde a pessoa ouve música, e só depois no objeto. Um presente que encaixa na rotina toca todos os dias; os outros ficam na caixa."
+    },
+    {
       "slug": "melhores-auscultadores",
       "category": "Escuta pessoal",
       "navLabel": "Auscultadores",
@@ -318,7 +534,7 @@
         }
       ],
       "related": [
-        "gira-discos",
+        "presentes-para-quem-gosta-de-musica",
         "soundbars"
       ]
     },

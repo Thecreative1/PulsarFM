@@ -95,6 +95,10 @@ Já publicados (para não repetir a mesma piada noutro sítio). Atualizado a
 - **Acessórios:** gaveta de adaptadores sem destino, USB-C como
   especialidade, encosto da cadeira (suporte), aparelhagem dos anos 90 a
   tocar esta rádio, "filmes dobrados por acidente".
+- **Presentes:** presente que acaba na gaveta / fica na caixa, vinil limpo
+  "com a manga da camisola", sampler dos anos 90 que custava um ordenado
+  (a referência retro deste guia), "espreita o que está em cima da
+  secretária".
 - **Hub:** "conversa de folheto nunca", "do primeiro play ao último lado B".
   Não voltar a usar "folheto" nos guias.
 - **Páginas de género (PT e EN):** cassete do carro sem a fita enrolar (M80),

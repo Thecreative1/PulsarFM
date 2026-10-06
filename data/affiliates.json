@@ -36,6 +36,10 @@
     "Tecnologia e acessórios": {
       "src": "/img/gear/acessorios.svg",
       "alt": "Ilustração néon de um adaptador DAC, cabos e símbolo Bluetooth"
+    },
+    "Presentes": {
+      "src": "/img/gear/presentes.svg",
+      "alt": "Ilustração néon de uma caixa de presente com notas de música"
     }
   },
   "products": [
@@ -791,6 +795,106 @@
         "type": "manual",
         "checkedAt": "2026-10-06",
         "referenceUrl": "https://www.amazon.es/dp/B015PZ7QO2/"
+      }
+    },
+    {
+      "id": "pro-ject-cleaning-set-basic",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0BVR181B5",
+      "name": "Pro-Ject Cleaning Set Basic",
+      "category": "Presentes",
+      "description": "Duas escovas de fibra de carbono da Pro-Ject: a Brush it tira o pó dos discos antes de tocar e a Clean it trata da agulha. Segundo a marca, ambas reduzem a eletricidade estática. É o presente pequeno que quem tem vinil usa todas as semanas.",
+      "bestFor": "Quem já tem gira-discos",
+      "pros": [
+        "Marca de referência no vinil",
+        "Usa-se todas as semanas",
+        "Serve qualquer gira-discos"
+      ],
+      "cons": [
+        "Vendido por um vendedor externo na Amazon.es"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0BVR181B5/"
+      }
+    },
+    {
+      "id": "americanflat-moldura-vinil",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B00UNSPUDQ",
+      "name": "Americanflat moldura para vinil 32×32 cm",
+      "category": "Presentes",
+      "description": "Moldura de alumínio de 32×32 cm, à medida das capas de LP, com frente em acrílico e acessórios para pendurar. A capa preferida passa da prateleira para a parede. O disco tem de sair da capa antes de emoldurar.",
+      "bestFor": "Quem tem uma capa preferida",
+      "pros": [
+        "Medida certa para capas de LP",
+        "Pronta a pendurar"
+      ],
+      "cons": [
+        "O disco não fica dentro da moldura"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B00UNSPUDQ/"
+      }
+    },
+    {
+      "id": "akai-mpk-mini-iv",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0FT3N7TK1",
+      "name": "Akai Professional MPK Mini IV",
+      "category": "Presentes",
+      "description": "Um teclado MIDI que cabe numa mochila: 25 teclas sensíveis à velocidade, 8 pads MPC e um ecrã a cores, ligado por USB-C. Segundo a Akai, traz uma coleção de instrumentos virtuais para começar a produzir. Precisa de um computador e de um programa de produção.",
+      "bestFor": "Quem quer fazer as próprias faixas",
+      "pros": [
+        "Compacto",
+        "Pads MPC",
+        "Instrumentos virtuais incluídos (fabricante)"
+      ],
+      "cons": [
+        "Teclas pequenas",
+        "Precisa de computador"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0FT3N7TK1/"
+      }
+    },
+    {
+      "id": "hercules-inpulse-200-mk3",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0G3Q92XG4",
+      "name": "Hercules DJControl Inpulse 200 MK3",
+      "category": "Presentes",
+      "description": "Controlador de DJ de entrada, compacto, que funciona com o DJUCED ou o Serato DJ Lite no computador. Tem luzes que ajudam a acertar o tempo entre faixas e uma função de stems para remisturar. Chega para as primeiras misturas, sem equipamento de clube.",
+      "bestFor": "Quem quer começar a misturar como DJ",
+      "pros": [
+        "Pensado para principiantes",
+        "Funciona com DJUCED ou Serato DJ Lite",
+        "Compacto"
+      ],
+      "cons": [
+        "Precisa de computador e de colunas ou auscultadores"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0G3Q92XG4/"
       }
     }
   ]

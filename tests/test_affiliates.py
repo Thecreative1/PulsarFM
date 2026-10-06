@@ -43,6 +43,11 @@ def strip_products(editorial):
     return editorial
 
 
+def headphones(editorial):
+    """The headphones guide, found by slug: the hub order changes (seasonal guides go first)."""
+    return next(a for a in editorial['articles'] if a['slug'] == 'melhores-auscultadores')
+
+
 def use_product(article, product):
     """Put a fixture product in a guide, with the quick pick every guide with products needs."""
     article['productIds'] = [product['id']]
@@ -80,7 +85,7 @@ class AffiliateTests(unittest.TestCase):
         self.editorial = strip_products(copy.deepcopy(gen.read_json(gen.ROOT / 'data/recommendations.json')))
 
     def test_badge_comparison_and_faq(self):
-        article = self.editorial['articles'][0]
+        article = headphones(self.editorial)
         use_product(article, self.product)
         article['badges'] = {self.product['id']: 'Até 50€ <b>'}
         article['comparison'] = {'caption': 'Tabela', 'columns': ['Modelo', 'Nota'],
@@ -121,7 +126,7 @@ class AffiliateTests(unittest.TestCase):
         self.assertEqual(link['rel'], 'noopener')
         self.assertEqual(link['target'], '_blank')
         self.assertNotIn('data-affiliate-link', link)
-        use_product(self.editorial['articles'][0], self.product)
+        use_product(headphones(self.editorial), self.product)
         html = gen.generate(self.catalog, self.editorial)['recomendacoes/melhores-auscultadores/index.html']
         self.assertNotIn('affiliate-disclosure', html)
         self.assertIn('sem comissão', html)
@@ -183,7 +188,7 @@ class AffiliateTests(unittest.TestCase):
                 gen.validate_price(dict(price, amount=amount))
 
     def test_article_cards_inline_links_and_disclosure(self):
-        article = self.editorial['articles'][0]
+        article = headphones(self.editorial)
         use_product(article, self.product)
         article['sections'][0]['productLinks'] = [{'productId': self.product['id'], 'label': 'Ver este modelo'}]
         html = gen.generate(self.catalog, self.editorial)['recomendacoes/melhores-auscultadores/index.html']
@@ -198,7 +203,7 @@ class AffiliateTests(unittest.TestCase):
         self.product['status'] = 'draft'
         self.product['affiliateUrl'] = ''
         self.catalog['awin']['publisherId'] = ''
-        self.editorial['articles'][0]['productIds'] = [self.product['id']]
+        headphones(self.editorial)['productIds'] = [self.product['id']]
         html = gen.generate(self.catalog, self.editorial)['recomendacoes/melhores-auscultadores/index.html']
         self.assertNotIn('data-affiliate-link', html)
         self.assertNotIn('Auscultadores de teste', html)
@@ -209,10 +214,10 @@ class AffiliateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             gen.generate(self.catalog, self.editorial)
         self.catalog['products'].pop()
-        self.editorial['articles'][0]['productIds'] = ['unknown-product']
+        headphones(self.editorial)['productIds'] = ['unknown-product']
         with self.assertRaises(KeyError):
             gen.generate(self.catalog, self.editorial)
-        self.editorial['articles'][0]['slug'] = '../escape'
+        headphones(self.editorial)['slug'] = '../escape'
         with self.assertRaises(ValueError):
             gen.generate(self.catalog, self.editorial)
 
@@ -283,7 +288,7 @@ class AmazonTests(unittest.TestCase):
         self.product.update(pros=['Pró editorial único'], cons=['Contra editorial único'],
                             bestFor='Uso ideal editorial único')
         editorial = strip_products(gen.read_json(gen.ROOT / 'data/recommendations.json'))
-        use_product(editorial['articles'][0], self.product)
+        use_product(headphones(editorial), self.product)
         html = gen.generate(self.catalog, editorial)['recomendacoes/melhores-auscultadores/index.html']
         for note in ('Pró editorial único', 'Contra editorial único', 'Uso ideal editorial único'):
             self.assertNotIn(note, html)
@@ -349,7 +354,7 @@ class SeoAndConversionTests(unittest.TestCase):
             for slug in article['related']:
                 inbound[slug] += 1
         self.assertTrue(all(count >= 1 for count in inbound.values()), inbound)
-        self.editorial['articles'][0]['related'] = ['nao-existe']
+        headphones(self.editorial)['related'] = ['nao-existe']
         with self.assertRaises(ValueError):
             gen.generate(self.catalog, self.editorial)
 
@@ -384,7 +389,7 @@ class SeoAndConversionTests(unittest.TestCase):
         ]
         for field, value, message in cases:
             editorial = copy.deepcopy(self.editorial)
-            article = editorial['articles'][0]
+            article = headphones(editorial)
             if value is None:
                 article.pop(field)
             else:
@@ -407,7 +412,7 @@ class SeoAndConversionTests(unittest.TestCase):
             gen.generate(catalog, self.editorial)
 
     def test_bad_quick_picks_and_row_products_fail(self):
-        article = self.editorial['articles'][0]
+        article = headphones(self.editorial)
         article['quickPicks'].append({'label': 'X', 'productId': 'jbl-go-5', 'note': 'fora do guia'})
         with self.assertRaises(ValueError):
             gen.generate(self.catalog, self.editorial)

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Caixa de presente com notas de música a sair, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .note { animation: rise 3.2s ease-in-out infinite; }
+    .note.n2 { animation-delay: -1.1s; }
+    .note.n3 { animation-delay: -2.2s; }
+    .lid { animation: lift 3.2s ease-in-out infinite; }
+    .spark { animation: led 2.4s ease-in-out infinite; }
+    .spark.s2 { animation-delay: -.8s; }
+    .spark.s3 { animation-delay: -1.6s; }
+    @keyframes rise { 0% { opacity: 0; transform: translateY(14px); } 30%, 70% { opacity: 1; } 100% { opacity: 0; transform: translateY(-22px); } }
+    @keyframes lift { 50% { transform: translateY(-5px); } }
+    @keyframes led { 50% { opacity: .25; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g class="note" stroke="#00FFCC" stroke-width="4"><path d="M196 104V62L218 56V98"/><circle cx="190" cy="106" r="7" fill="#00FFCC"/><circle cx="212" cy="100" r="7" fill="#00FFCC"/></g>
+    <g class="note n2" stroke="#C044FF" stroke-width="4"><path d="M262 90V52"/><path d="M262 52C272 58 280 60 282 70" /><circle cx="256" cy="92" r="7" fill="#C044FF"/></g>
+    <g class="note n3" stroke="#00CCFF" stroke-width="4"><path d="M300 112V80L318 76V108"/><circle cx="295" cy="114" r="6" fill="#00CCFF"/><circle cx="313" cy="110" r="6" fill="#00CCFF"/></g>
+  </g>
+  <rect x="148" y="176" width="184" height="114" rx="10" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <rect x="226" y="176" width="28" height="114" fill="#FF2D9B" fill-opacity=".85"/>
+  <g class="lid">
+    <rect x="136" y="144" width="208" height="36" rx="8" fill="#0C3C43" stroke="#00FFCC" stroke-width="2"/>
+    <rect x="226" y="144" width="28" height="36" fill="#FF2D9B"/>
+    <path d="M240 144C214 116 186 126 200 140C208 148 226 146 240 144Z" stroke="#FF2D9B" stroke-width="5" fill="#FF2D9B" fill-opacity=".25"/>
+    <path d="M240 144C266 116 294 126 280 140C272 148 254 146 240 144Z" stroke="#FF2D9B" stroke-width="5" fill="#FF2D9B" fill-opacity=".25"/>
+  </g>
+  <path d="M164 206H210M164 222H200" stroke="#9AD9D3" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#00FFCC">
+    <circle class="spark" cx="112" cy="132" r="4"/><circle class="spark s2" cx="368" cy="150" r="5"/><circle class="spark s3" cx="350" cy="236" r="3"/>
+  </g>
+</svg>
