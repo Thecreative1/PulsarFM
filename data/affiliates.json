@@ -45,6 +45,10 @@
     "Auriculares": {
       "src": "/img/gear/auriculares.svg",
       "alt": "Ilustração néon de um estojo aberto com auriculares sem fios"
+    },
+    "Colunas para PC": {
+      "src": "/img/gear/colunas-pc.svg",
+      "alt": "Ilustração néon de duas colunas de secretária ao lado de um ecrã"
     }
   },
   "products": [
@@ -1072,6 +1076,206 @@
         "type": "manual",
         "checkedAt": "2026-10-06",
         "referenceUrl": "https://www.amazon.es/dp/B0C4TLFZSZ/"
+      }
+    },
+    {
+      "id": "logitech-z150",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B00EUUXFFS",
+      "name": "Logitech Z150",
+      "category": "Colunas para PC",
+      "description": "O par mais simples para tirar o som de dentro do portátil. Segundo a Logitech, dois altifalantes de 5 cm com 3 W, ligar e volume no mesmo botão e uma saída para auscultadores à frente. Liga por jack de 3,5 mm. Não esperes graves: é para rádio, vídeos e chamadas.",
+      "bestFor": "Portátil, orçamento mínimo",
+      "pros": [
+        "Preço mínimo",
+        "Saída de auscultadores à frente"
+      ],
+      "cons": [
+        "Sem graves",
+        "Só jack"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B00EUUXFFS/"
+      }
+    },
+    {
+      "id": "creative-pebble-v3",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B08F5BQZL8",
+      "name": "Creative Pebble V3",
+      "category": "Colunas para PC",
+      "description": "As colunas redondas da Creative, agora com USB-C: o mesmo cabo leva o som e a alimentação. Têm Bluetooth para o telemóvel e, segundo a marca, um interruptor de ganho para mais volume. São pequenas e ficam inclinadas para quem está sentado à secretária.",
+      "bestFor": "Secretárias pequenas",
+      "pros": [
+        "USB-C para som e alimentação",
+        "Bluetooth",
+        "Compactas"
+      ],
+      "cons": [
+        "Graves limitados"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B08F5BQZL8/"
+      }
+    },
+    {
+      "id": "creative-pebble-plus",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07NYS5TTT",
+      "name": "Creative Pebble Plus 2.1",
+      "category": "Colunas para PC",
+      "description": "A forma mais barata de ter subwoofer na secretária: duas colunas pequenas inclinadas a 45° e um subwoofer de 4 polegadas virado para baixo, segundo a Creative. Alimentação por USB. Os graves não fazem tremer o prédio, mas mudam bastante o som do portátil.",
+      "bestFor": "Graves com orçamento curto",
+      "pros": [
+        "Subwoofer incluído",
+        "Alimentação por USB"
+      ],
+      "cons": [
+        "Subwoofer pequeno"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07NYS5TTT/"
+      }
+    },
+    {
+      "id": "creative-pebble-x",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0CTCMVB2R",
+      "name": "Creative Pebble X",
+      "category": "Colunas para PC",
+      "description": "Para setups de gaming: iluminação RGB com 16,8 milhões de cores, Bluetooth e USB-C. Segundo a Creative, dão 15 W RMS pela porta USB e até 30 W com um carregador USB PD de 30 W ou mais, que não vem na caixa.",
+      "bestFor": "Gaming com iluminação",
+      "pros": [
+        "Iluminação RGB",
+        "USB-C e Bluetooth",
+        "Mais potência com carregador USB PD"
+      ],
+      "cons": [
+        "Carregador para a potência máxima vendido à parte"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0CTCMVB2R/"
+      }
+    },
+    {
+      "id": "logitech-z407",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07W6JDL3Z",
+      "name": "Logitech Z407",
+      "category": "Colunas para PC",
+      "description": "Sistema 2.1 com subwoofer e um comando redondo sem fios para o volume e a reprodução. A Logitech indica 40 W RMS, Bluetooth e entradas USB e jack. As colunas podem ficar deitadas ou de pé. Para filmes e jogos com graves sem ocupar a secretária toda.",
+      "bestFor": "Filmes e jogos com graves",
+      "pros": [
+        "Subwoofer",
+        "Comando sem fios",
+        "Bluetooth, USB e jack"
+      ],
+      "cons": [
+        "Subwoofer ocupa espaço no chão"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07W6JDL3Z/"
+      }
+    },
+    {
+      "id": "edifier-r1280db",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B01NCTNZRC",
+      "name": "Edifier R1280DB",
+      "category": "Colunas para PC",
+      "description": "Colunas de estante com amplificador incluído e caixa em MDF: som de pequena aparelhagem. A Edifier indica 2×21 W RMS, Bluetooth, entradas RCA, ótica e coaxial e comando à distância. Servem para o PC e para a TV.",
+      "bestFor": "PC e TV com um só par de colunas",
+      "pros": [
+        "Som de aparelhagem",
+        "Entradas ótica, coaxial, RCA e Bluetooth",
+        "Comando"
+      ],
+      "cons": [
+        "Maiores do que colunas de PC",
+        "Vendidas por um vendedor externo na Amazon.es"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B01NCTNZRC/"
+      }
+    },
+    {
+      "id": "edifier-m60",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0D95QG8W4",
+      "name": "Edifier M60",
+      "category": "Colunas para PC",
+      "description": "Do tamanho de um telemóvel posto de pé, mas com tweeter de seda e woofer de 3 polegadas em cada coluna. Segundo a Edifier, 66 W RMS no total e Bluetooth com LDAC para áudio de alta resolução. Para secretárias pequenas que não querem abdicar do som.",
+      "bestFor": "Secretária pequena, som a sério",
+      "pros": [
+        "Muito compactas",
+        "Bluetooth LDAC",
+        "Vendidas pela loja oficial da Edifier"
+      ],
+      "cons": [
+        "Sem subwoofer"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0D95QG8W4/"
+      }
+    },
+    {
+      "id": "audioengine-a2-plus",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07MYW4Q8S",
+      "name": "Audioengine A2+ Wireless",
+      "category": "Colunas para PC",
+      "description": "Colunas de secretária premium da Audioengine, montadas e afinadas à mão, segundo a marca. Têm Bluetooth aptX, entrada USB e duas analógicas, e saída para subwoofer se um dia quiseres mais graves. 60 W no total, numa caixa pequena.",
+      "bestFor": "Secretária premium",
+      "pros": [
+        "Acabamento premium",
+        "Bluetooth aptX, USB e analógicas",
+        "Saída para subwoofer"
+      ],
+      "cons": [
+        "Preço premium"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07MYW4Q8S/"
       }
     }
   ]

@@ -784,6 +784,220 @@
       ]
     },
     {
+      "slug": "colunas-para-pc",
+      "category": "Som à secretária",
+      "navLabel": "Colunas para PC",
+      "navIcon": "🖥️",
+      "illustration": "/img/gear/colunas-pc.svg",
+      "title": "Melhores colunas para PC: som a sério na secretária",
+      "seoTitle": "Melhores colunas para PC 2026: com subwoofer, Bluetooth e gaming",
+      "summary": "Do portátil ao PC de jogos: colunas para a secretária, com e sem subwoofer, do económico ao premium, e como as ligar sem complicações.",
+      "metaDescription": "Creative Pebble, Logitech Z407, Edifier R1280DB, Edifier M60 e Audioengine A2+: as melhores colunas para PC de 2026, com e sem subwoofer.",
+      "intro": "As colunas que vêm no portátil servem para os avisos do sistema e pouco mais. Para ouvir rádio, música ou jogos à secretária, um par de colunas dedicadas muda o dia, e não precisa de ser caro. Antes de comparar, vê como as vais ligar e quanto espaço tens à volta do ecrã.",
+      "updatedAt": "2026-10-06",
+      "publishedAt": "2026-10-06",
+      "sections": [
+        {
+          "heading": "Como se ligam ao computador",
+          "paragraphs": [
+            "Há três caminhos. Pelo jack de 3,5 mm, o mais universal, que usa a placa de som do computador. Por USB, em que as colunas recebem o som em digital e muitas vezes também a alimentação, num só cabo. Por Bluetooth, sem cabos de áudio, mas com um pequeno atraso que se nota em jogos e vídeos.",
+            "Confirma também a alimentação: as colunas pequenas vivem da porta USB do computador; as maiores precisam de uma tomada."
+          ],
+          "checklist": [
+            "Conta as portas livres no computador: USB-A, USB-C ou jack.",
+            "Mede o espaço de cada lado do ecrã.",
+            "Se também queres ligar o telemóvel ou a TV, procura Bluetooth ou entrada ótica."
+          ],
+          "productLinks": [
+            {
+              "productId": "creative-pebble-v3",
+              "label": "Ver as Creative Pebble V3 na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Com ou sem subwoofer?",
+          "paragraphs": [
+            "Um subwoofer dá os graves que as colunas pequenas não conseguem, e isso nota-se em filmes, jogos e música eletrónica. Em troca, ocupa espaço debaixo da secretária e, num prédio de paredes finas, também chega aos vizinhos.",
+            "Para rádio, podcasts e música a volume moderado, um par de colunas bem feitas dá perfeitamente conta do recado."
+          ],
+          "productLinks": [
+            {
+              "productId": "logitech-z407",
+              "label": "Ver as Logitech Z407 na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Para jogar",
+          "paragraphs": [
+            "Nos jogos, o atraso conta: liga por cabo ou USB, não por Bluetooth. A iluminação RGB não melhora o som, mas há quem não monte um setup sem ela, e as Creative Pebble X juntam as duas coisas."
+          ]
+        },
+        {
+          "heading": "Colunas de estante: o salto de qualidade",
+          "paragraphs": [
+            "Um par de colunas de estante ativas, como as Edifier R1280DB, traz o amplificador incluído e soa como uma pequena aparelhagem. Serve para o PC e, pela entrada ótica ou RCA, também para a TV ou para um gira-discos com pré-amplificador.",
+            "É a aparelhagem de quarto dos anos 90, sem o leitor de cassetes e com Bluetooth."
+          ],
+          "productLinks": [
+            {
+              "productId": "edifier-r1280db",
+              "label": "Ver as Edifier R1280DB na Amazon"
+            }
+          ]
+        }
+      ],
+      "productIds": [
+        "logitech-z150",
+        "creative-pebble-v3",
+        "creative-pebble-plus",
+        "creative-pebble-x",
+        "logitech-z407",
+        "edifier-r1280db",
+        "edifier-m60",
+        "audioengine-a2-plus"
+      ],
+      "quickPicks": [
+        {
+          "label": "Económico",
+          "productId": "logitech-z150",
+          "note": "Um par simples para tirar o som do portátil."
+        },
+        {
+          "label": "Com subwoofer",
+          "productId": "logitech-z407",
+          "note": "Graves a sério e comando sem fios."
+        },
+        {
+          "label": "Estante",
+          "productId": "edifier-r1280db",
+          "note": "Som de aparelhagem, para o PC e para a TV."
+        },
+        {
+          "label": "Premium",
+          "productId": "audioengine-a2-plus",
+          "note": "Pequenas, com Bluetooth aptX e acabamento cuidado."
+        }
+      ],
+      "badges": {
+        "logitech-z150": "Económico",
+        "creative-pebble-v3": "Económico · USB-C",
+        "creative-pebble-plus": "Económico · Subwoofer",
+        "creative-pebble-x": "Gaming · RGB",
+        "logitech-z407": "Gama média · Subwoofer",
+        "edifier-r1280db": "Gama média · Estante",
+        "edifier-m60": "Premium compacto",
+        "audioengine-a2-plus": "Premium"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "As oito colunas para PC recomendadas: configuração, ligações e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Configuração",
+          "Ligações",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "Logitech Z150",
+            "2.0",
+            "Jack 3,5 mm, saída de auscultadores",
+            "Portátil, orçamento mínimo"
+          ],
+          [
+            "Creative Pebble V3",
+            "2.0",
+            "USB-C, Bluetooth",
+            "Secretárias pequenas"
+          ],
+          [
+            "Creative Pebble Plus 2.1",
+            "2.1",
+            "Alimentação USB, jack 3,5 mm",
+            "Graves com orçamento curto"
+          ],
+          [
+            "Creative Pebble X",
+            "2.0",
+            "USB-C, Bluetooth",
+            "Gaming com RGB"
+          ],
+          [
+            "Logitech Z407",
+            "2.1",
+            "USB, jack 3,5 mm, Bluetooth",
+            "Filmes e jogos com graves"
+          ],
+          [
+            "Edifier R1280DB",
+            "2.0 de estante",
+            "RCA, ótica, coaxial, Bluetooth",
+            "PC e TV"
+          ],
+          [
+            "Edifier M60",
+            "2.0 compacta",
+            "Bluetooth LDAC, USB-C",
+            "Secretária pequena, som a sério"
+          ],
+          [
+            "Audioengine A2+ Wireless",
+            "2.0 compacta",
+            "Bluetooth aptX, USB, analógicas",
+            "Secretária premium"
+          ]
+        ],
+        "rowProducts": [
+          "logitech-z150",
+          "creative-pebble-v3",
+          "creative-pebble-plus",
+          "creative-pebble-x",
+          "logitech-z407",
+          "edifier-r1280db",
+          "edifier-m60",
+          "audioengine-a2-plus"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma as portas do teu computador antes de comprar."
+      },
+      "faq": [
+        {
+          "q": "Quais são as melhores colunas para PC qualidade-preço?",
+          "a": "Na gama mais baixa, as Creative Pebble V3 ligam por USB-C e Bluetooth e cabem em qualquer secretária. Um degrau acima, as Edifier R1280DB são colunas de estante com som de aparelhagem, que também servem para a TV.",
+          "productIds": [
+            "creative-pebble-v3",
+            "edifier-r1280db"
+          ]
+        },
+        {
+          "q": "Vale a pena ter colunas para PC com subwoofer?",
+          "a": "Para filmes, jogos e música com graves, sim: a diferença nota-se. As Creative Pebble Plus são a forma mais barata de experimentar; as Logitech Z407 juntam-lhe Bluetooth e um comando sem fios. Para rádio e podcasts, um par sem subwoofer chega.",
+          "productIds": [
+            "creative-pebble-plus",
+            "logitech-z407"
+          ]
+        },
+        {
+          "q": "Posso ligar colunas Bluetooth ao PC?",
+          "a": "Podes, e para música funciona bem. Em jogos e vídeos, o atraso do Bluetooth pode notar-se; aí, liga por cabo ou USB. Várias colunas desta lista têm as duas opções."
+        },
+        {
+          "q": "Que colunas escolher para gaming?",
+          "a": "Liga por USB ou por cabo para evitar atraso, e escolhe pelo espaço da secretária. As Creative Pebble X têm iluminação RGB; as Logitech Z407 trazem subwoofer para as explosões.",
+          "productIds": [
+            "creative-pebble-x",
+            "logitech-z407"
+          ]
+        }
+      ],
+      "related": [
+        "colunas-bluetooth",
+        "home-studio"
+      ],
+      "closing": "Primeiro a ligação e o espaço na secretária; depois decide se os graves justificam um subwoofer. O resto é ouvir a tua rádio com o som que ela merece."
+    },
+    {
       "slug": "soundbars",
       "category": "Som na sala",
       "navLabel": "Soundbars",
@@ -1476,8 +1690,8 @@
         }
       ],
       "related": [
-        "gira-discos",
-        "home-studio"
+        "colunas-para-pc",
+        "gira-discos"
       ]
     }
   ],

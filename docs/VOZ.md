@@ -98,6 +98,10 @@ Já publicados (para não repetir a mesma piada noutro sítio). Atualizado a
 - **Auriculares:** desaparecem entre as almofadas do sofá, o fio dos
   auriculares antigos enrolado no fundo do bolso (a referência retro deste
   guia), "os que te esqueces que tens postos".
+- **Colunas para PC:** colunas do portátil "para os avisos do sistema",
+  paredes finas e vizinhos, a aparelhagem de quarto dos anos 90 sem o leitor
+  de cassetes (a referência retro deste guia), "ouvir a tua rádio com o som
+  que ela merece".
 - **Presentes:** presente que acaba na gaveta / fica na caixa, vinil limpo
   "com a manga da camisola", sampler dos anos 90 que custava um ordenado
   (a referência retro deste guia), "espreita o que está em cima da
