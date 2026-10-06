@@ -149,7 +149,7 @@ figcaption { color: var(--text-dim); font-size: .78rem; margin-top: 12px; text-a
 .product-badge { display: inline-block; margin: 0 0 10px; padding: 3px 12px; border: 1px solid var(--neon-pink); border-radius: 999px; color: var(--neon-pink); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
 .guide-comparison, .guide-faq { margin-block: 42px; }
 .guide-comparison > h2, .guide-faq > h2 { color: var(--line-primary); }
-.table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+.table-scroll { position: relative; /* keeps .sr-only link text inside the scroll box */ overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
 .table-scroll:focus-visible { outline: 2px solid var(--line-primary); outline-offset: 2px; }
 .guide-comparison table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .88rem; }
 .guide-comparison th, .guide-comparison td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
@@ -161,6 +161,17 @@ figcaption { color: var(--text-dim); font-size: .78rem; margin-top: 12px; text-a
 .faq-item { border-left: 2px solid var(--neon-purple); padding: 2px 0 2px 16px; margin-bottom: 22px; max-width: 68ch; }
 .faq-item h3 { font-size: 1.05rem; margin: 0 0 8px; color: var(--text-primary); }
 .faq-item p { margin: 0; color: var(--text-dim); }
+/* Quick picks: calm panel near the top for readers who already know what they want. */
+.quick-picks { max-width: 850px; margin: 0 0 40px; padding: 18px 22px 6px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-panel); }
+.quick-picks > h2 { margin: 0 0 4px; font-size: 1.15rem; color: var(--line-primary); }
+.quick-picks > .article-meta { margin: 0 0 8px; }
+.quick-picks ol { list-style: none; margin: 0; padding: 0; }
+.quick-picks li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr) auto; gap: 4px 18px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--border); }
+.pick-label { color: var(--neon-pink); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+.pick-name { color: var(--text-primary); }
+.pick-note { display: block; color: var(--text-dim); font-size: .85rem; line-height: 1.5; }
+.quick-picks .affiliate-inline, .table-cta .affiliate-inline { white-space: nowrap; font-size: .85rem; }
+.table-cta { display: block; margin-top: 6px; font-weight: normal; }
 @media (max-width: 760px) {
   .editorial-hero { grid-template-columns: 1fr; gap: 32px; }
   .editorial-hero figure { max-width: 460px; transform: none; }
@@ -176,4 +187,6 @@ figcaption { color: var(--text-dim); font-size: .78rem; margin-top: 12px; text-a
   .product-recommendation { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .product-image { max-width: 360px; }
   .affiliate-cta { width: 100%; }
+  .quick-picks { padding-inline: 16px; }
+  .quick-picks li { grid-template-columns: minmax(0, 1fr); }
 }

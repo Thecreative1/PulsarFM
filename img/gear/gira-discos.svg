@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Gira-discos com disco a rodar, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .spin { transform-origin: 196px 176px; animation: spin 6s linear infinite; }
+    .arm { transform-origin: 356px 88px; animation: arm 4s ease-in-out infinite; }
+    .led { animation: led 2.4s ease-in-out infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes arm { 50% { transform: rotate(-1.4deg); } }
+    @keyframes led { 50% { opacity: .35; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <rect x="64" y="40" width="352" height="272" rx="16" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <rect x="76" y="52" width="328" height="248" rx="10" stroke="#9AD9D3" stroke-opacity=".15"/>
+  <circle cx="196" cy="176" r="108" fill="#041015" stroke="#9AD9D3" stroke-opacity=".4" stroke-width="3"/>
+  <g class="spin">
+    <g stroke="#9AD9D3" stroke-opacity=".16"><circle cx="196" cy="176" r="96"/><circle cx="196" cy="176" r="86"/><circle cx="196" cy="176" r="76"/><circle cx="196" cy="176" r="66"/><circle cx="196" cy="176" r="56"/></g>
+    <path d="M128 108A96 96 0 0 1 196 80M264 244A96 96 0 0 1 196 272" stroke="#ECFFFB" stroke-opacity=".22" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="196" cy="176" r="34" fill="#FF2D9B"/>
+    <circle cx="196" cy="154" r="4" fill="#FFFFFF" fill-opacity=".35"/>
+    <circle cx="196" cy="176" r="5" fill="#ECFFFB"/>
+  </g>
+  <circle cx="356" cy="88" r="16" fill="#0C3C43" stroke="#9AD9D3"/>
+  <g class="arm">
+    <path d="M356 88V196L292 240" stroke="#ECFFFB" stroke-width="7" stroke-linecap="round"/>
+    <path d="M292 240L277 251" stroke="#00FFCC" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <rect x="330" y="262" width="22" height="12" rx="3" fill="#0C3C43" stroke="#9AD9D3" stroke-opacity=".5"/>
+  <rect x="358" y="262" width="22" height="12" rx="3" fill="#0C3C43" stroke="#9AD9D3" stroke-opacity=".5"/>
+  <circle class="led" cx="384" cy="68" r="6" fill="#00FFCC"/>
+</svg>

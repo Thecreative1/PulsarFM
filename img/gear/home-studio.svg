@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Microfone de estúdio com forma de onda e interface de áudio, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .halo { animation: halo 2.6s ease-in-out infinite; }
+    .signal { stroke-dasharray: 10 6; animation: flow 1.2s linear infinite; }
+    .meter path { transform-box: fill-box; transform-origin: bottom; animation: meter 1s ease-in-out infinite; }
+    .meter path:nth-child(2) { animation-delay: -.3s; animation-duration: .8s; }
+    .meter path:nth-child(3) { animation-delay: -.6s; animation-duration: 1.2s; }
+    .meter path:nth-child(4) { animation-delay: -.15s; animation-duration: .9s; }
+    .rec { animation: led 1.6s ease-in-out infinite; }
+    @keyframes halo { 50% { opacity: .25; } }
+    @keyframes flow { to { stroke-dashoffset: -32; } }
+    @keyframes meter { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    @keyframes led { 50% { opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <ellipse class="halo" cx="240" cy="112" rx="72" ry="96" fill="#C044FF" fill-opacity=".14"/>
+  <path class="signal" d="M56 112L72 112L80 92L92 132L104 80L116 144L128 98L140 124L152 112L176 112" stroke="#00FFCC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="signal" d="M304 112L328 112L340 98L352 128L364 84L376 140L388 96L400 126L408 112L424 112" stroke="#00FFCC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M184 104V144C184 196 296 196 296 144V104" stroke="#9AD9D3" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M240 186V236" stroke="#ECFFFB" stroke-width="6" stroke-linecap="round"/>
+  <rect x="200" y="40" width="80" height="132" rx="40" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+  <path d="M212 70H268M208 84H272M208 98H272M208 112H272M208 126H272M212 140H268" stroke="#9AD9D3" stroke-opacity=".35" stroke-width="2"/>
+  <rect x="196" y="150" width="88" height="14" rx="4" fill="#C044FF" fill-opacity=".6"/>
+  <rect x="140" y="236" width="200" height="52" rx="10" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <circle cx="176" cy="262" r="13" fill="#041015" stroke="#9AD9D3"/>
+  <path d="M176 262L184 253" stroke="#ECFFFB" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="216" cy="262" r="13" fill="#041015" stroke="#9AD9D3"/>
+  <path d="M216 262L208 253" stroke="#ECFFFB" stroke-width="3" stroke-linecap="round"/>
+  <g class="meter" stroke="#FF2D9B" stroke-width="5" stroke-linecap="round">
+    <path d="M256 276V250"/><path d="M270 276V248"/><path d="M284 276V252"/><path d="M298 276V246"/>
+  </g>
+  <circle class="rec" cx="322" cy="250" r="5" fill="#FF2D9B"/>
+</svg>

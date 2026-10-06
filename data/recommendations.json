@@ -8,9 +8,12 @@
       "slug": "melhores-auscultadores",
       "category": "Escuta pessoal",
       "title": "Melhores auscultadores em 2026: uma escolha para cada orçamento",
+      "seoTitle": "Melhores auscultadores Bluetooth 2026: fones para cada orçamento",
       "summary": "Auscultadores Bluetooth para estudar, viajar ou ouvir rádio à secretária: cinco escolhas, da gama económica ao premium, e como decidir.",
+      "metaDescription": "Sony WH-CH520, WH-CH720N, Soundcore Space One, ATH-M50xBT2 e WH-1000XM5: os melhores auscultadores Bluetooth de 2026, do económico ao premium.",
       "intro": "Não há melhores auscultadores em abstrato. Há os melhores para a tua cabeça, o teu orçamento e o sítio onde passas as horas a ouvir. Escolhemos cinco modelos disponíveis na Amazon.es, da entrada ao premium, e dizemos para quem serve cada um. Antes de comparar, responde a três perguntas: onde, durante quanto tempo e ligados a quê.",
       "updatedAt": "2026-10-06",
+      "publishedAt": "2026-09-29",
       "sections": [
         {
           "heading": "Começa pela tua forma de ouvir",
@@ -120,7 +123,14 @@
             "Viagens e máximo silêncio"
           ]
         ],
-        "note": "Valores indicados pelos fabricantes. A autonomia real depende do volume, do codec e do uso do cancelamento de ruído."
+        "note": "Valores indicados pelos fabricantes. A autonomia real depende do volume, do codec e do uso do cancelamento de ruído.",
+        "rowProducts": [
+          "sony-wh-ch520",
+          "sony-wh-ch720n",
+          "soundcore-space-one",
+          "audio-technica-ath-m50xbt2",
+          "sony-wh-1000xm5"
+        ]
       },
       "faq": [
         {
@@ -140,15 +150,44 @@
           "a": "Sim. Qualquer modelo desta lista liga ao computador por Bluetooth e, com multiponto, alternas entre o portátil e o telemóvel sem voltar a emparelhar. Para produzir música, usa o cabo."
         }
       ],
-      "closing": "Primeiro o formato e o conforto. Depois decide se o cancelamento de ruído compensa na tua rotina. Com isso resolvido, sobram dois ou três modelos da mesma gama, e aí já é uma questão de gosto, cor e preço do dia."
+      "closing": "Primeiro o formato e o conforto. Depois decide se o cancelamento de ruído compensa na tua rotina. Com isso resolvido, sobram dois ou três modelos da mesma gama, e aí já é uma questão de gosto, cor e preço do dia.",
+      "quickPicks": [
+        {
+          "label": "Económico",
+          "productId": "sony-wh-ch520",
+          "note": "Sem fios e leves, para ouvir em casa."
+        },
+        {
+          "label": "Gama média",
+          "productId": "sony-wh-ch720n",
+          "note": "Cancelamento de ruído leve para estudar e trabalhar."
+        },
+        {
+          "label": "Para criar",
+          "productId": "audio-technica-ath-m50xbt2",
+          "note": "Som neutro e cabo para produzir."
+        },
+        {
+          "label": "Premium",
+          "productId": "sony-wh-1000xm5",
+          "note": "O máximo silêncio em viagens."
+        }
+      ],
+      "related": [
+        "home-studio",
+        "tecnologia-acessorios"
+      ]
     },
     {
       "slug": "colunas-bluetooth",
       "category": "Música em companhia",
       "title": "Colunas Bluetooth para levar a música contigo",
+      "seoTitle": "Melhores colunas Bluetooth 2026: caixas de som portáteis",
       "summary": "Da cozinha ao fim de tarde no jardim: tamanho, autonomia e ligações, sem cair no culto dos watts.",
+      "metaDescription": "JBL Go 5, Flip 7, Marshall Emberton III e Acton IV: como escolher uma coluna Bluetooth (caixa de som) pela autonomia, resistência à água e ligações.",
       "intro": "Uma coluna portátil tem de caber no sítio onde vai tocar e na forma como a vais carregar. Há duas espécies: a que muda de divisão de vez em quando e a que vive na mochila. Descobre primeiro qual é a tua.",
       "updatedAt": "2026-10-06",
+      "publishedAt": "2026-09-29",
       "sections": [
         {
           "heading": "Onde vai tocar?",
@@ -229,7 +268,13 @@
             "Sala, com gira-discos ou CD"
           ]
         ],
-        "note": "Valores indicados pelos fabricantes. A autonomia real depende do volume e das funções ligadas."
+        "note": "Valores indicados pelos fabricantes. A autonomia real depende do volume e das funções ligadas.",
+        "rowProducts": [
+          "jbl-go-5",
+          "jbl-flip-7",
+          "marshall-emberton-iii",
+          "marshall-acton-iv"
+        ]
       },
       "faq": [
         {
@@ -248,15 +293,39 @@
           "q": "Posso ligar um gira-discos a uma coluna?",
           "a": "Sim, se a coluna tiver entrada por cabo. A Marshall Acton IV tem entrada RCA e auxiliar de 3,5 mm, mas o gira-discos precisa de ter pré-amplificador phono. Outra opção é um gira-discos com Bluetooth, que envia o som sem fios."
         }
+      ],
+      "quickPicks": [
+        {
+          "label": "Económica",
+          "productId": "jbl-go-5",
+          "note": "Cabe no bolso e aguenta água."
+        },
+        {
+          "label": "Gama média",
+          "productId": "jbl-flip-7",
+          "note": "Praia, piscina e jardim."
+        },
+        {
+          "label": "Premium",
+          "productId": "marshall-acton-iv",
+          "note": "Para a sala, com entrada RCA."
+        }
+      ],
+      "related": [
+        "gira-discos",
+        "soundbars"
       ]
     },
     {
       "slug": "soundbars",
       "category": "Som na sala",
       "title": "Soundbars: dá espaço ao som, sem complicar a sala",
+      "seoTitle": "Melhores soundbars 2026: barra de som para a TV, até Dolby Atmos",
       "summary": "Diálogos, concertos e cinema. Um guia para verificar ligações e espaço antes da compra.",
+      "metaDescription": "Samsung, Bose, Sony e Sonos Beam: soundbars da económica ao Dolby Atmos e o que verificar no televisor (HDMI ARC, eARC, ótico) antes de comprar.",
       "intro": "Antes de escolher uma soundbar, espreita as ligações atrás do televisor e mede o móvel. A opção certa para a tua sala começa pela compatibilidade e pelo espaço, não pela lista de modos de som.",
       "updatedAt": "2026-10-06",
+      "publishedAt": "2026-09-29",
       "sections": [
         {
           "heading": "Começa pelo televisor",
@@ -346,7 +415,14 @@
             "Atmos e streaming"
           ]
         ],
-        "note": "Características indicadas pelos fabricantes. Confirma as portas do teu televisor antes de comprar."
+        "note": "Características indicadas pelos fabricantes. Confirma as portas do teu televisor antes de comprar.",
+        "rowProducts": [
+          "samsung-hw-b400f",
+          "samsung-hw-b46cf",
+          "bose-tv-speaker",
+          "sony-ht-s40r",
+          "sonos-beam-gen-2"
+        ]
       },
       "faq": [
         {
@@ -369,15 +445,39 @@
           "q": "Vale a pena uma soundbar com Dolby Atmos?",
           "a": "Vale, se vês muitos filmes e séries com Atmos em streaming e o televisor tem eARC. O efeito de altura depende da sala: tetos altos ou irregulares diluem-no. Para notícias, futebol e rádio, uma barra mais simples faz o mesmo trabalho."
         }
+      ],
+      "quickPicks": [
+        {
+          "label": "Económica",
+          "productId": "samsung-hw-b400f",
+          "note": "Diálogos mais claros numa TV pequena."
+        },
+        {
+          "label": "Gama média",
+          "productId": "samsung-hw-b46cf",
+          "note": "Graves com subwoofer sem fios."
+        },
+        {
+          "label": "Premium",
+          "productId": "sonos-beam-gen-2",
+          "note": "Dolby Atmos e streaming numa só barra."
+        }
+      ],
+      "related": [
+        "colunas-bluetooth",
+        "melhores-auscultadores"
       ]
     },
     {
       "slug": "gira-discos",
       "category": "Ritual do vinil",
       "title": "Gira-discos: prepara o teu primeiro lado A",
+      "seoTitle": "Melhores gira-discos 2026: o teu primeiro toca-discos de vinil",
       "summary": "Do disco às colunas, percebe o que precisas para montar um sistema de vinil.",
+      "metaDescription": "Audio-Technica AT-LP60X, Lenco LS-300, Sony PS-LX3BT e mais: gira-discos (toca-discos) para começar no vinil, com ou sem Bluetooth e pré-amplificador.",
       "intro": "O vinil tem uma característica que o streaming nos fez esquecer: é um sistema, não um botão. Antes de escolher o gira-discos, vê o que já tens em casa e por onde o som vai chegar às colunas ou aos auscultadores.",
       "updatedAt": "2026-10-06",
+      "publishedAt": "2026-09-29",
       "sections": [
         {
           "heading": "Pensa no sistema completo",
@@ -473,7 +573,14 @@
             "Quem gosta do ritual"
           ]
         ],
-        "note": "Características indicadas pelos fabricantes e pela loja. Confirma as ligações do teu sistema antes de comprar."
+        "note": "Características indicadas pelos fabricantes e pela loja. Confirma as ligações do teu sistema antes de comprar.",
+        "rowProducts": [
+          "audio-technica-at-lp60x",
+          "lenco-ls300",
+          "sony-ps-lx3bt",
+          "audio-technica-at-lp120x",
+          "jbl-spinner-bt"
+        ]
       },
       "faq": [
         {
@@ -492,15 +599,39 @@
           "q": "Os gira-discos baratos estragam os discos?",
           "a": "Alguns modelos tudo-em-um muito baratos usam cápsulas cerâmicas e braços pouco ajustáveis, que desgastam mais os discos. Cápsula magnética e pressão de agulha ajustável são bons sinais. Se tens discos de que gostas, vale a pena olhar para isso antes do preço."
         }
+      ],
+      "quickPicks": [
+        {
+          "label": "Entrada",
+          "productId": "audio-technica-at-lp60x",
+          "note": "Automático, para o primeiro disco."
+        },
+        {
+          "label": "Com Bluetooth",
+          "productId": "sony-ps-lx3bt",
+          "note": "Automático e sem fios."
+        },
+        {
+          "label": "Intermédio",
+          "productId": "audio-technica-at-lp120x",
+          "note": "Ajustável, para afinar o sistema."
+        }
+      ],
+      "related": [
+        "colunas-bluetooth",
+        "tecnologia-acessorios"
       ]
     },
     {
       "slug": "home-studio",
       "category": "Do ouvir ao criar",
       "title": "Home studio: começa pelo que queres gravar",
+      "seoTitle": "Home studio para começar: microfone, interface de áudio e monitores",
       "summary": "Voz, guitarra ou primeiras demos. Monta um conjunto pequeno que faça sentido para o teu projeto.",
+      "metaDescription": "Samson Q2U, Focusrite Scarlett Solo, ATH-M20x e PreSonus Eris 3.5: o equipamento essencial para montar um home studio e gravar voz ou guitarra em casa.",
       "intro": "Um home studio começa com uma pergunta simples: o que vais gravar, e quantas coisas entram ao mesmo tempo? A resposta escolhe por ti a interface, o microfone e a monitorização. O resto é catálogo.",
       "updatedAt": "2026-10-06",
+      "publishedAt": "2026-09-29",
       "sections": [
         {
           "heading": "Liga as peças certas",
@@ -553,15 +684,39 @@
         "presonus-eris-3-5": "Monitores",
         "rode-psa1": "Braço de microfone",
         "adam-hall-pad-eco-2": "Isolamento"
-      }
+      },
+      "quickPicks": [
+        {
+          "label": "Microfone",
+          "productId": "samson-q2u",
+          "note": "USB hoje, XLR quando tiveres interface."
+        },
+        {
+          "label": "Interface",
+          "productId": "focusrite-scarlett-solo-4",
+          "note": "Uma entrada de microfone e uma de instrumento."
+        },
+        {
+          "label": "Monitorização",
+          "productId": "audio-technica-ath-m20x",
+          "note": "Auscultadores fechados para gravar."
+        }
+      ],
+      "related": [
+        "melhores-auscultadores",
+        "tecnologia-acessorios"
+      ]
     },
     {
       "slug": "tecnologia-acessorios",
       "category": "Pequenos ajustes",
       "title": "Tecnologia e acessórios para a tua rotina musical",
+      "seoTitle": "Acessórios de áudio: adaptadores, DAC, Bluetooth e cabos úteis",
       "summary": "Adaptadores, suportes e ligações: pequenas escolhas que tornam a escuta mais simples.",
+      "metaDescription": "Adaptador USB-C para jack, DAC FiiO KA11, recetor Bluetooth para aparelhagens antigas e cabos RCA: pequenos acessórios que resolvem problemas de áudio.",
       "intro": "Nem sempre é preciso trocar o equipamento principal. Às vezes o problema resolve-se com um adaptador, um suporte ou um cabo com o comprimento certo.",
       "updatedAt": "2026-10-06",
+      "publishedAt": "2026-09-29",
       "sections": [
         {
           "heading": "Compatibilidade antes de tudo",
@@ -616,7 +771,30 @@
         "ugreen-jack-rca-1m": "Cabo",
         "fiio-ka11": "DAC",
         "new-bee-suporte-auscultadores": "Arrumação"
-      }
+      },
+      "quickPicks": [
+        {
+          "label": "Adaptador",
+          "productId": "apple-usb-c-jack-35",
+          "note": "O jack de volta num telemóvel USB-C."
+        },
+        {
+          "label": "Bluetooth",
+          "productId": "ugreen-bluetooth-2-em-1",
+          "note": "Bluetooth para a aparelhagem antiga."
+        },
+        {
+          "label": "DAC",
+          "productId": "fiio-ka11",
+          "note": "Mais folga para auscultadores com fio."
+        }
+      ],
+      "related": [
+        "gira-discos",
+        "home-studio"
+      ]
     }
-  ]
+  ],
+  "seoTitle": "Guias de áudio: auscultadores, colunas, vinil e home studio",
+  "metaDescription": "Guias práticos para escolher auscultadores, colunas Bluetooth, soundbars, gira-discos e home studio, com modelos da gama económica ao premium."
 }

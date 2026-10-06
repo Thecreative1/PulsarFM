@@ -217,8 +217,11 @@ Amazon.es Associates, tag `pulsarfm-21` ONLY** (never another site's tag; the
 generator enforces it). Products carry an `asin` and the generator builds
 `https://www.amazon.es/dp/<ASIN>/?tag=pulsarfm-21` with
 `rel="sponsored nofollow noopener noreferrer"`. No prices on the pages, no
-Amazon images (only allowed via PA-API/Amazon-provided links — cards use
-`img/gear-editorial.svg` until then). `bestFor`/`pros`/`cons` are data-only.
+Amazon images (only allowed via PA-API/Amazon-provided links — cards use the
+animated per-category illustrations in `img/gear/`, mapped by `categoryImages`).
+`bestFor`/`pros`/`cons` are data-only. Guides have `seoTitle`/`metaDescription`
+(title tag only; H1 stays `title`), `quickPicks`, `related` and
+`comparison.rowProducts` — see `docs/AFILIADOS.md`.
 Before adding a product, verify on amazon.es that the ASIN is in stock and
 not only sold second-hand ("Segunda mano"). The Amazon Associates statement
 ("Como Afiliado da Amazon…") must stay in the disclosure, hub and privacy page.

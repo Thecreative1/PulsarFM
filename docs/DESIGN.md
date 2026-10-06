@@ -26,3 +26,7 @@ Neon allowed on the page frame (all in `assets/recommendations.css`, "Brand edge
 - Body background: the same faint radial glows as the radio home page (purple top-left, pink top-right, blue bottom).
 
 Keep calm: article body text, checklists, product cards, the comparison table and FAQs — no glow, no animation. Transitions respect `prefers-reduced-motion`.
+
+**Exception agreed with the owner (06/10/2026): product illustrations pulse.** Amazon photos can't be used (Associates terms), so each card shows its category illustration from `img/gear/` (auscultadores, colunas, soundbars, gira-discos, home-studio, acessorios — mapped in `categoryImages` in `data/affiliates.json`). They follow the hub illustration's rules: 480×360, same palette and background, CSS animation inside the SVG with transform/opacity only, subtle (bob, spin, ripple, EQ bars), and `prefers-reduced-motion` turns them off. The card frame, text and CTA stay static.
+
+**Quick picks** (`.quick-picks`, after the disclosure): a calm panel (`--bg-panel`, thin border, no glow) with a pink uppercase label, the product name linking to its card and an inline Amazon link. Comparison tables put the store link under the model name in the first column, so it stays visible when the table scrolls sideways.

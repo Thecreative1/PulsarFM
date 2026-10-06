@@ -1,4 +1,6 @@
 import copy
+import json
+import re
 from datetime import date, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
@@ -28,6 +30,19 @@ def fixture():
     return catalog, product
 
 
+def strip_products(editorial):
+    """Drop every real product reference so a fixture catalog can be rendered alone."""
+    for article in editorial['articles']:
+        article['productIds'] = []
+        article.pop('badges', None)
+        article.pop('quickPicks', None)
+        if article.get('comparison'):
+            article['comparison'].pop('rowProducts', None)
+        for section in article['sections']:
+            section.pop('productLinks', None)
+    return editorial
+
+
 def amazon_fixture():
     catalog = copy.deepcopy(gen.read_json(gen.ROOT / 'data/affiliates.json'))
     product = gen.read_json(gen.ROOT / 'templates/product.json')
@@ -55,13 +70,8 @@ class HTMLInventory(HTMLParser):
 class AffiliateTests(unittest.TestCase):
     def setUp(self):
         self.catalog, self.product = fixture()
-        self.editorial = copy.deepcopy(gen.read_json(gen.ROOT / 'data/recommendations.json'))
-        for article in self.editorial['articles']:
-            # The fixture catalog only has one product: drop every real reference
-            article['productIds'] = []
-            article.pop('badges', None)
-            for section in article['sections']:
-                section.pop('productLinks', None)
+        # The fixture catalog only has one product: drop every real reference.
+        self.editorial = strip_products(copy.deepcopy(gen.read_json(gen.ROOT / 'data/recommendations.json')))
 
     def test_badge_comparison_and_faq(self):
         article = self.editorial['articles'][0]
@@ -245,11 +255,16 @@ class AmazonTests(unittest.TestCase):
             with self.subTest(asin=asin), self.assertRaises(ValueError):
                 gen.product_url(self.catalog, dict(self.product, asin=asin))
 
-    def test_category_required_and_image_defaults_to_local_illustration(self):
+    def test_category_required_and_image_uses_local_category_illustration(self):
         self.product.pop('image', None)
         html = gen.render_product(self.catalog, self.product, 'recommendation-1')
-        self.assertEqual(HTMLInventory(html).images[0]['src'], gen.DEFAULT_IMAGE)
+        image = HTMLInventory(html).images[0]
+        self.assertEqual(image['src'], '/img/gear/auscultadores.svg')
+        self.assertTrue((gen.ROOT / image['src'].lstrip('/')).exists())
         self.assertNotIn('amazon.com/images', html)
+        self.product['category'] = 'Categoria sem ilustração'
+        html = gen.render_product(self.catalog, self.product, 'recommendation-1')
+        self.assertEqual(HTMLInventory(html).images[0]['src'], gen.DEFAULT_IMAGE)
         self.product['category'] = ''
         with self.assertRaises(ValueError):
             gen.validate_catalog(self.catalog)
@@ -261,12 +276,7 @@ class AmazonTests(unittest.TestCase):
     def test_notes_stay_in_data_and_disclosure_is_shown(self):
         self.product.update(pros=['Pró editorial único'], cons=['Contra editorial único'],
                             bestFor='Uso ideal editorial único')
-        editorial = gen.read_json(gen.ROOT / 'data/recommendations.json')
-        for article in editorial['articles']:
-            article['productIds'] = []
-            article.pop('badges', None)
-            for section in article['sections']:
-                section.pop('productLinks', None)
+        editorial = strip_products(gen.read_json(gen.ROOT / 'data/recommendations.json'))
         editorial['articles'][0]['productIds'] = [self.product['id']]
         html = gen.generate(self.catalog, editorial)['recomendacoes/melhores-auscultadores/index.html']
         for note in ('Pró editorial único', 'Contra editorial único', 'Uso ideal editorial único'):
@@ -288,6 +298,64 @@ class AmazonTests(unittest.TestCase):
                     self.assertEqual(url.hostname, 'www.amazon.es', path)
                     self.assertEqual(parse_qs(url.query), {'tag': ['pulsarfm-21']}, path)
                     self.assertEqual(link['rel'], 'sponsored nofollow noopener noreferrer', path)
+
+
+class SeoAndConversionTests(unittest.TestCase):
+    def setUp(self):
+        self.catalog = gen.read_json(gen.ROOT / 'data/affiliates.json')
+        self.editorial = gen.read_json(gen.ROOT / 'data/recommendations.json')
+        self.pages = gen.generate(self.catalog, self.editorial)
+
+    def json_ld(self, html):
+        return [json.loads(block) for block in
+                re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)]
+
+    def test_titles_descriptions_and_structured_data(self):
+        for article in self.editorial['articles']:
+            html = self.pages[f'recomendacoes/{article["slug"]}/index.html']
+            self.assertIn(f'<title>{gen.esc(article["seoTitle"])} | Pulsar FM</title>', html)
+            self.assertIn(f'<h1>{gen.esc(article["title"])}</h1>', html)  # H1 unchanged
+            self.assertIn(f'content="{gen.esc(article["metaDescription"])}"', html)
+            types = {block['@type'] for block in self.json_ld(html)}
+            self.assertTrue({'BreadcrumbList', 'Article', 'ItemList'} <= types, article['slug'])
+            self.assertNotIn('www.pulsarfm.eu', html)
+        hub = self.json_ld(self.pages['recomendacoes/index.html'])
+        self.assertEqual({block['@type'] for block in hub}, {'BreadcrumbList', 'ItemList'})
+
+    def test_quick_picks_and_table_links_are_tracked_affiliate_links(self):
+        for article in self.editorial['articles']:
+            html = self.pages[f'recomendacoes/{article["slug"]}/index.html']
+            links = [link for link in HTMLInventory(html).links if 'data-affiliate-link' in link]
+            positions = {link['data-position'] for link in links}
+            self.assertEqual({p for p in positions if p.startswith('quick-')},
+                             {f'quick-{i}' for i in range(1, len(article['quickPicks']) + 1)})
+            rows = (article.get('comparison') or {}).get('rowProducts') or []
+            self.assertEqual({p for p in positions if p.startswith('table-')},
+                             {f'table-{i}' for i in range(1, len(rows) + 1)})
+            for pick in article['quickPicks']:
+                self.assertIn(f'href="#product-{pick["productId"]}"', html)
+                self.assertIn(f'id="product-{pick["productId"]}"', html)
+
+    def test_related_guides_follow_the_editorial_map_and_fail_closed(self):
+        inbound = {article['slug']: 0 for article in self.editorial['articles']}
+        for article in self.editorial['articles']:
+            self.assertNotIn(article['slug'], article['related'])
+            for slug in article['related']:
+                inbound[slug] += 1
+        self.assertTrue(all(count >= 1 for count in inbound.values()), inbound)
+        self.editorial['articles'][0]['related'] = ['nao-existe']
+        with self.assertRaises(KeyError):
+            gen.generate(self.catalog, self.editorial)
+
+    def test_bad_quick_picks_and_row_products_fail(self):
+        article = self.editorial['articles'][0]
+        article['quickPicks'].append({'label': 'X', 'productId': 'jbl-go-5', 'note': 'fora do guia'})
+        with self.assertRaises(ValueError):
+            gen.generate(self.catalog, self.editorial)
+        article['quickPicks'].pop()
+        article['comparison']['rowProducts'] = article['comparison']['rowProducts'][:-1]
+        with self.assertRaises(ValueError):
+            gen.generate(self.catalog, self.editorial)
 
 
 class FeedTests(unittest.TestCase):

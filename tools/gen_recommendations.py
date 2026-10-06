@@ -26,6 +26,7 @@ DEFAULT_IMAGE = "/img/gear-editorial.svg"
 DEFAULT_IMAGE_ALT = "Ilustração de equipamento de áudio nas cores néon da PulsarFM"
 NETWORKS = ("awin", "amazon")
 AMAZON_STATEMENT = "Como Afiliado da Amazon, a PulsarFM recebe por compras elegíveis."
+SITE = "https://pulsarfm.eu"  # Apex domain, never www.
 
 
 def esc(value):
@@ -139,6 +140,10 @@ def validate_catalog(catalog):
             raise ValueError("Merchants need a slug ID and a name")
         if merchant.get("network") not in NETWORKS or not merchant.get("allowedDestinationHosts"):
             raise ValueError("Configure network and destination hosts for each merchant")
+    for category, illustration in catalog.get("categoryImages", {}).items():
+        image_url(illustration.get("src"))
+        if not isinstance(illustration.get("alt"), str) or not illustration["alt"].strip():
+            raise ValueError(f"Category image for {category} needs alt text")
     products = {}
     for product in catalog["products"]:
         product_id = product.get("id", "")
@@ -221,12 +226,21 @@ def render_price(price, today=None):
             'Preço e disponibilidade podem mudar. Confirma na loja.</small></div>')
 
 
+def product_image(catalog, product):
+    """Own image if authorised, else the category illustration, else the generic one."""
+    if product.get("image"):
+        return image_url(product["image"]), product["imageAlt"]
+    illustration = catalog.get("categoryImages", {}).get(product.get("category", ""))
+    if illustration:
+        return image_url(illustration["src"]), illustration["alt"]
+    return DEFAULT_IMAGE, DEFAULT_IMAGE_ALT
+
+
 def render_product(catalog, product, position, today=None, badge=""):
     badge_html = f'<p class="product-badge">{esc(badge)}</p>' if badge else ""
-    image = product.get("image")
+    image, image_alt = product_image(catalog, product)
     return template("product.html", id=esc(product["id"]), badge=badge_html,
-                    image=esc(image_url(image) if image else DEFAULT_IMAGE),
-                    image_alt=esc(product["imageAlt"] if image else DEFAULT_IMAGE_ALT),
+                    image=esc(image), image_alt=esc(image_alt),
                     name=esc(product["name"]),
                     merchant=esc(catalog["merchants"][product["merchant"]]["name"]),
                     description=esc(product["description"]), price=render_price(product.get("price"), today),
@@ -247,15 +261,38 @@ def page(title, description, path, content, article=False):
                     og_type="article" if article else "website", content=content)
 
 
-def render_comparison(comparison):
-    """Optional table: {"caption", "columns": [...], "rows": [[...], ...]}; plain escaped text."""
+def json_ld(data):
+    data = {"@context": "https://schema.org", **data}
+    # Never let the content close the script tag early.
+    return ('<script type="application/ld+json">' +
+            json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + '</script>')
+
+
+def render_comparison(comparison, catalog=None, products=None):
+    """Optional table: {"caption", "columns": [...], "rows": [[...], ...]}; plain escaped text.
+
+    Optional "rowProducts" (one product ID or null per row) adds a store link under each model name,
+    in the first column so it stays visible when the table scrolls sideways.
+    """
     columns = comparison["columns"]
-    if any(len(row) != len(columns) for row in comparison["rows"]):
+    rows = comparison["rows"]
+    if any(len(row) != len(columns) for row in rows):
         raise ValueError("Every comparison row needs one cell per column")
+    row_products = comparison.get("rowProducts")
+    if row_products is not None and len(row_products) != len(rows):
+        raise ValueError("rowProducts needs one entry (product ID or null) per comparison row")
+    links = [""] * len(rows)
+    if row_products:
+        for i, product_id in enumerate(row_products, 1):
+            if product_id and products[product_id]["status"] == "published":
+                product = products[product_id]
+                label = catalog["merchants"][product["merchant"]].get("shortCta", "Ver na loja")
+                links[i - 1] = render_affiliate_link(catalog, product, f"table-{i}", label, "affiliate-inline")
     head = "".join(f'<th scope="col">{esc(col)}</th>' for col in columns)
-    body = "".join('<tr><th scope="row">' + esc(row[0]) + '</th>' +
+    body = "".join('<tr><th scope="row">' + esc(row[0]) +
+                   (f'<span class="table-cta">{link}</span>' if link else "") + '</th>' +
                    "".join(f'<td>{esc(cell)}</td>' for cell in row[1:]) + '</tr>'
-                   for row in comparison["rows"])
+                   for row, link in zip(rows, links))
     note = f'<p class="article-meta">{esc(comparison["note"])}</p>' if comparison.get("note") else ""
     return ('<section class="guide-comparison" aria-labelledby="comparacao">'
             f'<h2 id="comparacao">{esc(comparison.get("heading", "Comparação rápida"))}</h2>'
@@ -267,12 +304,56 @@ def render_faq(faq):
     """Optional FAQ: visible section + FAQPage JSON-LD built from the same text."""
     items = "".join(f'<div class="faq-item"><h3>{esc(item["q"])}</h3><p>{esc(item["a"])}</p></div>'
                     for item in faq)
-    ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    ld = json_ld({"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": item["q"],
-         "acceptedAnswer": {"@type": "Answer", "text": item["a"]}} for item in faq]},
-        ensure_ascii=False).replace("</", "<\\/")  # never close the script tag early
+         "acceptedAnswer": {"@type": "Answer", "text": item["a"]}} for item in faq]})
     return ('<section class="guide-faq" aria-labelledby="faq"><h2 id="faq">Perguntas frequentes</h2>'
-            f'{items}</section><script type="application/ld+json">{ld}</script>')
+            f'{items}</section>{ld}')
+
+
+def render_quick_picks(article, catalog, products):
+    """Short "for people in a hurry" list near the top; each pick links to its card and the store."""
+    items = []
+    for i, pick in enumerate(article.get("quickPicks", []), 1):
+        if pick["productId"] not in article["productIds"]:
+            raise ValueError("Quick pick for a product that is not in this article: " + pick["productId"])
+        product = products[pick["productId"]]
+        if product["status"] != "published":
+            continue
+        items.append(f'<li><span class="pick-label">{esc(pick["label"])}</span>'
+                     f'<span class="pick-copy"><a class="pick-name" href="#product-{esc(product["id"])}">'
+                     f'{esc(product["name"])}</a><span class="pick-note">{esc(pick["note"])}</span></span>'
+                     + render_affiliate_link(catalog, product, f"quick-{i}", css_class="affiliate-inline")
+                     + '</li>')
+    if not items:
+        return ""
+    return ('<section class="quick-picks" aria-labelledby="escolhas"><h2 id="escolhas">Escolhas rápidas</h2>'
+            '<p class="article-meta">Para quem já sabe o que procura. O porquê de cada escolha está mais abaixo.</p>'
+            f'<ol>{"".join(items)}</ol></section>')
+
+
+def article_json_ld(article, selected, description):
+    url = f'{SITE}/recomendacoes/{article["slug"]}/'
+    organization = {"@type": "Organization", "name": "PulsarFM", "url": SITE + "/",
+                    "logo": {"@type": "ImageObject", "url": SITE + "/img/icon-512.png"}}
+    parts = [
+        json_ld({"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Pulsar FM", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Recomendações", "item": SITE + "/recomendacoes/"},
+            {"@type": "ListItem", "position": 3, "name": article["title"], "item": url}]}),
+        json_ld({"@type": "Article", "headline": article["title"], "description": description,
+                 "datePublished": article.get("publishedAt", article["updatedAt"]),
+                 "dateModified": article["updatedAt"], "inLanguage": "pt-PT",
+                 "image": SITE + "/img/pulsar-og.jpg", "mainEntityOfPage": url,
+                 "author": organization, "publisher": organization}),
+    ]
+    if selected:
+        parts.append(json_ld({"@type": "ItemList", "name": "Produtos para comparar: " + article["title"],
+                              "itemListElement": [
+                                  {"@type": "ListItem", "position": i, "name": product["name"],
+                                   "url": f'{url}#product-{product["id"]}'}
+                                  for i, product in enumerate(selected, 1)]}))
+    return "".join(parts)
 
 
 def uses_amazon(catalog, products):
@@ -328,16 +409,29 @@ def render_article(article, articles, catalog, products):
                          'Confirma o preço, a disponibilidade e o vendedor na loja; pode tratar-se de uma oferta Marketplace.</p>') +
                         cards + '</section>')
     updated = date.fromisoformat(article["updatedAt"])
-    others = [item for item in articles if item["slug"] != article["slug"]][:2]
+    by_slug = {item["slug"]: item for item in articles}
+    if article.get("related"):
+        others = [by_slug[slug] for slug in article["related"]]  # Unknown slugs fail the build.
+    else:
+        others = [item for item in articles if item["slug"] != article["slug"]][:2]
+    description = article.get("metaDescription") or article["summary"]
+    quick_picks = render_quick_picks(article, catalog, products)
+    comparison = (render_comparison(article["comparison"], catalog, products)
+                  if article.get("comparison") else "")
+    for product_id in (article.get("comparison") or {}).get("rowProducts") or []:
+        if product_id:
+            linked.append(products[product_id])
     content = template("article.html", category=esc(article["category"]), title=esc(article["title"]),
                        intro=esc(article["intro"]), updated_at=updated.isoformat(),
                        updated_label=updated.strftime("%d/%m/%Y"),
                        disclosure=disclosure(catalog, linked) if has_affiliates else "",
+                       quick_picks=quick_picks,
                        sections="\n".join(sections), products=product_html,
-                       extras=(render_comparison(article["comparison"]) if article.get("comparison") else "") +
-                              (render_faq(article["faq"]) if article.get("faq") else ""),
+                       extras=comparison + (render_faq(article["faq"]) if article.get("faq") else "") +
+                              article_json_ld(article, selected, description),
                        closing=esc(article["closing"]), related="\n".join(guide_link(item) for item in others))
-    return page(article["title"], article["summary"], f'/recomendacoes/{article["slug"]}/', content, True)
+    return page(article.get("seoTitle") or article["title"], description,
+                f'/recomendacoes/{article["slug"]}/', content, True)
 
 
 def render_hub(editorial, catalog):
@@ -363,8 +457,16 @@ def render_hub(editorial, catalog):
                '<p>Os nossos guias ajudam-te a comparar formatos, ligações e necessidades. '
                'Quando incluímos produtos, explicamos a escolha e identificamos os links de afiliado. '
                'Só apresentamos um produto como testado quando existe um teste da redação.</p>'
-               '<p>' + link_note + ' <a href="/privacidade.html#afiliados">Saber mais</a>.</p></aside>')
-    return page(editorial["title"], editorial["description"], "/recomendacoes/", content)
+               '<p>' + link_note + ' <a href="/privacidade.html#afiliados">Saber mais</a>.</p></aside>' +
+               json_ld({"@type": "BreadcrumbList", "itemListElement": [
+                   {"@type": "ListItem", "position": 1, "name": "Pulsar FM", "item": SITE + "/"},
+                   {"@type": "ListItem", "position": 2, "name": "Recomendações", "item": SITE + "/recomendacoes/"}]}) +
+               json_ld({"@type": "ItemList", "name": editorial["title"], "itemListElement": [
+                   {"@type": "ListItem", "position": i, "name": article["title"],
+                    "url": f'{SITE}/recomendacoes/{article["slug"]}/'}
+                   for i, article in enumerate(editorial["articles"], 1)]}))
+    return page(editorial.get("seoTitle") or editorial["title"],
+                editorial.get("metaDescription") or editorial["description"], "/recomendacoes/", content)
 
 
 def generate(catalog, editorial):

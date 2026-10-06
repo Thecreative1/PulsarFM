@@ -18,7 +18,7 @@ O catálogo tem 30 produtos em seis guias, todos com `linkType: "affiliate"` e `
 
 Não mostramos preços: mudam constantemente e não há integração automática (PA-API). O CTA é «Ver preço na Amazon». Não apresentamos produtos como testes da redação.
 
-**Imagens:** as regras do programa só permitem imagens da Amazon obtidas pela PA-API ou por links fornecidos pela própria Amazon, alojadas nos servidores dela. Não descarregar nem copiar fotografias da Amazon. Enquanto não houver acesso à PA-API (exige vendas qualificadas), os cartões usam a ilustração local `img/gear-editorial.svg`, sem campo `image` no produto. Se um dia houver uma imagem autorizada, basta preencher `image` e `imageAlt`. Atenção: uma imagem servida pela Amazon liga o browser do visitante aos servidores dela; atualizar a política de privacidade nesse momento.
+**Imagens:** as regras do programa só permitem imagens da Amazon obtidas pela PA-API ou por links fornecidos pela própria Amazon, alojadas nos servidores dela. Não descarregar nem copiar fotografias da Amazon. Enquanto não houver acesso à PA-API (exige vendas qualificadas), os cartões usam a ilustração animada da categoria (`img/gear/*.svg`, mapeada em `categoryImages` no `data/affiliates.json` pelo campo `category` do produto), sem campo `image` no produto. Uma categoria sem ilustração cai para `img/gear-editorial.svg`. Se um dia houver uma imagem autorizada, basta preencher `image` e `imageAlt`. Atenção: uma imagem servida pela Amazon liga o browser do visitante aos servidores dela; atualizar a política de privacidade nesse momento.
 
 O site continua estático e compatível com GitHub Pages. O HTML é gerado antes da publicação: conteúdo, links e divulgação existem sem JavaScript.
 
@@ -118,6 +118,21 @@ Campos opcionais de cada artigo em `data/recommendations.json` (texto simples, s
 ```
 
 `badges` só aceita IDs presentes em `productIds` do mesmo artigo; cada linha de `rows` tem de ter uma célula por coluna (a primeira é o cabeçalho da linha). A FAQ gera a secção visível e o JSON-LD `FAQPage` a partir do mesmo texto. As etiquetas indicam a gama (Económico, Gama média, Premium), nunca valores em euros.
+
+## SEO e conversão (campos do artigo)
+
+| Campo | Para quê |
+| --- | --- |
+| `seoTitle` | `<title>` e `og:title` pensados para pesquisa ("Melhores … 2026"), com pt-PT e pt-BR (caixa de som, toca-discos, barra de som, fones). O H1 continua a ser `title`. |
+| `metaDescription` | Meta description com 140–155 caracteres, a nomear 2–4 modelos. Sem ela usa-se `summary`. |
+| `publishedAt` | Data de publicação para o JSON-LD `Article` (`updatedAt` é a `dateModified`). |
+| `related` | Os dois guias de "Mais para a tua próxima sessão", escolhidos por tema. Um slug inexistente falha a geração. Garantir que todos os guias recebem pelo menos um link. |
+| `quickPicks` | Caixa "Escolhas rápidas" logo após a divulgação: `[{ "label": "Económico", "productId": "…", "note": "Frase curta." }]`. O produto tem de estar em `productIds`. Cada escolha liga ao cartão (`#product-<id>`) e à Amazon (posição GA4 `quick-N`). |
+| `comparison.rowProducts` | Um ID de produto (ou `null`) por linha da tabela: põe "Ver na Amazon" por baixo do nome do modelo (posição `table-N`). |
+
+O gerador acrescenta automaticamente o JSON-LD `BreadcrumbList`, `Article` e `ItemList` (produtos) a cada guia, e `BreadcrumbList` + `ItemList` (guias) ao hub, além do `FAQPage` já existente. Não usamos `Product` com ofertas: sem preço nem avaliações, seria marcação inválida.
+
+As páginas de género também levam aos guias pela caixa GEAR (`GEAR` em `tools/gen_genre_pages.py`). Desde 06/10/2026, a página Pop liga a Tecnologia e acessórios.
 
 ## Novos artigos
 

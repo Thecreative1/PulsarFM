@@ -8,7 +8,34 @@
       "allowedDestinationHosts": [
         "www.amazon.es"
       ],
-      "cta": "Ver preço na Amazon"
+      "cta": "Ver preço na Amazon",
+      "shortCta": "Ver na Amazon"
+    }
+  },
+  "categoryImages": {
+    "Auscultadores": {
+      "src": "/img/gear/auscultadores.svg",
+      "alt": "Ilustração néon de auscultadores com ondas de som"
+    },
+    "Colunas Bluetooth": {
+      "src": "/img/gear/colunas.svg",
+      "alt": "Ilustração néon de uma coluna Bluetooth portátil"
+    },
+    "Soundbars": {
+      "src": "/img/gear/soundbars.svg",
+      "alt": "Ilustração néon de um televisor com uma soundbar"
+    },
+    "Gira-discos": {
+      "src": "/img/gear/gira-discos.svg",
+      "alt": "Ilustração néon de um gira-discos com um disco a rodar"
+    },
+    "Home Studio": {
+      "src": "/img/gear/home-studio.svg",
+      "alt": "Ilustração néon de um microfone de estúdio e uma interface de áudio"
+    },
+    "Tecnologia e acessórios": {
+      "src": "/img/gear/acessorios.svg",
+      "alt": "Ilustração néon de um adaptador DAC, cabos e símbolo Bluetooth"
     }
   },
   "products": [

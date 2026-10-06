@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Adaptador DAC com cabos, ficha jack e símbolo Bluetooth, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .cable { stroke-dasharray: 6 8; animation: flow 1.6s linear infinite; }
+    .bt { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-in-out infinite; }
+    .ring { transform-box: fill-box; transform-origin: center; animation: ring 2.4s ease-out infinite; }
+    .led { animation: led 2s ease-in-out infinite; }
+    @keyframes flow { to { stroke-dashoffset: -28; } }
+    @keyframes pulse { 50% { transform: scale(1.08); opacity: .7; } }
+    @keyframes ring { 0% { transform: scale(.7); opacity: .8; } 100% { transform: scale(1.25); opacity: 0; } }
+    @keyframes led { 50% { opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <path d="M58 96C116 96 112 176 150 176" stroke="#9AD9D3" stroke-opacity=".3" stroke-width="8" stroke-linecap="round"/>
+  <path class="cable" d="M58 96C116 96 112 176 150 176" stroke="#00FFCC" stroke-width="2"/>
+  <rect x="146" y="166" width="42" height="20" rx="6" fill="#9AD9D3" fill-opacity=".7"/>
+  <rect x="186" y="144" width="108" height="64" rx="14" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+  <rect x="198" y="156" width="84" height="40" rx="8" stroke="#9AD9D3" stroke-opacity=".15"/>
+  <circle class="led" cx="270" cy="176" r="6" fill="#00FFCC"/>
+  <path d="M212 168H244M212 184H236" stroke="#9AD9D3" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+  <path d="M294 176C336 176 336 236 372 236" stroke="#9AD9D3" stroke-opacity=".3" stroke-width="8" stroke-linecap="round"/>
+  <path class="cable" d="M294 176C336 176 336 236 372 236" stroke="#00FFCC" stroke-width="2"/>
+  <rect x="370" y="226" width="36" height="20" rx="5" fill="#ECFFFB" fill-opacity=".85"/>
+  <path d="M406 236H428" stroke="#ECFFFB" stroke-width="6" stroke-linecap="round"/>
+  <path d="M414 232V240M421 232V240" stroke="#061D22" stroke-width="2"/>
+  <path d="M58 248H112M58 276H112" stroke="#9AD9D3" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+  <rect x="110" y="238" width="44" height="20" rx="5" fill="#FF2D9B" fill-opacity=".85"/>
+  <rect x="110" y="266" width="44" height="20" rx="5" fill="#C044FF" fill-opacity=".85"/>
+  <path d="M154 248H170M154 276H170" stroke="#ECFFFB" stroke-width="5" stroke-linecap="round"/>
+  <circle class="ring" cx="380" cy="82" r="38" stroke="#C044FF" stroke-width="2"/>
+  <path class="bt" d="M366 66L394 94L380 108V56L394 70L366 98" stroke="#C044FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Coluna Bluetooth portátil a vibrar com ondas de som, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .ripple { transform-box: fill-box; transform-origin: center; animation: ripple 2.8s ease-out infinite; }
+    .ripple.late { animation-delay: -1.4s; }
+    .radiator { transform-box: fill-box; transform-origin: center; animation: thump .55s ease-in-out infinite; }
+    .drop { animation: drop 3s ease-in-out infinite; }
+    .drop.late { animation-delay: -1.5s; }
+    .led { animation: led 2.4s ease-in-out infinite; }
+    .led:nth-child(2) { animation-delay: -.6s; }
+    .led:nth-child(3) { animation-delay: -1.2s; }
+    .led:nth-child(4) { animation-delay: -1.8s; }
+    @keyframes ripple { 0% { transform: scale(.82); opacity: .8; } 100% { transform: scale(1.12); opacity: 0; } }
+    @keyframes thump { 50% { transform: scaleX(1.5); } }
+    @keyframes drop { 0%, 100% { opacity: .2; transform: translateY(0); } 50% { opacity: .8; transform: translateY(6px); } }
+    @keyframes led { 50% { opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <pattern id="mesh" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="6" cy="6" r="2" fill="#9AD9D3" fill-opacity=".28"/></pattern>
+  </defs>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <ellipse class="ripple" cx="240" cy="176" rx="172" ry="104" stroke="#00FFCC" stroke-width="2"/>
+  <ellipse class="ripple late" cx="240" cy="176" rx="172" ry="104" stroke="#C044FF" stroke-width="2"/>
+  <rect x="112" y="118" width="256" height="116" rx="58" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <rect x="140" y="130" width="200" height="92" rx="12" fill="url(#mesh)"/>
+  <rect x="210" y="166" width="60" height="20" rx="5" fill="#0C3C43" stroke="#00CCFF" stroke-width="2"/>
+  <path d="M222 176H258" stroke="#ECFFFB" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+  <ellipse class="radiator" cx="112" cy="176" rx="12" ry="44" fill="#FF2D9B" fill-opacity=".85"/>
+  <ellipse class="radiator" cx="368" cy="176" rx="12" ry="44" fill="#FF2D9B" fill-opacity=".85"/>
+  <path d="M168 118C168 92 312 92 312 118" stroke="#C044FF" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#00CCFF">
+    <path class="drop" d="M84 62C84 62 74 76 74 82A10 10 0 0 0 94 82C94 76 84 62 84 62Z"/>
+    <path class="drop late" d="M404 52C404 52 396 64 396 68A8 8 0 0 0 412 68C412 64 404 52 404 52Z"/>
+  </g>
+  <g fill="#00FFCC">
+    <circle class="led" cx="210" cy="270" r="5"/><circle class="led" cx="230" cy="270" r="5"/>
+    <circle class="led" cx="250" cy="270" r="5"/><circle class="led" cx="270" cy="270" r="5"/>
+  </g>
+</svg>
