@@ -2343,6 +2343,17 @@ function updatePlayerButtons() {
       { label: "VLi3N",         file: "skins/VLi3N_upd.wsz" },
       { label: "SB",            file: "skins/SB.wsz" },
       { label: "Korea",         file: "skins/Korea.wsz" },
+      // From the Winamp Skin Museum (skins.webamp.org), added 2026-10-06
+      { label: "Tron Vaporwave", file: "skins/Tron-Vaporwave-by-LuigiHann.wsz" },
+      { label: "Vaporwave",      file: "skins/Vaporwave_fixed.wsz" },
+      { label: "NeonAMP R",      file: "skins/NeonAMP_Type_R.wsz" },
+      { label: "NeonGlow",       file: "skins/NeonGlow_digital.wsz" },
+      { label: "Neon Z",         file: "skins/Neon_Z_v2-9.wsz" },
+      { label: "Neonamp",        file: "skins/Neonamp.wsz" },
+      { label: "NeoN Orange",    file: "skins/NeoN_Orange_v1.wsz" },
+      { label: "CyberSpace",     file: "skins/CyberSpace_Amp.wsz" },
+      { label: "CyberHouse",     file: "skins/CyberHouse-WebAmp.wsz" },
+      { label: "Enter Tron",     file: "skins/Enter_Tron.wsz" },
     ];
 
     const skinBtn    = document.getElementById("skin-btn");
@@ -2370,8 +2381,10 @@ function updatePlayerButtons() {
       const isOpen = skinDrawer.classList.contains("open");
       if (!isOpen) {
         const r = skinBtn.getBoundingClientRect();
+        // Keep the drawer on screen (20 skins make it wide on small phones)
+        const maxLeft = document.documentElement.clientWidth - skinDrawer.offsetWidth - 12;
         skinDrawer.style.top  = (r.bottom + 6) + "px";
-        skinDrawer.style.left = r.left + "px";
+        skinDrawer.style.left = Math.max(12, Math.min(r.left, maxLeft)) + "px";
       }
       skinDrawer.classList.toggle("open");
     });

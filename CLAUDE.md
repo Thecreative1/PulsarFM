@@ -46,7 +46,11 @@ sitemap.xml           — 25 URLs; bump <lastmod> when pages change
 robots.txt            — points to the sitemap (apex domain)
 manifest.webmanifest  — PWA manifest
 img/                  — pulsar-logo.webp/png (hero), pulsar-og.jpg (social), icon-*.png (PWA)
-skins/                — Winamp .wsz skins for the SKINS drawer
+skins/                — 20 Winamp .wsz skins for the SKINS drawer (list in `skins` array in index.html).
+                        New ones come from the Winamp Skin Museum (skins.webamp.org): download
+                        r2.webampskins.org/skins/<md5>.wsz (the museum ID is the file's MD5 — check it),
+                        confirm main.bmp and no executables inside. The museum CDN has no CORS, so
+                        skins must be local files, never hotlinked.
 .claude/launch.json   — preview server config (python -m http.server 4173)
 ```
 
@@ -216,7 +220,7 @@ and the genre-page FAQs.
 ## Feature inventory (so you don't rebuild what exists)
 
 Genre filter bar + favorites filter · per-card favorite stars · SCAN (random
-station) · SKINS drawer (10 .wsz, persisted) · dock/float player modes ·
+station) · SKINS drawer (20 .wsz, persisted, kept on screen) · dock/float player modes ·
 TRIP mode (fullscreen visualizer) · SLEEP timer (15/30/60 min → pause) ·
 resume-last-station chip · SHARE button (Web Share API + clipboard fallback) ·
 PT/EN switch · consent banner · PWA manifest · 8 SEO genre pages (PT + EN) ·
