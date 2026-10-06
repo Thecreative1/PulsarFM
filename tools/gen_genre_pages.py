@@ -20,7 +20,7 @@ GENRES = {
   "faq":[
    ("Como ouvir rádio rock online grátis?","Abre o Pulsar FM no navegador, escolhe uma estação rock e carrega em play. É em direto (ao vivo), grátis e não precisas de instalar nada. Nem de criar conta."),
    ("Qual é a melhor rádio rock online?","Depende do que procuras. A Radio Paradise tem curadoria humana e eclética, a Rock Antenne é rock alemão sem pausas e a KEXP Seattle é a referência do rock independente. Se não sabes por onde começar, começa pela KEXP."),
-   ("Posso ouvir rádio rock no telemóvel ou no celular?","Sim. O Pulsar FM funciona em qualquer navegador moderno: computador, tablet, telemóvel ou celular, em Portugal, no Brasil ou em qualquer parte do mundo.")]},
+   ("Posso ouvir rádio rock no telemóvel ou no celular?","Sim, em qualquer navegador moderno, no computador, no telemóvel ou no celular. Se não sabes qual escolher, carrega em SCAN e o Pulsar FM escolhe uma estação por ti.")]},
  "radios-jazz": {
   "genre":"jazz","emoji":"\U0001F3B7","nome":"Jazz",
   "title":"Rádios Jazz Online Grátis — Ao Vivo de Paris e do Mundo | Pulsar FM",
@@ -37,7 +37,7 @@ GENRES = {
   "faq":[
    ("Qual é a melhor rádio de jazz de Paris?","A TSF Jazz é a rádio de referência do jazz em Paris, a emitir 24 horas por dia. No Pulsar FM também tens a Jazz Radio France, do swing ao soul, e a FIP Jazz, mais eclética."),
    ("Como ouvir rádio jazz online grátis?","Abre o Pulsar FM no navegador, escolhe uma estação de jazz e carrega em play. Em direto (ao vivo), grátis e sem registos."),
-   ("Posso ouvir jazz no telemóvel ou no celular?","Sim. O Pulsar FM funciona em qualquer navegador, no computador ou no celular, em Portugal, no Brasil ou onde estiveres.")]},
+   ("Posso ouvir jazz no telemóvel ou no celular?","Sim, em qualquer navegador, no computador ou no celular. Carrega na estrela da TSF Jazz e ela fica guardada nos teus favoritos para a próxima vez.")]},
  "radios-chill": {
   "genre":"chill","emoji":"\U0001F33F","nome":"Chill / Ambiente",
   "title":"Rádios Chill e Ambient Online Grátis — Ao Vivo | Pulsar FM",
@@ -45,7 +45,7 @@ GENRES = {
   "h1":"Rádios Chill Online",
   "intro":"Ambient, drones espaciais e vaporwave: seis estações para desligar do mundo. Fecha os olhos, ou deixa o visualizador fazer o trabalho por ti.",
   "stations":[
-   ("SomaFM Drone Zone","Ambient e drones espaciais. O equivalente sonoro de pôr o telemóvel em modo avião."),
+   ("SomaFM Drone Zone","Ambient e drones espaciais, sem batida nem pressa."),
    ("Chillout-style Jazz","Chill com comunicações espaciais da NASA à mistura. Houston, está tudo calmo."),
    ("Nightwave Plaza","Vaporwave e estética retro: a internet dos anos 90 em forma de som, sem os pop-ups."),
    ("SomaFM Lush","Vozes suaves sobre eletrónica de sonho."),
@@ -54,7 +54,7 @@ GENRES = {
   "faq":[
    ("Que tipo de música tocam as rádios chill?","Ambient, drones espaciais, vaporwave, downtempo e balearic. Música para relaxar, dormir ou trabalhar sem nada a puxar pela tua atenção."),
    ("Como ouvir rádio chill online grátis?","Abre o Pulsar FM, escolhe uma estação chill e carrega em play. Em direto (ao vivo), grátis e sem instalar nada."),
-   ("Posso ouvir música chill no telemóvel ou no celular?","Sim. O Pulsar FM funciona em qualquer navegador, no telemóvel ou celular, em Portugal, no Brasil ou em qualquer parte do mundo.")]},
+   ("Posso ouvir música chill no telemóvel ou no celular?","Sim, em qualquer navegador, no telemóvel ou no celular. Para adormecer com ambient, o botão SLEEP pausa a rádio ao fim de 15, 30 ou 60 minutos.")]},
  "radios-pop": {
   "genre":"pop","emoji":"\U0001F3B6","nome":"Pop",
   "title":"Rádios Pop Online Grátis — Hits ao Vivo | Pulsar FM",
@@ -71,7 +71,7 @@ GENRES = {
   "faq":[
    ("Que rádios pop portuguesas posso ouvir?","A RFM e a Rádio Comercial, as mais ouvidas de Portugal, em direto, lado a lado com a Capital FM de Londres e a NRJ de França."),
    ("Como ouvir rádio pop online grátis?","Abre o Pulsar FM no navegador, escolhe uma estação pop e carrega em play. Emissão ao vivo, grátis e sem instalar nada."),
-   ("Posso ouvir os hits no telemóvel ou no celular?","Sim, em qualquer navegador moderno, no computador ou no celular, em Portugal, no Brasil ou onde estiveres.")]},
+   ("Posso ouvir os hits no telemóvel ou no celular?","Sim, em qualquer navegador moderno, no computador ou no celular. Se ouvires um refrão que um amigo tem de ouvir, o botão SHARE envia-lhe a estação que está a tocar.")]},
  "radios-study": {
   "genre":"study","emoji":"\U0001F4BB","nome":"Study / Lo-Fi",
   "title":"Rádios para Estudar — Lo-Fi e Clássica ao Vivo | Pulsar FM",
@@ -84,11 +84,11 @@ GENRES = {
    ("I Love Chillhop","Lo-fi e chillhop, o clássico do estudo, em versão rádio."),
    ("SomaFM Deep Space One","Ambient espacial profundo, para quando o foco tem de ir longe."),
    ("Venice Classic Radio","Clássica intemporal, de Itália com amor."),
-   ("Lofi Radio","Lo-fi beats 24 horas por dia, para estudar ou para fingir que se está a estudar.")],
+   ("Lofi Radio","Lo-fi beats 24 horas por dia, num loop que não pede atenção.")],
   "faq":[
    ("Qual é a melhor música para estudar?","Lo-fi, chillhop, downtempo e clássica: música sem letra, que não compete com o que estás a ler. As seis estações desta página foram escolhidas exatamente para isso."),
    ("Como ouvir rádio lo-fi online grátis?","Abre o Pulsar FM no navegador, escolhe a I Love Chillhop ou a SomaFM Groove Salad e carrega em play. Grátis e sem distrações."),
-   ("Posso estudar com o Pulsar FM no telemóvel ou no celular?","Sim. Funciona em qualquer navegador, no computador, tablet, telemóvel ou celular, em Portugal, no Brasil ou em qualquer parte do mundo.")]},
+   ("Posso estudar com o Pulsar FM no telemóvel ou no celular?","Sim, em qualquer navegador, no telemóvel ou no celular. Adiciona o Pulsar FM ao ecrã principal e passa a abrir como uma app, sem passar pela loja de aplicações.")]},
  "radios-electronica": {
   "genre":"electro","emoji":"⚡","nome":"Eletrónica / Dance",
   "title":"Rádio de Música Eletrónica Online Grátis — Ao Vivo | Pulsar FM",
@@ -105,7 +105,7 @@ GENRES = {
   "faq":[
    ("Como ouvir música eletrónica online grátis?","Abre o Pulsar FM no navegador, escolhe uma estação e carrega em play. Techno, house e progressive em direto (ao vivo), 100% grátis."),
    ("Que estilos de eletrónica posso ouvir?","Techno e hands up na TechnoBase.FM, house 24 horas na HouseTime.FM, deep e progressive na Frisky Radio e sets de festivais na Sunshine Live."),
-   ("Posso ouvir rádio eletrônica no celular?","Sim. O Pulsar FM funciona em qualquer navegador, no computador ou no celular (telemóvel), em Portugal, no Brasil ou em qualquer parte do mundo.")]},
+   ("Posso ouvir rádio eletrônica no celular?","Sim, em qualquer navegador, no computador ou no celular (telemóvel). Da próxima vez que abrires o Pulsar FM, o botão Continuar a ouvir leva-te de volta à última estação.")]},
  "radios-psytrance": {
   "genre":"psy","emoji":"\U0001F500","nome":"Goa / Psytrance",
   "title":"Rádio Psytrance e Goa Trance Online — Ao Vivo Grátis | Pulsar FM",
@@ -122,7 +122,7 @@ GENRES = {
   "faq":[
    ("Qual é a diferença entre goa trance e psytrance?","O goa trance é o som original dos anos 90: melódico, oriental e hipnótico. O psytrance é a evolução moderna, mais rápida e mais pesada. Na Goa-Base ouves o clássico; na Hirschmilch Psy, o som de agora."),
    ("Como ouvir psytrance online grátis?","Abre o Pulsar FM, escolhe uma estação psy e carrega em play. Em direto (ao vivo), grátis e sem instalar nada. Ativa o modo TRIP para o visualizador em ecrã inteiro."),
-   ("Posso ouvir goa trance no telemóvel ou no celular?","Sim, em qualquer navegador moderno, no computador ou no celular, em Portugal, no Brasil ou em qualquer parte do mundo.")]},
+   ("Posso ouvir goa trance no telemóvel ou no celular?","Sim, em qualquer navegador moderno, no computador ou no celular. De preferência com auscultadores: o psytrance perde metade dos graves no altifalante do telemóvel.")]},
  "radios-synthwave": {
   "genre":"synthwave","emoji":"\U0001F306","nome":"Synthwave / Retrowave",
   "title":"Rádios Synthwave e Retrowave Online Grátis — Ao Vivo | Pulsar FM",
@@ -137,9 +137,9 @@ GENRES = {
    ("SomaFM Underground 80s","Synthpop e new wave underground dos anos 80. Os lados B que a rádio da altura deixava de fora."),
    ("SomaFM Synphaera","Space synth e eletrónica atmosférica.")],
   "faq":[
-   ("O que é synthwave?","Um género eletrónico inspirado nas bandas sonoras e nos sintetizadores dos anos 80: neon, nostalgia e noites que não acabam. É a alma do Pulsar FM."),
+   ("O que é synthwave?","Um género eletrónico inspirado nas bandas sonoras e nos sintetizadores dos anos 80: neon, nostalgia e noites que não acabam. Para começar: Kavinsky, The Midnight e Perturbator."),
    ("Como ouvir synthwave online grátis?","Abre o Pulsar FM no navegador, escolhe a Nightride FM ou a ChillSynth FM e carrega em play. Em direto (ao vivo) e grátis."),
-   ("Posso ouvir retrowave no telemóvel ou no celular?","Sim. Funciona em qualquer navegador, no computador ou no celular, em Portugal, no Brasil ou em qualquer parte do mundo.")]},
+   ("Posso ouvir retrowave no telemóvel ou no celular?","Sim, em qualquer navegador, no computador ou no celular. No computador, abre também o SKINS: há skins clássicas do Winamp para o player combinar com o neon.")]},
 }
 
 # English versions (/en/<slug>/), keyed by the PT page. Station names stay the same as in the
@@ -161,7 +161,7 @@ GENRES_EN = {
   "faq":[
    ("How can I listen to rock radio online for free?","Open Pulsar FM in your browser, pick a rock station and press play. It's live, free and there's nothing to install. No account either."),
    ("What is the best rock radio station online?","Depends on what you're after. Radio Paradise is human-curated and eclectic, Rock Antenne is non-stop German rock and KEXP Seattle is the reference for indie rock. Not sure where to start? Start with KEXP."),
-   ("Can I listen to rock radio on my phone?","Yes. Pulsar FM works in any modern browser: desktop, tablet or phone, wherever you are.")]},
+   ("Can I listen to rock radio on my phone?","Yes, in any modern browser, on desktop or phone. Not sure which station to pick? Press SCAN and Pulsar FM picks one for you.")]},
  "radios-jazz": {
   "slug":"jazz-radio","nome":"Jazz",
   "title":"Jazz Radio Online — Live from Paris and Beyond | Pulsar FM",
@@ -178,7 +178,7 @@ GENRES_EN = {
   "faq":[
    ("What is the best jazz radio station in Paris?","TSF Jazz is the reference jazz station in Paris, on air 24 hours a day. Pulsar FM also has Jazz Radio France, from swing to soul, and the more eclectic FIP Jazz."),
    ("How can I listen to jazz radio online for free?","Open Pulsar FM in your browser, pick a jazz station and press play. Live, free and no sign-up."),
-   ("Can I listen to jazz radio on my phone?","Yes. Pulsar FM runs in any browser, on desktop or phone, wherever you are.")]},
+   ("Can I listen to jazz radio on my phone?","Yes, in any browser, on desktop or phone. Tap the star on TSF Jazz and it stays in your favourites for next time.")]},
  "radios-chill": {
   "slug":"chill-radio","nome":"Chill / Ambient",
   "title":"Chill and Ambient Radio Online — Listen Live | Pulsar FM",
@@ -186,7 +186,7 @@ GENRES_EN = {
   "h1":"Chill Radio Online",
   "intro":"Ambient, space drones and vaporwave: six stations to switch off from the world. Close your eyes, or let the visualizer do the work.",
   "stations":[
-   ("SomaFM Drone Zone","Ambient and space drones. The audio equivalent of putting your phone in airplane mode."),
+   ("SomaFM Drone Zone","Ambient and space drones, no beat and no hurry."),
    ("Chillout-style Jazz","Chill with NASA space chatter in the mix. Houston, all is calm."),
    ("Nightwave Plaza","Vaporwave and retro aesthetics: the 90s internet as sound, minus the pop-ups."),
    ("SomaFM Lush","Soft vocals over dreamy electronica."),
@@ -195,7 +195,7 @@ GENRES_EN = {
   "faq":[
    ("What kind of music do chill radio stations play?","Ambient, space drones, vaporwave, downtempo and Balearic. Music for relaxing, sleeping or working without anything tugging at your attention."),
    ("How can I listen to chill radio online for free?","Open Pulsar FM, pick a chill station and press play. Live, free and nothing to install."),
-   ("Can I listen to chill music on my phone?","Yes. Pulsar FM works in any browser, on your phone, wherever you are.")]},
+   ("Can I listen to chill music on my phone?","Yes, in any browser on your phone. To fall asleep to ambient, the SLEEP button pauses the radio after 15, 30 or 60 minutes.")]},
  "radios-pop": {
   "slug":"pop-radio","nome":"Pop",
   "title":"Pop Radio Online — Today's Hits Live for Free | Pulsar FM",
@@ -212,7 +212,7 @@ GENRES_EN = {
   "faq":[
    ("Which pop radio stations can I listen to?","Capital FM from London, NRJ from France, I Love Radio and Antenne Bayern from Germany, plus RFM and Rádio Comercial, Portugal's most listened-to stations. All live."),
    ("How can I listen to pop radio online for free?","Open Pulsar FM in your browser, pick a pop station and press play. Live, free and nothing to install."),
-   ("Can I listen to the hits on my phone?","Yes, in any modern browser, on desktop or phone, wherever you are.")]},
+   ("Can I listen to the hits on my phone?","Yes, in any modern browser, on desktop or phone. Heard a chorus a friend needs to hear? The SHARE button sends them the station that's playing.")]},
  "radios-study": {
   "slug":"study-radio","nome":"Study / Lo-Fi",
   "title":"Lo-Fi and Study Music Radio — Listen Live for Free | Pulsar FM",
@@ -225,11 +225,11 @@ GENRES_EN = {
    ("I Love Chillhop","Lo-fi and chillhop, the study classic, as a radio station."),
    ("SomaFM Deep Space One","Deep space ambient, for when your focus has to go far."),
    ("Venice Classic Radio","Timeless classical, from Italy with love."),
-   ("Lofi Radio","Lo-fi beats 24/7, for studying or for pretending to.")],
+   ("Lofi Radio","Lo-fi beats 24/7, on a loop that doesn't ask for attention.")],
   "faq":[
    ("What is the best music to study to?","Lo-fi, chillhop, downtempo and classical: music without lyrics that doesn't compete with what you're reading. The six stations on this page were picked for exactly that."),
    ("How can I listen to lo-fi radio online for free?","Open Pulsar FM in your browser, pick I Love Chillhop or SomaFM Groove Salad and press play. Free and distraction-free."),
-   ("Can I study with Pulsar FM on my phone?","Yes. It works in any browser, on desktop, tablet or phone, wherever you are.")]},
+   ("Can I study with Pulsar FM on my phone?","Yes, in any browser on your phone. Add Pulsar FM to your home screen and it opens like an app, no app store involved.")]},
  "radios-electronica": {
   "slug":"electronic-radio","nome":"Electronic / Dance",
   "title":"Electronic Music Radio Online — Techno and House Live | Pulsar FM",
@@ -246,7 +246,7 @@ GENRES_EN = {
   "faq":[
    ("How can I listen to electronic music radio for free?","Open Pulsar FM in your browser, pick a station and press play. Techno, house and progressive, live and 100% free."),
    ("Which electronic music styles can I listen to?","Techno and hands up on TechnoBase.FM, 24/7 house on HouseTime.FM, deep and progressive on Frisky Radio and festival sets on Sunshine Live."),
-   ("Can I listen to electronic radio on my phone?","Yes. Pulsar FM works in any browser, on desktop or phone, wherever you are.")]},
+   ("Can I listen to electronic radio on my phone?","Yes, in any browser, on desktop or phone. Next time you open Pulsar FM, the Continue listening button takes you back to your last station.")]},
  "radios-psytrance": {
   "slug":"psytrance-radio","nome":"Goa / Psytrance",
   "title":"Psytrance and Goa Trance Radio Online — Live, Free | Pulsar FM",
@@ -263,7 +263,7 @@ GENRES_EN = {
   "faq":[
    ("What is the difference between goa trance and psytrance?","Goa trance is the original 90s sound: melodic, eastern and hypnotic. Psytrance is its modern evolution, faster and heavier. Goa-Base plays the classic; Hirschmilch Psy plays today's sound."),
    ("How can I listen to psytrance radio online for free?","Open Pulsar FM, pick a psy station and press play. Live, free and nothing to install. Switch on TRIP mode for the full-screen visualizer."),
-   ("Can I listen to goa trance on my phone?","Yes, in any modern browser, on desktop or phone, wherever you are.")]},
+   ("Can I listen to goa trance on my phone?","Yes, in any modern browser, on desktop or phone. Ideally with headphones: psytrance loses half its bass on a phone speaker.")]},
  "radios-synthwave": {
   "slug":"synthwave-radio","nome":"Synthwave / Retrowave",
   "title":"Synthwave and Retrowave Radio Online — Listen Live | Pulsar FM",
@@ -278,9 +278,9 @@ GENRES_EN = {
    ("SomaFM Underground 80s","Underground 80s synthpop and new wave. The B-sides the radio of the time left out."),
    ("SomaFM Synphaera","Space synth and atmospheric electronica.")],
   "faq":[
-   ("What is synthwave?","An electronic genre inspired by 80s film scores and synthesizers: neon, nostalgia and nights that never end. It's the soul of Pulsar FM."),
+   ("What is synthwave?","An electronic genre inspired by 80s film scores and synthesizers: neon, nostalgia and nights that never end. Where to start: Kavinsky, The Midnight and Perturbator."),
    ("How can I listen to synthwave radio online for free?","Open Pulsar FM in your browser, pick Nightride FM or ChillSynth FM and press play. Live and free."),
-   ("Can I listen to retrowave on my phone?","Yes. It works in any browser, on desktop or phone, wherever you are.")]},
+   ("Can I listen to retrowave on my phone?","Yes, in any browser, on desktop or phone. On desktop, open SKINS too: there are classic Winamp skins to match the neon.")]},
 }
 
 # Interface text per language. PT pages keep their exact original wording.

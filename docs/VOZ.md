@@ -100,8 +100,16 @@ Já publicados (para não repetir a mesma piada noutro sítio). Atualizado a
 - **Páginas de género (PT e EN):** cassete do carro sem a fita enrolar (M80),
   MP3 a 320 kbps na era do 56k (jazz), NASA/Houston (chill), pop-ups da
   internet dos anos 90 (Nightwave Plaza), vizinhos que se adaptem
-  (eletrónica), sol a nascer numa pista (psytrance). As páginas EN
+  (eletrónica), sol a nascer numa pista (psytrance), fingir que se percebe
+  de contrabaixo (jazz), "não é sítio para pedir baladas" (Radio BOB!), lados
+  B que a rádio da altura deixava de fora (Underground 80s), psytrance que
+  perde metade dos graves no altifalante do telemóvel. As páginas EN
   reaproveitam estas piadas em inglês; não são piadas novas.
+- **Pergunta "Posso ouvir no telemóvel/celular?" das páginas de género:**
+  cada página responde com uma funcionalidade real diferente (rock SCAN,
+  jazz favoritos, chill SLEEP, pop SHARE, estudo ecrã principal, eletrónica
+  Continuar a ouvir, psytrance auscultadores, synthwave SKINS). Não voltar à
+  resposta genérica igual em todas.
 - **Página inicial:** player saído de 1999, arrastar um .wsz para a pasta
   Skins, o lama do Winamp.
 
