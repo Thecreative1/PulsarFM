@@ -685,6 +685,92 @@
         "rode-psa1": "Braço de microfone",
         "adam-hall-pad-eco-2": "Isolamento"
       },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "As peças recomendadas para um home studio: função, ligação e quando fazem falta",
+        "columns": [
+          "Peça",
+          "Função",
+          "Ligação",
+          "Quando faz falta"
+        ],
+        "rows": [
+          [
+            "Samson Q2U",
+            "Microfone dinâmico",
+            "USB e XLR",
+            "Desde o primeiro dia"
+          ],
+          [
+            "Focusrite Scarlett Solo",
+            "Interface de áudio",
+            "USB-C; 1 entrada XLR e 1 de instrumento",
+            "Microfone XLR ou guitarra"
+          ],
+          [
+            "Audio-Technica ATH-M20x",
+            "Auscultadores fechados",
+            "Com fio",
+            "Gravar sem fugas para o microfone"
+          ],
+          [
+            "Audio-Technica ATH-M50xBT2",
+            "Auscultadores fechados",
+            "Com fio e Bluetooth",
+            "Ouvir e misturar com mais detalhe"
+          ],
+          [
+            "PreSonus Eris 3.5 (Gen 2)",
+            "Monitores ativos",
+            "Balanceada (TRS) e RCA",
+            "Misturar em colunas"
+          ],
+          [
+            "RØDE PSA1",
+            "Braço de microfone",
+            "Grampo de secretária",
+            "Quando o microfone sai da mesa"
+          ],
+          [
+            "Adam Hall PAD ECO 2",
+            "Bases de isolamento",
+            "—",
+            "Monitores em cima da secretária"
+          ]
+        ],
+        "rowProducts": [
+          "samson-q2u",
+          "focusrite-scarlett-solo-4",
+          "audio-technica-ath-m20x",
+          "audio-technica-ath-m50xbt2",
+          "presonus-eris-3-5",
+          "rode-psa1",
+          "adam-hall-pad-eco-2"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma a compatibilidade com o teu computador e o teu programa de gravação."
+      },
+      "faq": [
+        {
+          "q": "O que preciso para montar um home studio?",
+          "a": "Para começar: computador, um programa de gravação (DAW), um microfone e auscultadores fechados. Se o microfone for XLR ou quiseres gravar guitarra, junta uma interface de áudio. Os monitores podem esperar pela fase da mistura. Começa pequeno: o resto chega quando bateres numa limitação concreta."
+        },
+        {
+          "q": "Microfone USB ou XLR: qual escolher?",
+          "a": "O USB liga direto ao computador e é o caminho mais curto para gravar voz. O XLR pede uma interface, mas permite trocar de microfone e gravar várias fontes. O Samson Q2U tem as duas saídas: começas por USB e passas a XLR quando comprares a interface, sem deitar nada fora."
+        },
+        {
+          "q": "Preciso de interface de áudio para gravar guitarra?",
+          "a": "Sim. A guitarra precisa de uma entrada de instrumento (alta impedância), que o computador não tem. A Focusrite Scarlett Solo tem uma, ao lado da entrada de microfone, por isso dá para gravar voz e guitarra com a mesma caixa, uma de cada vez."
+        },
+        {
+          "q": "Auscultadores ou monitores para misturar?",
+          "a": "Para gravar, auscultadores fechados: o som não passa para o microfone. Para misturar, os monitores mostram melhor como a música soa numa sala. O ideal é usar os dois e confirmar a mistura em ambos, e já agora no telemóvel, que é onde muita gente a vai ouvir."
+        },
+        {
+          "q": "Posso usar auscultadores Bluetooth para gravar?",
+          "a": "Para ouvir, sim. Para gravar, não: o Bluetooth acrescenta atraso e ficas a cantar fora de tempo com o que estás a ouvir. Usa o cabo. Os ATH-M50xBT2 têm as duas ligações, por isso servem para as duas coisas."
+        }
+      ],
       "quickPicks": [
         {
           "label": "Microfone",
@@ -772,6 +858,74 @@
         "fiio-ka11": "DAC",
         "new-bee-suporte-auscultadores": "Arrumação"
       },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Os acessórios recomendados: para que servem, ligações e utilização ideal",
+        "columns": [
+          "Acessório",
+          "Para que serve",
+          "Ligações",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "Apple USB-C para jack 3,5 mm",
+            "Ligar auscultadores com fio",
+            "USB-C para jack 3,5 mm",
+            "Telemóvel ou portátil sem jack"
+          ],
+          [
+            "UGREEN Bluetooth 2 em 1",
+            "Recetor ou transmissor Bluetooth",
+            "Jack 3,5 mm",
+            "Aparelhagem antiga ou TV"
+          ],
+          [
+            "UGREEN jack para 2 RCA (1 m)",
+            "Ligar uma fonte com jack a entradas RCA",
+            "Jack 3,5 mm para 2 RCA",
+            "Telemóvel ou recetor numa aparelhagem"
+          ],
+          [
+            "FiiO KA11",
+            "DAC e amplificador portátil",
+            "USB-C para jack 3,5 mm",
+            "Auscultadores com fio exigentes"
+          ],
+          [
+            "New Bee suporte de auscultadores",
+            "Arrumação",
+            "—",
+            "Secretária arrumada"
+          ]
+        ],
+        "rowProducts": [
+          "apple-usb-c-jack-35",
+          "ugreen-bluetooth-2-em-1",
+          "ugreen-jack-rca-1m",
+          "fiio-ka11",
+          "new-bee-suporte-auscultadores"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma as portas dos teus aparelhos antes de comprar."
+      },
+      "faq": [
+        {
+          "q": "Como ligar auscultadores com fio a um telemóvel sem jack?",
+          "a": "Com um adaptador USB-C para jack de 3,5 mm, como o da Apple. É pequeno, não tem bateria e não pede emparelhamento. Em Android costuma funcionar, mas confirma a compatibilidade com o teu modelo. Para auscultadores mais exigentes, um DAC portátil como o FiiO KA11 dá mais folga."
+        },
+        {
+          "q": "O que é um DAC e preciso de um?",
+          "a": "O DAC converte o som digital em sinal analógico para os auscultadores. Todos os telemóveis e computadores têm um. Um DAC externo compensa quando os auscultadores precisam de mais potência ou quando a saída do aparelho tem ruído. Para auscultadores comuns, o adaptador básico chega."
+        },
+        {
+          "q": "Como pôr Bluetooth numa aparelhagem antiga?",
+          "a": "Com um recetor Bluetooth ligado à entrada auxiliar. O UGREEN 2 em 1 liga por jack de 3,5 mm; se a aparelhagem só tiver entradas RCA, junta um cabo jack para 2 RCA. A partir daí, a aparelhagem dos anos 90 toca o que o telemóvel mandar, incluindo esta rádio."
+        },
+        {
+          "q": "Posso usar auscultadores Bluetooth numa televisão sem Bluetooth?",
+          "a": "Sim, com um transmissor Bluetooth ligado à saída de auscultadores da TV. Confirma primeiro que a TV tem essa saída de 3,5 mm. O atraso entre imagem e som depende do transmissor e dos auscultadores: experimenta com diálogos antes de te habituares a ver filmes dobrados por acidente."
+        }
+      ],
       "quickPicks": [
         {
           "label": "Adaptador",
