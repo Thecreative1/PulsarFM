@@ -74,20 +74,41 @@ Servem para calibrar o tipo de humor. **Não reutilizar literalmente.**
 - "Há coisas que envelhecem bem. Um bom amplificador é uma delas. O Internet
   Explorer não era."
 
-Já publicados nos guias (para não repetir a mesma piada noutro guia):
-Bass Boost das aparelhagens dos anos 90 (auscultadores), pilhas de reserva no
-bolso do casaco (auscultadores), leitor de MP3 esquecido na gaveta (colunas),
-gaveta de adaptadores sem destino e USB-C (acessórios), portátil vs. sala
-cheia de equipamento (home studio).
+Já publicados (para não repetir a mesma piada noutro sítio). Atualizado a
+06/10/2026; ao escrever um guia novo, acrescentar aqui as piadas que usou.
 
-Nas páginas de género: cassete do carro sem a fita enrolar (M80), MP3 a
-320 kbps na era do 56k (jazz), NASA/Houston (chill), pop-ups da internet dos
-anos 90 (Nightwave Plaza), vizinhos que se adaptem (eletrónica).
+- **Auscultadores:** Bass Boost das aparelhagens dos anos 90, pilhas de
+  reserva no bolso do casaco, set de trance às onze da noite, colega que
+  atende chamadas em alta voz, "mais peso à bateria do que ao logótipo"
+  (Soundcore), "a dos carregadores" (Anker).
+- **Colunas:** leitor de MP3 esquecido na gaveta, "ligar uma coluna devia ser
+  tão simples como mudar de estação", graves que façam tremer a mesa (Go 5),
+  amplificador de guitarra em miniatura (Emberton III), culto dos watts.
+- **Soundbars:** efeitos com nomes de sala de cinema, volume da loja, "o resto
+  são nomes bonitos na caixa".
+- **Gira-discos:** "é um sistema, não um botão", braço que volta a casa
+  (PS-LX3BT), "quando o disco descansa" (Lenco), puristas que não perdoam o
+  Bluetooth.
+- **Home studio:** portátil vs. sala cheia de equipamento, cantar fora de
+  tempo por causa do Bluetooth, mistura confirmada no telemóvel, "o estúdio
+  perfeito que continua no carrinho".
+- **Acessórios:** gaveta de adaptadores sem destino, USB-C como
+  especialidade, encosto da cadeira (suporte), aparelhagem dos anos 90 a
+  tocar esta rádio, "filmes dobrados por acidente".
+- **Hub:** "conversa de folheto nunca", "do primeiro play ao último lado B".
+  Não voltar a usar "folheto" nos guias.
+- **Páginas de género (PT e EN):** cassete do carro sem a fita enrolar (M80),
+  MP3 a 320 kbps na era do 56k (jazz), NASA/Houston (chill), pop-ups da
+  internet dos anos 90 (Nightwave Plaza), vizinhos que se adaptem
+  (eletrónica), sol a nascer numa pista (psytrance). As páginas EN
+  reaproveitam estas piadas em inglês; não são piadas novas.
+- **Página inicial:** player saído de 1999, arrastar um .wsz para a pasta
+  Skins, o lama do Winamp.
 
-Na página inicial: player saído de 1999, arrastar um .wsz para a pasta Skins,
-o lama do Winamp. Nos produtos: encosto da cadeira (suporte Trust),
-aparelhagem que nasceu antes do Bluetooth (Fonestar).
+## Notas de redação que não são texto para o leitor
 
-Reforço de colunas/gira-discos/soundbars: graves que façam tremer a mesa (Go 5),
-amplificador de guitarra em miniatura (Emberton II), braço que volta a casa
-(PS-LX3BT), puristas que não perdoam o Bluetooth (FAQ gira-discos).
+Não escrever nos textos públicos coisas como "substitui o modelo X nesta
+lista", "é o que está à venda com regularidade" ou "vendido pela loja oficial
+na Amazon". Mudam sem aviso e envelhecem mal. Isso fica nos dados
+(`source`, `pros`/`cons`) ou no `docs/AFILIADOS.md`. O leitor só precisa de
+saber para quem serve o produto e qual é a limitação.
