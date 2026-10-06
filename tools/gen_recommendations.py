@@ -488,10 +488,44 @@ def render_hub(editorial, catalog):
                 nav=render_nav(editorial["articles"]))
 
 
+LOOK_TEXT_FIELDS = ("navLabel", "navIcon", "seoTitle", "metaDescription")
+
+
+def validate_article_look(article, slugs, catalog, products):
+    """Every guide must carry what keeps the section's look and SEO consistent (docs/AFILIADOS.md,
+    "Criar um guia novo"). Fails with the missing piece named, instead of shipping a page that looks off."""
+    name = article.get("slug", "?")
+    for field in LOOK_TEXT_FIELDS:
+        if not isinstance(article.get(field), str) or not article[field].strip():
+            raise ValueError(f"Guide {name} needs {field}")
+    if len(article["navLabel"]) > 20:
+        raise ValueError(f"Guide {name}: navLabel must be short (max 20 characters) to fit the category bar")
+    if len(article["metaDescription"]) > 160:
+        raise ValueError(f"Guide {name}: metaDescription over 160 characters gets cut by Google")
+    illustration = article.get("illustration", "")
+    if not re.fullmatch(r"/img/gear/[a-z0-9-]+\.svg", illustration or "") or not (ROOT / illustration.lstrip("/")).is_file():
+        raise ValueError(f"Guide {name} needs an existing neon illustration in /img/gear/*.svg")
+    date.fromisoformat(article.get("publishedAt", ""))
+    related = article.get("related", [])
+    if len(related) != 2 or name in related or len(set(related)) != 2 or not set(related) <= slugs:
+        raise ValueError(f"Guide {name} needs 2 distinct related guides (existing slugs, not itself)")
+    published = [products[pid] for pid in article["productIds"]
+                 if pid in products and products[pid]["status"] == "published"]
+    if published and not article.get("quickPicks"):
+        raise ValueError(f"Guide {name} has products, so it needs quickPicks")
+    images = catalog.get("categoryImages", {})
+    for product in published:
+        if product.get("category") and not product.get("image") and product["category"] not in images:
+            raise ValueError(f'Product {product["id"]}: category "{product["category"]}" has no illustration '
+                             'in categoryImages (data/affiliates.json)')
+
+
 def generate(catalog, editorial):
     products = validate_catalog(catalog)
     if editorial.get("schemaVersion") != 1:
         raise ValueError("Unsupported editorial schemaVersion")
+    all_slugs = {article.get("slug") for article in editorial["articles"]}
+    inbound = dict.fromkeys(all_slugs, 0)
     pages = {"recomendacoes/index.html": render_hub(editorial, catalog)}
     slugs = set()
     for article in editorial["articles"]:
@@ -500,8 +534,14 @@ def generate(catalog, editorial):
             raise ValueError("Articles need unique safe slugs")
         if len(set(article["productIds"])) != len(article["productIds"]):
             raise ValueError("Do not repeat a product card in the same article")
+        validate_article_look(article, all_slugs, catalog, products)
+        for target in article["related"]:
+            inbound[target] += 1
         slugs.add(slug)
         pages[f"recomendacoes/{slug}/index.html"] = render_article(article, editorial["articles"], catalog, products)
+    orphans = [slug for slug, count in inbound.items() if count == 0]
+    if orphans and len(editorial["articles"]) > 2:
+        raise ValueError("No other guide lists these in 'related': " + ", ".join(sorted(orphans)))
     return pages
 
 

@@ -31,6 +31,7 @@ def demo_page():
             section['productLinks'] = []
     article = editorial['articles'][0]
     article['productIds'] = [product['id']]
+    article['quickPicks'] = [{'label': 'Demonstração', 'productId': product['id'], 'note': 'Escolha rápida de exemplo.'}]
     article['sections'][0]['productLinks'] = [{'productId': product['id'], 'label': 'Experimentar o link no texto'}]
     html = generate(catalog, editorial)['recomendacoes/melhores-auscultadores/index.html']
     html = html.replace(esc(affiliate_url(catalog, product)), '/__preview__/destino')

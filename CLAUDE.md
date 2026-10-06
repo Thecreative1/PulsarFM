@@ -231,6 +231,12 @@ animated per-category illustrations in `img/gear/`, mapped by `categoryImages`).
 `bestFor`/`pros`/`cons` are data-only. Guides have `seoTitle`/`metaDescription`
 (title tag only; H1 stays `title`), `quickPicks`, `related` and
 `comparison.rowProducts` — see `docs/AFILIADOS.md`.
+**New guide:** follow "Criar um guia novo" in `docs/AFILIADOS.md` (start from
+`templates/article.json`; new category art from `templates/illustration.svg`,
+rules in `docs/DESIGN.md` "Creating a new illustration"). The generator refuses a
+guide missing `navLabel`/`navIcon`/`illustration`/`seoTitle`/`metaDescription`/
+`related`/`quickPicks`, an orphan guide, or a product category without art —
+fix the data, don't loosen the check.
 Before adding a product, verify on amazon.es that the ASIN is in stock and
 not only sold second-hand ("Segunda mano"). The Amazon Associates statement
 ("Como Afiliado da Amazon…") must stay in the disclosure, hub and privacy page.

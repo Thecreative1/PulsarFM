@@ -43,6 +43,12 @@ def strip_products(editorial):
     return editorial
 
 
+def use_product(article, product):
+    """Put a fixture product in a guide, with the quick pick every guide with products needs."""
+    article['productIds'] = [product['id']]
+    article['quickPicks'] = [{'label': 'Teste', 'productId': product['id'], 'note': 'Escolha de teste.'}]
+
+
 def amazon_fixture():
     catalog = copy.deepcopy(gen.read_json(gen.ROOT / 'data/affiliates.json'))
     product = gen.read_json(gen.ROOT / 'templates/product.json')
@@ -75,7 +81,7 @@ class AffiliateTests(unittest.TestCase):
 
     def test_badge_comparison_and_faq(self):
         article = self.editorial['articles'][0]
-        article['productIds'] = [self.product['id']]
+        use_product(article, self.product)
         article['badges'] = {self.product['id']: 'Até 50€ <b>'}
         article['comparison'] = {'caption': 'Tabela', 'columns': ['Modelo', 'Nota'],
                                  'rows': [['A', 'x < y']]}
@@ -115,7 +121,7 @@ class AffiliateTests(unittest.TestCase):
         self.assertEqual(link['rel'], 'noopener')
         self.assertEqual(link['target'], '_blank')
         self.assertNotIn('data-affiliate-link', link)
-        self.editorial['articles'][0]['productIds'] = [self.product['id']]
+        use_product(self.editorial['articles'][0], self.product)
         html = gen.generate(self.catalog, self.editorial)['recomendacoes/melhores-auscultadores/index.html']
         self.assertNotIn('affiliate-disclosure', html)
         self.assertIn('sem comissão', html)
@@ -178,13 +184,13 @@ class AffiliateTests(unittest.TestCase):
 
     def test_article_cards_inline_links_and_disclosure(self):
         article = self.editorial['articles'][0]
-        article['productIds'] = [self.product['id']]
+        use_product(article, self.product)
         article['sections'][0]['productLinks'] = [{'productId': self.product['id'], 'label': 'Ver este modelo'}]
         html = gen.generate(self.catalog, self.editorial)['recomendacoes/melhores-auscultadores/index.html']
         parsed = HTMLInventory(html)
         links = [link for link in parsed.links if 'data-affiliate-link' in link]
-        self.assertEqual(len(links), 2)
-        self.assertEqual({link['data-position'] for link in links}, {'inline-1-1', 'recommendation-1'})
+        self.assertEqual(len(links), 3)
+        self.assertEqual({link['data-position'] for link in links}, {'quick-1', 'inline-1-1', 'recommendation-1'})
         self.assertIn('sem custo adicional para ti', html)
         self.assertEqual(len(parsed.ids), len(set(parsed.ids)))
 
@@ -277,7 +283,7 @@ class AmazonTests(unittest.TestCase):
         self.product.update(pros=['Pró editorial único'], cons=['Contra editorial único'],
                             bestFor='Uso ideal editorial único')
         editorial = strip_products(gen.read_json(gen.ROOT / 'data/recommendations.json'))
-        editorial['articles'][0]['productIds'] = [self.product['id']]
+        use_product(editorial['articles'][0], self.product)
         html = gen.generate(self.catalog, editorial)['recomendacoes/melhores-auscultadores/index.html']
         for note in ('Pró editorial único', 'Contra editorial único', 'Uso ideal editorial único'):
             self.assertNotIn(note, html)
@@ -344,7 +350,7 @@ class SeoAndConversionTests(unittest.TestCase):
                 inbound[slug] += 1
         self.assertTrue(all(count >= 1 for count in inbound.values()), inbound)
         self.editorial['articles'][0]['related'] = ['nao-existe']
-        with self.assertRaises(KeyError):
+        with self.assertRaises(ValueError):
             gen.generate(self.catalog, self.editorial)
 
     def test_short_note_before_the_first_store_link_and_full_disclosure_at_the_end(self):
@@ -365,6 +371,40 @@ class SeoAndConversionTests(unittest.TestCase):
             self.assertEqual(re.findall(r'href="/recomendacoes/([^/"]+)/"', nav), slugs, path)
             current = re.findall(r'href="/recomendacoes/([^/"]+)/" aria-current="page"', nav)
             self.assertEqual(current, [] if path == 'recomendacoes/index.html' else [path.split('/')[1]])
+
+    def test_a_guide_without_its_look_fails_with_a_clear_message(self):
+        cases = [
+            ('navIcon', None, 'needs navIcon'),
+            ('navLabel', 'Um nome demasiado comprido', 'navLabel must be short'),
+            ('metaDescription', 'x' * 161, 'over 160'),
+            ('illustration', '/img/gear/nao-existe.svg', 'existing neon illustration'),
+            ('illustration', '/img/pulsar-og.jpg', 'existing neon illustration'),
+            ('related', ['soundbars'], '2 distinct related'),
+            ('quickPicks', [], 'needs quickPicks'),
+        ]
+        for field, value, message in cases:
+            editorial = copy.deepcopy(self.editorial)
+            article = editorial['articles'][0]
+            if value is None:
+                article.pop(field)
+            else:
+                article[field] = value
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, message):
+                gen.generate(self.catalog, editorial)
+
+    def test_orphan_guides_and_categories_without_illustration_fail(self):
+        editorial = copy.deepcopy(self.editorial)
+        for article in editorial['articles']:  # nobody points at the first guide any more
+            article['related'] = [s for s in article['related'] if s != 'melhores-auscultadores'] + \
+                [s for s in ('soundbars', 'gira-discos', 'home-studio')
+                 if s != article['slug'] and s not in article['related']]
+            article['related'] = article['related'][:2]
+        with self.assertRaisesRegex(ValueError, 'melhores-auscultadores'):
+            gen.generate(self.catalog, editorial)
+        catalog = copy.deepcopy(self.catalog)
+        del catalog['categoryImages']['Auscultadores']
+        with self.assertRaisesRegex(ValueError, 'no illustration'):
+            gen.generate(catalog, self.editorial)
 
     def test_bad_quick_picks_and_row_products_fail(self):
         article = self.editorial['articles'][0]

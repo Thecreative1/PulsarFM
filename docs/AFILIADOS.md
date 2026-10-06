@@ -31,14 +31,16 @@ O site continua estático e compatível com GitHub Pages. O HTML é gerado antes
 | `sitemap.xml` | Inclui a secção e os seis guias |
 | `data/affiliates.json` | Lojas (`amazon-es`) e catálogo central de produtos |
 | `data/recommendations.json` | Conteúdo e produtos selecionados para cada guia |
-| `templates/product.json`, `templates/article.json` | Exemplos para novas entradas, não publicados automaticamente |
+| `templates/product.json`, `templates/article.json` | Modelos completos para um produto e um guia novos (ver "Criar um guia novo") |
+| `templates/illustration.svg` | Ponto de partida para uma ilustração néon nova |
 | `templates/recommendations/page.html` | Estrutura comum das páginas e controlos de consentimento |
 | `templates/recommendations/article.html` | Template editorial reutilizável |
 | `templates/recommendations/product.html` | Componente de recomendação com imagem, descrição, preço opcional e CTA |
 | `templates/recommendations/disclosure.html` | Divulgação de afiliados reutilizável (a frase da Amazon entra automaticamente) |
 | `assets/recommendations.css` | Estilos responsivos isolados das páginas da rádio |
 | `assets/affiliate-analytics.js` | Consentimento, evento `affiliate_click`, fallback de imagem e validade de preços |
-| `img/gear-editorial.svg` | Ilustração editorial local, usada nos cartões |
+| `img/gear-editorial.svg` | Ilustração do topo do hub (e reserva se faltar a da categoria) |
+| `img/gear/*.svg` | Ilustrações néon animadas por categoria: cartões de produto e lista do hub |
 | `tools/gen_recommendations.py` | Validação e geração das sete páginas estáticas e sitemap |
 | `tools/import_awin_feed.py` | Adaptador CSV da Awin (inativo, ver abaixo) |
 | `tools/preview_recommendations.py` | Demonstração local com produto fictício e analytics simulado |
@@ -136,9 +138,53 @@ O gerador acrescenta automaticamente o JSON-LD `BreadcrumbList`, `Article` e `It
 
 As páginas de género também levam aos guias pela caixa GEAR (`GEAR` em `tools/gen_genre_pages.py`). Desde 06/10/2026, a página Pop liga a Tecnologia e acessórios.
 
-## Novos artigos
+## Criar um guia novo (passo a passo)
 
-Copiar `templates/article.json` para `articles` em `data/recommendations.json`, preencher o conteúdo seguindo `docs/VOZ.md`, escolher um `slug` único e executar o gerador. O índice e o sitemap são atualizados automaticamente. Ao remover ou mudar um slug, remover também o HTML antigo ou preparar o redirecionamento: o gerador não apaga diretórios.
+O gerador garante o aspeto: um guia sem ícone, ilustração, título SEO, relacionados ou escolhas rápidas **não gera**, e o erro diz o que falta. A ordem abaixo evita voltas atrás.
+
+1. **Escolher o tema e o `slug`.** Um guia por necessidade real ("melhores-microfones", não "microfones-baratos-e-bons"). Slug em minúsculas com hífens; é o URL `/recomendacoes/<slug>/` e não deve mudar depois de publicado.
+2. **Escolher 3 a 7 produtos na Amazon.es**, de gamas diferentes (económico, médio, premium), seguindo "Adicionar ou trocar um produto". Todos com a mesma `category` de produto.
+3. **Ilustração da categoria.** Se a `category` dos produtos for nova, criar a ilustração (ver "Ilustração nova" abaixo) e registá-la em `categoryImages` no `data/affiliates.json`:
+
+   ```json
+   "Microfones": { "src": "/img/gear/microfones.svg", "alt": "Ilustração néon de um microfone de estúdio" }
+   ```
+
+   Se os produtos forem de uma categoria que já existe, reutiliza-se a ilustração dela.
+4. **Copiar `templates/article.json`** para o fim de `articles` em `data/recommendations.json` e preencher:
+
+   | Campo | Regra |
+   | --- | --- |
+   | `category` | Etiqueta curta da secção, acima do título ("Escuta pessoal", "Ritual do vinil"). |
+   | `navLabel` | Nome no botão da barra de categorias, no máximo 20 caracteres. Com 7 ou mais guias a barra desliza no desktop pequeno: manter curto. |
+   | `navIcon` | Um emoji, como os filtros da rádio (🎧 🔊 📺 💿 🎙️ 🔌). Não repetir um que já exista. |
+   | `illustration` | A ilustração do guia em `/img/gear/*.svg` (normalmente a mesma da categoria dos produtos). Aparece ao lado do guia no hub. |
+   | `title` / `seoTitle` | `title` é o H1, editorial. `seoTitle` é o `<title>`: começa pelo termo de pesquisa ("Melhores … 2026") e mistura pt-PT e pt-BR. |
+   | `summary` / `metaDescription` | `summary` aparece no hub. `metaDescription` (máx. 160, ideal 140–155) nomeia 2–4 modelos. |
+   | `publishedAt` / `updatedAt` | Data de hoje nos dois; depois só `updatedAt` muda. |
+   | `sections` | 2–4 secções com critérios de escolha, na voz do `docs/VOZ.md`. 1–2 `productLinks` no texto, não mais. |
+   | `productIds`, `badges` | Ordem = ordem dos cartões (do económico ao premium). Etiquetas por gama, nunca em euros. |
+   | `quickPicks` | 3–4 escolhas (Económico / Gama média / Premium ou por uso), frase curta cada. |
+   | `comparison` + `rowProducts` | Tabela com uma linha por produto e o ID de cada linha em `rowProducts`. |
+   | `faq` | 3–5 perguntas com a formulação de pesquisa; respostas úteis primeiro. |
+   | `related` | 2 guias próximos do tema. |
+
+5. **Ligar o guia novo aos outros.** Acrescentar o slug novo ao `related` de pelo menos um guia existente (o gerador falha se um guia ficar sem ligações). A barra de categorias, a lista do hub e o sitemap atualizam-se sozinhos.
+6. **Opcional:** apontar uma página de género para o guia (dicionário `GEAR` em `tools/gen_genre_pages.py`, depois `python tools/gen_genre_pages.py`).
+7. **Gerar e testar:**
+
+   ```powershell
+   python tools/gen_recommendations.py
+   python -m pytest -q tests
+   ```
+
+8. **Ver no preview** (`/recomendacoes/` e o guia novo, com `?v=<algo>` para fugir à cache): botão novo na barra, ilustração no hub e nos cartões, escolhas rápidas, tabela com links, FAQ, nota de afiliados no topo e caixa no fim. Confirmar também no telemóvel.
+
+Ao remover ou mudar um slug, remover também o HTML antigo ou preparar o redirecionamento: o gerador não apaga diretórios. E retirar o slug dos `related` dos outros guias.
+
+### Ilustração nova
+
+Partir de `templates/illustration.svg` e guardar em `img/gear/<nome>.svg`. As regras completas estão em `docs/DESIGN.md` ("Creating a new illustration"); em resumo: tela 480×360 com o mesmo fundo e grelha, um objeto principal centrado, só a paleta da PulsarFM, 1–2 animações subtis com `transform`/`opacity`, e a regra de `prefers-reduced-motion`. Ver o SVG sozinho no browser antes de o usar: se o objeto não se reconhece à primeira (uma coluna que parece uma cara, fichas que parecem uma tesoura), redesenhar.
 
 ## Analytics
 

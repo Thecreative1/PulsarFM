@@ -1,22 +1,56 @@
 {
   "slug": "novo-guia",
-  "category": "Equipamento para música",
-  "title": "Título editorial do guia",
-  "summary": "Uma frase sobre a necessidade que este guia ajuda a resolver.",
+  "category": "Etiqueta curta da secção",
+  "navLabel": "Novo guia",
+  "navIcon": "🎛️",
+  "illustration": "/img/gear/novo-guia.svg",
+  "title": "Título editorial do guia (é o H1)",
+  "seoTitle": "Melhores … 2026: termo de pesquisa pt-PT e pt-BR",
+  "summary": "Uma frase sobre a necessidade que este guia ajuda a resolver (aparece no hub).",
+  "metaDescription": "140 a 155 caracteres, a nomear 2 a 4 modelos e para quem servem. É o texto que aparece no Google.",
   "intro": "Define o público, o contexto de utilização e os critérios de comparação.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-06",
+  "publishedAt": "2026-10-06",
   "sections": [
     {
       "heading": "Como escolher",
       "paragraphs": ["Explica os critérios, as limitações e a origem da informação. Não apresentar como testado um produto que não foi testado pela redação."],
       "checklist": ["Compatibilidade", "Conforto ou espaço", "Orçamento total"],
-      "productLinks": []
+      "productLinks": [{ "productId": "id-do-produto", "label": "Ver o … na Amazon" }]
     },
     {
       "heading": "O que comparar",
       "paragraphs": ["Compara alternativas para a mesma utilização. Identifica para quem cada escolha faz sentido e para quem não faz."]
     }
   ],
-  "productIds": [],
+  "productIds": ["id-economico", "id-gama-media", "id-premium"],
+  "quickPicks": [
+    { "label": "Económico", "productId": "id-economico", "note": "Frase curta: para quem serve." },
+    { "label": "Gama média", "productId": "id-gama-media", "note": "Frase curta: para quem serve." },
+    { "label": "Premium", "productId": "id-premium", "note": "Frase curta: para quem serve." }
+  ],
+  "badges": {
+    "id-economico": "Económico",
+    "id-gama-media": "Gama média · Uso",
+    "id-premium": "Premium · Uso"
+  },
+  "comparison": {
+    "heading": "Comparação rápida",
+    "caption": "Descrição da tabela para leitores de ecrã",
+    "columns": ["Modelo", "Característica", "Característica", "Ideal para"],
+    "rows": [
+      ["Modelo económico", "…", "…", "…"],
+      ["Modelo médio", "…", "…", "…"],
+      ["Modelo premium", "…", "…", "…"]
+    ],
+    "rowProducts": ["id-economico", "id-gama-media", "id-premium"],
+    "note": "Valores indicados pelos fabricantes."
+  },
+  "faq": [
+    { "q": "Pergunta com a formulação de pesquisa?", "a": "Resposta útil primeiro, personalidade depois (docs/VOZ.md)." },
+    { "q": "Segunda pergunta?", "a": "Resposta." },
+    { "q": "Terceira pergunta?", "a": "Resposta." }
+  ],
+  "related": ["slug-de-um-guia-proximo", "slug-de-outro-guia-proximo"],
   "closing": "Resume o critério mais útil para a decisão, sem urgência artificial."
 }

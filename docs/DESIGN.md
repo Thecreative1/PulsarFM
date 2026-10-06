@@ -32,3 +32,16 @@ Keep calm: article body text, checklists, product cards, the comparison table an
 **Category bar** (`.guide-nav`, under the header on every `/recomendacoes/` page, added 06/10/2026 at the owner's request): the six guides as neon pills (emoji `navIcon` + short `navLabel`), styled exactly like the genre filter buttons on the radio home page: solid cyan, pink glow on hover, neon green with glow for the current guide (it is frame, not reading surface). Below 900px it scrolls sideways with a fade on the right, and `affiliate-analytics.js` centres the current guide on load. No hamburger menu.
 
 **Quick picks** (`.quick-picks`, after the disclosure): a calm panel (`--bg-panel`, thin border, no glow) with a pink uppercase label, the product name linking to its card and an inline Amazon link. Comparison tables put the store link under the model name in the first column, so it stays visible when the table scrolls sideways.
+
+## Creating a new illustration
+
+Every guide and product category has its own neon illustration in `img/gear/`. A new one must look like it belongs to the same set. Start from `templates/illustration.svg`.
+
+- **Canvas:** `480×360`, `viewBox="0 0 480 360"`, background rect `#061D22` with `rx="20"`, and the faint grid line `M0 300H480M44 0V360M436 0V360` at `#9AD9D3`, opacity .09. Never change these.
+- **One object, centred,** drawn as a dark panel (`#08292F` / `#0C3C43` / `#041015`) with a 2–3px cyan (`#00FFCC`) or blue (`#00CCFF`) outline, inside roughly x 64–416 and y 40–300. Simple, flat shapes — the same drawing language as the turntable and headphones: rounded rects, circles, thick round strokes.
+- **Palette only:** cyan `#00FFCC`, blue `#00CCFF`, pink `#FF2D9B` (the "hot" detail: record label, speaker cone, EQ bars, REC light), purple `#C044FF` (secondary waves, Bluetooth), pale `#9AD9D3` at low opacity for inner lines, `#ECFFFB` for metal/needles. No gradients except the soundbar's synthwave sun; no text.
+- **Motion:** 1–2 subtle loops via CSS inside the SVG — spin, bob (≤5px), pulse (scale ≤1.1), ripple, dashed signal flow, EQ bars, LED blink. `transform`/`opacity` only, `transform-box: fill-box` for scaling parts, and keep `@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }`.
+- **Accessibility:** a `<title>` describing the object ("… nas cores néon da PulsarFM"). In product cards the `alt` comes from `categoryImages`; in the hub list the image is decorative (`alt=""`).
+- **Never** put a less-than sign inside the SVG's CSS comments (breaks parsing if the SVG is ever inlined).
+- **Check it alone** in the browser at full size and at 150px (hub thumbnail size) before wiring it up. If the object isn't recognisable at a glance, redraw — early drafts here produced a speaker that read as a robot face and RCA plugs that read as scissors.
+- Wire it up: `categoryImages` in `data/affiliates.json` (product cards) and `illustration` on the article (hub list). The generator fails if a guide's illustration file is missing or a published product's category has no illustration.
