@@ -78,6 +78,10 @@ figcaption { color: var(--text-dim); font-size: .78rem; margin-top: 12px; text-a
 .guide-title { color: var(--text-primary); font-size: clamp(1.15rem, 2.2vw, 1.45rem); line-height: 1.4; }
 .guide-summary { color: var(--text-dim); margin-top: 8px; max-width: 72ch; font-size: .93rem; }
 .guide-arrow { color: var(--line-primary); font-size: 1.4rem; }
+/* Hub list: the guide's illustration before the arrow; dimmed at rest, lit on hover (frame neon). */
+.guides-index .guide-link { grid-template-columns: 48px minmax(0, 1fr) 150px 24px; }
+.guide-thumb img { display: block; width: 150px; height: auto; aspect-ratio: 4 / 3; border: 1px solid var(--border); border-radius: 10px; opacity: .8; transition: opacity .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.guide-link:hover .guide-thumb img, .guide-link:focus-visible .guide-thumb img { opacity: 1; border-color: rgba(0, 255, 204, .45); box-shadow: 0 0 16px rgba(0, 255, 204, .2), 0 0 32px rgba(192, 68, 255, .12); }
 .editorial-policy { margin-block: 56px; padding: 28px 32px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-panel); }
 .editorial-policy h2 { color: var(--line-primary); font-size: 1.25rem; margin-top: 0; }
 .editorial-policy p { max-width: 78ch; color: var(--text-dim); }
@@ -161,7 +165,7 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
 .editorial-policy { border-color: rgba(192, 68, 255, .35); box-shadow: inset 0 0 30px rgba(192, 68, 255, .06); }
 .product-badge { box-shadow: 0 0 10px rgba(255, 45, 155, .25); }
 @media (prefers-reduced-motion: reduce) {
-  .guides-index .guide-link, .guides-index .guide-link::before { transition: none; }
+  .guides-index .guide-link, .guides-index .guide-link::before, .guide-thumb img { transition: none; }
   .guide-nav a { transition: none; }
   .guide-nav a:hover, .guide-nav a:focus-visible { transform: none; }
 }
@@ -205,7 +209,8 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
   .editorial-header { font-size: .83rem; padding-block: 18px; }
   .brand { font-size: 1rem; gap: 6px; }
   .brand img { width: 32px; height: 32px; }
-  .guide-link { grid-template-columns: 28px minmax(0, 1fr) 16px; gap: 10px; padding: 22px 0; }
+  .guide-link, .guides-index .guide-link { grid-template-columns: 28px minmax(0, 1fr) 16px; gap: 10px; padding: 22px 0; }
+  .guide-thumb { display: none; }
   .editorial-policy { padding: 22px; }
   .product-recommendation { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .product-image { max-width: 360px; }

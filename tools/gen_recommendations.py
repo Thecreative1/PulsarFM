@@ -247,13 +247,17 @@ def render_product(catalog, product, position, today=None, badge=""):
                     link=render_affiliate_link(catalog, product, position))
 
 
-def guide_link(article, index=None):
+def guide_link(article, index=None, thumb=False):
     number = f'<span class="guide-number" aria-hidden="true">{index:02}</span>' if index else ""
+    # Hub list only: the guide's neon illustration (decorative, the title already names it).
+    image = (f'<span class="guide-thumb"><img src="{esc(image_url(article["illustration"]))}" alt="" '
+             'width="480" height="360" loading="lazy" decoding="async"></span>'
+             if thumb and article.get("illustration") else "")
     return (f'<a class="guide-link" href="/recomendacoes/{esc(article["slug"])}/">{number}<span>'
             f'<span class="guide-category">{esc(article["category"])}</span>'
             f'<span class="guide-title">{esc(article["title"])}</span>'
             f'<span class="guide-summary">{esc(article["summary"])}</span></span>'
-            '<span class="guide-arrow" aria-hidden="true">↗</span></a>')
+            f'{image}<span class="guide-arrow" aria-hidden="true">↗</span></a>')
 
 
 def render_nav(articles, current=None):
@@ -466,7 +470,7 @@ def render_hub(editorial, catalog):
                'alt="Ilustração de um gira-discos, auscultadores e um disco, nas cores néon da PulsarFM">'
                '<figcaption>Do primeiro play ao último lado B.</figcaption></figure></section>'
                '<section id="guias" class="guides-index"><h2>Encontra a tua frequência</h2>' +
-               "\n".join(guide_link(article, i) for i, article in enumerate(editorial["articles"], 1)) +
+               "\n".join(guide_link(article, i, thumb=True) for i, article in enumerate(editorial["articles"], 1)) +
                '</section><aside class="editorial-policy"><h2>Conteúdo primeiro. Sempre.</h2>'
                '<p>Os nossos guias ajudam-te a comparar formatos, ligações e necessidades. '
                'Quando incluímos produtos, explicamos a escolha e identificamos os links de afiliado. '

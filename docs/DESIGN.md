@@ -20,7 +20,7 @@ Neon allowed on the page frame (all in `assets/recommendations.css`, "Brand edge
 - Header bottom line: purple → cyan → pink gradient with glow (same as the radio's dock separator).
 - Brand name and hub `h1`: soft cyan text glow.
 - Hub illustration: cyan border with outer glow. `img/gear-editorial.svg` animates itself with CSS inside the SVG (record spins, tonearm sways, headphones bob, cable dash flows, EQ bars, LED pulse). Transform/opacity only, no JS, disabled under `prefers-reduced-motion`. Never put `<` inside its CSS comments: it breaks parsing if the SVG is ever inlined in HTML.
-- Guide list: on hover/focus only, a cyan→pink bar on the left and a glowing pink number. At rest it stays flat.
+- Guide list: on hover/focus only, a cyan→pink bar on the left and a glowing pink number. At rest it stays flat. Each hub entry also shows its category illustration (150px, from the article's `illustration`) before the arrow: dimmed (opacity .8) at rest, full with a cyan glow on hover; hidden below 520px. The related-guides list at the end of each guide has no thumbnails.
 - Policy panel: faint purple border.
 - Product badges: pink pill with a faint glow.
 - Body background: the same faint radial glows as the radio home page (purple top-left, pink top-right, blue bottom).

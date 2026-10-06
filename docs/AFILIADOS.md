@@ -123,6 +123,7 @@ Campos opcionais de cada artigo em `data/recommendations.json` (texto simples, s
 
 | Campo | Para quê |
 | --- | --- |
+| `navIcon`, `illustration` | Emoji do botão na barra de categorias e ilustração néon (`/img/gear/*.svg`) mostrada ao lado do guia na lista do hub. |
 | `navLabel` | Nome curto do guia na barra de categorias por baixo do cabeçalho (todas as páginas ligam a todos os guias). Sem ele usa-se `category`. |
 | `seoTitle` | `<title>` e `og:title` pensados para pesquisa ("Melhores … 2026"), com pt-PT e pt-BR (caixa de som, toca-discos, barra de som, fones). O H1 continua a ser `title`. |
 | `metaDescription` | Meta description com 140–155 caracteres, a nomear 2–4 modelos. Sem ela usa-se `summary`. |
