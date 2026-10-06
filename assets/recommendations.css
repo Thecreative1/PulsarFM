@@ -132,6 +132,17 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
   box-shadow: 0 0 10px rgba(0, 255, 204, .35), 0 0 22px rgba(255, 45, 155, .15);
 }
 .brand { text-shadow: 0 0 10px rgba(0, 255, 204, .35); }
+/* Category bar: part of the frame, so the active category may glow. */
+.guide-nav { width: min(1100px, calc(100% - 48px)); margin-inline: auto; border-bottom: 1px solid var(--border); }
+.guide-nav ul { position: relative; /* offsetLeft of the links is measured from here */ display: flex; gap: 4px 28px; margin: 0; padding: 0; list-style: none; overflow-x: auto; scrollbar-width: none; }
+.guide-nav ul::-webkit-scrollbar { display: none; }
+.guide-nav a { display: inline-block; padding: 13px 0 11px; border-bottom: 2px solid transparent; color: var(--text-muted); font-size: .9rem; letter-spacing: .04em; white-space: nowrap; text-decoration: none; }
+.guide-nav a:hover, .guide-nav a:focus-visible { color: var(--line-primary); }
+.guide-nav a[aria-current="page"] { color: var(--line-primary); border-bottom-color: var(--line-primary); text-shadow: 0 0 10px rgba(0, 255, 204, .35); }
+/* Narrower screens: the bar scrolls sideways; the fade on the right hints there is more. */
+@media (max-width: 900px) {
+  .guide-nav ul { padding-right: 40px; mask-image: linear-gradient(90deg, #000 90%, transparent); }
+}
 .editorial-hero h1 { text-shadow: 0 0 14px rgba(0, 255, 204, .35), 0 0 34px rgba(192, 68, 255, .18); }
 .editorial-hero figure img {
   border-color: rgba(0, 255, 204, .45);
@@ -183,6 +194,10 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
 }
 @media (max-width: 520px) {
   .editorial-header, .editorial-main, .editorial-footer { width: calc(100% - 32px); }
+  /* Phones: the bar scrolls sideways; the fade on the right hints there is more. */
+  .guide-nav { width: 100%; }
+  .guide-nav ul { gap: 4px 20px; padding-inline: 16px 40px; }
+  .guide-nav a { font-size: .82rem; }
   .editorial-header { font-size: .83rem; padding-block: 18px; }
   .brand { font-size: 1rem; gap: 6px; }
   .brand img { width: 32px; height: 32px; }

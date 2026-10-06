@@ -113,6 +113,8 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
    the count), then run `python tools/gen_genre_pages.py`.
 5. If the total station count changed, update "48 estações/48 live stations"
    in: `<title>`, meta description, hero intro (static + both translations),
+   `pageTitle`/`metaDesc` in both translations (applyLanguage sets the tab
+   title and meta description; PT must match the static tags),
    og:description, JSON-LD description, `manifest.webmanifest`.
 6. Bump `<lastmod>` in `sitemap.xml`.
 

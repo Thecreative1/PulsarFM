@@ -1744,6 +1744,9 @@
 
     const translations = {
       pt: {
+        // Must match the static <title> and meta description (the SEO version)
+        pageTitle: "Pulsar FM — Rádio Online Grátis: 48 Estações ao Vivo | Winamp Retro",
+        metaDesc:  "Ouve rádio online grátis: 48 estações ao vivo em 8 géneros — rock, jazz, chill, eletrónica, psytrance, synthwave — com o visualizador retro do Winamp no browser.",
         h1:    "Sintoniza. Visualiza. Vibra.",
         intro: "48 estações ao vivo. 8 géneros. Com Milkdrop — o lendário visualizador do Winamp, agora no browser.",
         playBtn:    "🎧 Ouvir agora",
@@ -1821,6 +1824,8 @@
         footer2: `Pulsar FM é grátis. <em>Neon nights, Winamp vibes, internet estranha.</em> · Se gostas, <a href="https://ko-fi.com/pfm80" target="_blank" rel="noopener" style="opacity:0.8;">paga-me uma cerveja 🍺</a>`
       },
       en: {
+        pageTitle: "Pulsar FM — Free Online Radio: 48 Live Stations | Retro Winamp",
+        metaDesc:  "Listen to free online radio: 48 live stations in 8 genres — rock, jazz, chill, electronic, psytrance, synthwave — with the retro Winamp visualizer in your browser.",
         h1:    "Tune in. Visualize. Vibe.",
         intro: "48 live stations. 8 genres. With Milkdrop — the legendary Winamp visualizer, now in your browser.",
         playBtn:    "🎧 Listen now",
@@ -2042,6 +2047,8 @@ function updatePlayerButtons() {
       localStorage.setItem("pulsarfm-lang", lang);
       document.documentElement.lang = lang;
       const t = translations[lang];
+      document.title = t.pageTitle;
+      document.querySelector('meta[name="description"]').setAttribute("content", t.metaDesc);
       document.getElementById("hero-h1").textContent    = t.h1;
       document.getElementById("hero-intro").textContent = t.intro;
       document.getElementById("lang-switcher").textContent = t.langBtn;

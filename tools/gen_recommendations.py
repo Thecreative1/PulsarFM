@@ -256,9 +256,19 @@ def guide_link(article, index=None):
             '<span class="guide-arrow" aria-hidden="true">↗</span></a>')
 
 
-def page(title, description, path, content, article=False):
+def render_nav(articles, current=None):
+    """Category bar under the header: every page links to every guide; the current one is marked."""
+    items = "".join(
+        f'<li><a href="/recomendacoes/{esc(a["slug"])}/"'
+        + (' aria-current="page"' if a["slug"] == current else "")
+        + f'>{esc(a.get("navLabel") or a["category"])}</a></li>'
+        for a in articles)
+    return f'<nav class="guide-nav" aria-label="Categorias de equipamento"><ul>{items}</ul></nav>'
+
+
+def page(title, description, path, content, article=False, nav=""):
     return template("page.html", title=esc(title), description=esc(description), path=esc(path),
-                    og_type="article" if article else "website", content=content)
+                    og_type="article" if article else "website", content=content, nav=nav)
 
 
 def json_ld(data):
@@ -431,7 +441,7 @@ def render_article(article, articles, catalog, products):
                               article_json_ld(article, selected, description),
                        closing=esc(article["closing"]), related="\n".join(guide_link(item) for item in others))
     return page(article.get("seoTitle") or article["title"], description,
-                f'/recomendacoes/{article["slug"]}/', content, True)
+                f'/recomendacoes/{article["slug"]}/', content, True, render_nav(articles, article["slug"]))
 
 
 def render_hub(editorial, catalog):
@@ -466,7 +476,8 @@ def render_hub(editorial, catalog):
                     "url": f'{SITE}/recomendacoes/{article["slug"]}/'}
                    for i, article in enumerate(editorial["articles"], 1)]}))
     return page(editorial.get("seoTitle") or editorial["title"],
-                editorial.get("metaDescription") or editorial["description"], "/recomendacoes/", content)
+                editorial.get("metaDescription") or editorial["description"], "/recomendacoes/", content,
+                nav=render_nav(editorial["articles"]))
 
 
 def generate(catalog, editorial):

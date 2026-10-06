@@ -347,6 +347,14 @@ class SeoAndConversionTests(unittest.TestCase):
         with self.assertRaises(KeyError):
             gen.generate(self.catalog, self.editorial)
 
+    def test_category_bar_links_every_guide_and_marks_the_current_one(self):
+        slugs = [article['slug'] for article in self.editorial['articles']]
+        for path, html in self.pages.items():
+            nav = re.search(r'<nav class="guide-nav"[^>]*>(.*?)</nav>', html, re.S).group(1)
+            self.assertEqual(re.findall(r'href="/recomendacoes/([^/"]+)/"', nav), slugs, path)
+            current = re.findall(r'href="/recomendacoes/([^/"]+)/" aria-current="page"', nav)
+            self.assertEqual(current, [] if path == 'recomendacoes/index.html' else [path.split('/')[1]])
+
     def test_bad_quick_picks_and_row_products_fail(self):
         article = self.editorial['articles'][0]
         article['quickPicks'].append({'label': 'X', 'productId': 'jbl-go-5', 'note': 'fora do guia'})

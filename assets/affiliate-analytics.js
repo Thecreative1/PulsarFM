@@ -108,6 +108,13 @@
     if (img.complete && img.naturalWidth === 0) fallback();
   });
 
+  // On narrow screens the category bar scrolls sideways: bring the current guide into view.
+  const currentGuide = document.querySelector('.guide-nav [aria-current="page"]');
+  const guideBar = currentGuide && currentGuide.closest ? currentGuide.closest('ul') : null;
+  if (guideBar && guideBar.scrollWidth > guideBar.clientWidth) {
+    guideBar.scrollLeft = currentGuide.offsetLeft - (guideBar.clientWidth - currentGuide.offsetWidth) / 2;
+  }
+
   function hideStalePrices() {
     document.querySelectorAll('[data-price-checked]').forEach(element => {
       const checked = Date.parse(element.dataset.priceChecked + 'T00:00:00Z');
