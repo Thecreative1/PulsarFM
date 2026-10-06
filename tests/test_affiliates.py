@@ -347,6 +347,17 @@ class SeoAndConversionTests(unittest.TestCase):
         with self.assertRaises(KeyError):
             gen.generate(self.catalog, self.editorial)
 
+    def test_short_note_before_the_first_store_link_and_full_disclosure_at_the_end(self):
+        for article in self.editorial['articles']:
+            html = self.pages[f'recomendacoes/{article["slug"]}/index.html']
+            note = html.index('<a href="#divulgacao">Contém links de afiliado</a>')
+            first_store_link = html.index('data-affiliate-link')
+            box = html.index('id="divulgacao"')
+            self.assertLess(note, first_store_link, article['slug'])
+            self.assertGreater(box, html.index('class="guide-closing"'), article['slug'])
+            self.assertEqual(html.count('class="affiliate-disclosure"'), 1, article['slug'])
+            self.assertIn(gen.AMAZON_STATEMENT, html[box:])
+
     def test_category_bar_links_every_guide_and_marks_the_current_one(self):
         slugs = [article['slug'] for article in self.editorial['articles']]
         for path, html in self.pages.items():

@@ -6,6 +6,7 @@
   --line-secondary: #00ccff;
   --neon-pink: #ff2d9b;
   --neon-purple: #c044ff;
+  --neon-green: #39ff14;
   --text-primary: #ecfffb;
   --text-muted: #9ad9d3;
   --text-dim: #b2c9c8;
@@ -94,7 +95,7 @@ figcaption { color: var(--text-dim); font-size: .78rem; margin-top: 12px; text-a
 .guide-checklist { margin: 24px 0 0; padding-left: 24px; color: var(--text-muted); }
 .guide-checklist li { padding-left: 4px; margin-bottom: 10px; }
 .guide-checklist li::marker { color: var(--line-primary); }
-.affiliate-disclosure { padding: 16px 20px; border: 1px solid var(--border); border-radius: 12px; color: var(--text-dim); font-size: .85rem; margin: 0 0 28px; }
+.affiliate-disclosure { padding: 16px 20px; border: 1px solid var(--border); border-radius: 12px; color: var(--text-dim); font-size: .85rem; margin: 40px 0 0; scroll-margin-top: 24px; }
 .affiliate-disclosure p { margin: 0 0 6px; max-width: 84ch; }
 .product-selection { margin-block: 42px; }
 .product-selection > h2 { color: var(--line-primary); }
@@ -133,12 +134,13 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
 }
 .brand { text-shadow: 0 0 10px rgba(0, 255, 204, .35); }
 /* Category bar: part of the frame, so the active category may glow. */
-.guide-nav { width: min(1100px, calc(100% - 48px)); margin-inline: auto; border-bottom: 1px solid var(--border); }
-.guide-nav ul { position: relative; /* offsetLeft of the links is measured from here */ display: flex; gap: 4px 28px; margin: 0; padding: 0; list-style: none; overflow-x: auto; scrollbar-width: none; }
+.guide-nav { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+/* Same neon pills as the genre filter on the radio home page: cyan, pink on hover, green when active. */
+.guide-nav ul { position: relative; /* offsetLeft of the links is measured from here */ display: flex; gap: 10px; margin: 0; padding: 16px 4px 14px; list-style: none; overflow-x: auto; scrollbar-width: none; }
 .guide-nav ul::-webkit-scrollbar { display: none; }
-.guide-nav a { display: inline-block; padding: 13px 0 11px; border-bottom: 2px solid transparent; color: var(--text-muted); font-size: .9rem; letter-spacing: .04em; white-space: nowrap; text-decoration: none; }
-.guide-nav a:hover, .guide-nav a:focus-visible { color: var(--line-primary); }
-.guide-nav a[aria-current="page"] { color: var(--line-primary); border-bottom-color: var(--line-primary); text-shadow: 0 0 10px rgba(0, 255, 204, .35); }
+.guide-nav a { display: inline-block; padding: 9px 16px; border-radius: 999px; background: var(--line-secondary); color: #001114; font-size: .85rem; font-weight: bold; white-space: nowrap; text-decoration: none; transition: transform .14s ease, background-color .2s ease, box-shadow .2s ease; }
+.guide-nav a:hover, .guide-nav a:focus-visible { background: var(--neon-pink); color: #1a0010; transform: translateY(-2px); box-shadow: 0 0 14px rgba(255, 45, 155, .5), 0 0 28px rgba(255, 45, 155, .25); }
+.guide-nav a[aria-current="page"] { background: var(--neon-green); color: #001a00; box-shadow: 0 0 16px rgba(57, 255, 20, .5), 0 0 32px rgba(57, 255, 20, .25); }
 /* Narrower screens: the bar scrolls sideways; the fade on the right hints there is more. */
 @media (max-width: 900px) {
   .guide-nav ul { padding-right: 40px; mask-image: linear-gradient(90deg, #000 90%, transparent); }
@@ -160,6 +162,8 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
 .product-badge { box-shadow: 0 0 10px rgba(255, 45, 155, .25); }
 @media (prefers-reduced-motion: reduce) {
   .guides-index .guide-link, .guides-index .guide-link::before { transition: none; }
+  .guide-nav a { transition: none; }
+  .guide-nav a:hover, .guide-nav a:focus-visible { transform: none; }
 }
 .product-badge { display: inline-block; margin: 0 0 10px; padding: 3px 12px; border: 1px solid var(--neon-pink); border-radius: 999px; color: var(--neon-pink); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
 .guide-comparison, .guide-faq { margin-block: 42px; }
@@ -196,8 +200,8 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
   .editorial-header, .editorial-main, .editorial-footer { width: calc(100% - 32px); }
   /* Phones: the bar scrolls sideways; the fade on the right hints there is more. */
   .guide-nav { width: 100%; }
-  .guide-nav ul { gap: 4px 20px; padding-inline: 16px 40px; }
-  .guide-nav a { font-size: .82rem; }
+  .guide-nav ul { gap: 8px; padding-inline: 16px 40px; }
+  .guide-nav a { padding: 9px 14px; font-size: .82rem; }
   .editorial-header { font-size: .83rem; padding-block: 18px; }
   .brand { font-size: 1rem; gap: 6px; }
   .brand img { width: 32px; height: 32px; }

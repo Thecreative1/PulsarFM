@@ -261,7 +261,8 @@ def render_nav(articles, current=None):
     items = "".join(
         f'<li><a href="/recomendacoes/{esc(a["slug"])}/"'
         + (' aria-current="page"' if a["slug"] == current else "")
-        + f'>{esc(a.get("navLabel") or a["category"])}</a></li>'
+        + '>' + (f'<span aria-hidden="true">{esc(a["navIcon"])}</span> ' if a.get("navIcon") else "")
+        + f'{esc(a.get("navLabel") or a["category"])}</a></li>'
         for a in articles)
     return f'<nav class="guide-nav" aria-label="Categorias de equipamento"><ul>{items}</ul></nav>'
 
@@ -434,6 +435,9 @@ def render_article(article, articles, catalog, products):
     content = template("article.html", category=esc(article["category"]), title=esc(article["title"]),
                        intro=esc(article["intro"]), updated_at=updated.isoformat(),
                        updated_label=updated.strftime("%d/%m/%Y"),
+                       # Short note up top (before the first store link), full disclosure at the end.
+                       disclosure_note=(' · <a href="#divulgacao">Contém links de afiliado</a>'
+                                        if has_affiliates else ""),
                        disclosure=disclosure(catalog, linked) if has_affiliates else "",
                        quick_picks=quick_picks,
                        sections="\n".join(sections), products=product_html,

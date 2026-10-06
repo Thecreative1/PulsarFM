@@ -87,7 +87,7 @@ Em `data/affiliates.json`, dentro de `products`:
 
 Um produto em rascunho não aparece no HTML. Referências a IDs inexistentes fazem a geração falhar, em vez de desaparecerem em silêncio.
 
-Os links de afiliado têm `target="_blank"`, `rel="sponsored nofollow noopener noreferrer"` e indicação acessível de link de afiliado em nova aba. A divulgação aparece automaticamente no topo dos artigos com links de afiliado, com a frase exigida pelo programa: «Como Afiliado da Amazon, a PulsarFM recebe por compras elegíveis.» Não há componente de loja, carrinho, urgência artificial nem preços riscados. Evitar CTAs como «Comprar já», «Melhor preço» ou «Mais barato».
+Os links de afiliado têm `target="_blank"`, `rel="sponsored nofollow noopener noreferrer"` e indicação acessível de link de afiliado em nova aba. A divulgação é automática nos artigos com links de afiliado: uma nota curta («Contém links de afiliado») na linha da data, no topo e antes do primeiro link, que leva à caixa completa no fim do artigo (`#divulgacao`), com a frase exigida pelo programa: «Como Afiliado da Amazon, a PulsarFM recebe por compras elegíveis.» A nota do topo não deve ser removida: a divulgação tem de ser visível antes dos links. Não há componente de loja, carrinho, urgência artificial nem preços riscados. Evitar CTAs como «Comprar já», «Melhor preço» ou «Mais barato».
 
 ## Links no texto de um artigo
 

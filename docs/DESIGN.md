@@ -8,7 +8,7 @@ The editorial area extends the existing radio site. Listeners may open a guide b
 - Typography: existing Share Tech Mono with Courier New / monospace fallback.
 - Shape: rounded panels, thin borders, subtle glow. Avoid adding decorative animation to reading surfaces.
 - Editorial body measure: about 68 characters. Generous heading spacing, smaller metadata.
-- Recommendations: image and copy in a horizontal row, stacked on phones, with a single affiliate CTA and nearby disclosure.
+- Recommendations: image and copy in a horizontal row, stacked on phones, with a single affiliate CTA. Disclosure (owner's choice, 06/10/2026): a short "Contém links de afiliado" note in the date line at the top — always before the first store link — linking to the full disclosure box at the end of the article (`#divulgacao`). Never drop the top note: Amazon and EU advertising rules want it visible before the links.
 - Home integration: a neon GEAR corner button (left column, under FLOAT) plus the bilingual footer link, both opening the editorial section in another tab so playback continues. Each genre page also has a GEAR box linking to its matching guide.
 
 ## Neon on the frame, calm on the text
@@ -29,6 +29,6 @@ Keep calm: article body text, checklists, product cards, the comparison table an
 
 **Exception agreed with the owner (06/10/2026): product illustrations pulse.** Amazon photos can't be used (Associates terms), so each card shows its category illustration from `img/gear/` (auscultadores, colunas, soundbars, gira-discos, home-studio, acessorios — mapped in `categoryImages` in `data/affiliates.json`). They follow the hub illustration's rules: 480×360, same palette and background, CSS animation inside the SVG with transform/opacity only, subtle (bob, spin, ripple, EQ bars), and `prefers-reduced-motion` turns them off. The card frame, text and CTA stay static.
 
-**Category bar** (`.guide-nav`, under the header on every `/recomendacoes/` page, added 06/10/2026 at the owner's request): the six guides by their short `navLabel`, muted text; the current guide is cyan with an underline and a soft glow (it is frame, not reading surface). Below 900px it scrolls sideways with a fade on the right, and `affiliate-analytics.js` centres the current guide on load. No hamburger menu.
+**Category bar** (`.guide-nav`, under the header on every `/recomendacoes/` page, added 06/10/2026 at the owner's request): the six guides as neon pills (emoji `navIcon` + short `navLabel`), styled exactly like the genre filter buttons on the radio home page: solid cyan, pink glow on hover, neon green with glow for the current guide (it is frame, not reading surface). Below 900px it scrolls sideways with a fade on the right, and `affiliate-analytics.js` centres the current guide on load. No hamburger menu.
 
 **Quick picks** (`.quick-picks`, after the disclosure): a calm panel (`--bg-panel`, thin border, no glow) with a pink uppercase label, the product name linking to its card and an inline Amazon link. Comparison tables put the store link under the model name in the first column, so it stays visible when the table scrolls sideways.
