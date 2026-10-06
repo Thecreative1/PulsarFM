@@ -115,9 +115,13 @@ figcaption { color: var(--text-dim); font-size: .78rem; margin-top: 12px; text-a
 .editorial-footer { padding: 28px 0 40px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: .85rem; }
 .editorial-footer > div { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
 .editorial-footer button { padding: 0; border: 0; background: transparent; color: var(--text-muted); text-decoration: underline; text-underline-offset: .25em; }
-.editorial-consent { position: fixed; bottom: 16px; right: 16px; z-index: 5; width: min(440px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow: auto; padding: 22px; border: 1px solid var(--line-primary); border-radius: 16px; background: var(--bg-panel); box-shadow: 0 4px 24px #020d10; font-size: .85rem; }
-.editorial-consent > div { display: flex; gap: 12px; }
-.editorial-consent button { min-height: 44px; padding: 8px 20px; border: 1px solid var(--line-primary); border-radius: 6px; background: transparent; color: var(--text-primary); }
+/* Slim bar, centred at the bottom: covers as little of the guide (and its CTAs) as possible. */
+.editorial-consent { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; width: min(760px, calc(100% - 24px)); max-height: calc(100dvh - 24px); overflow: auto; padding: 10px 16px; border: 1px solid var(--line-primary); border-radius: 12px; background: var(--bg-panel); box-shadow: 0 4px 24px #020d10; font-size: .82rem; line-height: 1.5; }
+.editorial-consent p { flex: 1 1 300px; margin: 0; }
+.editorial-consent > div { display: flex; gap: 10px; flex: 0 0 auto; }
+.editorial-consent button { min-height: 44px; padding: 6px 18px; border: 1px solid var(--line-primary); border-radius: 6px; background: transparent; color: var(--text-primary); }
+/* While the bar is open, leave room so the footer and last CTAs can scroll above it. */
+body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
 .editorial-consent button:hover { background: var(--line-primary); color: var(--bg-base); }
 /* ── Brand edges: neon lives on the page frame (header line, hero title,
    illustration, list hover, badges). Reading surfaces stay calm and static. ── */
@@ -189,4 +193,7 @@ figcaption { color: var(--text-dim); font-size: .78rem; margin-top: 12px; text-a
   .affiliate-cta { width: 100%; }
   .quick-picks { padding-inline: 16px; }
   .quick-picks li { grid-template-columns: minmax(0, 1fr); }
+  .editorial-consent > div { flex: 1 1 100%; }
+  .editorial-consent button { flex: 1; }
+  body:has(.editorial-consent:not([hidden])) { padding-bottom: 150px; }
 }
