@@ -32,6 +32,9 @@
   <title>Rádios Pop Online Grátis — Hits ao Vivo | Pulsar FM</title>
   <meta name="description" content="Ouve os hits do momento ao vivo: RFM, Rádio Comercial, Capital FM de Londres e NRJ. Em direto, grátis e sem instalar nada." />
   <link rel="canonical" href="https://pulsarfm.eu/radios-pop/" />
+  <link rel="alternate" hreflang="pt" href="https://pulsarfm.eu/radios-pop/" />
+  <link rel="alternate" hreflang="en" href="https://pulsarfm.eu/en/pop-radio/" />
+  <link rel="alternate" hreflang="x-default" href="https://pulsarfm.eu/radios-pop/" />
   <meta name="theme-color" content="#031317" />
 
   <meta property="og:type" content="website" />
@@ -134,6 +137,8 @@
     }
 
     .breadcrumb a { color: var(--line-secondary); text-decoration: none; }
+    .breadcrumb { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+    .breadcrumb .lang-alt { margin-left: auto; color: var(--text-muted); }
     .breadcrumb a:hover { color: var(--line-primary); }
 
     h1 {
@@ -320,7 +325,7 @@
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › 🎶 Pop</nav>
+    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › 🎶 Pop<a class="lang-alt" href="/en/pop-radio/" hreflang="en" lang="en">English</a></nav>
 
     <h1>🎶 Rádios Pop Online</h1>
     <p class="intro">Os hits do momento, de Portugal a Londres, Paris e à Baviera. Seis estações pop em direto, para quando o dia pede refrões.</p>

@@ -32,6 +32,9 @@
   <title>Rádios para Estudar — Lo-Fi e Clássica ao Vivo | Pulsar FM</title>
   <meta name="description" content="Música para estudar e trabalhar: SomaFM Groove Salad, clássica sem interrupções e chillhop lo-fi. Grátis, ao vivo, no browser." />
   <link rel="canonical" href="https://pulsarfm.eu/radios-study/" />
+  <link rel="alternate" hreflang="pt" href="https://pulsarfm.eu/radios-study/" />
+  <link rel="alternate" hreflang="en" href="https://pulsarfm.eu/en/study-radio/" />
+  <link rel="alternate" hreflang="x-default" href="https://pulsarfm.eu/radios-study/" />
   <meta name="theme-color" content="#031317" />
 
   <meta property="og:type" content="website" />
@@ -134,6 +137,8 @@
     }
 
     .breadcrumb a { color: var(--line-secondary); text-decoration: none; }
+    .breadcrumb { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+    .breadcrumb .lang-alt { margin-left: auto; color: var(--text-muted); }
     .breadcrumb a:hover { color: var(--line-primary); }
 
     h1 {
@@ -320,7 +325,7 @@
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › 💻 Study / Lo-Fi</nav>
+    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › 💻 Study / Lo-Fi<a class="lang-alt" href="/en/study-radio/" hreflang="en" lang="en">English</a></nav>
 
     <h1>💻 Rádios para Estudar</h1>
     <p class="intro">Lo-fi, downtempo e clássica: seis estações escolhidas para sessões longas de estudo ou trabalho a sério. Pouca letra, pouca conversa e nenhuma desculpa para não começar.</p>

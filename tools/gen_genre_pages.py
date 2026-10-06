@@ -142,6 +142,159 @@ GENRES = {
    ("Posso ouvir retrowave no telemóvel ou no celular?","Sim. Funciona em qualquer navegador, no computador ou no celular, em Portugal, no Brasil ou em qualquer parte do mundo.")]},
 }
 
+# English versions (/en/<slug>/), keyed by the PT page. Station names stay the same as in the
+# player; descriptions, FAQs and SEO copy are written for English searches (docs/VOZ.md applies).
+GENRES_EN = {
+ "radios-rock": {
+  "slug":"rock-radio","nome":"Rock / Alternative",
+  "title":"Rock Radio Online — Listen Live for Free | Pulsar FM",
+  "desc":"Listen to rock and alternative radio live and free, nothing to install. Radio Paradise, Rock Antenne, KEXP and more, with a retro Winamp-style visualizer.",
+  "h1":"Rock Radio Online",
+  "intro":"From classic rock to today's alternative: six hand-picked stations, all live. Hit play, turn it up and let Milkdrop handle the visuals.",
+  "stations":[
+   ("Radio Paradise - Rock Mix","Eclectic rock picked by humans, not by an algorithm. Live from California."),
+   ("Rock Antenne","Germany's big rock station. Classic to modern, no breaks."),
+   ("KEXP Seattle","Seattle's legendary independent station. If a new band is worth hearing, there's a good chance it played here first."),
+   ("Virgin Radio Italy","Classic and modern rock with an Italian accent."),
+   ("M80 Rádio","The classics that defined generations, live from Portugal. Like the car tape deck, minus the chewed-up tape."),
+   ("Radio BOB!","Non-stop German rock, from classic rock to metal. Not the place to request ballads.")],
+  "faq":[
+   ("How can I listen to rock radio online for free?","Open Pulsar FM in your browser, pick a rock station and press play. It's live, free and there's nothing to install. No account either."),
+   ("What is the best rock radio station online?","Depends on what you're after. Radio Paradise is human-curated and eclectic, Rock Antenne is non-stop German rock and KEXP Seattle is the reference for indie rock. Not sure where to start? Start with KEXP."),
+   ("Can I listen to rock radio on my phone?","Yes. Pulsar FM works in any modern browser: desktop, tablet or phone, wherever you are.")]},
+ "radios-jazz": {
+  "slug":"jazz-radio","nome":"Jazz",
+  "title":"Jazz Radio Online — Live from Paris and Beyond | Pulsar FM",
+  "desc":"Listen to live jazz radio for free: TSF Jazz from Paris, FIP Jazz and Radio Swiss Jazz. Streaming in your browser, with a retro Winamp-style visualizer.",
+  "h1":"Jazz Radio Online",
+  "intro":"From Paris to Switzerland, jazz around the clock, live. Good for dinner, for work, or for pretending you understand the double bass.",
+  "stations":[
+   ("TSF Jazz","The reference jazz station in Paris, on air 24 hours a day."),
+   ("Smooth Jazz","Smooth jazz at 320 kbps, for unwinding. On a 56k modem, an MP3 at this quality took almost an hour to download."),
+   ("Radio Swiss Jazz","Hand-picked, ad-free jazz from Swiss public radio."),
+   ("Jazz Radio France","France's big jazz network, from swing to soul."),
+   ("SomaFM Sonic Universe","Avant-garde jazz and experimental sounds, for when the standards aren't enough."),
+   ("FIP Jazz","Eclectic, ad-free jazz from French public radio.")],
+  "faq":[
+   ("What is the best jazz radio station in Paris?","TSF Jazz is the reference jazz station in Paris, on air 24 hours a day. Pulsar FM also has Jazz Radio France, from swing to soul, and the more eclectic FIP Jazz."),
+   ("How can I listen to jazz radio online for free?","Open Pulsar FM in your browser, pick a jazz station and press play. Live, free and no sign-up."),
+   ("Can I listen to jazz radio on my phone?","Yes. Pulsar FM runs in any browser, on desktop or phone, wherever you are.")]},
+ "radios-chill": {
+  "slug":"chill-radio","nome":"Chill / Ambient",
+  "title":"Chill and Ambient Radio Online — Listen Live | Pulsar FM",
+  "desc":"Live chill and ambient radio: SomaFM Drone Zone, Nightwave Plaza and Ibiza Global Radio. Free, streaming in your browser, with psychedelic visuals.",
+  "h1":"Chill Radio Online",
+  "intro":"Ambient, space drones and vaporwave: six stations to switch off from the world. Close your eyes, or let the visualizer do the work.",
+  "stations":[
+   ("SomaFM Drone Zone","Ambient and space drones. The audio equivalent of putting your phone in airplane mode."),
+   ("Chillout-style Jazz","Chill with NASA space chatter in the mix. Houston, all is calm."),
+   ("Nightwave Plaza","Vaporwave and retro aesthetics: the 90s internet as sound, minus the pop-ups."),
+   ("SomaFM Lush","Soft vocals over dreamy electronica."),
+   ("Ibiza Global Radio","Balearic chill and house, live from Ibiza, any time of day."),
+   ("Ambient Sleeping Pill","Pure ambient for sleeping or drifting, uninterrupted.")],
+  "faq":[
+   ("What kind of music do chill radio stations play?","Ambient, space drones, vaporwave, downtempo and Balearic. Music for relaxing, sleeping or working without anything tugging at your attention."),
+   ("How can I listen to chill radio online for free?","Open Pulsar FM, pick a chill station and press play. Live, free and nothing to install."),
+   ("Can I listen to chill music on my phone?","Yes. Pulsar FM works in any browser, on your phone, wherever you are.")]},
+ "radios-pop": {
+  "slug":"pop-radio","nome":"Pop",
+  "title":"Pop Radio Online — Today's Hits Live for Free | Pulsar FM",
+  "desc":"Listen to today's hits live: Capital FM London, NRJ France and Portugal's RFM and Rádio Comercial. Free, streaming in your browser, nothing to install.",
+  "h1":"Pop Radio Online",
+  "intro":"Today's hits, from Portugal to London, Paris and Bavaria. Six live pop stations for days that call for choruses.",
+  "stations":[
+   ("RFM Pop Rock","Portugal's pop rock hits, from RFM."),
+   ("Rádio Comercial","Portugal's most listened-to station: hits and good mood."),
+   ("Capital FM UK","Today's hits, live from London."),
+   ("NRJ France","Hit music only, as the slogan says. The hits, live from France."),
+   ("I Love Radio DE","Charts and hits for the streaming generation, from Germany."),
+   ("Antenne Bayern","The big hits from Bavaria's largest private station.")],
+  "faq":[
+   ("Which pop radio stations can I listen to?","Capital FM from London, NRJ from France, I Love Radio and Antenne Bayern from Germany, plus RFM and Rádio Comercial, Portugal's most listened-to stations. All live."),
+   ("How can I listen to pop radio online for free?","Open Pulsar FM in your browser, pick a pop station and press play. Live, free and nothing to install."),
+   ("Can I listen to the hits on my phone?","Yes, in any modern browser, on desktop or phone, wherever you are.")]},
+ "radios-study": {
+  "slug":"study-radio","nome":"Study / Lo-Fi",
+  "title":"Lo-Fi and Study Music Radio — Listen Live for Free | Pulsar FM",
+  "desc":"Music to study and work to: SomaFM Groove Salad, non-stop classical and lo-fi chillhop. Free, live, right in your browser.",
+  "h1":"Study Music Radio",
+  "intro":"Lo-fi, downtempo and classical: six stations picked for long study or deep-work sessions. Few lyrics, little chatter and no excuse not to start.",
+  "stations":[
+   ("SomaFM Groove Salad","Downtempo and chill to keep you focused for hours. An internet radio institution."),
+   ("Radio Swiss Classic","Classical music with no interruptions or ads."),
+   ("I Love Chillhop","Lo-fi and chillhop, the study classic, as a radio station."),
+   ("SomaFM Deep Space One","Deep space ambient, for when your focus has to go far."),
+   ("Venice Classic Radio","Timeless classical, from Italy with love."),
+   ("Lofi Radio","Lo-fi beats 24/7, for studying or for pretending to.")],
+  "faq":[
+   ("What is the best music to study to?","Lo-fi, chillhop, downtempo and classical: music without lyrics that doesn't compete with what you're reading. The six stations on this page were picked for exactly that."),
+   ("How can I listen to lo-fi radio online for free?","Open Pulsar FM in your browser, pick I Love Chillhop or SomaFM Groove Salad and press play. Free and distraction-free."),
+   ("Can I study with Pulsar FM on my phone?","Yes. It works in any browser, on desktop, tablet or phone, wherever you are.")]},
+ "radios-electronica": {
+  "slug":"electronic-radio","nome":"Electronic / Dance",
+  "title":"Electronic Music Radio Online — Techno and House Live | Pulsar FM",
+  "desc":"Live electronic and dance radio: TechnoBase.FM, Radio FG Paris and HouseTime.FM. Techno, house and progressive, free in your browser.",
+  "h1":"Electronic Music Radio Online",
+  "intro":"Techno, house and progressive, live around the clock. Turn it up, fire up Milkdrop and your room becomes a dancefloor. The neighbours will adapt.",
+  "stations":[
+   ("TechnoBase.FM DE","Techno and hands up live from Germany, with a huge community."),
+   ("HouseTime.FM","House 24/7, from the TechnoBase family."),
+   ("Frisky Radio USA","Deep house and progressive with resident DJs, live from the US."),
+   ("Sunshine Live","Germany's biggest electronic station: sets, festivals and little talk."),
+   ("Hirschmilch Electronic","German electronica, uninterrupted."),
+   ("Radio FG Paris","House and electro live from Paris: the club station.")],
+  "faq":[
+   ("How can I listen to electronic music radio for free?","Open Pulsar FM in your browser, pick a station and press play. Techno, house and progressive, live and 100% free."),
+   ("Which electronic music styles can I listen to?","Techno and hands up on TechnoBase.FM, 24/7 house on HouseTime.FM, deep and progressive on Frisky Radio and festival sets on Sunshine Live."),
+   ("Can I listen to electronic radio on my phone?","Yes. Pulsar FM works in any browser, on desktop or phone, wherever you are.")]},
+ "radios-psytrance": {
+  "slug":"psytrance-radio","nome":"Goa / Psytrance",
+  "title":"Psytrance and Goa Trance Radio Online — Live, Free | Pulsar FM",
+  "desc":"Live psytrance and goa trance radio: Goa-Base, Hirschmilch Psy and BOM Psytrance. Free in your browser, with psychedelic Milkdrop visuals.",
+  "h1":"Psytrance Radio Online",
+  "intro":"Old-school goa and modern psytrance, live. Pairs well with Pulsar FM's TRIP mode, the full-screen visualizer. Anyone who has watched the sun rise on a dancefloor gets the idea.",
+  "stations":[
+   ("Goa-Base Trance","Old-school goa trance, live from Germany. Eastern melodies and bubbling 303s."),
+   ("Hirschmilch Psy","High-quality psytrance, uninterrupted."),
+   ("BOM Psytrance","Non-stop psytrance from the 1.FM network."),
+   ("Psyndora Psytrance","Psytrance and progressive from the Greek scene."),
+   ("Hirschmilch Progressive","Hypnotic progressive psy, for hours on end."),
+   ("Hirschmilch Chillout","Psychill and goa ambient, for landing after the trip.")],
+  "faq":[
+   ("What is the difference between goa trance and psytrance?","Goa trance is the original 90s sound: melodic, eastern and hypnotic. Psytrance is its modern evolution, faster and heavier. Goa-Base plays the classic; Hirschmilch Psy plays today's sound."),
+   ("How can I listen to psytrance radio online for free?","Open Pulsar FM, pick a psy station and press play. Live, free and nothing to install. Switch on TRIP mode for the full-screen visualizer."),
+   ("Can I listen to goa trance on my phone?","Yes, in any modern browser, on desktop or phone, wherever you are.")]},
+ "radios-synthwave": {
+  "slug":"synthwave-radio","nome":"Synthwave / Retrowave",
+  "title":"Synthwave and Retrowave Radio Online — Listen Live | Pulsar FM",
+  "desc":"Live synthwave and retrowave radio: Nightride FM, ChillSynth FM and SomaFM Underground 80s. Neon, nostalgia and a Winamp visualizer in your browser.",
+  "h1":"Synthwave Radio Online",
+  "intro":"Neon, synths and nostalgia for an 80s that never quite looked like this. It's the genre that defines Pulsar FM's vibe, in six stations.",
+  "stations":[
+   ("Nightride FM","Synthwave and retrowave for night driving (car optional)."),
+   ("ChillSynth FM","Soft chillsynth: neon on low."),
+   ("SomaFM Digitalis","Indie electronica with a digital soul."),
+   ("Nightride Datawave","Datawave: synths for surfing the digital night."),
+   ("SomaFM Underground 80s","Underground 80s synthpop and new wave. The B-sides the radio of the time left out."),
+   ("SomaFM Synphaera","Space synth and atmospheric electronica.")],
+  "faq":[
+   ("What is synthwave?","An electronic genre inspired by 80s film scores and synthesizers: neon, nostalgia and nights that never end. It's the soul of Pulsar FM."),
+   ("How can I listen to synthwave radio online for free?","Open Pulsar FM in your browser, pick Nightride FM or ChillSynth FM and press play. Live and free."),
+   ("Can I listen to retrowave on my phone?","Yes. It works in any browser, on desktop or phone, wherever you are.")]},
+}
+
+# Interface text per language. PT pages keep their exact original wording.
+LABELS = {
+ "pt": {"html_lang": "pt", "og_locale": '<meta property="og:locale" content="pt_PT" />\n  <meta property="og:locale:alternate" content="pt_BR" />',
+        "play": "\U0001F3A7 Ouvir no player", "all": "▶ OUVIR TUDO NO PULSAR FM", "faq": "Perguntas frequentes",
+        "others": "Outros géneros", "alt_label": "English", "lang_q": "",
+        "footer": "Pulsar FM — rádio online grátis com visualizador retro estilo Winamp · <a href=\"/privacidade.html\">Privacidade &amp; Cookies</a>"},
+ "en": {"html_lang": "en", "og_locale": '<meta property="og:locale" content="en_GB" />\n  <meta property="og:locale:alternate" content="en_US" />',
+        "play": "\U0001F3A7 Play in the player", "all": "▶ LISTEN ON PULSAR FM", "faq": "Frequently asked questions",
+        "others": "Other genres", "alt_label": "Português", "lang_q": "&amp;lang=en",
+        "footer": "Pulsar FM — free online radio with a retro Winamp-style visualizer · <a href=\"/privacidade.html\">Privacy &amp; Cookies</a>"},
+}
+
 GA = '''  <!-- Google tag (gtag.js) with Consent Mode v2 - default: everything denied -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRD1BYXB78"></script>
   <script>
@@ -187,22 +340,50 @@ GEAR = {
                       "Synthwave em vinil é outro ritual: prepara o teu primeiro lado A."),
 }
 
-def page(slug, g):
-    gear_slug, gear_h, gear_p = GEAR[slug]
-    gear_html = '''    <a class="gear-box" href="/recomendacoes/{}/">
+def path_for(slug, lang):
+    """URL path (no leading slash) of a genre page: PT keeps radios-*/, EN lives under en/."""
+    return slug + "/" if lang == "pt" else "en/" + GENRES_EN[slug]["slug"] + "/"
+
+
+def localized(slug, lang):
+    """Genre data for one language; EN overrides the copy and keeps genre/emoji from PT."""
+    g = GENRES[slug]
+    if lang == "pt":
+        return g
+    en = GENRES_EN[slug]
+    assert len(en["stations"]) == len(g["stations"]), slug  # keep the 6-per-genre grid
+    return dict(g, **{k: v for k, v in en.items() if k != "slug"})
+
+
+def page(slug, lang="pt"):
+    g = localized(slug, lang)
+    L = LABELS[lang]
+    path = path_for(slug, lang)
+    other_lang = "en" if lang == "pt" else "pt"
+    base = "https://pulsarfm.eu/"
+    alternates = "\n  ".join(
+        '<link rel="alternate" hreflang="{}" href="{}{}" />'.format(code, base, path_for(slug, target))
+        for code, target in (("pt", "pt"), ("en", "en"), ("x-default", "pt")))
+    lang_alt = '<a class="lang-alt" href="/{}" hreflang="{}" lang="{}">{}</a>'.format(
+        path_for(slug, other_lang), other_lang, other_lang, L["alt_label"])
+    gear_html = ""
+    if lang == "pt":  # The guides are PT-only (and Amazon.es), so EN pages skip the GEAR box.
+        gear_slug, gear_h, gear_p = GEAR[slug]
+        gear_html = '''    <a class="gear-box" href="/recomendacoes/{}/">
       <span class="gear-tag">\U0001F3A7 GEAR</span>
       <strong>{}</strong>
       <span>{}</span>
       <span class="gear-go">Ler o guia →</span>
     </a>'''.format(gear_slug, gear_h, gear_p)
     others = "\n".join(
-        '          <a href="/{}/" class="genre-filter-link">{} {}</a>'.format(s, d["emoji"], d["nome"])
+        '          <a href="/{}" class="genre-filter-link">{} {}</a>'.format(
+            path_for(s, lang), d["emoji"], localized(s, lang)["nome"])
         for s, d in GENRES.items() if s != slug)
     cards = "\n".join('''      <article class="radio-card">
         <h3>{}</h3>
         <p>{}</p>
-        <a class="play-cta" href="/?genre={}">\U0001F3A7 Ouvir no player</a>
-      </article>'''.format(name, desc, g["genre"]) for name, desc in g["stations"])
+        <a class="play-cta" href="/?genre={}{}">{}</a>
+      </article>'''.format(name, desc, g["genre"], L["lang_q"], L["play"]) for name, desc in g["stations"])
     stations_ld = ",\n      ".join(
         '{{ "@type": "ListItem", "position": {}, "item": {{ "@type": "RadioStation", "name": {}, "description": {} }} }}'.format(
             i + 1, json.dumps(name, ensure_ascii=False), json.dumps(desc, ensure_ascii=False))
@@ -216,7 +397,7 @@ def page(slug, g):
             json.dumps(q, ensure_ascii=False), json.dumps(a, ensure_ascii=False))
         for q, a in g["faq"])
     return '''<!DOCTYPE html>
-<html lang="pt">
+<html lang="{html_lang}">
 <head>
 {GA}
 
@@ -226,17 +407,17 @@ def page(slug, g):
 
   <title>{title}</title>
   <meta name="description" content="{desc}" />
-  <link rel="canonical" href="https://pulsarfm.eu/{slug}/" />
+  <link rel="canonical" href="https://pulsarfm.eu/{path}" />
+  {alternates}
   <meta name="theme-color" content="#031317" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pulsarfm.eu/{slug}/" />
+  <meta property="og:url" content="https://pulsarfm.eu/{path}" />
   <meta property="og:title" content="{h1} | Pulsar FM" />
   <meta property="og:description" content="{desc}" />
   <meta property="og:image" content="https://pulsarfm.eu/img/pulsar-og.jpg" />
   <meta property="og:site_name" content="Pulsar FM" />
-  <meta property="og:locale" content="pt_PT" />
-  <meta property="og:locale:alternate" content="pt_BR" />
+  {og_locale}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -259,7 +440,7 @@ def page(slug, g):
     "@type": "BreadcrumbList",
     "itemListElement": [
       {{ "@type": "ListItem", "position": 1, "name": "Pulsar FM", "item": "https://pulsarfm.eu/" }},
-      {{ "@type": "ListItem", "position": 2, "name": "{h1}", "item": "https://pulsarfm.eu/{slug}/" }}
+      {{ "@type": "ListItem", "position": 2, "name": "{h1}", "item": "https://pulsarfm.eu/{path}" }}
     ]
   }}
   </script>
@@ -322,6 +503,8 @@ def page(slug, g):
     }}
 
     .breadcrumb a {{ color: var(--line-secondary); text-decoration: none; }}
+    .breadcrumb {{ display: flex; flex-wrap: wrap; gap: 4px 6px; }}
+    .breadcrumb .lang-alt {{ margin-left: auto; color: var(--text-muted); }}
     .breadcrumb a:hover {{ color: var(--line-primary); }}
 
     h1 {{
@@ -508,7 +691,7 @@ def page(slug, g):
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › {emoji} {nome}</nav>
+    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › {emoji} {nome}{lang_alt}</nav>
 
     <h1>{emoji} {h1}</h1>
     <p class="intro">{intro}</p>
@@ -517,32 +700,35 @@ def page(slug, g):
 {cards}
     </div>
 
-    <a class="home-cta" href="/?genre={genre}">▶ OUVIR TUDO NO PULSAR FM</a>
+    <a class="home-cta" href="/?genre={genre}{lang_q}">{all_label}</a>
 
 {gear_html}
 
-    <h2>Perguntas frequentes</h2>
+    <h2>{faq_h}</h2>
     <div class="faq">
 {faq_html}
     </div>
 
-    <h2>Outros géneros</h2>
+    <h2>{others_h}</h2>
     <div class="genre-links">
 {others}
     </div>
 
-    <footer>Pulsar FM — rádio online grátis com visualizador retro estilo Winamp · <a href="/privacidade.html">Privacidade &amp; Cookies</a></footer>
+    <footer>{footer}</footer>
   </main>
 </body>
 </html>
-'''.format(GA=GA, slug=slug, cards=cards, others=others, stations_ld=stations_ld,
+'''.format(GA=GA, path=path, alternates=alternates, lang_alt=lang_alt, cards=cards, others=others,
+           stations_ld=stations_ld, html_lang=L["html_lang"], og_locale=L["og_locale"],
+           lang_q=L["lang_q"], all_label=L["all"], faq_h=L["faq"], others_h=L["others"], footer=L["footer"],
            faq_html=faq_html, faq_ld=faq_ld, gear_html=gear_html,
            title=g["title"], desc=g["desc"], h1=g["h1"], intro=g["intro"],
            emoji=g["emoji"], nome=g["nome"], genre=g["genre"])
 
-for slug, g in GENRES.items():
-    d = os.path.join(OUT, slug)
-    os.makedirs(d, exist_ok=True)
-    with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
-        f.write(page(slug, g))
-    print("OK", slug)
+for slug in GENRES:
+    for lang in ("pt", "en"):
+        d = os.path.join(OUT, *path_for(slug, lang).strip("/").split("/"))
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
+            f.write(page(slug, lang))
+        print("OK", path_for(slug, lang))

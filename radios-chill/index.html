@@ -32,6 +32,9 @@
   <title>Rádios Chill e Ambient Online Grátis — Ao Vivo | Pulsar FM</title>
   <meta name="description" content="Rádios chill e ambient ao vivo: SomaFM Drone Zone, Nightwave Plaza e Ibiza Global Radio. Grátis, em direto, no browser, com visuais psicadélicos." />
   <link rel="canonical" href="https://pulsarfm.eu/radios-chill/" />
+  <link rel="alternate" hreflang="pt" href="https://pulsarfm.eu/radios-chill/" />
+  <link rel="alternate" hreflang="en" href="https://pulsarfm.eu/en/chill-radio/" />
+  <link rel="alternate" hreflang="x-default" href="https://pulsarfm.eu/radios-chill/" />
   <meta name="theme-color" content="#031317" />
 
   <meta property="og:type" content="website" />
@@ -134,6 +137,8 @@
     }
 
     .breadcrumb a { color: var(--line-secondary); text-decoration: none; }
+    .breadcrumb { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+    .breadcrumb .lang-alt { margin-left: auto; color: var(--text-muted); }
     .breadcrumb a:hover { color: var(--line-primary); }
 
     h1 {
@@ -320,7 +325,7 @@
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › 🌿 Chill / Ambiente</nav>
+    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › 🌿 Chill / Ambiente<a class="lang-alt" href="/en/chill-radio/" hreflang="en" lang="en">English</a></nav>
 
     <h1>🌿 Rádios Chill Online</h1>
     <p class="intro">Ambient, drones espaciais e vaporwave: seis estações para desligar do mundo. Fecha os olhos, ou deixa o visualizador fazer o trabalho por ti.</p>

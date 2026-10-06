@@ -32,6 +32,9 @@
   <title>Rádio de Música Eletrónica Online Grátis — Ao Vivo | Pulsar FM</title>
   <meta name="description" content="Rádios de música eletrónica e dance ao vivo: TechnoBase.FM, Radio FG de Paris e HouseTime.FM. Techno, house e progressive em direto, grátis no browser." />
   <link rel="canonical" href="https://pulsarfm.eu/radios-electronica/" />
+  <link rel="alternate" hreflang="pt" href="https://pulsarfm.eu/radios-electronica/" />
+  <link rel="alternate" hreflang="en" href="https://pulsarfm.eu/en/electronic-radio/" />
+  <link rel="alternate" hreflang="x-default" href="https://pulsarfm.eu/radios-electronica/" />
   <meta name="theme-color" content="#031317" />
 
   <meta property="og:type" content="website" />
@@ -134,6 +137,8 @@
     }
 
     .breadcrumb a { color: var(--line-secondary); text-decoration: none; }
+    .breadcrumb { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+    .breadcrumb .lang-alt { margin-left: auto; color: var(--text-muted); }
     .breadcrumb a:hover { color: var(--line-primary); }
 
     h1 {
@@ -320,7 +325,7 @@
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › ⚡ Eletrónica / Dance</nav>
+    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › ⚡ Eletrónica / Dance<a class="lang-alt" href="/en/electronic-radio/" hreflang="en" lang="en">English</a></nav>
 
     <h1>⚡ Rádios de Música Eletrónica Online</h1>
     <p class="intro">Techno, house e progressive em direto, 24 horas por dia. Sobe o volume, liga o Milkdrop e o quarto passa a pista. Os vizinhos que se adaptem.</p>

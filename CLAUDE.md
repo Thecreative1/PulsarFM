@@ -38,9 +38,10 @@ here was hit at least once — do not reintroduce them.
 ```
 index.html            — the whole app: CSS + HTML + JS in one file
 privacidade.html      — privacy policy (GDPR), standalone neon page
-radios-*/index.html   — 8 SEO genre landing pages (GENERATED — do not hand-edit)
+radios-*/index.html   — 8 SEO genre landing pages, PT (GENERATED — do not hand-edit)
+en/*-radio/index.html — the same 8 pages in English (GENERATED, same generator)
 tools/gen_genre_pages.py — generator for the genre pages (run: python tools/gen_genre_pages.py)
-sitemap.xml           — 10 URLs; bump <lastmod> when pages change
+sitemap.xml           — 25 URLs; bump <lastmod> when pages change
 robots.txt            — points to the sitemap (apex domain)
 manifest.webmanifest  — PWA manifest
 img/                  — pulsar-logo.webp/png (hero), pulsar-og.jpg (social), icon-*.png (PWA)
@@ -107,8 +108,9 @@ Butterchurn + presets also from unpkg. Pinned versions — don't bump casually.
 3. Update the matching static `<article class="radio-card"><h3>Name</h3></article>` in `index.html`.
 4. Update `GENRES` in `tools/gen_genre_pages.py` (name + one-line PT
    description; each genre also has a `faq` list of 3 (question, answer)
-   tuples rendered as a visible FAQ section + FAQPage JSON-LD) and run
-   `python tools/gen_genre_pages.py`.
+   tuples rendered as a visible FAQ section + FAQPage JSON-LD) AND the
+   matching entry in `GENRES_EN` (same station order — the generator asserts
+   the count), then run `python tools/gen_genre_pages.py`.
 5. If the total station count changed, update "48 estações/48 live stations"
    in: `<title>`, meta description, hero intro (static + both translations),
    og:description, JSON-LD description, `manifest.webmanifest`.
@@ -151,7 +153,12 @@ search-shaped; the voice goes in the answers.
 All user-facing strings live in the `translations` object (`pt` / `en`) in
 `index.html`. `applyLanguage()` re-renders everything and must update any new
 translatable element — add your element's update line there. Static HTML holds
-the PT version (also the SEO fallback). Genre pages are PT-only by design.
+the PT version (also the SEO fallback). Genre pages exist in PT (`/radios-*/`)
+and EN (`/en/*-radio/`), linked with hreflang (x-default = PT) and a language
+link in the breadcrumb. EN pages have no GEAR box (guides are PT/Amazon.es) and
+their CTAs open the player with `?lang=en`, which the home page honours over
+the stored choice. In EN mode the home's genre links point to the EN pages
+(`genrePagesEn`). The recommendation guides stay PT-only.
 
 SEO copy deliberately mixes pt-PT and pt-BR vocabulary ("em direto" + "ao
 vivo", "telemóvel" + "celular", "eletrónica" + "eletrônica") to capture
@@ -196,7 +203,7 @@ Genre filter bar + favorites filter · per-card favorite stars · SCAN (random
 station) · SKINS drawer (10 .wsz, persisted) · dock/float player modes ·
 TRIP mode (fullscreen visualizer) · SLEEP timer (15/30/60 min → pause) ·
 resume-last-station chip · SHARE button (Web Share API + clipboard fallback) ·
-PT/EN switch · consent banner · PWA manifest · 8 SEO genre pages ·
+PT/EN switch · consent banner · PWA manifest · 8 SEO genre pages (PT + EN) ·
 `?genre=` deep links with URL sync · dock bezel + side wings (now playing,
 clock; ≥1180px) · idle Milkdrop overlay (`.md-idle`, injected next to the
 Butterchurn canvas and re-attached by a MutationObserver; click = resume
