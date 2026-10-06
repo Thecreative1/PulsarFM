@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Televisor e auscultadores pousados numa base que transmite o som, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .wave { animation: wave 2.4s ease-in-out infinite; }
+    .wave.w2 { animation-delay: -.8s; }
+    .wave.w3 { animation-delay: -1.6s; }
+    .screen { animation: glow 4s ease-in-out infinite; }
+    .led { animation: led 2s ease-in-out infinite; }
+    @keyframes wave { 0%, 100% { opacity: .1; } 50% { opacity: .9; } }
+    @keyframes glow { 50% { opacity: .7; } }
+    @keyframes led { 50% { opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <!-- TV on the left -->
+  <rect x="58" y="74" width="196" height="128" rx="8" fill="#041015" stroke="#9AD9D3" stroke-opacity=".5" stroke-width="3"/>
+  <rect class="screen" x="68" y="84" width="176" height="108" rx="4" fill="#14282F"/>
+  <path d="M90 168H222M106 152H206" stroke="#00CCFF" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="156" cy="124" r="20" fill="#FF2D9B" fill-opacity=".7"/>
+  <path d="M146 202L138 222H174L166 202" stroke="#9AD9D3" stroke-opacity=".4" stroke-width="3"/>
+  <!-- Cable from the TV to the base -->
+  <path d="M254 180C284 180 284 262 310 262" stroke="#9AD9D3" stroke-opacity=".35" stroke-width="3" stroke-dasharray="6 6"/>
+  <!-- Transmitter base with headphones resting on it -->
+  <rect x="306" y="248" width="116" height="30" rx="12" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <circle class="led" cx="400" cy="263" r="4" fill="#00FFCC"/>
+  <path d="M364 248V214" stroke="#9AD9D3" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M318 196C318 132 410 132 410 196" stroke="#00CCFF" stroke-width="10" stroke-linecap="round"/>
+  <rect x="304" y="186" width="30" height="50" rx="14" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+  <rect x="394" y="186" width="30" height="50" rx="14" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+  <!-- Radio waves from the base -->
+  <g stroke-width="3" stroke-linecap="round" fill="none">
+    <path class="wave" d="M352 112C358 104 370 104 376 112" stroke="#00FFCC"/>
+    <path class="wave w2" d="M344 100C354 86 374 86 384 100" stroke="#C044FF"/>
+    <path class="wave w3" d="M336 88C350 68 378 68 392 88" stroke="#FF2D9B"/>
+  </g>
+</svg>

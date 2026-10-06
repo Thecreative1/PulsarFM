@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Amplificador com medidor de agulha ligado a um pré-amplificador phono, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .needle { transform-origin: 150px 196px; animation: swing 1.6s ease-in-out infinite; }
+    .signal { stroke-dasharray: 6 8; animation: flow 1.4s linear infinite; }
+    .led { animation: led 2s ease-in-out infinite; }
+    @keyframes swing { 0%, 100% { transform: rotate(-32deg); } 40% { transform: rotate(18deg); } 60% { transform: rotate(4deg); } }
+    @keyframes flow { to { stroke-dashoffset: -28; } }
+    @keyframes led { 50% { opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <!-- Integrated amplifier front panel -->
+  <rect x="64" y="110" width="352" height="120" rx="12" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <!-- VU meter (left) -->
+  <rect x="86" y="128" width="128" height="84" rx="8" fill="#041015" stroke="#9AD9D3" stroke-opacity=".45"/>
+  <path d="M104 186A52 52 0 0 1 196 186" stroke="#9AD9D3" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M182 168A52 52 0 0 1 196 186" stroke="#FF2D9B" stroke-width="3"/>
+  <g class="needle"><path d="M150 196L150 146" stroke="#00FFCC" stroke-width="3" stroke-linecap="round"/></g>
+  <circle cx="150" cy="196" r="5" fill="#ECFFFB"/>
+  <!-- Three knobs in a row (right) -->
+  <circle cx="262" cy="170" r="20" fill="#041015" stroke="#9AD9D3" stroke-width="2"/>
+  <path d="M262 170L250 158" stroke="#ECFFFB" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="318" cy="170" r="20" fill="#041015" stroke="#9AD9D3" stroke-width="2"/>
+  <path d="M318 170L330 160" stroke="#ECFFFB" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="374" cy="170" r="26" fill="#041015" stroke="#00CCFF" stroke-width="3"/>
+  <path d="M374 170L374 150" stroke="#ECFFFB" stroke-width="3" stroke-linecap="round"/>
+  <circle class="led" cx="396" cy="212" r="4" fill="#00FFCC"/>
+  <!-- Phono preamp box below, with the signal flowing into the amp -->
+  <rect x="96" y="262" width="96" height="34" rx="8" fill="#0C3C43" stroke="#C044FF" stroke-width="2"/>
+  <circle cx="116" cy="279" r="5" fill="#FF2D9B"/><circle cx="134" cy="279" r="5" fill="#ECFFFB" fill-opacity=".8"/>
+  <path class="signal" d="M192 279C240 279 240 238 280 232" stroke="#00FFCC" stroke-width="3"/>
+</svg>

@@ -49,6 +49,22 @@
     "Colunas para PC": {
       "src": "/img/gear/colunas-pc.svg",
       "alt": "Ilustração néon de duas colunas de secretária ao lado de um ecrã"
+    },
+    "Para crianças": {
+      "src": "/img/gear/criancas.svg",
+      "alt": "Ilustração néon de auscultadores pequenos e um medidor de volume com limite"
+    },
+    "Para a TV": {
+      "src": "/img/gear/televisao.svg",
+      "alt": "Ilustração néon de um televisor e de auscultadores pousados numa base transmissora"
+    },
+    "Amplificação": {
+      "src": "/img/gear/amplificacao.svg",
+      "alt": "Ilustração néon de um amplificador com medidor de agulha e um pré-amplificador phono"
+    },
+    "Microfones": {
+      "src": "/img/gear/microfones.svg",
+      "alt": "Ilustração néon de um telemóvel a gravar com um microfone de lapela"
     }
   },
   "products": [
@@ -1276,6 +1292,606 @@
         "type": "manual",
         "checkedAt": "2026-10-06",
         "referenceUrl": "https://www.amazon.es/dp/B07MYW4Q8S/"
+      }
+    },
+    {
+      "id": "earfun-kids-com-fio",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0D2P5V6QT",
+      "name": "EarFun auscultadores para crianças (com fio)",
+      "category": "Para crianças",
+      "description": "Os primeiros auscultadores com o mínimo de preocupações: volume limitado a 85 dB, cabo entrançado de nylon que aguenta puxões e jack de 3,5 mm. Segundo a EarFun, são feitos com materiais reciclados e cumprem as normas de segurança para crianças (CPC e CPSIA).",
+      "bestFor": "Primeiros auscultadores",
+      "pros": [
+        "Volume limitado a 85 dB",
+        "Cabo entrançado resistente",
+        "Preço baixo"
+      ],
+      "cons": [
+        "Sem microfone nesta versão"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0D2P5V6QT/"
+      }
+    },
+    {
+      "id": "jbl-junior-320",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0DKY6143T",
+      "name": "JBL Junior 320",
+      "category": "Para crianças",
+      "description": "Com fio, dobráveis e com microfone integrado para as aulas online. A JBL limita o volume a 85 dB (JBL Safe Sound) e usa almofadas macias e controlos grandes, pensados para mãos pequenas.",
+      "bestFor": "Escola e aulas online",
+      "pros": [
+        "Microfone",
+        "Volume limitado a 85 dB",
+        "Dobráveis"
+      ],
+      "cons": [
+        "Com fio"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0DKY6143T/"
+      }
+    },
+    {
+      "id": "belkin-soundform-mini",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0D4ZMNMZ5",
+      "name": "Belkin SoundForm Mini",
+      "category": "Para crianças",
+      "description": "A forma mais barata de passar para sem fios: Bluetooth 5.3, microfone e, segundo a Belkin, até 30 horas de bateria, com carga rápida por USB-C. Volume limitado a 85 dB.",
+      "bestFor": "Sem fios com orçamento curto",
+      "pros": [
+        "Bluetooth",
+        "Microfone",
+        "Volume limitado a 85 dB"
+      ],
+      "cons": [
+        "Mais uma coisa para carregar"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0D4ZMNMZ5/"
+      }
+    },
+    {
+      "id": "philips-tak4200",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0GY4F18QW",
+      "name": "Philips TAK4200",
+      "category": "Para crianças",
+      "description": "Sem fios e dobráveis, com volume limitado a 85 dB. A Philips indica até 45 horas de reprodução e 2 horas de uso com 15 minutos de carga por USB-C. Boa escolha para viagens longas.",
+      "bestFor": "Viagens longas",
+      "pros": [
+        "Bateria longa (fabricante)",
+        "Volume limitado a 85 dB",
+        "Dobráveis"
+      ],
+      "cons": [
+        "Marca menos associada a crianças"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0GY4F18QW/"
+      }
+    },
+    {
+      "id": "jbl-junior-320-bt",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0DHS6KXJL",
+      "name": "JBL Junior 320 BT",
+      "category": "Para crianças",
+      "description": "A versão sem fios dos JBL Junior: Bluetooth, volume limitado a 85 dB e, segundo a JBL, até 50 horas de bateria. A app JBL Headphones mostra o volume e o tempo de uso, para os pais acompanharem.",
+      "bestFor": "Uso diário sem fios",
+      "pros": [
+        "Bateria longa (fabricante)",
+        "App para os pais",
+        "Volume limitado a 85 dB"
+      ],
+      "cons": [
+        "Mais caros do que os Belkin"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0DHS6KXJL/"
+      }
+    },
+    {
+      "id": "alpine-muffy-baby",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0GN3KBGB1",
+      "name": "Alpine Muffy Baby",
+      "category": "Para crianças",
+      "description": "Não tocam música: são protetores de ouvido para bebés e crianças pequenas, para concertos, festas, fogo de artifício ou viagens de avião. O arco ajusta-se à medida que a criança cresce. Confirma na ficha a idade indicada pela Alpine.",
+      "bestFor": "Proteger bebés do barulho",
+      "pros": [
+        "Proteção auditiva",
+        "Ajustáveis"
+      ],
+      "cons": [
+        "Não tocam música"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0GN3KBGB1/"
+      }
+    },
+    {
+      "id": "philips-shc5200",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0FPDD4P55",
+      "name": "Philips SHC5200",
+      "category": "Para a TV",
+      "description": "A entrada mais acessível nos auscultadores sem fios para TV. Segundo a Philips, ligação digital a 2,4 GHz com alcance de 30 metros, que aguenta paredes pelo meio, até 30 horas de bateria e carga rápida por USB-C. Over-ear, com arco ajustável para sessões longas.",
+      "bestFor": "Orçamento curto",
+      "pros": [
+        "Bateria longa (fabricante)",
+        "Alcance de 30 m (fabricante)"
+      ],
+      "cons": [
+        "Carregam por cabo, não numa base"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0FPDD4P55/"
+      }
+    },
+    {
+      "id": "energy-sistem-soundreel",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0FJY7XNQJ",
+      "name": "Energy Sistem SoundReel",
+      "category": "Para a TV",
+      "description": "Da marca espanhola Energy Sistem: base de radiofrequência a 2,4 GHz pensada para manter a imagem e o som sincronizados, e Bluetooth para usar os mesmos auscultadores com o telemóvel. A marca indica até 18 horas de autonomia.",
+      "bestFor": "Televisão e telemóvel com os mesmos auscultadores",
+      "pros": [
+        "RF e Bluetooth",
+        "Baixa latência na TV"
+      ],
+      "cons": [
+        "Autonomia abaixo do Philips"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0FJY7XNQJ/"
+      }
+    },
+    {
+      "id": "sennheiser-rs-120-w",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0B7P9R373",
+      "name": "Sennheiser RS 120-W",
+      "category": "Para a TV",
+      "description": "O clássico da Sennheiser para televisão: auscultadores on-ear sem fios que pousam numa base transmissora, onde também carregam. Segundo a marca, a base deve ficar a pelo menos 50 cm de outros aparelhos sem fios, para evitar interferências.",
+      "bestFor": "Uso diário simples",
+      "pros": [
+        "Carregam na base",
+        "Marca de referência"
+      ],
+      "cons": [
+        "On-ear: menos isolamento"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0B7P9R373/"
+      }
+    },
+    {
+      "id": "avantree-ensemble",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B08629PFFQ",
+      "name": "Avantree Ensemble",
+      "category": "Para a TV",
+      "description": "Pensados para pessoas mais velhas e para quem perde os diálogos: a função Clear Voice realça as vozes e cada um ouve ao seu volume. Atenção: segundo a Avantree, o televisor tem de ter saída ótica ou de jack de 3,5 mm; com uma TV que só tem HDMI não funcionam.",
+      "bestFor": "Pessoas mais velhas",
+      "pros": [
+        "Realce de voz (Clear Voice)",
+        "Vendidos pela loja oficial da Avantree"
+      ],
+      "cons": [
+        "Não funcionam com TV só com HDMI"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B08629PFFQ/"
+      }
+    },
+    {
+      "id": "sennheiser-rs-175",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07XTW93RV",
+      "name": "Sennheiser RS 175",
+      "category": "Para a TV",
+      "description": "Over-ear fechados com transmissão digital. A Sennheiser indica até 100 metros de alcance em linha de vista e uma base que serve de carregador e que transmite para dois pares ao mesmo tempo. Para casais e salas grandes.",
+      "bestFor": "Casais e salas grandes",
+      "pros": [
+        "Dois pares em simultâneo (fabricante)",
+        "Base carregadora",
+        "Alcance longo"
+      ],
+      "cons": [
+        "Segundo par vendido à parte"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07XTW93RV/"
+      }
+    },
+    {
+      "id": "sennheiser-rs-5200",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B099X2SKR6",
+      "name": "Sennheiser RS 5200",
+      "category": "Para a TV",
+      "description": "Para quem já ouve pior: a função Speech Clarity reduz o ruído de fundo da televisão para os diálogos se ouvirem melhor, há três perfis de som e o volume pode ser diferente em cada ouvido. Desligam sozinhos e, segundo a Sennheiser, a bateria dura 12 horas.",
+      "bestFor": "Quem ouve pior",
+      "pros": [
+        "Clareza de voz",
+        "Volume por ouvido",
+        "Desligar automático"
+      ],
+      "cons": [
+        "Preço mais alto"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B099X2SKR6/"
+      }
+    },
+    {
+      "id": "behringer-pp400",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B000H2BC4E",
+      "name": "Behringer Microphono PP400",
+      "category": "Amplificação",
+      "description": "O pré-amplificador phono mais barato que vale a pena: converte o sinal do gira-discos em sinal de linha para colunas ativas, amplificadores ou mesas de mistura. Só serve para cápsulas MM, o tipo da grande maioria dos gira-discos de entrada, e traz o transformador de 12 V incluído.",
+      "bestFor": "Orçamento mínimo",
+      "pros": [
+        "Preço mínimo",
+        "Saídas RCA e jack 6,3 mm"
+      ],
+      "cons": [
+        "Só cápsulas MM",
+        "Construção simples"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B000H2BC4E/"
+      }
+    },
+    {
+      "id": "fosi-audio-box-x2",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07XNTHHBP",
+      "name": "Fosi Audio Box X2",
+      "category": "Amplificação",
+      "description": "Um pré-amplificador phono com três níveis de ganho (39, 42 e 45 dB), para acertar o volume à cápsula e à sala. Tem terminal de terra para o fio do gira-discos e, segundo a Fosi, circuitos de baixo ruído. Só para cápsulas MM.",
+      "bestFor": "Ajustar o ganho à cápsula",
+      "pros": [
+        "Ganho ajustável",
+        "Terminal de terra",
+        "Vendido pela loja oficial da Fosi"
+      ],
+      "cons": [
+        "Só cápsulas MM"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07XNTHHBP/"
+      }
+    },
+    {
+      "id": "pro-ject-phono-box-e",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B01CZW87HS",
+      "name": "Pro-Ject Phono Box E",
+      "category": "Amplificação",
+      "description": "O pré-amplificador de referência na entrada de gama, de uma marca que vive do vinil. Liga-se à entrada de linha (AUX) do amplificador e, segundo a Pro-Ject, tem blindagem metálica e fonte de alimentação externa para evitar interferências. Para cápsulas MM.",
+      "bestFor": "Menos ruído, melhor blindagem",
+      "pros": [
+        "Marca de referência no vinil",
+        "Blindagem metálica"
+      ],
+      "cons": [
+        "Só cápsulas MM",
+        "Vendido por um vendedor externo na Amazon.es"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B01CZW87HS/"
+      }
+    },
+    {
+      "id": "fosi-audio-bt20a",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07BQC7GNL",
+      "name": "Fosi Audio BT20A",
+      "category": "Amplificação",
+      "description": "Um amplificador compacto para colunas passivas: classe D, Bluetooth 5.0 e controlos de graves e agudos. A Fosi indica 100 W por canal a 4 ohms. Não tem entrada phono: para o gira-discos, junta-lhe um pré-amplificador.",
+      "bestFor": "Colunas passivas num sistema compacto",
+      "pros": [
+        "Compacto",
+        "Bluetooth",
+        "Controlos de graves e agudos"
+      ],
+      "cons": [
+        "Sem entrada phono"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07BQC7GNL/"
+      }
+    },
+    {
+      "id": "edifier-p12",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07NT9HZ9R",
+      "name": "Edifier P12",
+      "category": "Amplificação",
+      "description": "Colunas de estante passivas para quem parte do zero: tweeter de cúpula de seda, woofer de 4 polegadas e suportes de parede integrados. Ligam-se a qualquer amplificador com fio de coluna normal.",
+      "bestFor": "Começar do zero com colunas passivas",
+      "pros": [
+        "Suportes de parede integrados",
+        "Tweeter de seda"
+      ],
+      "cons": [
+        "Precisam de amplificador",
+        "Vendidas por um vendedor externo na Amazon.es"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07NT9HZ9R/"
+      }
+    },
+    {
+      "id": "denon-pma-600ne",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B07YCVDKJT",
+      "name": "Denon PMA-600NE",
+      "category": "Amplificação",
+      "description": "Um amplificador integrado clássico, com entrada phono para gira-discos de cápsula MM, Bluetooth e duas entradas óticas para a TV. A Denon indica 70 W por canal e um modo analógico que desliga os circuitos digitais. Tudo numa caixa, para colunas passivas.",
+      "bestFor": "Tudo numa só caixa",
+      "pros": [
+        "Entrada phono",
+        "Entradas óticas",
+        "Bluetooth"
+      ],
+      "cons": [
+        "Preço mais alto",
+        "Ocupa espaço de aparelhagem"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B07YCVDKJT/"
+      }
+    },
+    {
+      "id": "boya-by-m1",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B00MPDYGBE",
+      "name": "BOYA BY-M1",
+      "category": "Microfones",
+      "description": "O microfone de lapela mais usado por quem está a começar: prende-se à roupa, capta em todas as direções e tem 6 metros de cabo com jack de 3,5 mm de 4 polos, para telemóvel ou câmara. Num telemóvel sem jack precisa de adaptador. Funciona com uma pilha LR44, incluída.",
+      "bestFor": "Vídeos e aulas com orçamento curto",
+      "pros": [
+        "Preço baixo",
+        "Serve telemóvel e câmara",
+        "Cabo comprido"
+      ],
+      "cons": [
+        "Com fio",
+        "Telemóveis sem jack precisam de adaptador",
+        "Vendido por um vendedor externo na Amazon.es"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B00MPDYGBE/"
+      }
+    },
+    {
+      "id": "dji-mic-mini",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0FQJH54TR",
+      "name": "DJI Mic Mini (2 transmissores, recetor para telemóvel)",
+      "category": "Microfones",
+      "description": "Dois transmissores de lapela sem fios, com 10 gramas cada, segundo a DJI, e um recetor que liga ao telemóvel. A DJI indica até 300 metros de alcance e até 11,5 horas de uso nesta configuração. Para entrevistas e vídeos a dois sem cabos à vista.",
+      "bestFor": "Entrevistas e vídeos com o telemóvel",
+      "pros": [
+        "Sem fios",
+        "Dois transmissores",
+        "Muito leves"
+      ],
+      "cons": [
+        "Mais caro do que uma lapela com fio"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0FQJH54TR/"
+      }
+    },
+    {
+      "id": "rode-videomicro-ii",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0BM8HQL6L",
+      "name": "RØDE VideoMicro II",
+      "category": "Microfones",
+      "description": "Microfone de canhão para câmara: monta-se em cima e capta o que está à frente, ignorando o que vem dos lados. Segundo a RØDE, mede 8 cm, pesa 39 gramas, tem suspensão contra choques e não precisa de pilhas. Melhora logo o som de qualquer vídeo gravado com câmara.",
+      "bestFor": "Vídeo com câmara",
+      "pros": [
+        "Compacto",
+        "Sem pilhas",
+        "Suspensão contra choques"
+      ],
+      "cons": [
+        "Precisa de câmara ou adaptador para telemóvel"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0BM8HQL6L/"
+      }
+    },
+    {
+      "id": "fifine-usb-condensador",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B09BHJRZZB",
+      "name": "FIFINE microfone USB de condensador",
+      "category": "Microfones",
+      "description": "A entrada mais barata para gravar voz ao computador: liga por USB, sem instalar nada, e vem com tripé. Tem controlo de volume no corpo. Segundo a FIFINE, funciona com PC, Mac e PS4/PS5, mas não com telemóveis. Por ser de condensador, apanha mais o eco do quarto do que um dinâmico.",
+      "bestFor": "Começar a gravar voz ao computador",
+      "pros": [
+        "Preço baixo",
+        "USB, sem instalação",
+        "Tripé incluído"
+      ],
+      "cons": [
+        "Não funciona com telemóveis",
+        "Apanha mais o quarto",
+        "Vendido por um vendedor externo na Amazon.es"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B09BHJRZZB/"
+      }
+    },
+    {
+      "id": "rode-podmic-usb",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0BQM4TKF7",
+      "name": "RØDE PodMic USB",
+      "category": "Microfones",
+      "description": "Dinâmico, com som de rádio, pensado para podcasts e locuções. Tem USB-C e XLR, por isso liga ao computador hoje e a uma interface ou mesa amanhã. Pela app RØDE Central, segundo a marca, junta processamento de voz como o APHEX Aural Exciter e o Big Bottom.",
+      "bestFor": "Podcast com mais qualidade",
+      "pros": [
+        "USB-C e XLR",
+        "Processamento de voz pela app",
+        "Saída de auscultadores"
+      ],
+      "cons": [
+        "Pesado para um braço fraco"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0BQM4TKF7/"
+      }
+    },
+    {
+      "id": "shure-mv7-plus",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0CTJ7PVN1",
+      "name": "Shure MV7+",
+      "category": "Microfones",
+      "description": "O topo de gama dos microfones de podcast com USB: dinâmico, com USB-C e XLR, um painel táctil com LED que serve de medidor e de botão para silenciar, e, segundo a Shure, redução de ruído em tempo real e um antipop digital.",
+      "bestFor": "Podcast premium",
+      "pros": [
+        "Redução de ruído",
+        "USB-C e XLR",
+        "Silenciar por toque"
+      ],
+      "cons": [
+        "Preço premium"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0CTJ7PVN1/"
       }
     }
   ]

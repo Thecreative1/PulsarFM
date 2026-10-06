@@ -234,7 +234,7 @@
       ],
       "related": [
         "gira-discos",
-        "melhores-auscultadores"
+        "auscultadores-para-criancas"
       ],
       "closing": "Pensa primeiro em quando e onde a pessoa ouve música, e só depois no objeto. Um presente que encaixa na rotina toca todos os dias; os outros ficam na caixa."
     },
@@ -629,6 +629,204 @@
         "presentes-para-quem-gosta-de-musica"
       ],
       "closing": "Primeiro o encaixe, depois o telemóvel que tens no bolso, e só no fim o cancelamento de ruído. Os melhores auriculares são os que te esqueces que tens postos."
+    },
+    {
+      "slug": "auscultadores-para-criancas",
+      "category": "Pequenos ouvintes",
+      "navLabel": "Para crianças",
+      "navIcon": "🧸",
+      "illustration": "/img/gear/criancas.svg",
+      "title": "Auscultadores para crianças: volume seguro, dos desenhos animados à escola",
+      "seoTitle": "Auscultadores para crianças 2026: volume limitado a 85 dB, com e sem fios",
+      "summary": "Auscultadores com volume limitado para crianças, com e sem fios, e protetores de ouvido para bebés em concertos e viagens.",
+      "metaDescription": "JBL Junior 320, Belkin SoundForm Mini, Philips e EarFun: auscultadores para crianças com volume limitado a 85 dB, e protetores para bebés.",
+      "intro": "Os ouvidos de uma criança não precisam de um volume que faça tremer o carro, e os auscultadores certos tratam disso sozinhos. Este guia tem duas partes: auscultadores para música, desenhos animados e aulas, com o volume limitado; e protetores para bebés, que não tocam nada e só servem para tapar o barulho.",
+      "updatedAt": "2026-10-06",
+      "publishedAt": "2026-10-06",
+      "sections": [
+        {
+          "heading": "Porque é que o limite de volume importa",
+          "paragraphs": [
+            "Os auscultadores para crianças limitam o volume máximo, quase sempre a 85 dB, o valor de referência mais usado nesta categoria. Mesmo assim, o tempo conta: horas seguidas no volume máximo não são boa ideia em idade nenhuma, e a OMS recomenda limites ainda mais baixos para quem ouve muitas horas por semana.",
+            "Os walkmans dos anos 80 não tinham limite nenhum. A geração que os usou a fundo sabe bem porque é que isto existe."
+          ],
+          "checklist": [
+            "Confirma o limite de volume na ficha (85 dB é o mais comum).",
+            "Prefere arcos ajustáveis e almofadas macias: a cabeça cresce depressa.",
+            "Para a escola ou aulas online, procura microfone integrado.",
+            "Um cabo entrançado aguenta melhor os puxões."
+          ]
+        },
+        {
+          "heading": "Com fio ou sem fios?",
+          "paragraphs": [
+            "Com fio não há bateria para carregar nem emparelhamentos, e são mais baratos. O cabo é o ponto fraco, por isso convém que seja resistente. Sem fios dão mais liberdade e evitam cabos presos nas cadeiras, mas são mais uma coisa para carregar à noite.",
+            "Num tablet sem entrada de jack, os sem fios resolvem logo; os com fio precisam de um adaptador USB-C."
+          ],
+          "productLinks": [
+            {
+              "productId": "belkin-soundform-mini",
+              "label": "Ver os Belkin SoundForm Mini na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Para a escola e as aulas online",
+          "paragraphs": [
+            "Um microfone integrado dá jeito para as videochamadas com professores e com os avós. Os JBL Junior 320 trazem microfone mesmo na versão com fio."
+          ],
+          "productLinks": [
+            {
+              "productId": "jbl-junior-320",
+              "label": "Ver os JBL Junior 320 na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Bebés, concertos e aviões",
+          "paragraphs": [
+            "Para bebés, a pergunta não é que auscultadores comprar: é como proteger os ouvidos do barulho. Os protetores para bebés não tocam música. Tapam o ruído em concertos, festas, fogo de artifício ou descolagens.",
+            "Escolhe pela idade indicada pelo fabricante e pelo ajuste: têm de ficar bem colocados sem apertar."
+          ],
+          "productLinks": [
+            {
+              "productId": "alpine-muffy-baby",
+              "label": "Ver os Alpine Muffy Baby na Amazon"
+            }
+          ]
+        }
+      ],
+      "productIds": [
+        "earfun-kids-com-fio",
+        "jbl-junior-320",
+        "belkin-soundform-mini",
+        "philips-tak4200",
+        "jbl-junior-320-bt",
+        "alpine-muffy-baby"
+      ],
+      "quickPicks": [
+        {
+          "label": "Económico com fio",
+          "productId": "earfun-kids-com-fio",
+          "note": "Volume limitado e cabo entrançado, por pouco dinheiro."
+        },
+        {
+          "label": "Sem fios",
+          "productId": "belkin-soundform-mini",
+          "note": "Bluetooth, microfone e até 30 horas de bateria (Belkin)."
+        },
+        {
+          "label": "Para a escola",
+          "productId": "jbl-junior-320",
+          "note": "Com fio e microfone para as aulas online."
+        },
+        {
+          "label": "Para bebés",
+          "productId": "alpine-muffy-baby",
+          "note": "Protegem do barulho em concertos e viagens."
+        }
+      ],
+      "badges": {
+        "earfun-kids-com-fio": "Económico · Com fio",
+        "jbl-junior-320": "Com fio · Microfone",
+        "belkin-soundform-mini": "Sem fios · Económico",
+        "philips-tak4200": "Sem fios · Viagens",
+        "jbl-junior-320-bt": "Sem fios · Bateria longa",
+        "alpine-muffy-baby": "Bebés · Proteção"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Os auscultadores e protetores recomendados para crianças: ligação, limite de volume e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Ligação",
+          "Volume",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "EarFun (com fio)",
+            "Jack 3,5 mm",
+            "Limitado a 85 dB",
+            "Primeiros auscultadores"
+          ],
+          [
+            "JBL Junior 320",
+            "Com fio, com microfone",
+            "Limitado a 85 dB",
+            "Escola e aulas online"
+          ],
+          [
+            "Belkin SoundForm Mini",
+            "Bluetooth, com microfone",
+            "Limitado a 85 dB",
+            "Sem fios, orçamento curto"
+          ],
+          [
+            "Philips TAK4200",
+            "Bluetooth",
+            "Limitado a 85 dB",
+            "Viagens longas"
+          ],
+          [
+            "JBL Junior 320 BT",
+            "Bluetooth",
+            "Limitado a 85 dB",
+            "Uso diário sem fios"
+          ],
+          [
+            "Alpine Muffy Baby",
+            "Não tocam música",
+            "Protetor de ouvido",
+            "Bebés e crianças pequenas"
+          ]
+        ],
+        "rowProducts": [
+          "earfun-kids-com-fio",
+          "jbl-junior-320",
+          "belkin-soundform-mini",
+          "philips-tak4200",
+          "jbl-junior-320-bt",
+          "alpine-muffy-baby"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma na ficha a idade e o tamanho recomendados."
+      },
+      "faq": [
+        {
+          "q": "Quais são os melhores auscultadores para crianças?",
+          "a": "Os que limitam o volume e aguentam o uso diário. Com fio, os JBL Junior 320 juntam marca, microfone e limite de 85 dB. Sem fios, os Belkin SoundForm Mini e os JBL Junior 320 BT fazem o mesmo, com bateria para vários dias.",
+          "productIds": [
+            "jbl-junior-320",
+            "belkin-soundform-mini",
+            "jbl-junior-320-bt"
+          ]
+        },
+        {
+          "q": "A partir de que idade uma criança pode usar auscultadores?",
+          "a": "Não há uma idade única: depende do uso e do tempo. O importante é limitar o volume, fazer pausas e escolher um tamanho que assente bem. Se tiveres dúvidas sobre a audição da criança, fala com o pediatra."
+        },
+        {
+          "q": "Os bebés podem usar auscultadores no avião?",
+          "a": "Para bebés, o mais indicado são protetores de ouvido, que tapam o ruído sem tocar música, como os Alpine Muffy Baby. Confirma sempre a idade e o ajuste recomendados pelo fabricante.",
+          "productIds": [
+            "alpine-muffy-baby"
+          ]
+        },
+        {
+          "q": "Que auscultadores sem fios para crianças escolher?",
+          "a": "Os Belkin SoundForm Mini são a opção mais acessível, com microfone e até 30 horas de bateria, segundo a Belkin. Os Philips TAK4200 e os JBL Junior 320 BT duram mais entre cargas. Todos limitam o volume a 85 dB.",
+          "productIds": [
+            "belkin-soundform-mini",
+            "philips-tak4200",
+            "jbl-junior-320-bt"
+          ]
+        }
+      ],
+      "related": [
+        "melhores-auscultadores",
+        "presentes-para-quem-gosta-de-musica"
+      ],
+      "closing": "Volume limitado, tamanho certo e um cabo ou uma bateria que aguentem a rotina. Com isso resolvido, o resto é deixar a criança escolher a cor."
     },
     {
       "slug": "colunas-bluetooth",
@@ -1163,9 +1361,192 @@
         }
       ],
       "related": [
-        "colunas-bluetooth",
-        "melhores-auscultadores"
+        "auscultadores-para-televisao",
+        "colunas-bluetooth"
       ]
+    },
+    {
+      "slug": "auscultadores-para-televisao",
+      "category": "Som no sofá",
+      "navLabel": "Para a TV",
+      "navIcon": "📡",
+      "illustration": "/img/gear/televisao.svg",
+      "title": "Auscultadores para ouvir televisão: diálogos claros sem acordar a casa",
+      "seoTitle": "Auscultadores para ouvir televisão: sem fios e sem atraso (2026)",
+      "summary": "Auscultadores sem fios com base para a TV: para ver filmes sem acordar ninguém, ou para perceber melhor os diálogos com o volume à medida.",
+      "metaDescription": "Sennheiser RS 120-W, RS 175 e RS 5200, Avantree Ensemble e Philips: auscultadores sem fios para ouvir televisão, com diálogos claros e sem atraso.",
+      "intro": "Há duas razões para querer ouvir a televisão com auscultadores: ver o filme à meia-noite sem acordar a casa, ou perceber os diálogos sem o volume que incomoda toda a gente. Os auscultadores próprios para TV resolvem as duas coisas com uma base que liga ao televisor e transmite o som sem fios, sem o atraso que o Bluetooth costuma trazer.",
+      "updatedAt": "2026-10-06",
+      "publishedAt": "2026-10-06",
+      "sections": [
+        {
+          "heading": "Primeiro, as saídas do televisor",
+          "paragraphs": [
+            "A base liga a uma saída de áudio da TV: ótica (TOSLINK), jack de 3,5 mm ou RCA, conforme o modelo. Confirma atrás do televisor antes de comprar: alguns modelos, como o Avantree Ensemble, não funcionam com televisores que só têm HDMI.",
+            "Se a TV tiver Bluetooth, uns auscultadores normais também servem, mas é comum haver um pequeno atraso entre a imagem e o som. As bases de radiofrequência foram feitas para o evitar."
+          ],
+          "checklist": [
+            "Vê que saídas de áudio tem a TV: ótica, jack ou RCA.",
+            "Se mais alguém vai ouvir ao mesmo tempo, procura uma base que aceite dois pares.",
+            "Confirma se a base também carrega os auscultadores."
+          ]
+        },
+        {
+          "heading": "Para quem ouve pior",
+          "paragraphs": [
+            "Alguns modelos têm funções pensadas para quem já não percebe bem os diálogos: realce de voz, volume diferente em cada ouvido e perfis de som. Não substituem um aparelho auditivo nem uma consulta, mas tornam a televisão muito mais fácil de acompanhar.",
+            "O Sennheiser RS 5200 e o Avantree Ensemble são os mais orientados para isso."
+          ],
+          "productLinks": [
+            {
+              "productId": "sennheiser-rs-5200",
+              "label": "Ver o Sennheiser RS 5200 na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Conforto para sessões longas",
+          "paragraphs": [
+            "Um filme dura duas horas; uma maratona de séries, bem mais. Leveza, almofadas macias e um arco que não aperte contam mais do que a ficha técnica. Os modelos que carregam ao pousar na base evitam a bateria a acabar a meio do episódio.",
+            "E já ninguém precisa de esticar um fio do televisor até ao sofá, nem de tropeçar nele a caminho da cozinha."
+          ],
+          "productLinks": [
+            {
+              "productId": "sennheiser-rs-120-w",
+              "label": "Ver o Sennheiser RS 120-W na Amazon"
+            }
+          ]
+        }
+      ],
+      "productIds": [
+        "philips-shc5200",
+        "energy-sistem-soundreel",
+        "sennheiser-rs-120-w",
+        "avantree-ensemble",
+        "sennheiser-rs-175",
+        "sennheiser-rs-5200"
+      ],
+      "quickPicks": [
+        {
+          "label": "Económico",
+          "productId": "philips-shc5200",
+          "note": "Sem fios, até 30 horas de bateria (Philips)."
+        },
+        {
+          "label": "Clássico",
+          "productId": "sennheiser-rs-120-w",
+          "note": "Pousam na base e ficam a carregar."
+        },
+        {
+          "label": "Para quem ouve pior",
+          "productId": "sennheiser-rs-5200",
+          "note": "Realce de voz e volume diferente em cada ouvido."
+        },
+        {
+          "label": "Para dois",
+          "productId": "sennheiser-rs-175",
+          "note": "A base transmite para dois pares ao mesmo tempo."
+        }
+      ],
+      "badges": {
+        "philips-shc5200": "Económico",
+        "energy-sistem-soundreel": "TV e telemóvel",
+        "sennheiser-rs-120-w": "Clássico",
+        "avantree-ensemble": "Diálogos claros",
+        "sennheiser-rs-175": "Para dois",
+        "sennheiser-rs-5200": "Clareza de voz"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Os auscultadores para televisão recomendados: ligação, destaque e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Ligação",
+          "Destaque",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "Philips SHC5200",
+            "Digital 2,4 GHz",
+            "Até 30 h de bateria",
+            "Orçamento curto"
+          ],
+          [
+            "Energy Sistem SoundReel",
+            "Base RF 2,4 GHz e Bluetooth",
+            "Baixa latência",
+            "TV e telemóvel"
+          ],
+          [
+            "Sennheiser RS 120-W",
+            "Base RF",
+            "Carregam na base",
+            "Uso diário simples"
+          ],
+          [
+            "Avantree Ensemble",
+            "Ótica ou jack 3,5 mm",
+            "Realce de voz",
+            "Pessoas mais velhas"
+          ],
+          [
+            "Sennheiser RS 175",
+            "Base digital",
+            "Dois pares, até 100 m",
+            "Casais e salas grandes"
+          ],
+          [
+            "Sennheiser RS 5200",
+            "Base digital",
+            "Clareza de voz, volume por ouvido",
+            "Quem ouve pior"
+          ]
+        ],
+        "rowProducts": [
+          "philips-shc5200",
+          "energy-sistem-soundreel",
+          "sennheiser-rs-120-w",
+          "avantree-ensemble",
+          "sennheiser-rs-175",
+          "sennheiser-rs-5200"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma as saídas de áudio do teu televisor antes de comprar."
+      },
+      "faq": [
+        {
+          "q": "Quais são os melhores auscultadores para ouvir televisão?",
+          "a": "Para a maioria das casas, um modelo com base de radiofrequência, como o Sennheiser RS 120-W: liga à TV, carrega na base e não tem o atraso do Bluetooth. Para quem já ouve pior, o Sennheiser RS 5200 tem realce de voz e volume diferente em cada ouvido.",
+          "productIds": [
+            "sennheiser-rs-120-w",
+            "sennheiser-rs-5200"
+          ]
+        },
+        {
+          "q": "Posso usar auscultadores Bluetooth para ver televisão?",
+          "a": "Podes, se a TV tiver Bluetooth, mas é comum haver um pequeno atraso entre a imagem e o som, que se nota nos diálogos. Os auscultadores com base própria foram feitos para o evitar. Se a TV não tiver Bluetooth, um transmissor ligado à saída de áudio resolve."
+        },
+        {
+          "q": "Que auscultadores para televisão são melhores para idosos?",
+          "a": "Os que realçam os diálogos e são simples de usar. O Avantree Ensemble tem a função Clear Voice, e o Sennheiser RS 5200 junta realce de voz, volume diferente em cada ouvido e desligar automático.",
+          "productIds": [
+            "avantree-ensemble",
+            "sennheiser-rs-5200"
+          ]
+        },
+        {
+          "q": "Duas pessoas podem ouvir a mesma televisão com auscultadores?",
+          "a": "Sim, com uma base que transmita para dois pares, como a do Sennheiser RS 175, segundo a marca. Confirma na ficha se o segundo par é compatível e se é vendido à parte.",
+          "productIds": [
+            "sennheiser-rs-175"
+          ]
+        }
+      ],
+      "related": [
+        "soundbars",
+        "melhores-auscultadores"
+      ],
+      "closing": "Primeiro as saídas da televisão, depois quem vai ouvir e quanto ouve. Com isso resolvido, cada um ouve ao seu volume e a casa dorme."
     },
     {
       "slug": "gira-discos",
@@ -1330,9 +1711,202 @@
         }
       ],
       "related": [
-        "colunas-bluetooth",
-        "tecnologia-acessorios"
+        "amplificador-para-gira-discos",
+        "colunas-bluetooth"
       ]
+    },
+    {
+      "slug": "amplificador-para-gira-discos",
+      "category": "Ligar o vinil",
+      "navLabel": "Amplificação",
+      "navIcon": "🎚️",
+      "illustration": "/img/gear/amplificacao.svg",
+      "title": "Amplificador para gira-discos e colunas passivas: a peça que falta entre o disco e o som",
+      "seoTitle": "Amplificador para gira-discos e colunas passivas: guia 2026",
+      "summary": "Pré-amplificador phono, amplificador ou os dois? Como ligar o gira-discos às colunas, ativas ou passivas, sem comprar a peça errada.",
+      "metaDescription": "Behringer PP400, Pro-Ject Phono Box E, Fosi Audio e Denon PMA-600NE: pré-amplificadores e amplificadores para gira-discos e colunas passivas.",
+      "intro": "Entre o gira-discos e as colunas há quase sempre uma peça em falta, e é fácil comprar a errada. O sinal que sai da agulha é tão fraco que precisa de dois passos: ser pré-amplificado e equalizado, que é o trabalho do pré-amplificador phono, e depois amplificado o suficiente para mexer as colunas. Este guia ajuda-te a perceber qual dos dois te falta.",
+      "updatedAt": "2026-10-06",
+      "publishedAt": "2026-10-06",
+      "sections": [
+        {
+          "heading": "Pré-amplificador ou amplificador?",
+          "paragraphs": [
+            "Se as colunas são ativas, com tomada e botão de volume, já têm amplificador: só te falta o pré-amplificador phono, a não ser que o gira-discos já o traga. Se as colunas são passivas, só com terminais para o fio, precisas de um amplificador, e de um pré-amplificador se esse amplificador não tiver entrada phono.",
+            "Uma entrada de linha (AUX) não é uma entrada phono, por muito que o cabo encaixe: sem pré-amplificador, o som sai baixíssimo e sem graves."
+          ],
+          "checklist": [
+            "Vê se o gira-discos tem pré-amplificador integrado, e se está ligado.",
+            "Vê se as colunas são ativas (com tomada) ou passivas (só com terminais).",
+            "Se o amplificador tem entrada PHONO, não precisas de pré-amplificador à parte.",
+            "Confirma o tipo de cápsula: quase todos os gira-discos de entrada usam MM."
+          ]
+        },
+        {
+          "heading": "Pré-amplificadores phono",
+          "paragraphs": [
+            "Ligam-se entre o gira-discos e a entrada de linha das colunas ativas ou do amplificador. Os mais baratos resolvem; os melhores têm menos ruído de fundo e melhor blindagem contra interferências.",
+            "O fio de terra do gira-discos liga ao terminal GND do pré-amplificador. Se ouvires um zumbido grave, é quase sempre esse fio que está a faltar."
+          ],
+          "productLinks": [
+            {
+              "productId": "pro-ject-phono-box-e",
+              "label": "Ver o Pro-Ject Phono Box E na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Amplificadores para colunas passivas",
+          "paragraphs": [
+            "Os mini-amplificadores de classe D, como o Fosi Audio BT20A, são pequenos, baratos e chegam para colunas de estante numa sala normal. Muitos não têm entrada phono: junta-lhes um pré-amplificador.",
+            "Um amplificador integrado com entrada phono, como o Denon PMA-600NE, resolve tudo numa só caixa. É o tipo de aparelho que nos anos 80 se comprava para a vida inteira, e que ainda hoje se compra pelo mesmo motivo."
+          ],
+          "productLinks": [
+            {
+              "productId": "fosi-audio-bt20a",
+              "label": "Ver o Fosi Audio BT20A na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "E as colunas passivas?",
+          "paragraphs": [
+            "Se partes do zero, um par de colunas de estante passivas, como as Edifier P12, liga-se ao amplificador com fio de coluna normal. Respeita o + e o − de cada lado: trocados numa só coluna, os graves desaparecem."
+          ],
+          "productLinks": [
+            {
+              "productId": "edifier-p12",
+              "label": "Ver as Edifier P12 na Amazon"
+            }
+          ]
+        }
+      ],
+      "productIds": [
+        "behringer-pp400",
+        "fosi-audio-box-x2",
+        "pro-ject-phono-box-e",
+        "fosi-audio-bt20a",
+        "edifier-p12",
+        "denon-pma-600ne"
+      ],
+      "quickPicks": [
+        {
+          "label": "Pré-amplificador barato",
+          "productId": "behringer-pp400",
+          "note": "Resolve o phono por muito pouco dinheiro."
+        },
+        {
+          "label": "Pré-amplificador de referência",
+          "productId": "pro-ject-phono-box-e",
+          "note": "Menos ruído e melhor blindagem."
+        },
+        {
+          "label": "Mini-amplificador",
+          "productId": "fosi-audio-bt20a",
+          "note": "Para colunas passivas, com Bluetooth."
+        },
+        {
+          "label": "Tudo numa caixa",
+          "productId": "denon-pma-600ne",
+          "note": "Amplificador integrado com entrada phono."
+        }
+      ],
+      "badges": {
+        "behringer-pp400": "Pré-amplificador · Económico",
+        "fosi-audio-box-x2": "Pré-amplificador · Ganho ajustável",
+        "pro-ject-phono-box-e": "Pré-amplificador · Referência",
+        "fosi-audio-bt20a": "Amplificador · Compacto",
+        "edifier-p12": "Colunas passivas",
+        "denon-pma-600ne": "Amplificador · Entrada phono"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Pré-amplificadores, amplificadores e colunas recomendados: tipo, ligação e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Tipo",
+          "Liga-se a",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "Behringer PP400",
+            "Pré-amplificador phono (MM)",
+            "Entrada de linha ou colunas ativas",
+            "Orçamento mínimo"
+          ],
+          [
+            "Fosi Audio Box X2",
+            "Pré-amplificador phono (MM)",
+            "Entrada de linha ou colunas ativas",
+            "Ajustar o ganho (39/42/45 dB)"
+          ],
+          [
+            "Pro-Ject Phono Box E",
+            "Pré-amplificador phono (MM)",
+            "Entrada de linha do amplificador",
+            "Menos ruído, melhor blindagem"
+          ],
+          [
+            "Fosi Audio BT20A",
+            "Amplificador classe D com Bluetooth",
+            "Colunas passivas",
+            "Sistema compacto"
+          ],
+          [
+            "Edifier P12",
+            "Colunas passivas de estante",
+            "Amplificador",
+            "Começar do zero"
+          ],
+          [
+            "Denon PMA-600NE",
+            "Amplificador integrado",
+            "Colunas passivas; gira-discos pela entrada phono",
+            "Tudo numa caixa"
+          ]
+        ],
+        "rowProducts": [
+          "behringer-pp400",
+          "fosi-audio-box-x2",
+          "pro-ject-phono-box-e",
+          "fosi-audio-bt20a",
+          "edifier-p12",
+          "denon-pma-600ne"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma o tipo de cápsula e as entradas do teu equipamento."
+      },
+      "faq": [
+        {
+          "q": "Preciso de amplificador para ligar o gira-discos?",
+          "a": "Depende das colunas. Com colunas ativas, só precisas de um pré-amplificador phono, se o gira-discos não o tiver. Com colunas passivas, precisas de um amplificador, e de um pré-amplificador se o amplificador não tiver entrada phono."
+        },
+        {
+          "q": "Qual é o melhor pré-amplificador phono barato?",
+          "a": "O Behringer PP400 resolve o básico por muito pouco. Se quiseres menos ruído de fundo e melhor blindagem, o Pro-Ject Phono Box E é a referência na entrada de gama.",
+          "productIds": [
+            "behringer-pp400",
+            "pro-ject-phono-box-e"
+          ]
+        },
+        {
+          "q": "Que amplificador usar com colunas passivas?",
+          "a": "Para uma sala normal e colunas de estante, um mini-amplificador como o Fosi Audio BT20A chega. Se queres ligar o gira-discos diretamente, um integrado com entrada phono, como o Denon PMA-600NE, evita uma caixa a mais.",
+          "productIds": [
+            "fosi-audio-bt20a",
+            "denon-pma-600ne"
+          ]
+        },
+        {
+          "q": "Porque é que o gira-discos faz um zumbido?",
+          "a": "Quase sempre falta ligar o fio de terra do gira-discos ao terminal GND do pré-amplificador ou do amplificador. Se o zumbido continuar, afasta os cabos de áudio dos cabos de alimentação."
+        }
+      ],
+      "related": [
+        "gira-discos",
+        "tecnologia-acessorios"
+      ],
+      "closing": "Escreve numa folha o que já tens, do gira-discos às colunas. A peça que falta no meio é a que tens de comprar, e mais nenhuma."
     },
     {
       "slug": "home-studio",
@@ -1518,9 +2092,214 @@
         }
       ],
       "related": [
-        "melhores-auscultadores",
-        "tecnologia-acessorios"
+        "microfone-para-podcast",
+        "melhores-auscultadores"
       ]
+    },
+    {
+      "slug": "microfone-para-podcast",
+      "category": "Gravar a tua voz",
+      "navLabel": "Microfones",
+      "navIcon": "🎤",
+      "illustration": "/img/gear/microfones.svg",
+      "title": "Microfone para podcast e vídeo: do telemóvel ao estúdio caseiro",
+      "seoTitle": "Microfone para podcast, telemóvel e vídeo: guia 2026",
+      "summary": "Lapela, sem fios, para câmara ou USB de secretária: que microfone escolher para gravar podcasts, vídeos e aulas, do telemóvel ao computador.",
+      "metaDescription": "BOYA BY-M1, DJI Mic Mini, RØDE VideoMicro II, Samson Q2U, RØDE PodMic USB e Shure MV7+: microfones para podcast, telemóvel e vídeo.",
+      "intro": "O microfone do telemóvel ou do portátil foi feito para chamadas, não para gravar. A boa notícia é que o salto de qualidade custa pouco, desde que escolhas o tipo certo para o que vais gravar: vídeo com o telemóvel, vídeo com câmara ou voz sentado à secretária.",
+      "updatedAt": "2026-10-06",
+      "publishedAt": "2026-10-06",
+      "sections": [
+        {
+          "heading": "Três tipos de microfone, três usos",
+          "paragraphs": [
+            "Os de lapela prendem-se à roupa e ficam perto da boca: ideais para vídeos, entrevistas e aulas. Os de câmara, tipo canhão, montam-se em cima da câmara e apanham o que está à frente. Os de secretária, USB ou XLR, são os do podcast: falas diretamente para eles, sempre à mesma distância."
+          ],
+          "checklist": [
+            "Gravas com o telemóvel? Lapela, com ou sem fios.",
+            "Gravas com câmara? Microfone de câmara com saída de 3,5 mm.",
+            "Gravas ao computador? Microfone USB.",
+            "Confirma a ligação do teu telemóvel: muitos já não têm jack de 3,5 mm."
+          ]
+        },
+        {
+          "heading": "Para vídeo com o telemóvel",
+          "paragraphs": [
+            "Um microfone de lapela com fio é a solução mais barata e funciona, mas o cabo limita os movimentos, e num telemóvel sem jack precisas de um adaptador. Os sistemas sem fios, como o DJI Mic Mini, trazem um recetor que liga ao telemóvel e transmissores pequenos para duas pessoas."
+          ],
+          "productLinks": [
+            {
+              "productId": "dji-mic-mini",
+              "label": "Ver o DJI Mic Mini na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Para podcast",
+          "paragraphs": [
+            "Numa divisão sem tratamento acústico, um microfone dinâmico apanha menos o eco do quarto do que um de condensador. O Samson Q2U e o RØDE PodMic USB são dinâmicos e têm USB e XLR: ligam diretamente ao computador e, mais tarde, a uma interface.",
+            "Fala a um palmo do microfone, sempre à mesma distância. É a dica mais barata deste guia, e funciona com qualquer modelo. Nos anos 90, gravar a própria voz era uma cassete virgem e o botão REC do rádio-gravador; hoje o episódio chega a quem quiser ouvi-lo."
+          ],
+          "productLinks": [
+            {
+              "productId": "samson-q2u",
+              "label": "Ver o Samson Q2U na Amazon"
+            }
+          ]
+        },
+        {
+          "heading": "Para vídeo com câmara",
+          "paragraphs": [
+            "Um microfone de câmara como o RØDE VideoMicro II monta-se em cima da câmara e capta o que está à frente, ignorando o que vem dos lados. Não precisa de pilhas, o que é menos uma coisa a falhar a meio da gravação."
+          ],
+          "productLinks": [
+            {
+              "productId": "rode-videomicro-ii",
+              "label": "Ver o RØDE VideoMicro II na Amazon"
+            }
+          ]
+        }
+      ],
+      "productIds": [
+        "boya-by-m1",
+        "dji-mic-mini",
+        "rode-videomicro-ii",
+        "fifine-usb-condensador",
+        "samson-q2u",
+        "rode-podmic-usb",
+        "shure-mv7-plus"
+      ],
+      "quickPicks": [
+        {
+          "label": "Lapela barata",
+          "productId": "boya-by-m1",
+          "note": "Com fio, para telemóvel ou câmara."
+        },
+        {
+          "label": "Sem fios",
+          "productId": "dji-mic-mini",
+          "note": "Dois transmissores para entrevistas com o telemóvel."
+        },
+        {
+          "label": "Podcast",
+          "productId": "samson-q2u",
+          "note": "USB hoje, XLR quando tiveres interface."
+        },
+        {
+          "label": "Premium",
+          "productId": "shure-mv7-plus",
+          "note": "Dinâmico, USB-C e XLR, com redução de ruído."
+        }
+      ],
+      "badges": {
+        "boya-by-m1": "Lapela · Económico",
+        "dji-mic-mini": "Sem fios · Telemóvel",
+        "rode-videomicro-ii": "Câmara",
+        "fifine-usb-condensador": "USB · Económico",
+        "samson-q2u": "Podcast · USB e XLR",
+        "rode-podmic-usb": "Podcast · Gama média",
+        "shure-mv7-plus": "Podcast · Premium"
+      },
+      "comparison": {
+        "heading": "Comparação rápida",
+        "caption": "Os microfones recomendados: tipo, ligação e utilização ideal",
+        "columns": [
+          "Modelo",
+          "Tipo",
+          "Liga-se a",
+          "Ideal para"
+        ],
+        "rows": [
+          [
+            "BOYA BY-M1",
+            "Lapela com fio",
+            "Jack 3,5 mm (telemóvel, câmara)",
+            "Vídeos e aulas, orçamento curto"
+          ],
+          [
+            "DJI Mic Mini",
+            "Lapela sem fios (2 transmissores)",
+            "Telemóvel",
+            "Entrevistas e vídeos"
+          ],
+          [
+            "RØDE VideoMicro II",
+            "Canhão para câmara",
+            "Câmara (3,5 mm)",
+            "Vídeo com câmara"
+          ],
+          [
+            "FIFINE USB",
+            "Condensador USB",
+            "Computador",
+            "Começar a gravar voz"
+          ],
+          [
+            "Samson Q2U",
+            "Dinâmico USB e XLR",
+            "Computador ou interface",
+            "Podcast em casa"
+          ],
+          [
+            "RØDE PodMic USB",
+            "Dinâmico USB-C e XLR",
+            "Computador ou interface",
+            "Podcast com mais qualidade"
+          ],
+          [
+            "Shure MV7+",
+            "Dinâmico USB-C e XLR",
+            "Computador ou interface",
+            "Podcast premium"
+          ]
+        ],
+        "rowProducts": [
+          "boya-by-m1",
+          "dji-mic-mini",
+          "rode-videomicro-ii",
+          "fifine-usb-condensador",
+          "samson-q2u",
+          "rode-podmic-usb",
+          "shure-mv7-plus"
+        ],
+        "note": "Características indicadas pelos fabricantes. Confirma as ligações do teu telemóvel, câmara ou computador."
+      },
+      "faq": [
+        {
+          "q": "Qual é o melhor microfone para podcast?",
+          "a": "Para gravar em casa, um dinâmico USB: apanha menos o eco do quarto. O Samson Q2U é o ponto de partida; o RØDE PodMic USB e o Shure MV7+ sobem a qualidade e trazem processamento de voz pela app.",
+          "productIds": [
+            "samson-q2u",
+            "rode-podmic-usb",
+            "shure-mv7-plus"
+          ]
+        },
+        {
+          "q": "Que microfone usar com o telemóvel?",
+          "a": "Para vídeos e entrevistas, um de lapela. Com fio, o BOYA BY-M1 resolve por pouco, mas num telemóvel sem jack precisa de adaptador. Sem fios, o DJI Mic Mini traz um recetor que liga ao telemóvel e dois transmissores.",
+          "productIds": [
+            "boya-by-m1",
+            "dji-mic-mini"
+          ]
+        },
+        {
+          "q": "Microfone dinâmico ou condensador?",
+          "a": "O dinâmico apanha sobretudo o que está perto, por isso é melhor numa divisão com eco ou barulho. O condensador apanha mais detalhe, e também mais quarto. Para podcast em casa, o dinâmico perdoa mais."
+        },
+        {
+          "q": "Preciso de interface de áudio para gravar um podcast?",
+          "a": "Não, se o microfone for USB. Microfones como o Samson Q2U e o RØDE PodMic USB têm USB e XLR: começas pelo USB e passas a uma interface quando quiseres.",
+          "productIds": [
+            "samson-q2u",
+            "rode-podmic-usb"
+          ]
+        }
+      ],
+      "related": [
+        "home-studio",
+        "colunas-para-pc"
+      ],
+      "closing": "Primeiro onde vais gravar e com quê: telemóvel, câmara ou computador. Depois fala perto do microfone e grava. O resto aprende-se no segundo episódio."
     },
     {
       "slug": "tecnologia-acessorios",

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Telemóvel a gravar com um microfone de lapela sem fios, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .rec { animation: led 1.4s ease-in-out infinite; }
+    .bars path { transform-box: fill-box; transform-origin: center; animation: eq 1s ease-in-out infinite; }
+    .bars path:nth-child(2) { animation-delay: -.3s; animation-duration: .8s; }
+    .bars path:nth-child(3) { animation-delay: -.6s; animation-duration: 1.2s; }
+    .bars path:nth-child(4) { animation-delay: -.15s; animation-duration: .9s; }
+    .bars path:nth-child(5) { animation-delay: -.45s; animation-duration: 1.1s; }
+    .bars path:nth-child(6) { animation-delay: -.75s; }
+    .wave { animation: wave 2.4s ease-in-out infinite; }
+    .wave.far { animation-delay: -1.2s; }
+    @keyframes led { 50% { opacity: .3; } }
+    @keyframes eq { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    @keyframes wave { 0%, 100% { opacity: .15; } 50% { opacity: .9; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <!-- Phone recording -->
+  <rect x="96" y="48" width="132" height="244" rx="20" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <rect x="108" y="72" width="108" height="196" rx="10" fill="#041015"/>
+  <circle class="rec" cx="128" cy="92" r="7" fill="#FF2D9B"/>
+  <path d="M142 92H196" stroke="#9AD9D3" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+  <g class="bars" stroke="#00FFCC" stroke-width="7" stroke-linecap="round">
+    <path d="M126 170V194"/><path d="M142 158V206"/><path d="M158 166V198"/><path d="M174 150V214"/><path d="M190 162V202"/><path d="M206 172V192"/>
+  </g>
+  <circle cx="162" cy="246" r="9" stroke="#9AD9D3" stroke-opacity=".5" stroke-width="2"/>
+  <!-- Wireless waves between the lav transmitter and the phone -->
+  <g stroke-width="3" stroke-linecap="round" fill="none">
+    <path class="wave" d="M264 150C254 160 254 176 264 186" stroke="#00FFCC"/>
+    <path class="wave far" d="M248 136C232 154 232 182 248 200" stroke="#C044FF"/>
+  </g>
+  <!-- Lavalier mic: foam windscreen on a small capsule, held by a clip, cable trailing down -->
+  <path d="M318 178C318 222 352 236 352 286" stroke="#9AD9D3" stroke-opacity=".45" stroke-width="4" stroke-linecap="round"/>
+  <rect x="304" y="150" width="28" height="44" rx="6" fill="#0C3C43" stroke="#00CCFF" stroke-width="3" transform="rotate(-12 318 172)"/>
+  <path d="M300 168L338 160" stroke="#9AD9D3" stroke-opacity=".6" stroke-width="3"/>
+  <ellipse cx="322" cy="128" rx="22" ry="26" fill="#C044FF" fill-opacity=".35" stroke="#C044FF" stroke-width="3"/>
+  <path d="M308 120C314 116 330 116 336 120M306 132C314 128 330 128 338 132" stroke="#C044FF" stroke-opacity=".6" stroke-width="2"/>
+</svg>

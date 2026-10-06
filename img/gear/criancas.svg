@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Auscultadores pequenos com um medidor de volume que nunca passa o limite, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .phones { animation: bob 4s ease-in-out infinite; }
+    .meter path { transform-box: fill-box; transform-origin: bottom; animation: meter 1.2s ease-in-out infinite; }
+    .meter path:nth-child(2) { animation-delay: -.4s; animation-duration: 1s; }
+    .meter path:nth-child(3) { animation-delay: -.8s; animation-duration: 1.4s; }
+    .meter path:nth-child(4) { animation-delay: -.2s; animation-duration: 1.1s; }
+    .limit { animation: led 2.4s ease-in-out infinite; }
+    .star { transform-box: fill-box; transform-origin: center; animation: twinkle 3s ease-in-out infinite; }
+    @keyframes bob { 50% { transform: translateY(-5px); } }
+    @keyframes meter { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    @keyframes led { 50% { opacity: .45; } }
+    @keyframes twinkle { 50% { transform: scale(.75); opacity: .6; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <!-- Small, rounded kids' headphones with a star sticker -->
+  <g class="phones">
+    <path d="M86 196C86 114 214 114 214 196" stroke="#00CCFF" stroke-width="16" stroke-linecap="round"/>
+    <path d="M100 192C100 132 200 132 200 192" stroke="#9AD9D3" stroke-opacity=".45" stroke-width="7"/>
+    <rect x="66" y="180" width="50" height="74" rx="25" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+    <rect x="184" y="180" width="50" height="74" rx="25" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+    <path class="star" d="M209 205L213 214L222 215L215 221L217 230L209 225L201 230L203 221L196 215L205 214Z" fill="#C044FF"/>
+  </g>
+  <!-- Volume meter: bars bounce but never cross the limit line -->
+  <rect x="286" y="104" width="122" height="168" rx="12" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <g class="meter" stroke="#00FFCC" stroke-width="14" stroke-linecap="round">
+    <path d="M314 250V160"/><path d="M338 250V160"/><path d="M362 250V160"/><path d="M386 250V160"/>
+  </g>
+  <path class="limit" d="M300 142H394" stroke="#FF2D9B" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 7"/>
+  <rect x="384" y="126" width="16" height="13" rx="3" fill="#FF2D9B"/>
+  <path d="M388 126V121C388 115 396 115 396 121V126" stroke="#FF2D9B" stroke-width="3"/>
+</svg>
