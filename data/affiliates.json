@@ -40,6 +40,10 @@
     "Presentes": {
       "src": "/img/gear/presentes.svg",
       "alt": "Ilustração néon de uma caixa de presente com notas de música"
+    },
+    "Auriculares": {
+      "src": "/img/gear/auriculares.svg",
+      "alt": "Ilustração néon de um estojo aberto com auriculares sem fios"
     }
   },
   "products": [
@@ -895,6 +899,178 @@
         "type": "manual",
         "checkedAt": "2026-10-06",
         "referenceUrl": "https://www.amazon.es/dp/B0G3Q92XG4/"
+      }
+    },
+    {
+      "id": "soundcore-p20i",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0BTYCRJSS",
+      "name": "Soundcore P20i",
+      "category": "Auriculares",
+      "description": "A entrada mais barata nos auriculares sem fios de uma marca conhecida. A Soundcore indica diafragmas de 10 mm, graves marcados e uma app com 22 equalizações e uma função para encontrar um auricular perdido. Não tem cancelamento de ruído: é para uso casual, não para o avião.",
+      "bestFor": "Primeiros auriculares sem fios, orçamento curto",
+      "pros": [
+        "Preço de entrada",
+        "App com equalizador"
+      ],
+      "cons": [
+        "Sem cancelamento de ruído"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0BTYCRJSS/"
+      }
+    },
+    {
+      "id": "soundcore-liberty-4-nc",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0BZV4QFP8",
+      "name": "Soundcore Liberty 4 NC",
+      "category": "Auriculares",
+      "description": "Cancelamento de ruído adaptativo por um preço de gama baixa. Segundo a Soundcore, reduz até 98,5% do ruído e ajusta-se em tempo real ao ouvido e ao ambiente. É a escolha para quem quer silêncio no metro sem pagar a marca.",
+      "bestFor": "Cancelamento de ruído com orçamento curto",
+      "pros": [
+        "Cancelamento adaptativo",
+        "Bom preço"
+      ],
+      "cons": [
+        "Marca menos conhecida do que Sony ou Apple"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0BZV4QFP8/"
+      }
+    },
+    {
+      "id": "sony-wf-c710n",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0DZ6Z6T1C",
+      "name": "Sony WF-C710N",
+      "category": "Auriculares",
+      "description": "Os sucessores dos WF-C700N. Segundo a Sony, têm cancelamento de ruído melhorado, com dois microfones em cada auricular, chamadas mais nítidas e até o dobro da bateria do modelo anterior. Trazem modo ambiente e equalizador de 5 bandas na app. É o meio-termo sensato da Sony.",
+      "bestFor": "Dia a dia e transportes",
+      "pros": [
+        "Cancelamento de ruído de marca",
+        "Modo ambiente",
+        "Equalizador na app"
+      ],
+      "cons": [
+        "Isolamento abaixo dos modelos premium"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0DZ6Z6T1C/"
+      }
+    },
+    {
+      "id": "apple-airpods-4",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0DGHWD7CT",
+      "name": "Apple AirPods 4",
+      "category": "Auriculares",
+      "description": "Os auriculares óbvios para quem tem iPhone: emparelham num toque e passam sozinhos de um aparelho Apple para outro. Formato aberto, sem pontas de silicone, com chip H2 e áudio espacial personalizado. Esta versão não tem cancelamento de ruído; há uma variante com, mais cara.",
+      "bestFor": "Quem tem iPhone",
+      "pros": [
+        "Integração com iPhone",
+        "Formato aberto, leve"
+      ],
+      "cons": [
+        "Sem cancelamento de ruído nesta versão",
+        "Com Android perdem funções"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0DGHWD7CT/"
+      }
+    },
+    {
+      "id": "samsung-galaxy-buds3",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0D4QVNFWV",
+      "name": "Samsung Galaxy Buds3",
+      "category": "Auriculares",
+      "description": "Para quem tem um Samsung: formato aberto, cancelamento de ruído adaptativo e, com telemóveis Galaxy, o codec próprio da Samsung para áudio de alta resolução. É a versão espanhola, vendida pela Amazon com carregador. O formato aberto isola menos do que os intra-auriculares.",
+      "bestFor": "Quem tem Samsung",
+      "pros": [
+        "Integração com telemóveis Galaxy",
+        "Cancelamento adaptativo"
+      ],
+      "cons": [
+        "Formato aberto isola menos",
+        "Funções extra só com Samsung"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0D4QVNFWV/"
+      }
+    },
+    {
+      "id": "shokz-openrun",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0CYFSQPJH",
+      "name": "Shokz OpenRun",
+      "category": "Auriculares",
+      "description": "Condução óssea: ficam à frente da orelha e deixam o ouvido livre, para correr na rua sem deixar de ouvir o trânsito. Resistentes a pó e água (IP67, segundo a Shokz) e com microfones para chamadas. Têm menos graves do que os intra-auriculares; é a troca pela segurança.",
+      "bestFor": "Correr e pedalar na rua",
+      "pros": [
+        "Ouvido livre",
+        "IP67 (fabricante)"
+      ],
+      "cons": [
+        "Menos graves",
+        "Deixam escapar som a volume alto"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0CYFSQPJH/"
+      }
+    },
+    {
+      "id": "sony-wf-1000xm5",
+      "status": "published",
+      "linkType": "affiliate",
+      "merchant": "amazon-es",
+      "asin": "B0C4TLFZSZ",
+      "name": "Sony WF-1000XM5",
+      "category": "Auriculares",
+      "description": "Os auriculares topo de gama da Sony. Segundo a marca, têm o cancelamento de ruído mais eficaz da linha, áudio de alta resolução e DSEE Extreme. Para quem viaja muito e quer o máximo de silêncio num estojo de bolso.",
+      "bestFor": "Viagens e máximo silêncio",
+      "pros": [
+        "Cancelamento de ruído de topo",
+        "Áudio de alta resolução"
+      ],
+      "cons": [
+        "Preço premium"
+      ],
+      "price": null,
+      "source": {
+        "type": "manual",
+        "checkedAt": "2026-10-06",
+        "referenceUrl": "https://www.amazon.es/dp/B0C4TLFZSZ/"
       }
     }
   ]

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <title>Estojo aberto com dois auriculares sem fios, nas cores néon da PulsarFM</title>
+  <style>
+    /* Transform/opacity only, so it stays on the compositor. Runs inside an img tag. */
+    .float { animation: bob 3.6s ease-in-out infinite; }
+    .wave { animation: wave 2.4s ease-in-out infinite; }
+    .wave.far { animation-delay: -1.2s; }
+    .led { animation: led 2.4s ease-in-out infinite; }
+    @keyframes bob { 50% { transform: translateY(-9px); } }
+    @keyframes wave { 0%, 100% { opacity: .15; } 50% { opacity: .9; } }
+    @keyframes led { 50% { opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="480" height="360" rx="20" fill="#061D22"/>
+  <path d="M0 300H480M44 0V360M436 0V360" stroke="#9AD9D3" stroke-opacity=".09"/>
+  <!-- Open lid, hinged at the back of the case -->
+  <path d="M124 190C124 132 156 108 214 108H226C284 108 300 132 300 190" fill="#08292F" stroke="#00FFCC" stroke-width="2"/>
+  <path d="M138 186C140 140 166 122 214 122H226C270 122 284 140 286 186" stroke="#9AD9D3" stroke-opacity=".18" stroke-width="2"/>
+  <!-- Case body with one earbud still docked (stem + tip visible) -->
+  <rect x="112" y="186" width="200" height="96" rx="34" fill="#0C3C43" stroke="#00FFCC" stroke-width="2"/>
+  <ellipse cx="170" cy="192" rx="26" ry="9" fill="#041015" stroke="#9AD9D3" stroke-opacity=".4"/>
+  <ellipse cx="254" cy="192" rx="26" ry="9" fill="#041015" stroke="#9AD9D3" stroke-opacity=".4"/>
+  <path d="M154 190C154 172 186 172 186 190" fill="#14282F" stroke="#00CCFF" stroke-width="3"/>
+  <circle cx="170" cy="176" r="7" fill="#C044FF"/>
+  <circle class="led" cx="212" cy="252" r="6" fill="#00FFCC"/>
+  <!-- Second earbud lifting out, tilted: silicone tip, round body, long stem -->
+  <g class="float">
+    <g transform="rotate(-28 350 132)">
+      <rect x="338" y="138" width="24" height="86" rx="12" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+      <circle cx="350" cy="128" r="30" fill="#0C3C43" stroke="#00CCFF" stroke-width="3"/>
+      <ellipse cx="350" cy="96" rx="15" ry="11" fill="#FF2D9B"/>
+      <rect x="344" y="200" width="12" height="14" rx="4" fill="#9AD9D3" fill-opacity=".5"/>
+    </g>
+  </g>
+  <g stroke-width="3" stroke-linecap="round">
+    <path class="wave" d="M300 70C284 78 278 92 282 106" stroke="#00FFCC"/>
+    <path class="wave far" d="M292 46C266 58 256 82 262 106" stroke="#C044FF"/>
+  </g>
+</svg>

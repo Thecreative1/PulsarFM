@@ -140,14 +140,14 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
 /* Category bar: part of the frame, so the active category may glow. */
 .guide-nav { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
 /* Same neon pills as the genre filter on the radio home page: cyan, pink on hover, green when active. */
-.guide-nav ul { position: relative; /* offsetLeft of the links is measured from here */ display: flex; gap: 10px; margin: 0; padding: 16px 4px 14px; list-style: none; overflow-x: auto; scrollbar-width: none; }
+.guide-nav ul { position: relative; /* offsetLeft of the links is measured from here */ display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 16px 4px 14px; list-style: none; overflow-x: auto; scrollbar-width: none; }
 .guide-nav ul::-webkit-scrollbar { display: none; }
 .guide-nav a { display: inline-block; padding: 9px 16px; border-radius: 999px; background: var(--line-secondary); color: #001114; font-size: .85rem; font-weight: bold; white-space: nowrap; text-decoration: none; transition: transform .14s ease, background-color .2s ease, box-shadow .2s ease; }
 .guide-nav a:hover, .guide-nav a:focus-visible { background: var(--neon-pink); color: #1a0010; transform: translateY(-2px); box-shadow: 0 0 14px rgba(255, 45, 155, .5), 0 0 28px rgba(255, 45, 155, .25); }
 .guide-nav a[aria-current="page"] { background: var(--neon-green); color: #001a00; box-shadow: 0 0 16px rgba(57, 255, 20, .5), 0 0 32px rgba(57, 255, 20, .25); }
 /* Narrower screens: the bar scrolls sideways; the fade on the right hints there is more. */
 @media (max-width: 900px) {
-  .guide-nav ul { padding-right: 40px; mask-image: linear-gradient(90deg, #000 90%, transparent); }
+  .guide-nav ul { flex-wrap: nowrap; padding-right: 40px; mask-image: linear-gradient(90deg, #000 90%, transparent); }
 }
 .editorial-hero h1 { text-shadow: 0 0 14px rgba(0, 255, 204, .35), 0 0 34px rgba(192, 68, 255, .18); }
 .editorial-hero figure img {
