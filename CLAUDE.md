@@ -42,6 +42,9 @@ privacidade.html      — privacy policy (GDPR), standalone neon page
 radios-*/index.html   — 8 SEO genre landing pages, PT (GENERATED — do not hand-edit)
 en/*-radio/index.html — the same 8 pages in English (GENERATED, same generator)
 tools/gen_genre_pages.py — generator for the genre pages (run: python tools/gen_genre_pages.py)
+tools/indexnow.py     — pings Bing/IndexNow with changed pages; run after a push is live
+                        (default: pages changed in the last commit; --all, --since <rev>)
+BingSiteAuth.xml, 50e4b799….txt — Bing Webmaster verification + IndexNow key. Never delete.
 sitemap.xml           — 25 URLs; bump <lastmod> when pages change
 robots.txt            — points to the sitemap (apex domain)
 manifest.webmanifest  — PWA manifest
