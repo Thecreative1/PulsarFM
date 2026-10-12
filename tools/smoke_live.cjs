@@ -81,10 +81,25 @@ async function batch(items,kind) {
   for(const [width,label] of [[1440,'desktop'],[390,'mobile']]){
     await page.setViewportSize({width,height:width===390?844:1000});
     await page.goto(liveUrl('/es/recomendaciones/'),{waitUntil:'domcontentloaded'});
-    assert.equal(await page.locator('.guide-nav li').count(),7);
-    assert.equal(await page.locator('.guides-index .guide-link').count(),8);
+    assert.equal(await page.locator('.guide-nav li').count(),13);
+    assert.equal(await page.locator('#guias .guide-link').count(),13);
     await checkLayout('Spanish hub '+label);
     await page.screenshot({path:path.join(evidence,'hub-'+label+'.png'),animations:'disabled'});
+      const primary = JSON.parse(fs.readFileSync(path.join(root,'data/recommendations.es.json'),'utf8')).articles.filter(a=>!a.secondary);
+      for (const article of primary) {
+        const route = '/es/recomendaciones/'+article.slug+'/';
+        await page.locator('.guide-nav a[href="'+route+'"]').click();
+        assert.equal(new URL(page.url()).pathname,route);
+        assert.equal(await page.locator('.product-recommendation').count(),article.productIds.length);
+        assert.equal(await page.locator('.guide-comparison tbody tr').count(),article.productIds.length);
+        assert.equal(await page.locator('.quick-picks li').count(),article.quickPicks.length);
+        assert.equal(await page.locator('.guide-nav [aria-current="page"]').getAttribute('href'),route);
+        await checkLayout(article.navLabel+' '+label);
+        const ptRoute = '/recomendacoes/'+article.ptSlug+'/';
+        assert.equal(await page.locator('.locale-nav a[lang="pt-PT"]').getAttribute('href'),ptRoute);
+      }
+      results.checks.push('All 13 guide buttons navigate to complete Spanish content on '+label);
+
     await page.goto(liveUrl('/es/recomendaciones/auriculares-cancelacion-ruido-trabajar/'),{waitUntil:'domcontentloaded'});
     await checkLayout('Spanish article '+label);
     const commercial=await page.locator('a[data-affiliate-link]').evaluateAll(links=>links.map(a=>({tag:new URL(a.href).searchParams.get('tag'),market:a.dataset.market,rel:a.rel})));

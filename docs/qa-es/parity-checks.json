@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-12",
+  "primaryGuides": 13,
+  "supplementaryGuides": 2,
+  "localizedProducts": 73,
+  "spanishPages": 39,
+  "allSitePages": 71,
+  "legacyAmazonLinks": 313,
+  "preservation": [
+    {
+      "file": "recomendacoes/index.html",
+      "amazonLinks": 0,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/presentes-para-quem-gosta-de-musica/index.html",
+      "amazonLinks": 37,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/melhores-auscultadores/index.html",
+      "amazonLinks": 17,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/melhores-auriculares-bluetooth/index.html",
+      "amazonLinks": 25,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/auscultadores-para-criancas/index.html",
+      "amazonLinks": 26,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/colunas-bluetooth/index.html",
+      "amazonLinks": 18,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/colunas-para-pc/index.html",
+      "amazonLinks": 29,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/soundbars/index.html",
+      "amazonLinks": 21,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/auscultadores-para-televisao/index.html",
+      "amazonLinks": 23,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/gira-discos/index.html",
+      "amazonLinks": 21,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/amplificador-para-gira-discos/index.html",
+      "amazonLinks": 23,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/home-studio/index.html",
+      "amazonLinks": 24,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/microfone-para-podcast/index.html",
+      "amazonLinks": 28,
+      "preserved": true
+    },
+    {
+      "file": "recomendacoes/tecnologia-acessorios/index.html",
+      "amazonLinks": 21,
+      "preserved": true
+    }
+  ],
+  "browserSuccess": true
+}

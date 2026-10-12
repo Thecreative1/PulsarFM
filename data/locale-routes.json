@@ -14,14 +14,6 @@
       "es": "/es/recomendaciones/"
     },
     {
-      "pt": "/recomendacoes/gira-discos/",
-      "es": "/es/recomendaciones/tocadiscos-para-empezar/"
-    },
-    {
-      "pt": "/recomendacoes/home-studio/",
-      "es": "/es/recomendaciones/home-studio-economico/"
-    },
-    {
       "pt": "/radios-rock/",
       "es": "/es/radio-rock/"
     },
@@ -52,6 +44,58 @@
     {
       "pt": "/radios-synthwave/",
       "es": "/es/radio-synthwave/"
+    },
+    {
+      "pt": "/recomendacoes/presentes-para-quem-gosta-de-musica/",
+      "es": "/es/recomendaciones/regalos-para-amantes-musica/"
+    },
+    {
+      "pt": "/recomendacoes/melhores-auscultadores/",
+      "es": "/es/recomendaciones/auriculares-diadema/"
+    },
+    {
+      "pt": "/recomendacoes/melhores-auriculares-bluetooth/",
+      "es": "/es/recomendaciones/auriculares-bluetooth-calidad-precio/"
+    },
+    {
+      "pt": "/recomendacoes/auscultadores-para-criancas/",
+      "es": "/es/recomendaciones/auriculares-para-ninos/"
+    },
+    {
+      "pt": "/recomendacoes/colunas-bluetooth/",
+      "es": "/es/recomendaciones/altavoces-bluetooth-casa/"
+    },
+    {
+      "pt": "/recomendacoes/colunas-para-pc/",
+      "es": "/es/recomendaciones/altavoces-para-pc/"
+    },
+    {
+      "pt": "/recomendacoes/soundbars/",
+      "es": "/es/recomendaciones/barras-de-sonido/"
+    },
+    {
+      "pt": "/recomendacoes/auscultadores-para-televisao/",
+      "es": "/es/recomendaciones/auriculares-para-television/"
+    },
+    {
+      "pt": "/recomendacoes/gira-discos/",
+      "es": "/es/recomendaciones/tocadiscos-para-empezar/"
+    },
+    {
+      "pt": "/recomendacoes/amplificador-para-gira-discos/",
+      "es": "/es/recomendaciones/amplificador-para-tocadiscos/"
+    },
+    {
+      "pt": "/recomendacoes/home-studio/",
+      "es": "/es/recomendaciones/home-studio-economico/"
+    },
+    {
+      "pt": "/recomendacoes/microfone-para-podcast/",
+      "es": "/es/recomendaciones/microfonos-usb-podcast-streaming/"
+    },
+    {
+      "pt": "/recomendacoes/tecnologia-acessorios/",
+      "es": "/es/recomendaciones/accesorios-audio/"
     }
   ]
 }

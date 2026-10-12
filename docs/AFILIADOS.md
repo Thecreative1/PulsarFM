@@ -249,3 +249,8 @@ GA4 mantém G-YRD1BYXB78 e pulsarfm-consent. affiliate_click inclui market, lang
 A frase espanhola exigida por Amazon está visível no portal, nos guias e na política. Cada artigo anuncia publicidade antes dos links. Sem um ID validado, o gerador oferece apenas links diretos, sem copiar o ID PT.
 
 Fluxo manual GA4: registar as dimensões de âmbito Evento (market, language, article_slug, product_id, merchant, link_position, content_category, page_kind). Usar País e Sessão: origem/meio/canal para país e tráfego orgânico; filtrar /es/ e google / organic. Agrupar page_view por artigos/categorias e affiliate_click por artigo/produto/posição. O país vem do GA4, não de geolocalização adicional. Validar a configuração real no DebugView com consentimento; os testes locais bloqueiam pedidos GA4. Consultar pedidos e comissões no relatório Amazon por pulsarfmes-21 ou pulsarfm-21.
+
+
+## Estrutura espanhola alinhada com PT (12/10/2026)
+
+A edição ES tem 13 guias principais na mesma ordem dos 13 guias PT, 73 produtos localizados e dois guias complementares. O menu liga diretamente aos guias. As 13 categorias incluem as sete rotas originais preservadas. Alterações à seleção portuguesa exigem adaptar o guia ES correspondente; o gerador valida ordem, produtos, ilustração, ícone, escolhas rápidas e cobertura da comparação. Ver docs/CONVERSAO-ESTRUTURA-ES.md.

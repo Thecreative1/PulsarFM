@@ -56,23 +56,24 @@ def category_path(category):
 
 def guide_link(article, category, number=None):
     prefix = f'<span class="guide-number" aria-hidden="true">{number:02}</span>' if number else ''
-    image = (f'<span class="guide-thumb"><img src="{esc(category["illustration"])}" alt="" width="480" height="360" loading="lazy"></span>' if number else '')
+    image = (f'<span class="guide-thumb"><img src="{esc(article.get("illustration", category["illustration"]))}" alt="" width="480" height="360" loading="lazy"></span>' if number else '')
     return (f'<a class="guide-link" href="{BASE}{esc(article["slug"])}/">{prefix}<span>'
-            f'<span class="guide-category">{esc(category["name"])}</span><span class="guide-title">{esc(article["title"])}</span>'
+            f'<span class="guide-category">{esc(article.get("categoryLabel", category["name"]))}</span><span class="guide-title">{esc(article["title"])}</span>'
             f'<span class="guide-summary">{esc(article["summary"])}</span></span>{image}<span class="guide-arrow" aria-hidden="true">↗</span></a>')
 
 
-def nav(categories, current=None):
-    return '<nav class="guide-nav" aria-label="Categorías de equipo"><ul>' + ''.join(
-        f'<li><a href="{category_path(cat)}"' + (' aria-current="page"' if cat["slug"] == current else '') +
-        f'><span aria-hidden="true">{esc(cat["icon"])}</span> {esc(cat["name"])}</a></li>' for cat in categories) + '</ul></nav>'
+def nav(articles, current=None):
+    primary = [a for a in articles if not a.get("secondary")]
+    return '<nav class="guide-nav" aria-label="Guías de equipo"><ul>' + ''.join(
+        f'<li><a href="{BASE}{esc(a["slug"])}/"' + (' aria-current="page"' if a["slug"] == current else '') +
+        f'><span aria-hidden="true">{esc(a["navIcon"])}</span> {esc(a["navLabel"])}</a></li>' for a in primary) + '</ul></nav>'
 
 
 def disclosure(tag):
     if tag:
         return ('<aside class="affiliate-disclosure" id="divulgacion"><p><strong>Publicidad: enlaces de afiliado.</strong> '
                 'Si compras a través de ellos, PulsarFM puede recibir una comisión sin coste adicional para ti.</p>'
-                f'<p>{esc(AMAZON_STATEMENT)}</p><p>No hemos probado estos productos. Las comparaciones se basan en documentación de los fabricantes. '
+                f'<p>{esc(AMAZON_STATEMENT)}</p><p>No hemos probado estos productos. Las comparaciones se basan en las fichas y la documentación enlazadas. '
                 '<a href="/es/privacidad/#afiliados">Privacidad y afiliación</a>.</p></aside>')
     return '<aside class="affiliate-disclosure" id="divulgacion"><p>Enlaces comerciales directos a Amazon.es, sin identificador de afiliado para este mercado.</p></aside>'
 
@@ -103,8 +104,27 @@ def validate(editorial, catalog):
     products = {p["id"]: p for p in editorial["products"]}
     categories = {cat["slug"]: cat for cat in editorial["categories"]}
     articles = {a["slug"]: a for a in editorial["articles"]}
-    if len(products) != len(editorial["products"]) or len(articles) != len(editorial["articles"]) or len(categories) != 7:
-        raise ValueError("Unique products/articles and seven categories required")
+    if len(products) != len(editorial["products"]) or len(articles) != len(editorial["articles"]) or len(categories) != len(editorial["categories"]):
+        raise ValueError("Unique products/articles/categories required")
+    portuguese = read_json(ROOT / "data/recommendations.json")["articles"]
+    primary = [a for a in articles.values() if not a.get("secondary")]
+    if [a.get("ptSlug") for a in primary] != [a["slug"] for a in portuguese]:
+        raise ValueError("Spanish navigation must mirror the ordered Portuguese guides")
+    for a, original in zip(primary, portuguese):
+        if a["productIds"] != original["productIds"] or a.get("illustration") != original["illustration"]:
+            raise ValueError("Spanish guide must retain the Portuguese selection and illustration")
+        if not a.get("navLabel") or len(a["navLabel"]) > 20 or a.get("navIcon") != original["navIcon"]:
+            raise ValueError("Spanish guide needs the corresponding navigation label/icon")
+        for field in ("comparison", "badges"):
+            if not a.get(field):
+                raise ValueError("Mirrored guides need comparison and badges")
+        table = a["comparison"]
+        if table["rowProducts"] != a["productIds"] or len(table["rows"]) != len(a["productIds"]) or any(len(row) != len(table["columns"]) for row in table["rows"]):
+            raise ValueError("Comparison rows must cover every selected product")
+        if [q["productId"] for q in a["quickPicks"]] != [q["productId"] for q in original["quickPicks"]]:
+            raise ValueError("Spanish quick picks must retain the Portuguese selection")
+        for source in a.get("sources", []):
+            https_url(source["url"])
     for category in categories.values():
         if not SLUG.fullmatch(category["slug"]) or not (ROOT / category["illustration"].lstrip('/')).is_file():
             raise ValueError("Category requires safe slug and existing illustration")
@@ -117,6 +137,14 @@ def validate(editorial, catalog):
             raise ValueError("Product identity/reference changed without verification")
         if p["category"] not in categories or not p["pros"] or not p["cons"]:
             raise ValueError("Products need category and documented advantages/limitations")
+        if not p.get("profile") or not p.get("description"):
+            raise ValueError("Products need complete localized copy")
+        if p.get("illustration") and not (ROOT / p["illustration"].lstrip('/')).is_file():
+            raise ValueError("Product illustration must exist")
+        if p["listingCheckedAt"] != originals[p["id"]]["source"]["checkedAt"]:
+            raise ValueError("Localization must preserve the original listing verification date")
+        if p.get("sourceKind") == "catalog" and (p["sourceUrl"] != p["listingReference"] or p["specsCheckedAt"] != p["listingCheckedAt"]):
+            raise ValueError("Catalog-only references must not claim a fresh manufacturer verification")
         https_url(p["sourceUrl"])
         for source in p.get("sourceUrls", []):
             https_url(source)
@@ -135,8 +163,8 @@ def validate(editorial, catalog):
             raise ValueError("Articles need unique comparisons and concise metadata")
         if not set(a["productIds"]) <= products.keys() or not a.get("quickPicks") or not a.get("faq"):
             raise ValueError("Incomplete Spanish comparisons")
-        if {p["productId"] for p in a["quickPicks"]} != set(a["productIds"]):
-            raise ValueError("Quick picks must cover exactly the article products")
+        if not {p["productId"] for p in a["quickPicks"]} <= set(a["productIds"]) or len({p["productId"] for p in a["quickPicks"]}) != len(a["quickPicks"]):
+            raise ValueError("Quick picks must reference distinct products in the article")
         if len(a["sections"]) < 2 or not any(s.get("checklist") for s in a["sections"]):
             raise ValueError("Articles need objective criteria")
         if len(set(a["related"])) != 2 or a["slug"] in a["related"] or not set(a["related"]) <= articles.keys():
@@ -169,6 +197,8 @@ def render_article(a, products, originals, categories, articles, settings):
         if section.get("checklist"):
             content += '<ul class="guide-checklist">' + ''.join('<li>' + esc(s) + '</li>' for s in section["checklist"]) + '</ul>'
         content += '</section>'
+    if a.get("sources"):
+        content += '<section><h2>Fuentes de esta guía</h2><p>' + ' · '.join(f'<a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["label"])}</a>' for s in a["sources"]) + '</p></section>'
     content += '</div><section class="guide-comparison"><h2>Comparación para decidir</h2><div class="table-scroll" tabindex="0" role="region" aria-label="Comparación de productos"><table><caption class="sr-only">Funciones y límites documentados</caption><thead><tr><th scope="col">Modelo</th><th scope="col">Para quién</th><th scope="col">A favor</th><th scope="col">Qué confirmar</th></tr></thead><tbody>'
     for i, pid in enumerate(a["productIds"], 1):
         p = products[pid]
@@ -177,28 +207,29 @@ def render_article(a, products, originals, categories, articles, settings):
     content += '</tbody></table></div></section><section class="product-selection"><h2>Productos para comparar</h2><p class="article-meta">No mostramos precios ni disponibilidad: confirma el modelo, el vendedor y las condiciones en Amazon.es. Las imágenes son ilustraciones de categoría, no fotografías de producto.</p>'
     for i, pid in enumerate(a["productIds"], 1):
         p = products[pid]
-        image = categories[p["category"]]["illustration"]
-        content += (f'<article class="product-recommendation" id="product-{pid}"><div class="product-image"><img src="{image}" width="480" height="360" loading="lazy" data-product-image alt="Ilustración de {esc(categories[p["category"]]["name"])} en los colores de PulsarFM"></div><div class="product-copy">'
-                    f'<p class="product-merchant">Amazon.es · Publicidad</p><h3>{esc(p.get("localizedName", p["name"]))}</h3><p>{esc(p["description"])}</p><h4>A favor</h4><ul class="product-facts">' + ''.join('<li>' + esc(item) + '</li>' for item in p["pros"]) + '</ul><h4>Limitaciones</h4><ul class="product-facts">' + ''.join('<li>' + esc(item) + '</li>' for item in p["cons"]) + '</ul>'
+        image = p.get("illustration", categories[p["category"]]["illustration"])
+        content += (f'<article class="product-recommendation" id="product-{pid}"><div class="product-image"><img src="{image}" width="480" height="360" loading="lazy" data-product-image alt="Ilustración de equipo de audio en los colores de PulsarFM"></div><div class="product-copy">'
+                    f'<p class="product-merchant">Amazon.es · Publicidad</p><p class="product-badge">{esc(a.get("badges", {}).get(pid, p["profile"]))}</p><h3>{esc(p.get("localizedName", p["name"]))}</h3><p>{esc(p["description"])}</p><h4>A favor</h4><ul class="product-facts">' + ''.join('<li>' + esc(item) + '</li>' for item in p["pros"]) + '</ul><h4>Limitaciones</h4><ul class="product-facts">' + ''.join('<li>' + esc(item) + '</li>' for item in p["cons"]) + '</ul>'
                     '<p class="product-source">' + ' · '.join(
                         f'<a href="{esc(url)}" target="_blank" rel="noopener">{label}</a>'
-                        for url, label in zip(p.get("sourceUrls") or [p["sourceUrl"]], ["Documentación del fabricante", "Más documentación"])) +
-                    f' · Consultada el {date.fromisoformat(p["specsCheckedAt"]).strftime("%d/%m/%Y")}</p>' + product_link(p, originals[pid], a["slug"], f"recommendation-{i}") + '</div></article>')
+                        for url, label in zip(p.get("sourceUrls") or [p["sourceUrl"]], ["Ficha del catálogo" if p.get("sourceKind") == "catalog" else "Documentación del fabricante", "Más documentación"])) +
+                    f' · {"Referencia registrada" if p.get("sourceKind") == "catalog" else "Consultada"} el {date.fromisoformat(p["specsCheckedAt"]).strftime("%d/%m/%Y")}</p>' + (f'<p class="article-meta">{esc(p["sourceNote"])}</p>' if p.get("sourceNote") else "") + product_link(p, originals[pid], a["slug"], f"recommendation-{i}") + '</div></article>')
     content += '</section><section class="guide-faq"><h2>Preguntas frecuentes</h2>' + ''.join(f'<div class="faq-item"><h3>{esc(item["q"])}</h3><p>{esc(item["a"])}</p></div>' for item in a["faq"]) + '</section>'
     content += f'<div class="guide-closing"><p>{esc(a["closing"])}</p></div>' + disclosure(settings.get("trackingId")) + '</article>'
     content += '<section class="related-guides"><h2>Más guías para tu próxima sesión</h2>' + ''.join(guide_link(articles[slug], categories[articles[slug]["category"]]) for slug in a["related"]) + '</section>'
     organization = {"@type": "Organization", "name": "PulsarFM", "url": SITE + "/"}
     content += json_ld({"@type": "Article", "headline": a["title"], "description": a["metaDescription"], "inLanguage": "es-ES", "datePublished": a["publishedAt"], "dateModified": a["updatedAt"], "author": organization, "publisher": organization, "image": SITE + "/img/pulsar-og.jpg", "mainEntityOfPage": SITE + path})
-    return page(a["seoTitle"], a["metaDescription"], path, content, nav(categories.values(), cat["slug"]), True, category=cat["slug"])
+    return page(a["seoTitle"], a["metaDescription"], path, content, nav(articles.values(), a["slug"]), True, category=cat["slug"])
 
 
 def render_hub(editorial, categories, articles, settings):
-    content = crumbs([("Pulsar FM", "/es/"), ("Recomendaciones", BASE)])
-    content += ('<section class="editorial-hero"><div><p class="eyebrow">Equipo / Música / Tecnología</p><h1>Recomendaciones de audio PulsarFM</h1><p class="lead">La música es el punto de partida.<br>El equipo viene después.</p><p>Guías para escuchar mejor, montar tu rincón y empezar a grabar. Criterios claros, conexiones explicadas y límites de cada elección.</p><a class="text-link" href="#guias">Explorar las guías ↓</a></div><figure><img src="/img/gear-editorial.svg" width="720" height="520" alt="Ilustración de tocadiscos y auriculares en los colores de PulsarFM"><figcaption>Del primer play al último lado B.</figcaption></figure></section>')
-    content += '<section id="guias" class="guides-index"><h2>Encuentra tu próxima sesión</h2>' + ''.join(guide_link(a, categories[a["category"]], i) for i, a in enumerate(articles.values(), 1)) + '</section>'
-    content += '<aside class="editorial-policy"><h2>Cómo elegimos</h2><p>Selecciones editoriales basadas en documentación de los fabricantes. No hemos probado estos productos ni medido su sonido. Publicamos las fuentes y explicamos las limitaciones. Las recomendaciones se organizan por uso y conexiones. Compara el precio actual del equipo completo antes de decidir.</p></aside>' + disclosure(settings.get("trackingId"))
+    content = ('<section class="editorial-hero"><div><p class="eyebrow">Gear / Tecnología</p><h1>Recomendaciones PulsarFM</h1><p class="lead">La música es el punto de partida.<br>El equipo viene después.</p><p>Guías para escuchar mejor, montar tu rincón y empezar a crear. Sin jerga de folleto ni prisas por venderte nada: primero entiendes, después eliges.</p><a class="text-link" href="#guias">Explorar las guías ↓</a></div><figure><img src="/img/gear-editorial.svg" width="720" height="520" alt="Ilustración de tocadiscos y auriculares en los colores de PulsarFM"><figcaption>Del primer play al último lado B.</figcaption></figure></section>')
+    primary = [a for a in articles.values() if not a.get("secondary")]
+    content += '<section id="guias" class="guides-index"><h2>Encuentra tu frecuencia</h2>' + ''.join(guide_link(a, categories[a["category"]], i) for i, a in enumerate(primary, 1)) + '</section>'
+    content += '<section class="related-guides"><h2>Más guías para profundizar</h2>' + ''.join(guide_link(a, categories[a["category"]]) for a in articles.values() if a.get("secondary")) + '</section>'
+    content += '<aside class="editorial-policy"><h2>Cómo elegimos</h2><p>Selecciones editoriales basadas en fichas y documentación enlazadas. No hemos probado estos productos ni medido su sonido. Publicamos las fuentes y explicamos las limitaciones. Las recomendaciones se organizan por uso y conexiones. Compara el precio actual del equipo completo antes de decidir.</p></aside>' + disclosure(settings.get("trackingId"))
     content += json_ld({"@type": "CollectionPage", "name": editorial["title"], "inLanguage": "es-ES", "url": SITE + BASE})
-    return page(editorial["title"], editorial["description"], BASE, content, nav(categories.values()))
+    return page(editorial["title"], editorial["description"], BASE, content, nav(articles.values()))
 
 
 def render_category(cat, categories, articles):
@@ -209,7 +240,7 @@ def render_category(cat, categories, articles):
     content += ''.join(guide_link(a, cat, i) for i, a in enumerate(subset, 1)) + '</section><p class="article-meta">Selecciones editoriales con fuentes oficiales. Las guías identifican la publicidad antes de los enlaces comerciales.</p>'
     content += '<aside class="editorial-policy"><h2>También puede interesarte</h2><p>' + ' · '.join(f'<a href="{category_path(other)}">{esc(other["name"])}</a>' for other in categories.values() if other["slug"] != cat["slug"]) + '</p></aside>'
     content += json_ld({"@type": "CollectionPage", "name": cat["name"], "url": SITE + path, "inLanguage": "es-ES"})
-    return page(cat["name"] + ": guías para elegir", cat["intro"], path, content, nav(categories.values(), cat["slug"]), category=cat["slug"])
+    return page(cat["name"] + ": guías para elegir", cat["intro"], path, content, nav(articles.values()), category=cat["slug"])
 
 
 def render_privacy(settings):

@@ -46,7 +46,7 @@ class SpainTests(unittest.TestCase):
         cls.parsed = {name: HTML(content) for name, content in cls.pages.items()}
 
     def test_static_pages_are_complete_and_deterministic(self):
-        self.assertEqual(len(self.pages), 18)
+        self.assertEqual(len(self.pages), 31)
         for name, content in self.pages.items():
             with self.subTest(page=name):
                 self.assertEqual((ROOT / name).read_text(encoding='utf-8'), content)
@@ -82,9 +82,38 @@ class SpainTests(unittest.TestCase):
                 actual = {l.get('hreflang'): l['href'] for l in html.links if l.get('hreflang') and l.get('rel') == 'alternate'}
                 self.assertEqual(actual['pt-PT'], gen.SITE + pair['pt'])
                 self.assertEqual(actual['es-ES'], gen.SITE + pair['es'])
-        for name in ('auriculares-cancelacion-ruido-trabajar', 'microfonos-usb-podcast-streaming', 'equipos-hi-fi-empezar', 'auriculares-bluetooth-calidad-precio', 'altavoces-bluetooth-casa', 'accesorios-audio'):
+        for name in ('auriculares-cancelacion-ruido-trabajar', 'equipos-hi-fi-empezar'):
             html = HTML(self.pages['es/recomendaciones/' + name + '/index.html'])
             self.assertFalse(any(l.get('rel') == 'alternate' for l in html.links))
+
+    def test_portuguese_structure_and_selection_are_localized(self):
+        editorial = gen.read_json(ROOT / 'data/recommendations.es.json')
+        pt = gen.read_json(ROOT / 'data/recommendations.json')['articles']
+        primary = [a for a in editorial['articles'] if not a.get('secondary')]
+        self.assertEqual(len(primary), 13)
+        self.assertEqual(len(editorial['products']), 73)
+        expected_paths = [gen.BASE + a['slug'] + '/' for a in primary]
+        for original, localized in zip(pt, primary):
+            with self.subTest(guide=localized['slug']):
+                self.assertEqual(localized['productIds'], original['productIds'])
+                self.assertEqual(localized['illustration'], original['illustration'])
+                self.assertEqual(localized['navIcon'], original['navIcon'])
+                self.assertEqual(len(localized['sections']), len(original['sections']))
+                self.assertEqual(len(localized['faq']), len(original['faq']))
+                self.assertEqual(localized['comparison']['rowProducts'], original['productIds'])
+                content = self.pages['es/recomendaciones/' + localized['slug'] + '/index.html']
+                self.assertIn('class="product-badge"', content)
+                self.assertIn('aria-current="page"', content)
+        for name, content in self.pages.items():
+            if '/recomendaciones/' not in name: continue
+            nav = re.search(r'<nav class="guide-nav".*?</nav>', content, re.S)[0]
+            links = [a['href'] for a in HTML(nav).links]
+            self.assertEqual(links, expected_paths)
+        hub = self.pages['es/recomendaciones/index.html']
+        self.assertNotIn('class="breadcrumbs"', hub)
+        self.assertIn('regalos-para-amantes-musica', hub)
+        self.assertIn('auriculares-para-ninos', hub)
+        self.assertIn('barras-de-sonido', hub)
 
     def test_affiliate_market_ids_and_disclosures(self):
         count = 0

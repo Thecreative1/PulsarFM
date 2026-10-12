@@ -71,7 +71,7 @@ def main():
             assert title not in titles and description not in descriptions, 'Duplicate Spanish metadata'
             titles.add(title); descriptions.add(description)
             assert not any('noindex' in a.get('content', '') for tag, a in page.nodes if tag == 'meta' and a.get('name') == 'robots')
-    assert spanish == 26, 'Expected 26 complete Spanish pages'
+    assert spanish == 39, 'Expected 39 complete Spanish pages'
     print(f'Static site lint passed: {len(urls)} indexable pages, {spanish} Spanish, {links_checked} internal links')
 
 if __name__ == '__main__': main()
