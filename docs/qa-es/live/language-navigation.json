@@ -1,0 +1,265 @@
+{
+  "base": "https://pulsarfm.eu",
+  "startedAt": "2026-10-12T19:09:08.072Z",
+  "cases": [
+    {
+      "name": "ES-EN-ES-reload-history-genre-guides",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "name": "fresh-Spain",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "fresh-Portugal",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "fresh-other-country",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-service-error",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-network-failure",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-invalid-response",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-unknown",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-timeout",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "explicit-PT-wins-Spain",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "explicit-ES-wins-Portugal",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "explicit-EN",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "Spanish-URL-wins-stored-PT",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "Spanish-URL-explicit-EN",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "Spanish-URL-explicit-PT",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "stored-ES-wins-root",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "stored-PT-wins-Spain",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "stored-EN-Spanish-market",
+      "width": 1440,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "invalid-preference-detects-country",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "blocked-storage-keeps-navigation",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "manual-choice-wins-late-Spain",
+      "width": 1440,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "ES-EN-ES-reload-history-genre-guides",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "name": "fresh-Spain",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "fresh-Portugal",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "fresh-other-country",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-service-error",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-network-failure",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-invalid-response",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-unknown",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "country-timeout",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "explicit-PT-wins-Spain",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "explicit-ES-wins-Portugal",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "explicit-EN",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "Spanish-URL-wins-stored-PT",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "Spanish-URL-explicit-EN",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "Spanish-URL-explicit-PT",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "stored-ES-wins-root",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "stored-PT-wins-Spain",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "stored-EN-Spanish-market",
+      "width": 390,
+      "passed": true,
+      "requests": 0
+    },
+    {
+      "name": "invalid-preference-detects-country",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "blocked-storage-keeps-navigation",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    },
+    {
+      "name": "manual-choice-wins-late-Spain",
+      "width": 390,
+      "passed": true,
+      "requests": 1
+    }
+  ],
+  "errors": [],
+  "countryRequestsMocked": true,
+  "provider": {
+    "status": 200,
+    "corsReadable": true,
+    "countryCodeValid": true
+  },
+  "success": true,
+  "finishedAt": "2026-10-12T19:10:04.120Z"
+}

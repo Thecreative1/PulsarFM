@@ -374,8 +374,10 @@ GEAR = {
 
 with open(os.path.join(OUT, "data", "genres.es.json"), encoding="utf-8") as f:
     GENRES_ES = json.load(f)
+with open(os.path.join(OUT, "data", "radio.es.json"), encoding="utf-8") as f:
+    STATION_LABELS_ES = json.load(f)["translation"].get("stationLabels", {})
 LABELS["es"] = {"html_lang": "es-ES", "og_locale": '<meta property="og:locale" content="es_ES" />',
-    "play": "🎧 Escuchar en el player", "all": "▶ ESCUCHAR EN PULSAR FM", "faq": "Preguntas frecuentes",
+    "play": "🎧 Escuchar en el reproductor", "all": "▶ ESCUCHAR EN PULSAR FM", "faq": "Preguntas frecuentes",
     "others": "Otros géneros", "alt_label": "Português", "lang_q": "",
     "footer": 'Pulsar FM · Radio online gratis con visualizador retro Winamp · <a href="/es/privacidad/">Privacidad y cookies</a>'}
 
@@ -418,7 +420,7 @@ def page(slug, lang="pt"):
       <span class="gear-go">Ler o guia →</span>
     </a>'''.format(gear_slug, gear_h, gear_p)
     if lang == "es":
-        gear_html = '<a class="gear-box" href="/es/recomendaciones/{}/"><span class="gear-tag">🎧 EQUIPO</span><strong>Guías para tu próxima sesión</strong><span>Compara el equipo que encaja con tu forma de escuchar.</span><span class="gear-go">Leer la guía →</span></a>'.format(g["gearSlug"])
+        gear_html = '<a class="gear-box" href="/es/recomendaciones/{}/"><span class="gear-tag">🎧 GUÍAS</span><strong>Guías para tu próxima sesión</strong><span>Compara el equipo que encaja con tu forma de escuchar.</span><span class="gear-go">Leer la guía →</span></a>'.format(g["gearSlug"])
     home_path = "/es/" if lang == "es" else "/"
     home_link = "/?lang=pt" if lang == "pt" else "/?lang=en" if lang == "en" else home_path
     others = "\n".join(
@@ -429,7 +431,7 @@ def page(slug, lang="pt"):
         <h3>{}</h3>
         <p>{}</p>
         <a class="play-cta" href="{}?genre={}{}">{}</a>
-      </article>'''.format(name, desc, home_path, g["genre"], L["lang_q"], L["play"]) for name, desc in g["stations"])
+      </article>'''.format(STATION_LABELS_ES.get(name, name) if lang == "es" else name, desc, home_path, g["genre"], L["lang_q"], L["play"]) for name, desc in g["stations"])
     stations_ld = ",\n      ".join(
         '{{ "@type": "ListItem", "position": {}, "item": {{ "@type": "RadioStation", "name": {}, "description": {} }} }}'.format(
             i + 1, json.dumps(name, ensure_ascii=False), json.dumps(desc, ensure_ascii=False))

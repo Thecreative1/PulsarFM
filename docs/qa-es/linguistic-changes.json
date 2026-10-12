@@ -1,0 +1,292 @@
+[
+  {
+    "where": "radio.translation.intro",
+    "before": "64 emisoras en directo. 8 géneros. Con Milkdrop, el legendario visualizador de Winamp, ahora en tu navegador.",
+    "after": "64 emisoras en directo. 8 géneros musicales. Con MilkDrop, el legendario visualizador de Winamp, ahora en tu navegador."
+  },
+  {
+    "where": "controls.es.gear",
+    "before": "🎧 EQUIPO",
+    "after": "🎧 GUÍAS"
+  },
+  {
+    "where": "controls.es.scan",
+    "before": "⚡ AZAR",
+    "after": "⚡ AL AZAR"
+  },
+  {
+    "where": "controls.es.float",
+    "before": "🔓 LIBRE",
+    "after": "🔓 FLOTANTE"
+  },
+  {
+    "where": "controls.es.skinLabel",
+    "before": "Elegir una skin del player",
+    "after": "Elegir una skin del reproductor"
+  },
+  {
+    "where": "controls.es.floatLabel",
+    "before": "Liberar el player",
+    "after": "Activar el modo flotante del reproductor"
+  },
+  {
+    "where": "controls.es.dockLabel",
+    "before": "Fijar el player",
+    "after": "Fijar el reproductor"
+  },
+  {
+    "where": "translation.gearLabel",
+    "before": "Equipo: guías de audio (nueva pestaña)",
+    "after": "Guías de equipo de audio (nueva pestaña)"
+  },
+  {
+    "where": "seo.0.p",
+    "before": "Pulsar FM reúne emisoras elegidas a mano, <strong>radio en directo</strong> en un reproductor que parece salido de 1999 y visualizaciones Milkdrop que reaccionan a la música. Elige una emisora y pulsa play: sin cuenta ni aplicación que instalar.",
+    "after": "Pulsar FM reúne emisoras seleccionadas a mano de todo el mundo. Escucha <strong>radio en directo</strong> con un reproductor inspirado en 1999 y disfruta de las visualizaciones de MilkDrop que reaccionan al ritmo de la música. Elige una emisora y pulsa play: sin cuenta ni aplicación que instalar."
+  },
+  {
+    "where": "seo.1.p",
+    "before": "Winamp vuelve al navegador, con skins clásicas y sin instalar nada. Si cambiabas el aspecto del player con un archivo .wsz, ya sabes por dónde va la cosa. La llama sigue siendo opcional.",
+    "after": "Winamp vuelve al navegador, con skins clásicas y sin instalar nada. Si cambiabas el aspecto del reproductor con un archivo .wsz, ya sabes por dónde va la cosa. La llama sigue siendo opcional."
+  },
+  {
+    "where": "seo.2.p",
+    "before": "Del rock al psytrance, del jazz al synthwave. Elige un género, pulsa play y deja que suene. Milkdrop se encarga del resto.",
+    "after": "Del rock al psytrance, del jazz al synthwave. Elige un género, pulsa play y deja que suene. MilkDrop se encarga del resto."
+  },
+  {
+    "where": "translation.footer1",
+    "before": "Visualizador basado en <a href=\"https://github.com/jberg/butterchurn\" target=\"_blank\" rel=\"noopener\">Butterchurn</a> · Player basado en <a href=\"https://github.com/captbaritone/webamp\" target=\"_blank\" rel=\"noopener\">Webamp</a>",
+    "after": "Visualizador basado en <a href=\"https://github.com/jberg/butterchurn\" target=\"_blank\" rel=\"noopener\">Butterchurn</a> · Reproductor basado en <a href=\"https://github.com/captbaritone/webamp\" target=\"_blank\" rel=\"noopener\">Webamp</a>"
+  },
+  {
+    "where": "radios-rock.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-rock.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-rock.faq.2",
+    "before": "Sí. Los controles se adaptan a la pantalla del móvil. Si quieres descubrir otra emisora, el botón AZAR elige una de las 64 disponibles. La continuidad del audio al bloquear la pantalla depende del navegador.",
+    "after": "Sí. Los controles se adaptan a la pantalla del móvil. Si quieres descubrir otra emisora, el botón AL AZAR elige una de las 64 disponibles. La continuidad del audio al bloquear la pantalla depende del navegador."
+  },
+  {
+    "where": "radios-jazz.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-jazz.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-chill.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-chill.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-pop.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-pop.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-study.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-study.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-study.faq.2",
+    "before": "Sí. El filtro Estudio reúne las ocho emisoras de este género para que puedas cambiar de estación sin buscar entre toda la lista. Ajusta el volumen al nivel que te permita trabajar cómodamente.",
+    "after": "Sí. El filtro Estudio reúne las ocho emisoras de este género para que puedas cambiar de emisora sin buscar entre toda la lista. Ajusta el volumen al nivel que te permita trabajar cómodamente."
+  },
+  {
+    "where": "radios-electronica.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-electronica.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-electronica.intro",
+    "before": "House, techno, trance y sesiones de DJs desde varias escenas. Ocho emisoras para escuchar electrónica en directo con el visualizador Milkdrop de PulsarFM.",
+    "after": "House, techno, trance y sesiones de DJs desde varias escenas. Ocho emisoras para escuchar electrónica en directo con el visualizador MilkDrop de PulsarFM."
+  },
+  {
+    "where": "radios-psytrance.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-psytrance.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-psytrance.faq.2",
+    "before": "Sí. Puedes elegir una emisora y escuchar por la salida de audio del móvil o por auriculares compatibles. Si bloqueas la pantalla, la continuidad del stream depende del navegador.",
+    "after": "Sí. Puedes elegir una emisora y escuchar por la salida de audio del móvil o por auriculares compatibles. Si bloqueas la pantalla, la continuidad de la emisión depende del navegador."
+  },
+  {
+    "where": "radios-synthwave.faq.0",
+    "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+    "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+  },
+  {
+    "where": "radios-synthwave.faq.1",
+    "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+    "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+  },
+  {
+    "where": "radios-synthwave.intro",
+    "before": "Sintetizadores, retrowave y darksynth: ocho emisoras para una noche de estética retro. Cambia la skin del player si te apetece; la música sigue siendo lo primero.",
+    "after": "Sintetizadores, retrowave y darksynth: ocho emisoras para una noche de estética retro. Cambia la skin del reproductor si te apetece; la música sigue siendo lo primero."
+  },
+  {
+    "where": "categories.auriculares-cascos.name",
+    "before": "Auriculares y Cascos",
+    "after": "Auriculares y cascos"
+  },
+  {
+    "where": "categories.accesorios.name",
+    "before": "Accesorios de Audio",
+    "after": "Accesorios de audio"
+  },
+  {
+    "where": "auriculares-diadema.intro",
+    "before": "No hay unos cascos mejores para todo el mundo. Hay un formato que encaja en tu cabeza, tu presupuesto y el lugar donde escuchas. Esta selección mantiene cinco caminos, desde la escucha casual hasta los viajes y la grabación con cable. Empieza por dónde, cuánto tiempo y conectados a qué.",
+    "after": "No hay unos cascos mejores para todo el mundo. Hay un formato que encaja en tu cabeza, tu presupuesto y el lugar donde escuchas. Hemos seleccionado cinco modelos para diferentes formas de escuchar música: desde el uso diario hasta los viajes y la grabación con cable. Antes de elegir, piensa dónde los utilizarás, durante cuánto tiempo y a qué dispositivos los conectarás."
+  },
+  {
+    "where": "altavoces-para-pc.intro",
+    "before": "Un ordenador puede sonar fuera de su carcasa sin convertirse en un cine. La compra depende de las salidas del PC, del hueco en la mesa y de si puedes colocar un subwoofer. Esta selección recorre conexiones sencillas, conjuntos 2.1 y pares activos de escritorio.",
+    "after": "No necesitas montar un cine en casa para mejorar el sonido de tu ordenador. La compra depende de las salidas del PC, del hueco en la mesa y de si puedes colocar un subwoofer. Esta selección recorre conexiones sencillas, conjuntos 2.1 y pares activos de escritorio."
+  },
+  {
+    "where": "auriculares-bluetooth.intro",
+    "before": "Los auriculares de bolsillo se usan muchas veces al día y desaparecen con una facilidad admirable entre los cojines. Antes de comparar, decide con qué móvil van a funcionar, dónde escucharás y qué formato toleras. Esta selección distingue oído abierto, puntas intraaurales y conducción ósea.",
+    "after": "Los auriculares de bolsillo se usan muchas veces al día y desaparecen con una facilidad admirable entre los cojines. Antes de comparar, decide con qué móvil van a funcionar, dónde escucharás y qué formato toleras. En esta selección encontrarás auriculares de diseño abierto, modelos intraaurales y opciones de conducción ósea."
+  },
+  {
+    "where": "regalos.faq.q",
+    "before": "¿Qué regalar a alguien que le gusta la música?",
+    "after": "¿Qué regalar a alguien a quien le gusta la música?"
+  },
+  {
+    "where": "regalos.faq.q",
+    "before": "¿Qué regalar a alguien que le gusta la música electrónica?",
+    "after": "¿Qué regalar a alguien a quien le gusta la música electrónica?"
+  },
+  {
+    "where": "regalos.faq.3.a",
+    "before": "Cuidado para sus discos, un soporte o una portada enmarcada. Primero confirma que no lo tiene y que encaja con sus medidas y su forma de escuchar.",
+    "after": "Productos para cuidar sus discos, un soporte o una portada enmarcada. Primero confirma que no lo tiene y que encaja con sus medidas y su forma de escuchar."
+  },
+  {
+    "where": "altavoces-bluetooth.section.0",
+    "before": "Go 5 prioriza tamaño; Flip 7 ocupa más para una escucha portátil. Emberton III añade otra propuesta de autonomía y formato.",
+    "after": "Go 5 prioriza el tamaño compacto; Flip 7 ocupa más para una escucha portátil. Emberton III añade otra propuesta de autonomía y formato."
+  },
+  {
+    "where": "barras-de-sonido.section.0",
+    "before": "Comprueba también altura bajo la pantalla y el sensor del mando.",
+    "after": "Comprueba también el espacio bajo la pantalla y evita tapar el sensor del mando."
+  },
+  {
+    "where": "barras-de-sonido.section.1",
+    "before": "HW-B46CF añade subwoofer y HT-S40R un conjunto con traseros. Beam Gen 2 combina TV y reproducción por Wi-Fi; confirma la segunda generación y los formatos compatibles.",
+    "after": "HW-B46CF añade subwoofer y HT-S40R un conjunto con altavoces traseros. Beam Gen 2 combina TV y reproducción por Wi-Fi; confirma la segunda generación y los formatos compatibles."
+  },
+  {
+    "where": "amplificador.section.0",
+    "before": "Si el plato sale por PHONO y el equipo solo acepta AUX, necesitas etapa phono. Si sale por LINE y usas altavoces activos, esa etapa ya está resuelta.",
+    "after": "Si el plato sale por PHONO y el equipo solo acepta AUX, necesitas una etapa phono. Si sale por LINE y usas altavoces activos, esa etapa ya está resuelta."
+  },
+  {
+    "where": "home-studio.intro",
+    "before": "Un home studio empieza con una pregunta: qué vas a grabar y cuántas fuentes entran al mismo tiempo. La respuesta decide la interfaz, el micrófono y la monitorización. La selección reúne conexiones y límites para montar un sistema pequeño.",
+    "after": "Un home studio empieza con una pregunta: qué vas a grabar y cuántas fuentes entran al mismo tiempo. La respuesta decide la interfaz, el micrófono y la monitorización. Esta selección explica las conexiones que necesitas y las limitaciones de cada equipo para montar un pequeño estudio."
+  },
+  {
+    "where": "home-studio.section.2",
+    "before": "Acerca el micrófono a la fuente, ajusta ganancia y escucha una prueba. La colocación y la sala importan más que cambiar de marca a ciegas.",
+    "after": "Acerca el micrófono a la fuente, ajusta la ganancia y escucha una prueba. La colocación y la sala importan más que cambiar de marca a ciegas."
+  },
+  {
+    "where": "home-studio.closing",
+    "before": "Planea una primera grabación que puedas hacer con todas las conexiones resueltas. Una demo grabada enseña más que otra semana de carrito.",
+    "after": "Planea una primera grabación que puedas hacer con todas las conexiones resueltas. Una demo grabada enseña más que otra semana añadiendo cosas al carrito."
+  },
+  {
+    "where": "microfonos.section.0",
+    "before": "Una solapa acompaña a la persona; un micrófono de cámara recoge desde la cámara; uno de escritorio se coloca cerca de la boca. La distancia y el patrón de captación importan tanto como el formato.",
+    "after": "Un micrófono de solapa se lleva sujeto a la ropa; uno de cámara se monta sobre ella; uno de escritorio se coloca cerca de la boca. La distancia y el patrón de captación importan tanto como el formato."
+  },
+  {
+    "where": "accesorios.intro",
+    "before": "A veces no necesitas cambiar el equipo principal. Falta un adaptador, un cable con el largo adecuado o un sitio para dejar los cascos. Esta guía parte de problemas concretos y distingue señal digital, audio analógico y recepción o transmisión Bluetooth.",
+    "after": "A veces no necesitas cambiar el equipo principal. Falta un adaptador, un cable de la longitud adecuada o un sitio para dejar los cascos. Esta guía parte de problemas concretos y distingue señal digital, audio analógico y recepción o transmisión Bluetooth."
+  },
+  {
+    "where": "accesorios.section.0.heading",
+    "before": "Compatibilidad antes de todo",
+    "after": "Compatibilidad ante todo"
+  },
+  {
+    "where": "accesorios.section.1",
+    "before": "El dispositivo UGREEN combina ambos modos. Para entradas RCA necesitarás el cable apropiado; para TV, comprueba retraso de imagen y sonido con una conversación.",
+    "after": "El dispositivo UGREEN combina ambos modos. Para entradas RCA necesitarás el cable apropiado; para TV, comprueba el desfase entre la imagen y el sonido con una conversación."
+  },
+  {
+    "where": "accesorios.section.2",
+    "before": "Un cable 3,5 mm a RCA conecta audio analógico, pero no convierte una salida óptica ni hace de previo phono. Un soporte simplemente guarda los cascos.",
+    "after": "Un cable de 3,5 mm a RCA conecta audio analógico, pero no convierte una salida óptica ni hace de previo phono. Un soporte simplemente guarda los cascos."
+  },
+  {
+    "where": "hi-fi.section.0",
+    "before": "Los R1280DB son una pareja con amplificación integrada. El PMA-600NE es un amplificador: necesita cajas pasivas y cables. Comparar solo los precios de esos dos productos dejaría fuera una parte del segundo sistema.",
+    "after": "Los R1280DB son un par de altavoces con amplificación integrada. El PMA-600NE es un amplificador: necesita cajas pasivas y cables. Comparar solo los precios de esos dos productos dejaría fuera una parte del segundo sistema."
+  },
+  {
+    "where": "hi-fi.section.0",
+    "before": "En un escritorio pequeño, una pareja activa reduce componentes. En una sala donde quieres elegir y cambiar cajas, un sistema separado ofrece otra forma de ampliar. Mide el mueble y deja ventilación según el manual del amplificador.",
+    "after": "En un escritorio pequeño, un par de altavoces activos reduce el número de componentes. En una sala donde quieres elegir y cambiar cajas, un sistema separado ofrece otra forma de ampliar. Mide el mueble y deja ventilación según el manual del amplificador."
+  },
+  {
+    "where": "product.jbl-flip-7.description",
+    "before": "Altavoz portátil con batería y protección IP68 según JBL. La marca distingue 14 horas de reproducción y hasta 16 con Playtime Boost. Tiene sentido si vas a moverlo a menudo; para estéreo fijo, compara una par de altavoces.",
+    "after": "Altavoz portátil con batería y protección IP68 según JBL. La marca distingue 14 horas de reproducción y hasta 16 con Playtime Boost. Tiene sentido si vas a moverlo a menudo; para estéreo fijo, compara un par de altavoces."
+  },
+  {
+    "where": "product.ugreen-cable.description",
+    "before": "Cable estéreo de 3,5 mm a dos RCA para unir una salida analógica a una entrada de línea. No convierte señales digitales ni corrige niveles phono. Mide la distancia real entre aparatos antes de elegir el largo.",
+    "after": "Cable estéreo de 3,5 mm a dos RCA para unir una salida analógica a una entrada de línea. No convierte señales digitales ni corrige niveles phono. Mide la distancia real entre aparatos antes de elegir la longitud."
+  },
+  {
+    "where": "product.sonos-beam.description",
+    "before": "Beam de segunda generación admite Dolby Atmos y reproducción por Wi-Fi. Puede ampliarse con componentes Sonos compatibles. Revisa el formato de audio y la conexión del televisor; no confundir con Beam Ultra ni con la primera generación.",
+    "after": "Beam de segunda generación admite Dolby Atmos y reproducción por Wi-Fi. Puede ampliarse con componentes Sonos compatibles. Revisa el formato de audio y la conexión del televisor; no la confundas con Beam Ultra ni con la primera generación."
+  }
+]

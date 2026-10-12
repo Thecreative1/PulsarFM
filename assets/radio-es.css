@@ -1,0 +1,8 @@
+/* Keep the longer ES control label within the existing mobile button bank. */
+@media (max-width: 560px) {
+  html[lang="es-ES"] #player-lock-btn {
+    font-size: .64rem;
+    letter-spacing: .04em;
+    padding-inline: 6px;
+  }
+}

@@ -6,7 +6,7 @@
   "categories": [
     {
       "slug": "auriculares-cascos",
-      "name": "Auriculares y Cascos",
+      "name": "Auriculares y cascos",
       "icon": "🎧",
       "illustration": "/img/gear/auscultadores.svg",
       "intro": "Elige entre auriculares de botón y cascos de diadema: ajuste, aislamiento y uso diario antes que el logotipo."
@@ -48,7 +48,7 @@
     },
     {
       "slug": "accesorios-audio",
-      "name": "Accesorios de Audio",
+      "name": "Accesorios de audio",
       "icon": "🔌",
       "illustration": "/img/gear/acessorios.svg",
       "intro": "El adaptador correcto puede devolver la música al equipo que ya tienes."
@@ -206,7 +206,7 @@
       "name": "JBL Flip 7",
       "category": "altavoces-bluetooth",
       "profile": "Mover la música entre habitaciones",
-      "description": "Altavoz portátil con batería y protección IP68 según JBL. La marca distingue 14 horas de reproducción y hasta 16 con Playtime Boost. Tiene sentido si vas a moverlo a menudo; para estéreo fijo, compara una par de altavoces.",
+      "description": "Altavoz portátil con batería y protección IP68 según JBL. La marca distingue 14 horas de reproducción y hasta 16 con Playtime Boost. Tiene sentido si vas a moverlo a menudo; para estéreo fijo, compara un par de altavoces.",
       "pros": [
         "Batería y formato portátil",
         "IP68 según JBL"
@@ -626,7 +626,7 @@
       "name": "Sonos Beam (Gen 2)",
       "category": "barras-sonido",
       "profile": "TV y música por Wi-Fi",
-      "description": "Beam de segunda generación admite Dolby Atmos y reproducción por Wi-Fi. Puede ampliarse con componentes Sonos compatibles. Revisa el formato de audio y la conexión del televisor; no confundir con Beam Ultra ni con la primera generación.",
+      "description": "Beam de segunda generación admite Dolby Atmos y reproducción por Wi-Fi. Puede ampliarse con componentes Sonos compatibles. Revisa el formato de audio y la conexión del televisor; no la confundas con Beam Ultra ni con la primera generación.",
       "pros": [
         "Dolby Atmos compatible",
         "Música por Wi-Fi",
@@ -822,7 +822,7 @@
       "localizedName": "UGREEN cable de 3,5 mm a RCA, 1 m",
       "category": "accesorios-audio",
       "profile": "Conectar una salida de 3,5 mm a RCA",
-      "description": "Cable estéreo de 3,5 mm a dos RCA para unir una salida analógica a una entrada de línea. No convierte señales digitales ni corrige niveles phono. Mide la distancia real entre aparatos antes de elegir el largo.",
+      "description": "Cable estéreo de 3,5 mm a dos RCA para unir una salida analógica a una entrada de línea. No convierte señales digitales ni corrige niveles phono. Mide la distancia real entre aparatos antes de elegir la longitud.",
       "pros": [
         "Conexión analógica sencilla",
         "Un metro para equipos cercanos"
@@ -1720,11 +1720,11 @@
       ],
       "faq": [
         {
-          "q": "¿Qué regalar a alguien que le gusta la música?",
+          "q": "¿Qué regalar a alguien a quien le gusta la música?",
           "a": "Elige por su rutina: cascos para escuchar, limpieza para sus vinilos o un controlador para crear. Un accesorio para algo que ya utiliza tiene menos requisitos que un sistema nuevo."
         },
         {
-          "q": "¿Qué regalar a alguien que le gusta la música electrónica?",
+          "q": "¿Qué regalar a alguien a quien le gusta la música electrónica?",
           "a": "Un controlador de DJ para practicar mezclas o un teclado MIDI para usar instrumentos de software. Comprueba primero el ordenador, el programa y las conexiones que necesita."
         },
         {
@@ -1733,7 +1733,7 @@
         },
         {
           "q": "¿Qué regalar a quien ya tiene equipo?",
-          "a": "Cuidado para sus discos, un soporte o una portada enmarcada. Primero confirma que no lo tiene y que encaja con sus medidas y su forma de escuchar."
+          "a": "Productos para cuidar sus discos, un soporte o una portada enmarcada. Primero confirma que no lo tiene y que encaja con sus medidas y su forma de escuchar."
         }
       ],
       "closing": "Piensa primero en cuándo escucha música y después en el objeto. Un regalo que encaja en la rutina sale de la caja y se queda.",
@@ -1887,7 +1887,7 @@
       "illustration": "/img/gear/auscultadores.svg",
       "title": "Cascos Bluetooth en 2026: una elección para cada uso",
       "summary": "Cinco cascos de diadema para casa, estudio y viajes: formato, cancelación de ruido, batería y conexión por cable.",
-      "intro": "No hay unos cascos mejores para todo el mundo. Hay un formato que encaja en tu cabeza, tu presupuesto y el lugar donde escuchas. Esta selección mantiene cinco caminos, desde la escucha casual hasta los viajes y la grabación con cable. Empieza por dónde, cuánto tiempo y conectados a qué.",
+      "intro": "No hay unos cascos mejores para todo el mundo. Hay un formato que encaja en tu cabeza, tu presupuesto y el lugar donde escuchas. Hemos seleccionado cinco modelos para diferentes formas de escuchar música: desde el uso diario hasta los viajes y la grabación con cable. Antes de elegir, piensa dónde los utilizarás, durante cuánto tiempo y a qué dispositivos los conectarás.",
       "sections": [
         {
           "heading": "Empieza por tu forma de escuchar",
@@ -2054,7 +2054,7 @@
       "illustration": "/img/gear/auriculares.svg",
       "title": "Auriculares Bluetooth en 2026: del transporte al gimnasio",
       "summary": "Siete opciones de bolsillo, de formato abierto y de conducción ósea: ajuste, móvil, ANC y uso diario.",
-      "intro": "Los auriculares de bolsillo se usan muchas veces al día y desaparecen con una facilidad admirable entre los cojines. Antes de comparar, decide con qué móvil van a funcionar, dónde escucharás y qué formato toleras. Esta selección distingue oído abierto, puntas intraaurales y conducción ósea.",
+      "intro": "Los auriculares de bolsillo se usan muchas veces al día y desaparecen con una facilidad admirable entre los cojines. Antes de comparar, decide con qué móvil van a funcionar, dónde escucharás y qué formato toleras. En esta selección encontrarás auriculares de diseño abierto, modelos intraaurales y opciones de conducción ósea.",
       "sections": [
         {
           "heading": "El ajuste viene primero",
@@ -2420,7 +2420,7 @@
         {
           "heading": "¿Dónde va a sonar?",
           "paragraphs": [
-            "Go 5 prioriza tamaño; Flip 7 ocupa más para una escucha portátil. Emberton III añade otra propuesta de autonomía y formato.",
+            "Go 5 prioriza el tamaño compacto; Flip 7 ocupa más para una escucha portátil. Emberton III añade otra propuesta de autonomía y formato.",
             "Acton IV funciona conectado a la corriente. Para un rincón fijo, esa diferencia puede importar más que una cifra de batería."
           ],
           "checklist": [
@@ -2548,7 +2548,7 @@
       "illustration": "/img/gear/colunas-pc.svg",
       "title": "Altavoces para PC: del portátil a un escritorio con música",
       "summary": "Ocho conjuntos para ordenador: jack, audio USB, Bluetooth, subwoofer y altavoces de estantería.",
-      "intro": "Un ordenador puede sonar fuera de su carcasa sin convertirse en un cine. La compra depende de las salidas del PC, del hueco en la mesa y de si puedes colocar un subwoofer. Esta selección recorre conexiones sencillas, conjuntos 2.1 y pares activos de escritorio.",
+      "intro": "No necesitas montar un cine en casa para mejorar el sonido de tu ordenador. La compra depende de las salidas del PC, del hueco en la mesa y de si puedes colocar un subwoofer. Esta selección recorre conexiones sencillas, conjuntos 2.1 y pares activos de escritorio.",
       "sections": [
         {
           "heading": "Cómo se conectan al ordenador",
@@ -2742,7 +2742,7 @@
           "heading": "Empieza por el televisor",
           "paragraphs": [
             "Identifica HDMI ARC o eARC, salida óptica y formatos de audio admitidos. Un HDMI cualquiera no equivale a ARC. La barra y la TV deben compartir una conexión útil.",
-            "Comprueba también altura bajo la pantalla y el sensor del mando."
+            "Comprueba también el espacio bajo la pantalla y evita tapar el sensor del mando."
           ],
           "checklist": [
             "Salidas del televisor y entradas de la barra.",
@@ -2755,7 +2755,7 @@
           "heading": "Escucha lo que sueles ver",
           "paragraphs": [
             "Para diálogos, compara los modos de voz de una barra sencilla. Bose TV Speaker se centra en ese uso; HW-B400F ocupa menos espacio que un sistema con subwoofer.",
-            "HW-B46CF añade subwoofer y HT-S40R un conjunto con traseros. Beam Gen 2 combina TV y reproducción por Wi-Fi; confirma la segunda generación y los formatos compatibles.",
+            "HW-B46CF añade subwoofer y HT-S40R un conjunto con altavoces traseros. Beam Gen 2 combina TV y reproducción por Wi-Fi; confirma la segunda generación y los formatos compatibles.",
             "Dolby Atmos depende también del contenido, de la TV y de cómo sale el audio. El logotipo de la barra no crea un formato que la fuente no está enviando."
           ]
         }
@@ -3195,7 +3195,7 @@
         {
           "heading": "¿Previo phono o amplificador?",
           "paragraphs": [
-            "Si el plato sale por PHONO y el equipo solo acepta AUX, necesitas etapa phono. Si sale por LINE y usas altavoces activos, esa etapa ya está resuelta.",
+            "Si el plato sale por PHONO y el equipo solo acepta AUX, necesitas una etapa phono. Si sale por LINE y usas altavoces activos, esa etapa ya está resuelta.",
             "Si tus altavoces son pasivos, necesitas amplificación de potencia. Un pequeño previo phono no los alimenta."
           ],
           "checklist": [
@@ -3360,7 +3360,7 @@
       "illustration": "/img/gear/home-studio.svg",
       "title": "Home studio: empieza por lo que quieres grabar",
       "summary": "Voz, guitarra y primeras demos: micrófono, interfaz, monitorización y accesorios para un conjunto pequeño.",
-      "intro": "Un home studio empieza con una pregunta: qué vas a grabar y cuántas fuentes entran al mismo tiempo. La respuesta decide la interfaz, el micrófono y la monitorización. La selección reúne conexiones y límites para montar un sistema pequeño.",
+      "intro": "Un home studio empieza con una pregunta: qué vas a grabar y cuántas fuentes entran al mismo tiempo. La respuesta decide la interfaz, el micrófono y la monitorización. Esta selección explica las conexiones que necesitas y las limitaciones de cada equipo para montar un pequeño estudio.",
       "sections": [
         {
           "heading": "Conecta las piezas adecuadas",
@@ -3385,7 +3385,7 @@
         {
           "heading": "La habitación también entra en la grabación",
           "paragraphs": [
-            "Acerca el micrófono a la fuente, ajusta ganancia y escucha una prueba. La colocación y la sala importan más que cambiar de marca a ciegas.",
+            "Acerca el micrófono a la fuente, ajusta la ganancia y escucha una prueba. La colocación y la sala importan más que cambiar de marca a ciegas.",
             "Eris 3.5 necesita una colocación adecuada sobre la mesa. Las bases PAD ECO separan monitores de la superficie, pero no insonorizan la habitación.",
             "Antes de comprar el brazo PSA1, suma el peso del micrófono y su soporte. También tiene un mínimo de carga, no solo un máximo."
           ]
@@ -3413,7 +3413,7 @@
           "a": "Introduce retardo y puede dificultar cantar o tocar siguiendo la reproducción. Usa una conexión de monitorización por cable adecuada al equipo."
         }
       ],
-      "closing": "Planea una primera grabación que puedas hacer con todas las conexiones resueltas. Una demo grabada enseña más que otra semana de carrito.",
+      "closing": "Planea una primera grabación que puedas hacer con todas las conexiones resueltas. Una demo grabada enseña más que otra semana añadiendo cosas al carrito.",
       "seoTitle": "Home studio: empieza por lo que quieres grabar",
       "metaDescription": "Voz, guitarra y primeras demos: micrófono, interfaz, monitorización y accesorios para un conjunto pequeño.",
       "productIds": [
@@ -3537,7 +3537,7 @@
         {
           "heading": "Tres formatos, tres usos",
           "paragraphs": [
-            "Una solapa acompaña a la persona; un micrófono de cámara recoge desde la cámara; uno de escritorio se coloca cerca de la boca. La distancia y el patrón de captación importan tanto como el formato."
+            "Un micrófono de solapa se lleva sujeto a la ropa; uno de cámara se monta sobre ella; uno de escritorio se coloca cerca de la boca. La distancia y el patrón de captación importan tanto como el formato."
           ],
           "checklist": [
             "Dispositivo y entrada disponible.",
@@ -3710,10 +3710,10 @@
       "illustration": "/img/gear/acessorios.svg",
       "title": "Tecnología y accesorios para tu rutina musical",
       "summary": "Adaptadores, DAC, Bluetooth, cables y un soporte: pequeñas piezas para aprovechar el equipo que ya tienes.",
-      "intro": "A veces no necesitas cambiar el equipo principal. Falta un adaptador, un cable con el largo adecuado o un sitio para dejar los cascos. Esta guía parte de problemas concretos y distingue señal digital, audio analógico y recepción o transmisión Bluetooth.",
+      "intro": "A veces no necesitas cambiar el equipo principal. Falta un adaptador, un cable de la longitud adecuada o un sitio para dejar los cascos. Esta guía parte de problemas concretos y distingue señal digital, audio analógico y recepción o transmisión Bluetooth.",
       "sections": [
         {
-          "heading": "Compatibilidad antes de todo",
+          "heading": "Compatibilidad ante todo",
           "paragraphs": [
             "Un conector que encaja no garantiza una función compatible. USB-C puede transportar audio digital; un adaptador puede incluir un DAC para convertirlo a señal analógica.",
             "El adaptador Apple y KA11 cumplen funciones de conversión, con prestaciones distintas. KA11 no admite el micrófono del cable; el teléfono puede usar otra ruta de micrófono."
@@ -3729,13 +3729,13 @@
           "heading": "Bluetooth para un equipo que no lo tiene",
           "paragraphs": [
             "Un receptor lleva el audio del móvil a la entrada de línea de un equipo. Un transmisor envía audio hacia auriculares o altavoces Bluetooth.",
-            "El dispositivo UGREEN combina ambos modos. Para entradas RCA necesitarás el cable apropiado; para TV, comprueba retraso de imagen y sonido con una conversación."
+            "El dispositivo UGREEN combina ambos modos. Para entradas RCA necesitarás el cable apropiado; para TV, comprueba el desfase entre la imagen y el sonido con una conversación."
           ]
         },
         {
           "heading": "Compra para resolver una necesidad",
           "paragraphs": [
-            "Un cable 3,5 mm a RCA conecta audio analógico, pero no convierte una salida óptica ni hace de previo phono. Un soporte simplemente guarda los cascos.",
+            "Un cable de 3,5 mm a RCA conecta audio analógico, pero no convierte una salida óptica ni hace de previo phono. Un soporte simplemente guarda los cascos.",
             "Un DAC externo no garantiza una mejora audible. Compara si falta potencia, una conexión o una salida sin problemas antes de sumar otra pieza."
           ]
         }
@@ -3926,8 +3926,8 @@
         {
           "heading": "Activo o pasivo: compara el sistema completo",
           "paragraphs": [
-            "Los R1280DB son una pareja con amplificación integrada. El PMA-600NE es un amplificador: necesita cajas pasivas y cables. Comparar solo los precios de esos dos productos dejaría fuera una parte del segundo sistema.",
-            "En un escritorio pequeño, una pareja activa reduce componentes. En una sala donde quieres elegir y cambiar cajas, un sistema separado ofrece otra forma de ampliar. Mide el mueble y deja ventilación según el manual del amplificador."
+            "Los R1280DB son un par de altavoces con amplificación integrada. El PMA-600NE es un amplificador: necesita cajas pasivas y cables. Comparar solo los precios de esos dos productos dejaría fuera una parte del segundo sistema.",
+            "En un escritorio pequeño, un par de altavoces activos reduce el número de componentes. En una sala donde quieres elegir y cambiar cajas, un sistema separado ofrece otra forma de ampliar. Mide el mueble y deja ventilación según el manual del amplificador."
           ],
           "checklist": [
             "Haz una lista de fuentes: móvil, ordenador, TV y tocadiscos.",

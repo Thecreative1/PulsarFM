@@ -1,6 +1,6 @@
 {
   "base": "http://127.0.0.1:4185",
-  "startedAt": "2026-10-12T19:00:55.279Z",
+  "startedAt": "2026-10-12T19:25:20.684Z",
   "cases": [
     {
       "name": "ES-EN-ES-reload-history-genre-guides",
@@ -261,5 +261,5 @@
     "countryCodeValid": true
   },
   "success": true,
-  "finishedAt": "2026-10-12T19:01:47.197Z"
+  "finishedAt": "2026-10-12T19:26:13.160Z"
 }

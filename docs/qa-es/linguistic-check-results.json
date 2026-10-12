@@ -1,0 +1,30 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "stdout": "Static site lint passed: 71 indexable pages, 39 Spanish, 1936 internal links\r\n",
+      "stderr": ""
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "stdout": "...................................... [100%]\r\n38 passed, 1135 subtests passed in 4.11s\r\n",
+      "stderr": "Exception ignored in: <function Console.__del__ at 0x000001D7B3C7F7F0>\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\Phoenix\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pyreadline3\\console\\console.py\", line 255, in __del__\r\nOSError: [WinError -1073741816] Windows Error 0xc0000008\r\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "stdout": "JavaScript syntax lint passed: 37 scripts\n",
+      "stderr": ""
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "stdout": "TAP version 13\n# Subtest: no consent and denied consent send no affiliate events or GA requests\nok 1 - no consent and denied consent send no affiliate events or GA requests\n  ---\n  duration_ms: 3.4387\n  type: 'test'\n  ...\n# Subtest: accepted click sends the Amazon parameters and one event; page query is excluded\nok 2 - accepted click sends the Amazon parameters and one event; page query is excluded\n  ---\n  duration_ms: 1.8273\n  type: 'test'\n  ...\n# Subtest: keyboard/primary and middle clicks work, secondary and cancelled clicks do not\nok 3 - keyboard/primary and middle clicks work, secondary and cancelled clicks do not\n  ---\n  duration_ms: 1.6323\n  type: 'test'\n  ...\n# Subtest: acceptance, revocation and changes in another tab take effect immediately\nok 4 - acceptance, revocation and changes in another tab take effect immediately\n  ---\n  duration_ms: 1.0802\n  type: 'test'\n  ...\n# Subtest: blocked storage defaults denied and permits an explicit session-only choice\nok 5 - blocked storage defaults denied and permits an explicit session-only choice\n  ---\n  duration_ms: 0.9089\n  type: 'test'\n  ...\n# Subtest: reuse existing gtag without duplicate initialization; failures never cancel navigation\nok 6 - reuse existing gtag without duplicate initialization; failures never cancel navigation\n  ---\n  duration_ms: 0.9461\n  type: 'test'\n  ...\n# Subtest: storage write failure still honors a new explicit choice for this session\nok 7 - storage write failure still honors a new explicit choice for this session\n  ---\n  duration_ms: 1.0623\n  type: 'test'\n  ...\n# Subtest: Spanish market uses its confirmed ID and respects consent without duplicate events\nok 8 - Spanish market uses its confirmed ID and respects consent without duplicate events\n  ---\n  duration_ms: 1.1875\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 117.7388\n",
+      "stderr": ""
+    }
+  }
+]

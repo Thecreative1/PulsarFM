@@ -1,0 +1,548 @@
+{
+  "startedAt": "2026-10-12T19:09:09.886Z",
+  "base": "https://pulsarfm.eu",
+  "release": "88abe58db95941d9b203b4722f026010d1823f88",
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-rock/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-chill/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-jazz/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-study/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-electronica/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-psytrance/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-pop/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/radios-synthwave/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/rock-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/chill-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/jazz-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/study-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/electronic-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/psytrance-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/pop-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/en/synthwave-radio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/privacidade.html",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/presentes-para-quem-gosta-de-musica/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/colunas-bluetooth/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/melhores-auscultadores/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/auscultadores-para-criancas/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/melhores-auriculares-bluetooth/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/gira-discos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/auscultadores-para-televisao/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/soundbars/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/colunas-para-pc/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/amplificador-para-gira-discos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/microfone-para-podcast/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/tecnologia-acessorios/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/recomendacoes/home-studio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-chill/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/privacidad/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-electronica/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-pop/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-jazz/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-psytrance/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-para-estudiar/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/altavoces-bluetooth-casa/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-rock/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/radio-synthwave/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/accesorios-audio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/auriculares-bluetooth-calidad-precio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/altavoces-para-pc/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/auriculares-cancelacion-ruido-trabajar/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/amplificador-para-tocadiscos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/barras-de-sonido/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/auriculares-para-television/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/auriculares-diadema/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/auriculares-para-ninos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/altavoces-pc/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/accesorios-audio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/altavoces-bluetooth/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/amplificacion/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/equipos-hi-fi/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/home-studio/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/auriculares-cascos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/barras-sonido/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/regalos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/microfonos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/para-ninos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/para-tv/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/categorias/tocadiscos/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/equipos-hi-fi-empezar/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/home-studio-economico/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/tocadiscos-para-empezar/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/regalos-para-amantes-musica/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/microfonos-usb-podcast-streaming/",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    }
+  ],
+  "assets": [
+    {
+      "route": "/assets/radio-i18n.js",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/assets/radio-locales.js",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/assets/radio-region.js",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/assets/site-language.js",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/assets/affiliate-analytics.js",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/assets/recommendations.css",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "cacheControl": "max-age=600",
+      "matchesLocal": true
+    }
+  ],
+  "checks": [
+    "All 71 sitemap pages and 8 critical assets match the local release",
+    "Live radio: Webamp ready, station selection and CORS audio decoding work",
+    "PT/ES/EN, persistence, filter URLs and skin paths work without recreating Webamp",
+    "Spanish hub desktop: layout fits viewport",
+    "Regalos desktop: layout fits viewport",
+    "Cascos desktop: layout fits viewport",
+    "Auriculares desktop: layout fits viewport",
+    "Para niños desktop: layout fits viewport",
+    "Altavoces Bluetooth desktop: layout fits viewport",
+    "Altavoces para PC desktop: layout fits viewport",
+    "Barras de sonido desktop: layout fits viewport",
+    "Para la TV desktop: layout fits viewport",
+    "Tocadiscos desktop: layout fits viewport",
+    "Amplificación desktop: layout fits viewport",
+    "Home Studio desktop: layout fits viewport",
+    "Micrófonos desktop: layout fits viewport",
+    "Accesorios desktop: layout fits viewport",
+    "All 13 guide buttons navigate to complete Spanish content on desktop",
+    "Spanish article desktop: layout fits viewport",
+    "Spanish hub mobile: layout fits viewport",
+    "Regalos mobile: layout fits viewport",
+    "Cascos mobile: layout fits viewport",
+    "Auriculares mobile: layout fits viewport",
+    "Para niños mobile: layout fits viewport",
+    "Altavoces Bluetooth mobile: layout fits viewport",
+    "Altavoces para PC mobile: layout fits viewport",
+    "Barras de sonido mobile: layout fits viewport",
+    "Para la TV mobile: layout fits viewport",
+    "Tocadiscos mobile: layout fits viewport",
+    "Amplificación mobile: layout fits viewport",
+    "Home Studio mobile: layout fits viewport",
+    "Micrófonos mobile: layout fits viewport",
+    "Accesorios mobile: layout fits viewport",
+    "All 13 guide buttons navigate to complete Spanish content on mobile",
+    "Spanish article mobile: layout fits viewport",
+    "Commercial URLs keep confirmed IDs and sponsored attributes; one queued event on consent, none after revocation",
+    "Key Spanish routes render localized content and self canonical without JavaScript"
+  ],
+  "errors": [],
+  "audio": {
+    "decoded": true,
+    "currentTime": 0.162246,
+    "readyState": 4,
+    "station": "Radio Paradise - Rock Mix"
+  },
+  "normalUrls": [
+    {
+      "route": "/",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "route": "/es/recomendaciones/",
+      "status": 200,
+      "matchesLocal": true
+    }
+  ],
+  "success": true,
+  "finishedAt": "2026-10-12T19:09:27.622Z"
+}

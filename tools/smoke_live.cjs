@@ -30,8 +30,8 @@ async function batch(items,kind) {
  try {
   const routes=[...fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
   await batch(routes,'pages');
-  await batch(['/assets/radio-region.js','/assets/radio-locales.js','/assets/radio-i18n.js','/assets/site-language.js','/assets/affiliate-analytics.js','/assets/recommendations.css','/sitemap.xml','/robots.txt'],'assets');
-  results.checks.push('All '+routes.length+' sitemap pages and 8 critical assets match the local release');
+  await batch(['/assets/radio-es.css','/assets/radio-region.js','/assets/radio-locales.js','/assets/radio-i18n.js','/assets/site-language.js','/assets/affiliate-analytics.js','/assets/recommendations.css','/sitemap.xml','/robots.txt'],'assets');
+  results.checks.push('All '+routes.length+' sitemap pages and 9 critical assets match the local release');
   browser=await chromium.launch({headless:true,executablePath:process.env.PULSAR_CHROME||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
   const context=await browser.newContext({viewport:{width:1440,height:1000}});
   await context.route('https://api.country.is/', route => route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({country:'PT'})}));

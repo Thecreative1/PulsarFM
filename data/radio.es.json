@@ -3,7 +3,7 @@
     "pageTitle": "Pulsar FM: radio online gratis, 64 emisoras en directo | Winamp retro",
     "metaDesc": "Escucha 64 emisoras de radio online gratis: rock, jazz, chill, electrónica y synthwave. Reproductor retro Winamp y visualizaciones Milkdrop en tu navegador.",
     "h1": "Sintoniza. Visualiza. Disfruta.",
-    "intro": "64 emisoras en directo. 8 géneros. Con Milkdrop, el legendario visualizador de Winamp, ahora en tu navegador.",
+    "intro": "64 emisoras en directo. 8 géneros musicales. Con MilkDrop, el legendario visualizador de Winamp, ahora en tu navegador.",
     "playBtn": "🎧 Escuchar ahora",
     "loadingBtn": "⌛ Cargando el reproductor",
     "liveLabel": "En directo",
@@ -16,7 +16,7 @@
     "privacyLink": "Privacidad y cookies",
     "recommendationsLink": "Recomendaciones PulsarFM ↗",
     "recommendationsLabel": "Recomendaciones PulsarFM (nueva pestaña)",
-    "gearLabel": "Equipo: guías de audio (nueva pestaña)",
+    "gearLabel": "Guías de equipo de audio (nueva pestaña)",
     "shareListening": "🎧 Escuchando {station} en Pulsar FM, radio retro con visualizador Winamp",
     "shareDefault": "Pulsar FM: radio online retro con visualizador Winamp. Noches de neón incluidas.",
     "shareCopied": "✓ COPIADO",
@@ -84,15 +84,15 @@
     "seo": [
       {
         "h2": "Radio en directo, sin un algoritmo que decida por ti",
-        "p": "Pulsar FM reúne emisoras elegidas a mano, <strong>radio en directo</strong> en un reproductor que parece salido de 1999 y visualizaciones Milkdrop que reaccionan a la música. Elige una emisora y pulsa play: sin cuenta ni aplicación que instalar."
+        "p": "Pulsar FM reúne emisoras seleccionadas a mano de todo el mundo. Escucha <strong>radio en directo</strong> con un reproductor inspirado en 1999 y disfruta de las visualizaciones de MilkDrop que reaccionan al ritmo de la música. Elige una emisora y pulsa play: sin cuenta ni aplicación que instalar."
       },
       {
         "h2": "Para quienes echan de menos Winamp",
-        "p": "Winamp vuelve al navegador, con skins clásicas y sin instalar nada. Si cambiabas el aspecto del player con un archivo .wsz, ya sabes por dónde va la cosa. La llama sigue siendo opcional."
+        "p": "Winamp vuelve al navegador, con skins clásicas y sin instalar nada. Si cambiabas el aspecto del reproductor con un archivo .wsz, ya sabes por dónde va la cosa. La llama sigue siendo opcional."
       },
       {
         "h2": "Radio online por género musical",
-        "p": "Del rock al psytrance, del jazz al synthwave. Elige un género, pulsa play y deja que suene. Milkdrop se encarga del resto.",
+        "p": "Del rock al psytrance, del jazz al synthwave. Elige un género, pulsa play y deja que suene. MilkDrop se encarga del resto.",
         "links": [
           {
             "genre": "rock",
@@ -129,8 +129,12 @@
         ]
       }
     ],
-    "footer1": "Visualizador basado en <a href=\"https://github.com/jberg/butterchurn\" target=\"_blank\" rel=\"noopener\">Butterchurn</a> · Player basado en <a href=\"https://github.com/captbaritone/webamp\" target=\"_blank\" rel=\"noopener\">Webamp</a>",
-    "footer2": "Pulsar FM es gratis. <em>Noches de neón, espíritu Winamp, internet extraño.</em> · Si te gusta, <a href=\"https://ko-fi.com/pfm80\" target=\"_blank\" rel=\"noopener\">invítame a una cerveza 🍺</a>"
+    "footer1": "Visualizador basado en <a href=\"https://github.com/jberg/butterchurn\" target=\"_blank\" rel=\"noopener\">Butterchurn</a> · Reproductor basado en <a href=\"https://github.com/captbaritone/webamp\" target=\"_blank\" rel=\"noopener\">Webamp</a>",
+    "footer2": "Pulsar FM es gratis. <em>Noches de neón, espíritu Winamp, internet extraño.</em> · Si te gusta, <a href=\"https://ko-fi.com/pfm80\" target=\"_blank\" rel=\"noopener\">invítame a una cerveza 🍺</a>",
+    "logoAlt": "Logotipo Pulsar FM",
+    "stationLabels": {
+      "Frisky Radio EUA": "Frisky Radio (EE. UU.)"
+    }
   },
   "controls": {
     "pt": {
@@ -196,17 +200,17 @@
       "returnES": "Return to Spanish"
     },
     "es": {
-      "scan": "⚡ AZAR",
+      "scan": "⚡ AL AZAR",
       "skin": "🎨 SKINS",
-      "float": "🔓 LIBRE",
+      "float": "🔓 FLOTANTE",
       "dock": "🔒 FIJAR",
       "trip": "✦ TRIP",
       "share": "📡 ENVÍA",
       "sleep": "😴 SUEÑO",
       "scanLabel": "Elegir una emisora al azar",
-      "skinLabel": "Elegir una skin del player",
-      "floatLabel": "Liberar el player",
-      "dockLabel": "Fijar el player",
+      "skinLabel": "Elegir una skin del reproductor",
+      "floatLabel": "Activar el modo flotante del reproductor",
+      "dockLabel": "Fijar el reproductor",
       "tripLabel": "Visualizador a pantalla completa",
       "shareLabel": "Compartir la radio",
       "sleepLabel": "Temporizador de apagado: desactivado / 15 / 30 / 60 minutos",
@@ -221,7 +225,7 @@
       "tripNote": "Auriculares, luz tenue y tiempo para escuchar.",
       "close": "CERRAR",
       "exit": "ESC · toca para salir del modo Trip",
-      "gear": "🎧 EQUIPO",
+      "gear": "🎧 GUÍAS",
       "englishLabel": "Cambiar a inglés",
       "returnPT": "Volver a portugués",
       "returnES": "Volver a español"

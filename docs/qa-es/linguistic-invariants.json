@@ -1,0 +1,191 @@
+{
+  "baseline": "88abe58db95941d9b203b4722f026010d1823f88",
+  "nonSpanishPages": 32,
+  "spanishPages": 39,
+  "modifiedSpanishPages": [
+    "es/index.html",
+    "es/privacidad/index.html",
+    "es/radio-chill/index.html",
+    "es/radio-electronica/index.html",
+    "es/radio-jazz/index.html",
+    "es/radio-para-estudiar/index.html",
+    "es/radio-pop/index.html",
+    "es/radio-psytrance/index.html",
+    "es/radio-rock/index.html",
+    "es/radio-synthwave/index.html",
+    "es/recomendaciones/accesorios-audio/index.html",
+    "es/recomendaciones/altavoces-bluetooth-casa/index.html",
+    "es/recomendaciones/altavoces-para-pc/index.html",
+    "es/recomendaciones/amplificador-para-tocadiscos/index.html",
+    "es/recomendaciones/auriculares-bluetooth-calidad-precio/index.html",
+    "es/recomendaciones/auriculares-cancelacion-ruido-trabajar/index.html",
+    "es/recomendaciones/auriculares-diadema/index.html",
+    "es/recomendaciones/barras-de-sonido/index.html",
+    "es/recomendaciones/categorias/accesorios-audio/index.html",
+    "es/recomendaciones/categorias/altavoces-bluetooth/index.html",
+    "es/recomendaciones/categorias/altavoces-pc/index.html",
+    "es/recomendaciones/categorias/amplificacion/index.html",
+    "es/recomendaciones/categorias/auriculares-cascos/index.html",
+    "es/recomendaciones/categorias/barras-sonido/index.html",
+    "es/recomendaciones/categorias/equipos-hi-fi/index.html",
+    "es/recomendaciones/categorias/home-studio/index.html",
+    "es/recomendaciones/categorias/microfonos/index.html",
+    "es/recomendaciones/categorias/para-ninos/index.html",
+    "es/recomendaciones/categorias/para-tv/index.html",
+    "es/recomendaciones/categorias/regalos/index.html",
+    "es/recomendaciones/categorias/tocadiscos/index.html",
+    "es/recomendaciones/equipos-hi-fi-empezar/index.html",
+    "es/recomendaciones/home-studio-economico/index.html",
+    "es/recomendaciones/index.html",
+    "es/recomendaciones/microfonos-usb-podcast-streaming/index.html",
+    "es/recomendaciones/regalos-para-amantes-musica/index.html"
+  ],
+  "affiliateLinks": 221,
+  "checks": [
+    "All 32 PT/EN HTML files byte-identical",
+    "ES anchor attributes, affiliate URLs, tracking IDs and event attributes identical",
+    "Canonical, hreflang, heading hierarchy and functional inline scripts identical",
+    "Root radio, PT sources, affiliate configuration, analytics, navigation, sitemap and robots identical",
+    "PT/EN control dictionaries identical",
+    "Valid Schema structures/URLs/types preserved; only FAQ text and two category display names corrected",
+    "Mandatory Amazon affiliate statements unchanged",
+    "Genre IDs, slugs, raw station names/order and guide destinations preserved"
+  ],
+  "schemaTextCorrections": [
+    {
+      "path": "es/radio-chill/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-chill/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/radio-electronica/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-electronica/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/radio-jazz/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-jazz/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/radio-para-estudiar/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-para-estudiar/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/radio-para-estudiar/index.html.2.mainEntity.2.acceptedAnswer.text",
+      "before": "Sí. El filtro Estudio reúne las ocho emisoras de este género para que puedas cambiar de estación sin buscar entre toda la lista. Ajusta el volumen al nivel que te permita trabajar cómodamente.",
+      "after": "Sí. El filtro Estudio reúne las ocho emisoras de este género para que puedas cambiar de emisora sin buscar entre toda la lista. Ajusta el volumen al nivel que te permita trabajar cómodamente."
+    },
+    {
+      "path": "es/radio-pop/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-pop/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/radio-psytrance/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-psytrance/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/radio-psytrance/index.html.2.mainEntity.2.acceptedAnswer.text",
+      "before": "Sí. Puedes elegir una emisora y escuchar por la salida de audio del móvil o por auriculares compatibles. Si bloqueas la pantalla, la continuidad del stream depende del navegador.",
+      "after": "Sí. Puedes elegir una emisora y escuchar por la salida de audio del móvil o por auriculares compatibles. Si bloqueas la pantalla, la continuidad de la emisión depende del navegador."
+    },
+    {
+      "path": "es/radio-rock/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-rock/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/radio-rock/index.html.2.mainEntity.2.acceptedAnswer.text",
+      "before": "Sí. Los controles se adaptan a la pantalla del móvil. Si quieres descubrir otra emisora, el botón AZAR elige una de las 64 disponibles. La continuidad del audio al bloquear la pantalla depende del navegador.",
+      "after": "Sí. Los controles se adaptan a la pantalla del móvil. Si quieres descubrir otra emisora, el botón AL AZAR elige una de las 64 disponibles. La continuidad del audio al bloquear la pantalla depende del navegador."
+    },
+    {
+      "path": "es/radio-synthwave/index.html.2.mainEntity.0.acceptedAnswer.text",
+      "before": "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación.",
+      "after": "Elige una emisora y pulsa «Escuchar en el reproductor». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+    },
+    {
+      "path": "es/radio-synthwave/index.html.2.mainEntity.1.acceptedAnswer.text",
+      "before": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación.",
+      "after": "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada emisión depende de la emisora."
+    },
+    {
+      "path": "es/recomendaciones/accesorios-audio/index.html.0.itemListElement.2.name",
+      "before": "Accesorios de Audio",
+      "after": "Accesorios de audio"
+    },
+    {
+      "path": "es/recomendaciones/auriculares-bluetooth-calidad-precio/index.html.0.itemListElement.2.name",
+      "before": "Auriculares y Cascos",
+      "after": "Auriculares y cascos"
+    },
+    {
+      "path": "es/recomendaciones/auriculares-cancelacion-ruido-trabajar/index.html.0.itemListElement.2.name",
+      "before": "Auriculares y Cascos",
+      "after": "Auriculares y cascos"
+    },
+    {
+      "path": "es/recomendaciones/auriculares-diadema/index.html.0.itemListElement.2.name",
+      "before": "Auriculares y Cascos",
+      "after": "Auriculares y cascos"
+    },
+    {
+      "path": "es/recomendaciones/categorias/accesorios-audio/index.html.0.itemListElement.2.name",
+      "before": "Accesorios de Audio",
+      "after": "Accesorios de audio"
+    },
+    {
+      "path": "es/recomendaciones/categorias/accesorios-audio/index.html.1.name",
+      "before": "Accesorios de Audio",
+      "after": "Accesorios de audio"
+    },
+    {
+      "path": "es/recomendaciones/categorias/auriculares-cascos/index.html.0.itemListElement.2.name",
+      "before": "Auriculares y Cascos",
+      "after": "Auriculares y cascos"
+    },
+    {
+      "path": "es/recomendaciones/categorias/auriculares-cascos/index.html.1.name",
+      "before": "Auriculares y Cascos",
+      "after": "Auriculares y cascos"
+    }
+  ]
+}
