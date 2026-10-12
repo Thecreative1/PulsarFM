@@ -1,6 +1,12 @@
 /* Radio locale labels only. Webamp, audio and Milkdrop remain owned by index.html. */
 (() => {
   const i18n = window.PulsarRadioI18n;
+  // A blocked preference store must not stop language selection or the player.
+  i18n.storage = {
+    getItem(key) { try { return localStorage.getItem(key); } catch (_) { return null; } },
+    setItem(key, value) { try { localStorage.setItem(key, value); } catch (_) {} },
+    removeItem(key) { try { localStorage.removeItem(key); } catch (_) {} }
+  };
   i18n.applyControls = lang => {
     const t = i18n.controls[lang];
     for (const [id, key] of [['scan-btn','scan'], ['skin-btn','skin'], ['trip-btn','trip'], ['share-btn','share']]) {

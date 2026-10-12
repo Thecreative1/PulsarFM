@@ -20,6 +20,7 @@ fs.mkdirSync(evidence, { recursive: true });
     }
     browser = await chromium.launch({ headless: true, executablePath: process.env.PULSAR_CHROME || 'C:/Program Files/Google/Chrome/Application/chrome.exe' });
     const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  await context.route('https://api.country.is/', route => route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({country:'PT'})}));
     await context.route(/googletagmanager\.com|google-analytics\.com|amazon\.es/, route => route.abort());
     const page = await context.newPage();
     page.on('pageerror', error => results.errors.push(error.message));

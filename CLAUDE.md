@@ -190,7 +190,7 @@ and the genre-page FAQs.
 
 ## localStorage keys
 
-`pulsarfm-lang` (pt|en|es) · `pulsarfm-skin` (skin file path) ·
+`pulsarfm-lang` (pt|en|es) · `pulsarfm-market` (pt|es; EN return market) · `pulsarfm-skin` (skin file path) ·
 `pulsarfm-floating` (bool) · `pulsarfm-consent` (granted|denied) ·
 `pulsarfm-favs` (JSON array of stream URLs) · `pulsarfm-last` (JSON {url,name})
 
@@ -266,3 +266,6 @@ but `/assets/recommendations.css` is cached hard: cache-bust when testing.
 
 
 Spanish editorial navigation mirrors all 13 Portuguese guides in order, selection, illustrations and quick picks; the two existing specialist Spanish guides remain supplementary. The 73 localized products reuse catalog ASINs; never change the original listing verification dates when merely translating. Preserve all existing Spanish URLs. Build-time parity validation in gen_spain.py must stay enabled. Current sitemap: 71 pages including 39 Spanish.
+
+
+Homepage language precedence: explicit lang query, explicit /es/ path, saved language, then Country.is detection on a fresh neutral / visit. Country.is was expressly approved by the owner on 12/10/2026. It reads only the country code, uses no cookies/referrer, times out after 2 seconds and must never overrule a manual choice. EN returns to the PT/ES market of origin; preserve pulsarfm-market and return_lang=es through genre/player links. Run tools/check-language-navigation.cjs with the Playwright module directory before deployment and against https://pulsarfm.eu after deployment. Country cases are mocked; its separate connectivity probe makes one real approved request.

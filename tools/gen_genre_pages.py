@@ -319,7 +319,7 @@ GENRES_EN = {
 LABELS = {
  "pt": {"html_lang": "pt-PT", "og_locale": '<meta property="og:locale" content="pt_PT" />\n  <meta property="og:locale:alternate" content="pt_BR" />',
         "play": "\U0001F3A7 Ouvir no player", "all": "▶ OUVIR TUDO NO PULSAR FM", "faq": "Perguntas frequentes",
-        "others": "Outros géneros", "alt_label": "English", "lang_q": "",
+        "others": "Outros géneros", "alt_label": "English", "lang_q": "&amp;lang=pt",
         "footer": "Pulsar FM — rádio online grátis com visualizador retro estilo Winamp · <a href=\"/privacidade.html\">Privacidade &amp; Cookies</a>"},
  "en": {"html_lang": "en", "og_locale": '<meta property="og:locale" content="en_GB" />\n  <meta property="og:locale:alternate" content="en_US" />',
         "play": "\U0001F3A7 Play in the player", "all": "▶ LISTEN ON PULSAR FM", "faq": "Frequently asked questions",
@@ -420,6 +420,7 @@ def page(slug, lang="pt"):
     if lang == "es":
         gear_html = '<a class="gear-box" href="/es/recomendaciones/{}/"><span class="gear-tag">🎧 EQUIPO</span><strong>Guías para tu próxima sesión</strong><span>Compara el equipo que encaja con tu forma de escuchar.</span><span class="gear-go">Leer la guía →</span></a>'.format(g["gearSlug"])
     home_path = "/es/" if lang == "es" else "/"
+    home_link = "/?lang=pt" if lang == "pt" else "/?lang=en" if lang == "en" else home_path
     others = "\n".join(
         '          <a href="/{}" class="genre-filter-link">{} {}</a>'.format(
             path_for(s, lang), d["emoji"], localized(s, lang)["nome"])
@@ -737,7 +738,7 @@ def page(slug, lang="pt"):
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="{home_path}">Pulsar FM</a> › {emoji} {nome}{lang_alt}</nav>
+    <nav class="breadcrumb"><a href="{home_link}">Pulsar FM</a> › {emoji} {nome}{lang_alt}</nav>
 
     <h1>{emoji} {h1}</h1>
     <p class="intro">{intro}</p>
@@ -764,7 +765,7 @@ def page(slug, lang="pt"):
   </main>
 </body>
 </html>
-'''.format(GA=GA, home_path=home_path, path=path, alternates=alternates, lang_alt=lang_alt, cards=cards, others=others,
+'''.format(GA=GA, home_path=home_path, home_link=home_link, path=path, alternates=alternates, lang_alt=lang_alt, cards=cards, others=others,
            stations_ld=stations_ld, html_lang=L["html_lang"], og_locale=L["og_locale"],
            lang_q=L["lang_q"], all_label=L["all"], faq_h=L["faq"], others_h=L["others"], footer=L["footer"],
            faq_html=faq_html, faq_ld=faq_ld, gear_html=gear_html,

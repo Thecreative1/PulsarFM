@@ -193,10 +193,14 @@
     <p>Guardamos algumas preferências em <code>localStorage</code> — ficam <strong>só no teu dispositivo</strong>, nunca são enviadas para nós:</p>
     <ul>
       <li><code>pulsarfm-lang</code> — idioma escolhido (PT/ES/EN)</li>
+      <li><code>pulsarfm-market</code> — versão PT ou ES à qual regressar depois de inglês</li>
       <li><code>pulsarfm-skin</code> — skin do Winamp escolhida</li>
       <li><code>pulsarfm-floating</code> — modo do player (dock/float)</li>
       <li><code>pulsarfm-consent</code> — a tua escolha de cookies</li>
     </ul>
+
+    <h2>🌍 Idioma inicial por país</h2>
+    <p>Na primeira visita ao início, sem idioma explícito nem preferência guardada, o navegador consulta <a href="https://country.is/" target="_blank" rel="noopener">Country.is</a> através de <code>api.country.is</code>. O serviço recebe o IP ao responder ao pedido. A PulsarFM lê apenas o código do país, sem guardar o IP nem o acrescentar ao Google Analytics. Se o país for Espanha, abre ES; se a consulta falhar ou demorar mais de dois segundos, mantém PT. Não pede localização GPS nem coordenadas. A escolha manual tem sempre prioridade e a rádio continua disponível se o serviço falhar.</p>
 
     <h2>📻 Streams de rádio</h2>
     <p>Quando carregas em «Ouvir agora», o teu browser liga-se <strong>diretamente ao servidor da estação de rádio</strong> (SomaFM, Radio Paradise, etc.). Esse servidor vê o teu endereço IP — como em qualquer rádio online. Nós não intermediamos nem registamos nada disso.</p>
@@ -213,7 +217,7 @@
     <p>Com o teu consentimento de análise, registamos no Google Analytics o evento <code>affiliate_click</code>, com o mercado, idioma, slug do artigo, ID do produto, plataforma de afiliados, o identificador de afiliado da PulsarFM, o nome e a categoria do produto, o caminho da página, o endereço do produto na loja e a posição do link. Os cliques não são vendas: as compras e comissões são consultadas nos relatórios Amazon. Este evento não inclui os parâmetros de pesquisa do endereço da página. A recusa de cookies impede este evento na PulsarFM; não impede a abertura voluntária do link externo nem controla o tratamento de dados no destino.</p>
     <p>Não instalamos nenhum script da Amazon no site e as imagens dos produtos são ilustrações alojadas na PulsarFM. Nas páginas de recomendações podes alterar a escolha em «Preferências de cookies».</p>
 
-    <a class="back-link" href="/">← VOLTAR AO PULSAR FM</a><button class="reset-btn" id="reset-consent">REPOR COOKIES</button>
+    <a class="back-link" href="/?lang=pt">← VOLTAR AO PULSAR FM</a><button class="reset-btn" id="reset-consent">REPOR COOKIES</button>
 
     <div class="en-note">
       <strong>EN:</strong> Pulsar FM uses Google Analytics 4 with Consent Mode v2 — everything is denied by default until you accept the cookie banner. Preferences (language, skin, player mode, consent choice) are stored in your browser's localStorage only and never sent to us. Radio streams connect your browser directly to each station's server. Questions or GDPR requests: <a href="mailto:flavio.martins@gmail.com">flavio.martins@gmail.com</a>.
@@ -224,7 +228,7 @@
     document.getElementById('reset-consent').addEventListener('click', () => {
       localStorage.removeItem('pulsarfm-consent');
       gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
-      window.location.href = '/';
+      window.location.href = '/?lang=pt';
     });
   </script>
 </body>

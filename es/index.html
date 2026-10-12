@@ -15,7 +15,7 @@
       analytics_storage: 'denied',
       wait_for_update: 500
     });
-    if (localStorage.getItem('pulsarfm-consent') === 'granted') {
+    if ((() => { try { return localStorage.getItem('pulsarfm-consent'); } catch (_) { return null; } })() === 'granted') {
       gtag('consent', 'update', {
         ad_storage: 'granted',
         ad_user_data: 'granted',
@@ -32,6 +32,7 @@
   <link rel="alternate" hreflang="es-ES" href="https://pulsarfm.eu/es/">
   <script src="/assets/radio-locales.js"></script>
   <script src="/assets/radio-i18n.js"></script>
+  <script src="/assets/radio-region.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="manifest" href="manifest.webmanifest">
@@ -1475,7 +1476,7 @@
       <h1 id="hero-h1">Sintoniza. Visualiza. Disfruta.</h1>
       <p class="intro" id="hero-intro">64 emisoras en directo. 8 géneros. Con Milkdrop, el legendario visualizador de Winamp, ahora en tu navegador.</p>
       <nav class="market-switch" aria-label="Idioma">
-        <a href="/" data-radio-language="pt" lang="pt-PT" hreflang="pt-PT">PT</a><span aria-hidden="true"> | </span><a href="/es/" data-radio-language="es" aria-current="page" lang="es-ES" hreflang="es-ES">ES</a>
+        <a href="/?lang=pt" data-radio-language="pt" lang="pt-PT" hreflang="pt-PT">PT</a><span aria-hidden="true"> | </span><a href="/es/" data-radio-language="es" aria-current="page" lang="es-ES" hreflang="es-ES">ES</a>
       </nav>
     </div>
 
@@ -1822,8 +1823,8 @@
         kofiFloat:     "🍺 Support Pulsar",
         privacyLink:   "Privacy & Cookies",
         recommendationsLink: "PulsarFM recommendations (PT) ↗",
-        recommendationsLabel: "PulsarFM recommendations in Portuguese (new tab)",
-        gearLabel: "Gear: audio equipment guides in Portuguese (new tab)",
+        recommendationsLabel: "PulsarFM recommendations (new tab)",
+        gearLabel: "Gear: audio equipment guides (new tab)",
         shareListening: "🎧 Listening to {station} on Pulsar FM — retro radio with the Winamp visualizer",
         shareDefault:   "Pulsar FM — retro online radio with the Winamp visualizer. Neon nights included.",
         shareCopied:    "✓ COPIED",
@@ -1911,11 +1912,18 @@
     };
 
     // Explicit locale URLs win; the existing English preference stays supported.
+    const preferenceStorage = window.PulsarRadioI18n.storage;
     const urlLang = new URLSearchParams(location.search).get("lang");
-    const savedLang = (() => { try { return localStorage.getItem("pulsarfm-lang"); } catch (_) { return null; } })();
-    let currentLang = location.pathname.startsWith('/es/') ? 'es'
-                    : ['pt', 'en', 'es'].includes(urlLang) ? urlLang
-                    : savedLang === 'en' ? 'en' : 'pt';
+    const savedLang = (() => { try { return preferenceStorage.getItem("pulsarfm-lang"); } catch (_) { return null; } })();
+    const savedMarket = (() => { try { return preferenceStorage.getItem("pulsarfm-market"); } catch (_) { return null; } })();
+    const explicitLanguage = ['pt', 'en', 'es'].includes(urlLang) ? urlLang : null;
+    let currentLang = explicitLanguage || (location.pathname.startsWith('/es/') ? 'es'
+                    : ['pt', 'en', 'es'].includes(savedLang) ? savedLang : 'pt');
+    const returnParam = new URLSearchParams(location.search).get('return_lang');
+    let marketLanguage = currentLang === 'en'
+      ? ['pt', 'es'].includes(returnParam) ? returnParam
+      : location.pathname.startsWith('/es/') || savedMarket === 'es' || savedLang === 'es' ? 'es' : 'pt'
+      : currentLang;
     const genrePagesEs = {"rock":"/es/radio-rock/","jazz":"/es/radio-jazz/","chill":"/es/radio-chill/","pop":"/es/radio-pop/","study":"/es/radio-para-estudiar/","electro":"/es/radio-electronica/","psy":"/es/radio-psytrance/","synthwave":"/es/radio-synthwave/"};
 
     const filterButtons = document.getElementById("filter-buttons");
@@ -1926,8 +1934,8 @@
     let activeGenre    = "all";
     let playingUrl     = null;
 
-    let favorites  = new Set(JSON.parse(localStorage.getItem("pulsarfm-favs") || "[]"));
-    let lastPlayed = JSON.parse(localStorage.getItem("pulsarfm-last") || "null");
+    let favorites  = new Set(JSON.parse(preferenceStorage.getItem("pulsarfm-favs") || "[]"));
+    let lastPlayed = JSON.parse(preferenceStorage.getItem("pulsarfm-last") || "null");
 
     function renderFilters() {
       const t = translations[currentLang];
@@ -1972,7 +1980,7 @@
     function toggleFavorite(url) {
       if (favorites.has(url)) favorites.delete(url);
       else favorites.add(url);
-      localStorage.setItem("pulsarfm-favs", JSON.stringify([...favorites]));
+      preferenceStorage.setItem("pulsarfm-favs", JSON.stringify([...favorites]));
       const btn = document.querySelector(`.fav-btn[data-fav-url="${CSS.escape(url)}"]`);
       if (btn) {
         const faved = favorites.has(url);
@@ -2021,24 +2029,34 @@ function updatePlayerButtons() {
       seoBlocks.innerHTML = t.seo.map(card => {
         const links = card.links
           ? `<div class="genre-links">${card.links.map(l =>
-              `<a href="${(currentLang === "es" ? genrePagesEs : currentLang === "en" ? genrePagesEn : genrePages)[l.genre] || "#radio-groups"}" class="genre-filter-link" data-genre="${l.genre}">${l.label}</a>`
+              `<a href="${(currentLang === "es" ? genrePagesEs : currentLang === "en" ? genrePagesEn : genrePages)[l.genre] || "#radio-groups"}${currentLang === "en" && marketLanguage === "es" ? "?return_lang=es" : ""}" class="genre-filter-link" data-genre="${l.genre}">${l.label}</a>`
             ).join("")}</div>`
           : "";
         return `<article class="seo-card"><h2>${card.h2}</h2><p>${card.p}</p>${links}</article>`;
       }).join("");
     }
 
-    function applyLanguage(lang) {
+    function applyLanguage(lang, navigation = {}) {
+      if (!Object.prototype.hasOwnProperty.call(translations, lang)) return;
+      if (lang !== "en") marketLanguage = lang;
+      else if (["pt", "es"].includes(navigation.market)) marketLanguage = navigation.market;
       currentLang = lang;
-      try { localStorage.setItem("pulsarfm-lang", lang); } catch (_) { /* URL navigation works without storage. */ }
+      try { preferenceStorage.setItem("pulsarfm-lang", lang); preferenceStorage.setItem("pulsarfm-market", marketLanguage); } catch (_) { /* URL navigation works without storage. */ }
       document.documentElement.lang = lang === "es" ? "es-ES" : lang === "pt" ? "pt-PT" : "en";
       const t = translations[lang];
       const localePath = lang === 'es' ? '/es/' : '/';
       const route = new URL(location.href);
       route.pathname = localePath;
       route.searchParams.delete('lang');
-      if (lang === 'en') route.searchParams.set('lang', 'en');
-      history.replaceState(null, '', route.pathname + route.search + route.hash);
+      route.searchParams.delete('return_lang');
+      if (lang === 'en') {
+        route.searchParams.set('lang', 'en');
+        if (marketLanguage === 'es') route.searchParams.set('return_lang', 'es');
+      }
+      const target = route.pathname + route.search + route.hash;
+      const state = { ...history.state, pulsarMarket: marketLanguage };
+      if (navigation.history === 'push' && target !== location.pathname + location.search + location.hash) history.pushState(state, '', target);
+      else history.replaceState(state, '', target);
       document.querySelector('link[rel="canonical"]').href = 'https://pulsarfm.eu' + localePath;
       for (const [property, value] of [['og:url', 'https://pulsarfm.eu' + localePath], ['og:title', t.pageTitle], ['og:description', t.metaDesc], ['og:locale', lang === 'es' ? 'es_ES' : lang === 'en' ? 'en_GB' : 'pt_PT']]) {
         document.querySelector('meta[property="' + property + '"]').content = value;
@@ -2047,24 +2065,29 @@ function updatePlayerButtons() {
         link.toggleAttribute('aria-current', link.dataset.radioLanguage === lang);
         if (link.hasAttribute('aria-current')) link.setAttribute('aria-current', 'page');
       });
-      document.getElementById('recommendations-link').href = lang === 'es' ? '/es/recomendaciones/' : '/recomendacoes/';
-      document.getElementById('gear-btn').href = lang === 'es' ? '/es/recomendaciones/' : '/recomendacoes/';
-      document.getElementById('privacy-link').href = lang === 'es' ? '/es/privacidad/' : '/privacidade.html';
+      document.getElementById('recommendations-link').href = marketLanguage === 'es' ? '/es/recomendaciones/' : '/recomendacoes/';
+      document.getElementById('gear-btn').href = marketLanguage === 'es' ? '/es/recomendaciones/' : '/recomendacoes/';
+      document.getElementById('privacy-link').href = marketLanguage === 'es' ? '/es/privacidad/' : '/privacidade.html';
       window.PulsarRadioI18n.applyControls(lang);
       document.title = t.pageTitle;
       document.querySelector('meta[name="description"]').setAttribute("content", t.metaDesc);
       document.getElementById("hero-h1").textContent    = t.h1;
       document.getElementById("hero-intro").textContent = t.intro;
-      document.getElementById("lang-switcher").textContent = t.langBtn;
+      const languageButton = document.getElementById("lang-switcher");
+      languageButton.textContent = lang === 'en' ? marketLanguage.toUpperCase() : 'EN';
+      const labels = window.PulsarRadioI18n.controls[lang];
+      languageButton.setAttribute('aria-label', lang === 'en' ? labels['return' + marketLanguage.toUpperCase()] : labels.englishLabel);
       document.getElementById("footer-line1").innerHTML = t.footer1;
       document.getElementById("footer-line2").innerHTML = t.footer2;
       document.getElementById("privacy-link").textContent   = t.privacyLink;
-      document.getElementById("recommendations-link").textContent = t.recommendationsLink;
+      document.getElementById("recommendations-link").textContent = lang === "en" ? "PulsarFM recommendations (" + marketLanguage.toUpperCase() + ") ↗" : t.recommendationsLink;
       document.getElementById("recommendations-link").setAttribute("aria-label", t.recommendationsLabel);
       document.getElementById("gear-btn").setAttribute("aria-label", t.gearLabel);
       document.getElementById("kofi-float").textContent     = t.kofiFloat;
       document.getElementById("consent-title").textContent  = t.consentTitle;
       document.getElementById("consent-text").innerHTML     = t.consentText;
+      const consentPrivacy = document.querySelector("#consent-text a");
+      if (consentPrivacy) consentPrivacy.href = marketLanguage === "es" ? "/es/privacidad/" : "/privacidade.html";
       document.getElementById("consent-accept").textContent = t.consentAccept;
       document.getElementById("consent-reject").textContent = t.consentReject;
       document.getElementById("favs-empty").innerHTML = t.favsEmpty;
@@ -2111,7 +2134,7 @@ function updatePlayerButtons() {
       const filterUrl = new URL(location.href);
       if (activeGenre === 'all') filterUrl.searchParams.delete('genre');
       else filterUrl.searchParams.set('genre', activeGenre);
-      history.replaceState(null, '', filterUrl.pathname + filterUrl.search);
+      history.replaceState(history.state, '', filterUrl.pathname + filterUrl.search + filterUrl.hash);
     }
 
     function playRandom() {
@@ -2176,7 +2199,7 @@ function updatePlayerButtons() {
       webampInstance.setTracksToPlay([{ url, metaData: { artist: name, title: translations[currentLang].liveLabel } }]);
       setPlayingCard(url);
       lastPlayed = { url, name };
-      localStorage.setItem("pulsarfm-last", JSON.stringify(lastPlayed));
+      preferenceStorage.setItem("pulsarfm-last", JSON.stringify(lastPlayed));
       document.getElementById("resume-chip").hidden = true;
     }
 
@@ -2225,14 +2248,27 @@ function updatePlayerButtons() {
       link.addEventListener('click', event => {
         if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
-        applyLanguage(link.dataset.radioLanguage);
+        window.PulsarRadioRegion.manualChoice = true;
+        applyLanguage(link.dataset.radioLanguage, { history: 'push' });
       });
     });
-    window.addEventListener('popstate', () => applyLanguage(location.pathname.startsWith('/es/') ? 'es' : new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'pt'));
+    window.addEventListener('popstate', event => {
+      window.PulsarRadioRegion.manualChoice = true;
+      const params = new URLSearchParams(location.search);
+      const explicit = params.get('lang');
+      const lang = ['pt','es','en'].includes(explicit) ? explicit : location.pathname.startsWith('/es/') ? 'es' : 'pt';
+      applyLanguage(lang, { market: params.get('return_lang') || event.state?.pulsarMarket });
+      filterRadios(params.get('genre') || 'all');
+    });
     applyLanguage(currentLang);
 
     document.getElementById("lang-switcher").addEventListener("click", () => {
-      applyLanguage(currentLang === "en" ? "pt" : "en");
+      window.PulsarRadioRegion.manualChoice = true;
+      applyLanguage(currentLang === "en" ? marketLanguage : "en", { history: 'push' });
+    });
+
+    window.PulsarRadioRegion.country.then(lang => {
+      if (lang && !window.PulsarRadioRegion.manualChoice) applyLanguage(lang);
     });
 
     scanBtn.addEventListener("click", playRandom);
@@ -2241,7 +2277,7 @@ function updatePlayerButtons() {
     const consentBanner = document.getElementById("consent-banner");
 
     function closeConsent(choice) {
-      localStorage.setItem("pulsarfm-consent", choice);
+      preferenceStorage.setItem("pulsarfm-consent", choice);
       consentBanner.classList.remove("visible");
     }
 
@@ -2257,7 +2293,7 @@ function updatePlayerButtons() {
 
     document.getElementById("consent-reject").addEventListener("click", () => closeConsent("denied"));
 
-    if (!localStorage.getItem("pulsarfm-consent")) {
+    if (!preferenceStorage.getItem("pulsarfm-consent")) {
       setTimeout(() => consentBanner.classList.add("visible"), 1200);
     }
 
@@ -2270,7 +2306,10 @@ function updatePlayerButtons() {
       const text    = playing ? t.shareListening.replace("{station}", playing.textContent) : t.shareDefault;
       const shareUrl = new URL(currentLang === 'es' ? '/es/' : '/', 'https://pulsarfm.eu');
       if (activeGenre !== 'all') shareUrl.searchParams.set('genre', activeGenre);
-      if (currentLang === 'en') shareUrl.searchParams.set('lang', 'en');
+      if (currentLang === 'en') {
+        shareUrl.searchParams.set('lang', 'en');
+        if (marketLanguage === 'es') shareUrl.searchParams.set('return_lang', 'es');
+      }
       const url = shareUrl.href;
 
       if (navigator.share) {
@@ -2344,7 +2383,7 @@ function updatePlayerButtons() {
 
     const skinBtn    = document.getElementById("skin-btn");
     const skinDrawer = document.getElementById("skin-drawer");
-    let activeSkin   = localStorage.getItem("pulsarfm-skin") || null;
+    let activeSkin   = preferenceStorage.getItem("pulsarfm-skin") || null;
 
     skins.forEach(({ label, file }) => {
       const pill = document.createElement("button");
@@ -2353,7 +2392,7 @@ function updatePlayerButtons() {
       pill.addEventListener("click", () => {
         if (!webampInstance) return;
         webampInstance.setSkinFromUrl(file);
-        localStorage.setItem("pulsarfm-skin", file);
+        preferenceStorage.setItem("pulsarfm-skin", file);
         activeSkin = file;
         skinDrawer.querySelectorAll(".skin-pill").forEach(p => p.classList.remove("active"));
         pill.classList.add("active");
@@ -2531,11 +2570,11 @@ function updatePlayerButtons() {
 
     // ── Player dock / float toggle ──
     const playerLockBtn   = document.getElementById('player-lock-btn');
-    let   playerIsFloating = localStorage.getItem('pulsarfm-floating') === 'true';
+    let   playerIsFloating = preferenceStorage.getItem('pulsarfm-floating') === 'true';
 
     function applyPlayerMode(floating) {
       playerIsFloating = floating;
-      localStorage.setItem('pulsarfm-floating', floating);
+      preferenceStorage.setItem('pulsarfm-floating', floating);
       document.body.classList.toggle('player-floating', floating);
       playerLockBtn.textContent = window.PulsarRadioI18n.controls[currentLang][floating ? 'dock' : 'float'];
       playerLockBtn.setAttribute('aria-label', window.PulsarRadioI18n.controls[currentLang][floating ? 'dockLabel' : 'floatLabel']);

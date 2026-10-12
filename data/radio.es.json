@@ -159,7 +159,10 @@
       "tripNote": "Auscultadores, luz baixa e tempo para ouvir.",
       "close": "FECHAR",
       "exit": "ESC · toca para sair do modo Trip",
-      "gear": "🎧 GEAR"
+      "gear": "🎧 GEAR",
+      "englishLabel": "Mudar para inglês",
+      "returnPT": "Voltar ao português",
+      "returnES": "Voltar ao espanhol"
     },
     "en": {
       "scan": "⚡ SCAN",
@@ -187,7 +190,10 @@
       "tripNote": "Headphones, low lights and time to listen.",
       "close": "CLOSE",
       "exit": "ESC · tap to exit trip mode",
-      "gear": "🎧 GEAR"
+      "gear": "🎧 GEAR",
+      "englishLabel": "Switch to English",
+      "returnPT": "Return to Portuguese",
+      "returnES": "Return to Spanish"
     },
     "es": {
       "scan": "⚡ AZAR",
@@ -215,7 +221,10 @@
       "tripNote": "Auriculares, luz tenue y tiempo para escuchar.",
       "close": "CERRAR",
       "exit": "ESC · toca para salir del modo Trip",
-      "gear": "🎧 EQUIPO"
+      "gear": "🎧 EQUIPO",
+      "englishLabel": "Cambiar a inglés",
+      "returnPT": "Volver a portugués",
+      "returnES": "Volver a español"
     }
   }
 }

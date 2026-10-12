@@ -21,5 +21,6 @@ def language_switch(path, language="pt"):
     links = []
     for key, lang in (("pt", "pt-PT"), ("es", "es-ES")):
         current = ' aria-current="page"' if key == language else ""
-        links.append(f'<a href="{escape(pair[key], quote=True)}" lang="{lang}" data-site-language="{key}"{current}>{key.upper()}</a>')
+        target = pair[key] + ("?lang=pt" if key == "pt" and pair[key] == "/" else "")
+        links.append(f'<a href="{escape(target, quote=True)}" lang="{lang}" data-site-language="{key}"{current}>{key.upper()}</a>')
     return '<nav class="locale-nav" aria-label="Idioma">' + ' <span aria-hidden="true">|</span> '.join(links) + '</nav>'
