@@ -446,7 +446,7 @@ def page(slug, lang="pt"):
 <html lang="{html_lang}">
 <head>
 {GA}
-  <script src="/assets/site-language.js" defer></script>
+  <script src="/assets/site-language.js?v=20261012-navigation2" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
