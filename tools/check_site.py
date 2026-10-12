@@ -75,4 +75,3 @@ def main():
     print(f'Static site lint passed: {len(urls)} indexable pages, {spanish} Spanish, {links_checked} internal links')
 
 if __name__ == '__main__': main()
-

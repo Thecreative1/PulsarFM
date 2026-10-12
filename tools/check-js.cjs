@@ -22,4 +22,3 @@ function walk(dir) {
 }
 walk(root);
 console.log('JavaScript syntax lint passed: '+checked+' scripts');
-
