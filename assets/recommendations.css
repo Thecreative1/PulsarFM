@@ -222,3 +222,13 @@ body:has(.editorial-consent:not([hidden])) { padding-bottom: 110px; }
   .editorial-consent button { flex: 1; }
   body:has(.editorial-consent:not([hidden])) { padding-bottom: 150px; }
 }
+
+/* Locale navigation and Spanish editorial details reuse the existing frame. */
+.locale-nav { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; }
+.locale-nav a { padding: 6px; color: var(--text-muted); }
+.locale-nav a[aria-current="page"] { color: var(--line-primary); text-decoration: underline; }
+.editorial-header { flex-wrap: wrap; }
+.product-facts { padding-left: 20px; color: var(--text-muted); font-size: .9rem; }
+.product-source { font-size: .8rem; }
+.es-page .faq-item { border-left: 0; padding-left: 0; }
+.es-page .guide-header h1 { max-width: 30ch; }

@@ -37,7 +37,14 @@
     if (choice === 'granted' && !tagRequested) {
       tagRequested = true;
       window.gtag('js', new Date());
-      window.gtag('config', measurementId);
+      const context = document.body?.dataset || {};
+      window.gtag('config', measurementId, {
+        market: context.market || (window.location.pathname.startsWith('/es/') ? 'ES' : 'PT'),
+        language: context.language || (window.location.pathname.startsWith('/es/') ? 'es-ES' : 'pt-PT'),
+        article_slug: context.articleSlug || '',
+        content_category: context.contentCategory || '',
+        page_kind: context.pageKind || 'page'
+      });
       const script = document.createElement('script');
       script.async = true;
       script.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
@@ -78,6 +85,12 @@
     const { affiliatePlatform, trackingId, productName, productCategory, position } = link.dataset;
     if (!affiliatePlatform || !productName || !position) return;
     const parameters = {
+      market: link.dataset.market || (window.location.pathname.startsWith('/es/') ? 'ES' : 'PT'),
+      language: link.dataset.language || (window.location.pathname.startsWith('/es/') ? 'es-ES' : 'pt-PT'),
+      article_slug: link.dataset.articleSlug || window.location.pathname.split('/').filter(Boolean).at(-1) || '',
+      product_id: link.dataset.productId || '',
+      merchant: link.dataset.merchant || affiliatePlatform,
+      link_position: position,
       affiliate_platform: affiliatePlatform,
       product_name: productName,
       product_category: productCategory || '',
@@ -102,7 +115,7 @@
       if (img.dataset.fallback) return;
       img.dataset.fallback = 'true';
       img.src = '/img/gear-editorial.svg';
-      img.alt = 'Ilustração de equipamento de áudio; fotografia do produto indisponível';
+      img.alt = document.documentElement.lang.startsWith('es') ? 'Ilustración de equipo de audio; fotografía del producto no disponible' : 'Ilustração de equipamento de áudio; fotografia do produto indisponível';
     };
     img.addEventListener('error', fallback);
     if (img.complete && img.naturalWidth === 0) fallback();

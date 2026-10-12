@@ -1,0 +1,38 @@
+{
+  "errors": [],
+  "screenshots": [
+    "docs/qa-es/radio-desktop.png",
+    "docs/qa-es/radio-mobile.png",
+    "docs/qa-es/hub-desktop.png",
+    "docs/qa-es/article-desktop.png",
+    "docs/qa-es/hub-mobile.png",
+    "docs/qa-es/article-mobile.png"
+  ],
+  "checks": [
+    "Spanish radio desktop: no horizontal page overflow",
+    "PT/ES selection, persistence, filtered URLs and unchanged Webamp instance",
+    "Existing EN button works from the Spanish locale",
+    "Radio station selection reaches the existing player",
+    "Existing Radio Paradise stream decodes in Chrome with CORS and advancing playback time",
+    "Spanish radio mobile: no horizontal page overflow",
+    "Spanish hub desktop: no horizontal page overflow",
+    "Spanish article desktop: no horizontal page overflow",
+    "Spanish hub mobile: no horizontal page overflow",
+    "Spanish article mobile: no horizontal page overflow",
+    "Browser consent: single ES affiliate event on accept; none on revoke",
+    "5 key Spanish routes return localized content without JavaScript",
+    "6 representative legacy PT/EN URLs remain reachable",
+    "Root-to-ES navigation preserves original skin and player asset URLs"
+  ],
+  "radioState": {
+    "station": "Radio Paradise - Rock Mix",
+    "url": "https://stream.radioparadise.com/rock-128",
+    "playerReady": true
+  },
+  "audioCheck": {
+    "decoded": true,
+    "currentTime": 0.165106,
+    "readyState": 4
+  },
+  "success": true
+}

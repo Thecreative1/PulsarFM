@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-12",
+  "articles": [
+    {
+      "slug": "auriculares-bluetooth-calidad-precio",
+      "oldTitle": "Mejores auriculares Bluetooth calidad-precio en 2026",
+      "title": "Auriculares Bluetooth calidad-precio en 2026: cómo elegir",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "summary",
+        "metaDescription",
+        "intro",
+        "sections",
+        "quickPicks",
+        "faq"
+      ]
+    },
+    {
+      "slug": "auriculares-cancelacion-ruido-trabajar",
+      "oldTitle": "Mejores auriculares con cancelación de ruido para trabajar",
+      "title": "Auriculares con cancelación de ruido para trabajar: cómo elegir",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "summary",
+        "metaDescription",
+        "intro",
+        "sections",
+        "quickPicks",
+        "faq"
+      ]
+    },
+    {
+      "slug": "altavoces-bluetooth-casa",
+      "oldTitle": "Mejores altavoces Bluetooth para casa",
+      "title": "Altavoces Bluetooth para casa: portátil o estéreo",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "intro",
+        "sections",
+        "faq"
+      ]
+    },
+    {
+      "slug": "tocadiscos-para-empezar",
+      "oldTitle": "Qué tocadiscos comprar para empezar",
+      "title": "Qué tocadiscos comprar para empezar",
+      "changedFields": [
+        "sections"
+      ]
+    },
+    {
+      "slug": "home-studio-economico",
+      "oldTitle": "Cómo montar un home studio económico",
+      "title": "Cómo montar un home studio económico",
+      "changedFields": [
+        "sections"
+      ]
+    },
+    {
+      "slug": "microfonos-usb-podcast-streaming",
+      "oldTitle": "Mejores micrófonos USB para podcast y streaming",
+      "title": "Micrófonos USB para podcast y streaming: cómo elegir",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "intro",
+        "sections",
+        "quickPicks",
+        "faq",
+        "closing"
+      ]
+    },
+    {
+      "slug": "equipos-hi-fi-empezar",
+      "oldTitle": "Cómo elegir tu primer equipo Hi-Fi para casa",
+      "title": "Cómo elegir tu primer equipo Hi-Fi para casa",
+      "changedFields": [
+        "intro",
+        "sections",
+        "quickPicks"
+      ]
+    },
+    {
+      "slug": "accesorios-audio",
+      "oldTitle": "Accesorios de audio: adaptadores y DAC para escuchar con cable",
+      "title": "Accesorios de audio: adaptadores y DAC para escuchar con cable",
+      "changedFields": [
+        "summary",
+        "metaDescription",
+        "intro",
+        "sections",
+        "faq"
+      ]
+    }
+  ],
+  "productsRetained": [
+    "soundcore-p20i",
+    "sony-wf-c710n",
+    "sony-wh-ch520",
+    "sony-wh-ch720n",
+    "sony-wh-1000xm5",
+    "jbl-flip-7",
+    "edifier-r1280db",
+    "audio-technica-at-lp60x",
+    "audio-technica-at-lp120x",
+    "focusrite-scarlett-solo-4",
+    "audio-technica-ath-m20x",
+    "samson-q2u",
+    "rode-podmic-usb",
+    "denon-pma-600ne",
+    "apple-usb-c-jack-35",
+    "fiio-ka11"
+  ],
+  "removedEquivalences": [
+    {
+      "pt": "/recomendacoes/melhores-auriculares-bluetooth/",
+      "es": "/es/recomendaciones/auriculares-bluetooth-calidad-precio/"
+    },
+    {
+      "pt": "/recomendacoes/colunas-bluetooth/",
+      "es": "/es/recomendaciones/altavoces-bluetooth-casa/"
+    },
+    {
+      "pt": "/recomendacoes/tecnologia-acessorios/",
+      "es": "/es/recomendaciones/accesorios-audio/"
+    }
+  ]
+}

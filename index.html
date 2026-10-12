@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
+  <base href="/">
   <!-- Google tag (gtag.js) with Consent Mode v2 — default: everything denied -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRD1BYXB78"></script>
   <script>
@@ -26,6 +27,10 @@
   </script>
 
   <meta charset="UTF-8">
+  <link rel="alternate" hreflang="pt-PT" href="https://pulsarfm.eu/">
+  <link rel="alternate" hreflang="es-ES" href="https://pulsarfm.eu/es/">
+  <script src="/assets/radio-locales.js"></script>
+  <script src="/assets/radio-i18n.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="manifest" href="manifest.webmanifest">
@@ -77,7 +82,7 @@
     "name": "Pulsar FM",
     "url": "https://pulsarfm.eu/",
     "description": "Rádio online grátis com visualizador retro estilo Winamp. 64 estações ao vivo, 8 géneros: rock, jazz, chill, pop, electrónica, psytrance, synthwave.",
-    "inLanguage": ["pt", "en"],
+    "inLanguage": ["pt-PT", "es-ES", "en"],
     "publisher": {
       "@type": "Organization",
       "name": "Pulsar FM",
@@ -1457,6 +1462,10 @@
 
       .hero-logo { width: 72px; }
     }
+    .market-switch { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 8px 0; font-size: .8rem; color: var(--text-muted); }
+    .market-switch a { color: var(--text-muted); padding: 4px 8px; text-decoration: none; }
+    .market-switch a[aria-current="page"] { color: var(--line-primary); text-decoration: underline; text-underline-offset: 4px; }
+    .market-switch a:focus-visible { outline: 2px solid var(--line-secondary); outline-offset: 2px; }
   </style>
 </head>
 <body>
@@ -1494,6 +1503,9 @@
       <p class="eyebrow">Pulsar FM</p>
       <h1 id="hero-h1">Sintoniza. Visualiza. Vibra.</h1>
       <p class="intro" id="hero-intro">64 estações ao vivo. 8 géneros. Com Milkdrop — o lendário visualizador do Winamp, agora no browser.</p>
+      <nav class="market-switch" aria-label="Idioma">
+        <a href="/" data-radio-language="pt" lang="pt-PT" hreflang="pt-PT" aria-current="page">PT</a><span aria-hidden="true"> | </span><a href="/es/" data-radio-language="es" lang="es-ES" hreflang="es-ES">ES</a>
+      </nav>
     </div>
 
     <button class="resume-chip" id="resume-chip" hidden></button>
@@ -1775,6 +1787,7 @@
     };
 
     const translations = {
+      es: window.PulsarRadioI18n.es,
       pt: {
         // Must match the static <title> and meta description (the SEO version)
         pageTitle: "Pulsar FM — Rádio Online Grátis: 64 Estações ao Vivo | Winamp Retro",
@@ -1959,10 +1972,13 @@
       synthwave: "en/synthwave-radio/"
     };
 
-    // ?lang=en|pt (used by the English genre pages) wins over the stored choice
+    // Explicit locale URLs win; the existing English preference stays supported.
     const urlLang = new URLSearchParams(location.search).get("lang");
-    let currentLang = (urlLang === "en" || urlLang === "pt") ? urlLang
-                    : (localStorage.getItem("pulsarfm-lang") || "pt");
+    const savedLang = (() => { try { return localStorage.getItem("pulsarfm-lang"); } catch (_) { return null; } })();
+    let currentLang = location.pathname.startsWith('/es/') ? 'es'
+                    : ['pt', 'en', 'es'].includes(urlLang) ? urlLang
+                    : savedLang === 'en' ? 'en' : 'pt';
+    const genrePagesEs = {"rock":"/es/radio-rock/","jazz":"/es/radio-jazz/","chill":"/es/radio-chill/","pop":"/es/radio-pop/","study":"/es/radio-para-estudiar/","electro":"/es/radio-electronica/","psy":"/es/radio-psytrance/","synthwave":"/es/radio-synthwave/"};
 
     const filterButtons = document.getElementById("filter-buttons");
     const radioGroups   = document.getElementById("radio-groups");
@@ -2067,7 +2083,7 @@ function updatePlayerButtons() {
       seoBlocks.innerHTML = t.seo.map(card => {
         const links = card.links
           ? `<div class="genre-links">${card.links.map(l =>
-              `<a href="${(currentLang === "en" ? genrePagesEn : genrePages)[l.genre] || "#radio-groups"}" class="genre-filter-link" data-genre="${l.genre}">${l.label}</a>`
+              `<a href="${(currentLang === "es" ? genrePagesEs : currentLang === "en" ? genrePagesEn : genrePages)[l.genre] || "#radio-groups"}" class="genre-filter-link" data-genre="${l.genre}">${l.label}</a>`
             ).join("")}</div>`
           : "";
         return `<article class="seo-card"><h2>${card.h2}</h2><p>${card.p}</p>${links}</article>`;
@@ -2076,9 +2092,27 @@ function updatePlayerButtons() {
 
     function applyLanguage(lang) {
       currentLang = lang;
-      localStorage.setItem("pulsarfm-lang", lang);
-      document.documentElement.lang = lang;
+      try { localStorage.setItem("pulsarfm-lang", lang); } catch (_) { /* URL navigation works without storage. */ }
+      document.documentElement.lang = lang === "es" ? "es-ES" : lang === "pt" ? "pt-PT" : "en";
       const t = translations[lang];
+      const localePath = lang === 'es' ? '/es/' : '/';
+      const route = new URL(location.href);
+      route.pathname = localePath;
+      route.searchParams.delete('lang');
+      if (lang === 'en') route.searchParams.set('lang', 'en');
+      history.replaceState(null, '', route.pathname + route.search + route.hash);
+      document.querySelector('link[rel="canonical"]').href = 'https://pulsarfm.eu' + localePath;
+      for (const [property, value] of [['og:url', 'https://pulsarfm.eu' + localePath], ['og:title', t.pageTitle], ['og:description', t.metaDesc], ['og:locale', lang === 'es' ? 'es_ES' : lang === 'en' ? 'en_GB' : 'pt_PT']]) {
+        document.querySelector('meta[property="' + property + '"]').content = value;
+      }
+      document.querySelectorAll('[data-radio-language]').forEach(link => {
+        link.toggleAttribute('aria-current', link.dataset.radioLanguage === lang);
+        if (link.hasAttribute('aria-current')) link.setAttribute('aria-current', 'page');
+      });
+      document.getElementById('recommendations-link').href = lang === 'es' ? '/es/recomendaciones/' : '/recomendacoes/';
+      document.getElementById('gear-btn').href = lang === 'es' ? '/es/recomendaciones/' : '/recomendacoes/';
+      document.getElementById('privacy-link').href = lang === 'es' ? '/es/privacidad/' : '/privacidade.html';
+      window.PulsarRadioI18n.applyControls(lang);
       document.title = t.pageTitle;
       document.querySelector('meta[name="description"]').setAttribute("content", t.metaDesc);
       document.getElementById("hero-h1").textContent    = t.h1;
@@ -2136,7 +2170,10 @@ function updatePlayerButtons() {
       activeGenre = valid ? genre : "all";
       updateFilterState();
       // Keep the URL shareable without adding history entries
-      history.replaceState(null, "", activeGenre === "all" ? location.pathname : "?genre=" + activeGenre);
+      const filterUrl = new URL(location.href);
+      if (activeGenre === 'all') filterUrl.searchParams.delete('genre');
+      else filterUrl.searchParams.set('genre', activeGenre);
+      history.replaceState(null, '', filterUrl.pathname + filterUrl.search);
     }
 
     function playRandom() {
@@ -2246,10 +2283,18 @@ function updatePlayerButtons() {
     const scanBtn = document.getElementById("scan-btn");
     scanBtn.disabled = true;
 
+    document.querySelectorAll('[data-radio-language]').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        applyLanguage(link.dataset.radioLanguage);
+      });
+    });
+    window.addEventListener('popstate', () => applyLanguage(location.pathname.startsWith('/es/') ? 'es' : new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'pt'));
     applyLanguage(currentLang);
 
     document.getElementById("lang-switcher").addEventListener("click", () => {
-      applyLanguage(currentLang === "pt" ? "en" : "pt");
+      applyLanguage(currentLang === "en" ? "pt" : "en");
     });
 
     scanBtn.addEventListener("click", playRandom);
@@ -2285,7 +2330,10 @@ function updatePlayerButtons() {
       const t       = translations[currentLang];
       const playing = document.querySelector(".radio-card.playing h3");
       const text    = playing ? t.shareListening.replace("{station}", playing.textContent) : t.shareDefault;
-      const url     = "https://pulsarfm.eu/" + (activeGenre !== "all" ? "?genre=" + activeGenre : "");
+      const shareUrl = new URL(currentLang === 'es' ? '/es/' : '/', 'https://pulsarfm.eu');
+      if (activeGenre !== 'all') shareUrl.searchParams.set('genre', activeGenre);
+      if (currentLang === 'en') shareUrl.searchParams.set('lang', 'en');
+      const url = shareUrl.href;
 
       if (navigator.share) {
         try { await navigator.share({ title: "Pulsar FM", text, url }); return; }
@@ -2294,7 +2342,7 @@ function updatePlayerButtons() {
       try {
         await navigator.clipboard.writeText(text + " " + url);
         shareBtn.textContent = t.shareCopied;
-        setTimeout(() => { shareBtn.textContent = "📡 SHARE"; }, 1600);
+        setTimeout(() => { shareBtn.textContent = window.PulsarRadioI18n.controls[currentLang].share; }, 1600);
       } catch (err) { /* clipboard blocked — nothing else to do */ }
     });
 
@@ -2313,7 +2361,7 @@ function updatePlayerButtons() {
 
     function updateSleepBtn() {
       const mins = sleepSteps[sleepIndex];
-      sleepBtn.textContent = mins ? "😴 " + mins + "m" : "😴 SLEEP";
+      sleepBtn.textContent = mins ? "😴 " + mins + "m" : window.PulsarRadioI18n.controls[currentLang].sleep;
       sleepBtn.classList.toggle("active", mins > 0);
     }
 
@@ -2551,7 +2599,8 @@ function updatePlayerButtons() {
       playerIsFloating = floating;
       localStorage.setItem('pulsarfm-floating', floating);
       document.body.classList.toggle('player-floating', floating);
-      playerLockBtn.textContent = floating ? '🔒 DOCK' : '🔓 FLOAT';
+      playerLockBtn.textContent = window.PulsarRadioI18n.controls[currentLang][floating ? 'dock' : 'float'];
+      playerLockBtn.setAttribute('aria-label', window.PulsarRadioI18n.controls[currentLang][floating ? 'dockLabel' : 'floatLabel']);
       // Re-docking: windows may have been dragged anywhere while floating —
       // snap them back into the dock panel or they end up stuck behind #container
       if (!floating) layoutPlayerWindows();

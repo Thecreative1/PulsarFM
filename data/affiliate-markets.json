@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "markets": {
+    "PT": {
+      "marketplace": "www.amazon.es",
+      "trackingId": "pulsarfm-21",
+      "validated": true
+    },
+    "ES": {
+      "marketplace": "www.amazon.es",
+      "trackingId": "pulsarfmes-21",
+      "validated": true,
+      "validatedAt": "2026-10-12",
+      "validationSource": "Confirmed by the site owner in this implementation request"
+    }
+  }
+}

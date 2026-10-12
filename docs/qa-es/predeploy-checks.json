@@ -1,0 +1,37 @@
+[
+  {
+    "command": "python -X utf8 tools/build_site.py",
+    "passed": true,
+    "output": "OK radios-rock/\r\nOK en/rock-radio/\r\nOK es/radio-rock/\r\nOK radios-jazz/\r\nOK en/jazz-radio/\r\nOK es/radio-jazz/\r\nOK radios-chill/\r\nOK en/chill-radio/\r\nOK es/radio-chill/\r\nOK radios-pop/\r\nOK en/pop-radio/\r\nOK es/radio-pop/\r\nOK radios-study/\r\nOK en/study-radio/\r\nOK es/radio-para-estudiar/\r\nOK radios-electronica/\r\nOK en/electronic-radio/\r\nOK es/radio-electronica/\r\nOK radios-psytrance/\r\nOK en/psytrance-radio/\r\nOK es/radio-psytrance/\r\nOK radios-synthwave/\r\nOK en/synthwave-radio/\r\nOK es/radio-synthwave/\r\nGenerated 14 editorial pages and updated sitemap.xml\r\nGenerated 18 Spanish pages, locale data and sitemap (plus 8 genre pages)\r\n"
+  },
+  {
+    "command": "python -X utf8 tools/check_site.py",
+    "passed": true,
+    "output": "Static site lint passed: 58 indexable pages, 26 Spanish, 1346 internal links\r\n"
+  },
+  {
+    "command": "node tools/check-js.cjs",
+    "passed": true,
+    "output": "JavaScript syntax lint passed: 36 scripts\n"
+  },
+  {
+    "command": "node --check tools/smoke_live.cjs",
+    "passed": true,
+    "output": ""
+  },
+  {
+    "command": "python -X utf8 -m pytest -q tests",
+    "passed": true,
+    "output": ".....................................                                                [100%]\r\n37 passed, 492 subtests passed in 3.17s\r\n"
+  },
+  {
+    "command": "node --test tests/affiliate-analytics.test.cjs",
+    "passed": true,
+    "output": "TAP version 13\n# Subtest: no consent and denied consent send no affiliate events or GA requests\nok 1 - no consent and denied consent send no affiliate events or GA requests\n  ---\n  duration_ms: 3.247\n  type: 'test'\n  ...\n# Subtest: accepted click sends the Amazon parameters and one event; page query is excluded\nok 2 - accepted click sends the Amazon parameters and one event; page query is excluded\n  ---\n  duration_ms: 1.692\n  type: 'test'\n  ...\n# Subtest: keyboard/primary and middle clicks work, secondary and cancelled clicks do not\nok 3 - keyboard/primary and middle clicks work, secondary and cancelled clicks do not\n  ---\n  duration_ms: 1.5497\n  type: 'test'\n  ...\n# Subtest: acceptance, revocation and changes in another tab take effect immediately\nok 4 - acceptance, revocation and changes in another tab take effect immediately\n  ---\n  duration_ms: 1.1198\n  type: 'test'\n  ...\n# Subtest: blocked storage defaults denied and permits an explicit session-only choice\nok 5 - blocked storage defaults denied and permits an explicit session-only choice\n  ---\n  duration_ms: 0.9309\n  type: 'test'\n  ...\n# Subtest: reuse existing gtag without duplicate initialization; failures never cancel navigation\nok 6 - reuse existing gtag without duplicate initialization; failures never cancel navigation\n  ---\n  duration_ms: 0.9398\n  type: 'test'\n  ...\n# Subtest: storage write failure still honors a new explicit choice for this session\nok 7 - storage write failure still honors a new explicit choice for this session\n  ---\n  duration_ms: 0.9809\n  type: 'test'\n  ...\n# Subtest: Spanish market uses its confirmed ID and respects consent without duplicate events\nok 8 - Spanish market uses its confirmed ID and respects consent without duplicate events\n  ---\n  duration_ms: 1.0221\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 112.2507\n"
+  },
+  {
+    "command": "git diff --check",
+    "passed": true,
+    "output": ""
+  }
+]

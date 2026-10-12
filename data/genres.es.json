@@ -1,0 +1,458 @@
+{
+  "radios-rock": {
+    "slug": "radio-rock",
+    "nome": "Rock alternativo",
+    "title": "Radio rock online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Rock y música alternativa online",
+    "desc": "Escucha ocho emisoras de rock y música alternativa en directo. Radio gratis en el navegador con el reproductor Winamp y el visualizador Milkdrop.",
+    "intro": "Riffs, indie y rock clásico sin buscar la siguiente canción. Estas ocho emisoras recorren distintas escenas y décadas; elige una y ábrela en el reproductor retro de PulsarFM.",
+    "stations": [
+      [
+        "Radio Paradise - Rock Mix",
+        "Rock ecléctico elegido por personas, desde California."
+      ],
+      [
+        "Rock Antenne",
+        "Rock clásico y moderno desde Alemania."
+      ],
+      [
+        "KEXP Seattle",
+        "Radio independiente de Seattle para descubrir bandas."
+      ],
+      [
+        "Virgin Radio Italy",
+        "Rock clásico y actual desde Italia."
+      ],
+      [
+        "M80 Rádio",
+        "Clásicos de varias décadas desde Portugal."
+      ],
+      [
+        "Radio BOB!",
+        "Rock alemán, del clásico al metal."
+      ],
+      [
+        "FM4",
+        "Indie y electrónica de la emisora pública austríaca ORF."
+      ],
+      [
+        "Radio X UK",
+        "Rock e indie británico desde Londres."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar radio rock online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. Los controles se adaptan a la pantalla del móvil. Si quieres descubrir otra emisora, el botón AZAR elige una de las 64 disponibles. La continuidad del audio al bloquear la pantalla depende del navegador."
+      ]
+    ],
+    "gearSlug": "equipos-hi-fi-empezar"
+  },
+  "radios-jazz": {
+    "slug": "radio-jazz",
+    "nome": "Jazz",
+    "title": "Jazz online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Jazz online",
+    "desc": "Escucha ocho emisoras de jazz en directo con PulsarFM. Radio gratis en el navegador, reproductor Winamp y visualizador Milkdrop.",
+    "intro": "Del swing al jazz experimental, con paradas en París, Nueva Orleans y California. Ocho emisoras para descubrir intérpretes o dejar que el jazz acompañe la noche.",
+    "stations": [
+      [
+        "TSF Jazz",
+        "Jazz desde París, las 24 horas."
+      ],
+      [
+        "Smooth Jazz",
+        "Smooth jazz para escuchar sin prisa."
+      ],
+      [
+        "Radio Swiss Jazz",
+        "Selección de jazz de la radio pública suiza."
+      ],
+      [
+        "Jazz Radio France",
+        "Jazz, swing y soul desde Francia."
+      ],
+      [
+        "SomaFM Sonic Universe",
+        "Jazz de vanguardia y sonidos experimentales."
+      ],
+      [
+        "FIP Jazz",
+        "La selección ecléctica de jazz de la radio pública francesa."
+      ],
+      [
+        "WWOZ New Orleans",
+        "Jazz, blues y funk de la radio comunitaria de Nueva Orleans."
+      ],
+      [
+        "KCSM Jazz 91",
+        "Jazz durante todo el día desde la bahía de San Francisco."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar jazz online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. Puedes guardar una emisora con la estrella y volver a ella desde Favoritos. La preferencia queda en ese navegador; no necesitas crear una cuenta."
+      ]
+    ],
+    "gearSlug": "tocadiscos-para-empezar"
+  },
+  "radios-chill": {
+    "slug": "radio-chill",
+    "nome": "Chill y ambient",
+    "title": "Chill y ambient online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Chill y ambient online",
+    "desc": "Escucha ocho emisoras de chill y ambient en directo con PulsarFM. Radio gratis en el navegador, reproductor Winamp y visualizador Milkdrop.",
+    "intro": "Ambient, vaporwave y sonidos tranquilos para bajar el ritmo. Elige una de estas ocho emisoras y deja la música de fondo; el temporizador de sueño de PulsarFM puede detenerla más tarde.",
+    "stations": [
+      [
+        "SomaFM Drone Zone",
+        "Ambient y drones espaciales sin ritmo marcado."
+      ],
+      [
+        "Chillout-style Jazz",
+        "Chill con grabaciones de comunicaciones espaciales."
+      ],
+      [
+        "Nightwave Plaza",
+        "Vaporwave y sonidos con estética retro."
+      ],
+      [
+        "SomaFM Lush",
+        "Voces suaves sobre electrónica atmosférica."
+      ],
+      [
+        "Ibiza Global Radio",
+        "Chill balear y house desde Ibiza."
+      ],
+      [
+        "Ambient Sleeping Pill",
+        "Ambient para descansar y bajar el ritmo."
+      ],
+      [
+        "Radio Paradise Mellow Mix",
+        "El lado tranquilo de Radio Paradise."
+      ],
+      [
+        "Radio Paradise Serenity",
+        "Ambient y sonidos de naturaleza sin voces ni percusión."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar chill y ambient online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. El botón SUEÑO permite programar una pausa tras 15, 30 o 60 minutos. El navegador puede limitar los temporizadores o el audio en segundo plano; comprueba cómo se comporta tu móvil."
+      ]
+    ],
+    "gearSlug": "altavoces-bluetooth-casa"
+  },
+  "radios-pop": {
+    "slug": "radio-pop",
+    "nome": "Pop",
+    "title": "Pop online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Pop online",
+    "desc": "Escucha ocho emisoras de pop en directo con PulsarFM. Radio gratis en el navegador, reproductor Winamp y visualizador Milkdrop.",
+    "intro": "Éxitos actuales y canciones conocidas desde Portugal, Reino Unido, Francia y Alemania. Ocho emisoras para elegir entre distintas programaciones y descubrir qué suena fuera de tu lista habitual.",
+    "stations": [
+      [
+        "RFM Pop Rock",
+        "Pop rock de Portugal por RFM."
+      ],
+      [
+        "Rádio Comercial",
+        "Éxitos y programación de Rádio Comercial, desde Portugal."
+      ],
+      [
+        "Capital FM UK",
+        "Los éxitos del momento desde Londres."
+      ],
+      [
+        "NRJ France",
+        "Música pop y éxitos desde Francia."
+      ],
+      [
+        "I Love Radio DE",
+        "Listas de éxitos y pop actual desde Alemania."
+      ],
+      [
+        "Antenne Bayern",
+        "Éxitos de la radio privada de Baviera."
+      ],
+      [
+        "Cidade FM",
+        "Pop actual desde Portugal."
+      ],
+      [
+        "Heart UK",
+        "Canciones pop conocidas desde el Reino Unido."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar pop online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. El botón de compartir usa las opciones del móvil cuando están disponibles; si no, intenta copiar el enlace. Puedes enviar el género seleccionado a otra persona."
+      ]
+    ],
+    "gearSlug": "accesorios-audio"
+  },
+  "radios-study": {
+    "slug": "radio-para-estudiar",
+    "nome": "Música para estudiar",
+    "title": "Música para estudiar online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Música para estudiar online",
+    "desc": "Escucha ocho emisoras de música para estudiar en directo con PulsarFM. Radio gratis en el navegador, reproductor Winamp y visualizador Milkdrop.",
+    "intro": "Lo-fi, downtempo y música clásica para acompañar la lectura o el trabajo. Elige el estilo que menos te distraiga, ajusta el volumen y cambia de emisora cuando te apetezca.",
+    "stations": [
+      [
+        "SomaFM Groove Salad",
+        "Downtempo y chill para acompañar el trabajo."
+      ],
+      [
+        "Radio Swiss Classic",
+        "Música clásica de la radio pública suiza."
+      ],
+      [
+        "I Love Chillhop",
+        "Lo-fi y chillhop para una sesión de estudio."
+      ],
+      [
+        "SomaFM Deep Space One",
+        "Ambient espacial para concentrarse."
+      ],
+      [
+        "Venice Classic Radio",
+        "Música clásica desde Italia."
+      ],
+      [
+        "Lofi Radio",
+        "Lo-fi beats durante todo el día."
+      ],
+      [
+        "Classic FM UK",
+        "Música clásica conocida desde el Reino Unido."
+      ],
+      [
+        "France Musique",
+        "Clásica, conciertos y grabaciones de la radio pública francesa."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar música para estudiar online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. El filtro Estudio reúne las ocho emisoras de este género para que puedas cambiar de estación sin buscar entre toda la lista. Ajusta el volumen al nivel que te permita trabajar cómodamente."
+      ]
+    ],
+    "gearSlug": "auriculares-cancelacion-ruido-trabajar"
+  },
+  "radios-electronica": {
+    "slug": "radio-electronica",
+    "nome": "Electrónica y dance",
+    "title": "Electrónica y dance online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Electrónica y dance online",
+    "desc": "Escucha ocho emisoras de electrónica y dance en directo con PulsarFM. Radio gratis en el navegador, reproductor Winamp y visualizador Milkdrop.",
+    "intro": "House, techno, trance y sesiones de DJs desde varias escenas. Ocho emisoras para escuchar electrónica en directo con el visualizador Milkdrop de PulsarFM.",
+    "stations": [
+      [
+        "TechnoBase.FM DE",
+        "Techno y hands up desde Alemania."
+      ],
+      [
+        "HouseTime.FM",
+        "House las 24 horas."
+      ],
+      [
+        "Frisky Radio EUA",
+        "Deep house y progressive con sesiones de DJs."
+      ],
+      [
+        "Sunshine Live",
+        "Electrónica, sesiones y festivales desde Alemania."
+      ],
+      [
+        "Hirschmilch Electronic",
+        "Selección continua de electrónica."
+      ],
+      [
+        "Radio FG Paris",
+        "House y electro desde París."
+      ],
+      [
+        "TranceBase.FM",
+        "Trance y uplifting de la familia TechnoBase."
+      ],
+      [
+        "1.FM Deep House",
+        "Deep house desde la red 1.FM."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar electrónica y dance online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. PulsarFM recuerda la última emisora en ese navegador y ofrece «Seguir escuchando» al volver. La reproducción necesita una acción tuya; no comienza automáticamente."
+      ]
+    ],
+    "gearSlug": "home-studio-economico"
+  },
+  "radios-psytrance": {
+    "slug": "radio-psytrance",
+    "nome": "Goa y psytrance",
+    "title": "Goa y psytrance online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Goa y psytrance online",
+    "desc": "Escucha ocho emisoras de goa y psytrance en directo con PulsarFM. Radio gratis en el navegador, reproductor Winamp y visualizador Milkdrop.",
+    "intro": "Goa, psytrance, progressive y psychill para distintas fases de la noche. Explora estas ocho emisoras y elige entre ritmos de pista y sonidos para descansar.",
+    "stations": [
+      [
+        "Goa-Base Trance",
+        "Goa trance clásico desde Alemania."
+      ],
+      [
+        "Hirschmilch Psy",
+        "Selección continua de psytrance."
+      ],
+      [
+        "BOM Psytrance",
+        "Psytrance desde la red 1.FM."
+      ],
+      [
+        "Psyndora Psytrance",
+        "Psytrance y progressive desde Grecia."
+      ],
+      [
+        "Hirschmilch Progressive",
+        "Progressive psy para sesiones largas."
+      ],
+      [
+        "Hirschmilch Chillout",
+        "Psychill y ambient goa para bajar el ritmo."
+      ],
+      [
+        "Radio Ozora",
+        "Psytrance y goa de la radio del festival Ozora."
+      ],
+      [
+        "Goanight",
+        "Goa y psytrance nocturno de la comunidad laut.fm."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar goa y psytrance online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. Puedes elegir una emisora y escuchar por la salida de audio del móvil o por auriculares compatibles. Si bloqueas la pantalla, la continuidad del stream depende del navegador."
+      ]
+    ],
+    "gearSlug": "auriculares-bluetooth-calidad-precio"
+  },
+  "radios-synthwave": {
+    "slug": "radio-synthwave",
+    "nome": "Synthwave y retrowave",
+    "title": "Synthwave y retrowave online: 8 emisoras en directo | Pulsar FM",
+    "h1": "Synthwave y retrowave online",
+    "desc": "Escucha ocho emisoras de synthwave y retrowave en directo con PulsarFM. Radio gratis en el navegador, reproductor Winamp y visualizador Milkdrop.",
+    "intro": "Sintetizadores, retrowave y darksynth: ocho emisoras para una noche de estética retro. Cambia la skin del player si te apetece; la música sigue siendo lo primero.",
+    "stations": [
+      [
+        "Nightride FM",
+        "Synthwave y retrowave para la noche."
+      ],
+      [
+        "ChillSynth FM",
+        "Chillsynth suave para escuchar sin prisa."
+      ],
+      [
+        "SomaFM Digitalis",
+        "Electrónica independiente con espíritu digital."
+      ],
+      [
+        "Nightride Datawave",
+        "Datawave para una noche de sintetizadores."
+      ],
+      [
+        "SomaFM Underground 80s",
+        "Synthpop y new wave underground de los años 80."
+      ],
+      [
+        "SomaFM Synphaera",
+        "Space synth y electrónica atmosférica."
+      ],
+      [
+        "Nightride Darksynth",
+        "Darksynth, la vertiente más oscura del synthwave."
+      ],
+      [
+        "laut.fm Synthwave",
+        "Synthwave y retrowave de la comunidad laut.fm."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cómo escuchar synthwave y retrowave online gratis?",
+        "Elige una emisora y pulsa «Escuchar en el player». PulsarFM abre el género seleccionado; no necesitas cuenta ni instalar una aplicación."
+      ],
+      [
+        "¿Puedo escuchar estas emisoras desde España?",
+        "Sí, puedes abrir PulsarFM en el navegador. Las emisoras emiten desde sus servidores y la disponibilidad de cada stream depende de la estación."
+      ],
+      [
+        "¿Funciona en el móvil?",
+        "Sí. Desde SKINS puedes cambiar el aspecto del reproductor y guardar la elección en ese navegador. El audio sigue dependiendo de la emisora y de las restricciones de segundo plano del móvil."
+      ]
+    ],
+    "gearSlug": "tocadiscos-para-empezar"
+  }
+}

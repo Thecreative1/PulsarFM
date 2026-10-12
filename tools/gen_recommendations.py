@@ -3,6 +3,8 @@
 Edit data/ and templates/, then run python tools/gen_recommendations.py.
 No affiliate account credentials, network access or JS build pipeline required.
 """
+from market_config import market_config
+from site_i18n import alternates, language_switch
 from datetime import date
 from decimal import Decimal, InvalidOperation
 from html import escape
@@ -79,12 +81,13 @@ def product_url(catalog, product):
 
 def amazon_url(merchant, product):
     """Build the link from the ASIN so every Amazon URL carries the PulsarFM tag."""
-    if merchant.get("trackingId") != AMAZON_TRACKING_ID:
+    pt_tag = market_config("PT")["trackingId"]
+    if merchant.get("trackingId") != pt_tag:
         raise ValueError("Amazon merchants must use the PulsarFM tracking ID " + AMAZON_TRACKING_ID)
     asin = product.get("asin", "")
     if not isinstance(asin, str) or not ASIN.fullmatch(asin):
         raise ValueError("Amazon products need a 10-character ASIN")
-    url = f'https://{merchant["allowedDestinationHosts"][0]}/dp/{asin}/?tag={AMAZON_TRACKING_ID}'
+    url = f'https://{merchant["allowedDestinationHosts"][0]}/dp/{asin}/?tag={pt_tag}'
     return https_url(url, merchant["allowedDestinationHosts"])
 
 
@@ -207,6 +210,7 @@ def render_affiliate_link(catalog, product, position, label=None, css_class="aff
             f'data-affiliate-platform="{esc(merchant["network"])}"{tracking} '
             f'data-merchant="{esc(product["merchant"])}" data-product-name="{esc(product["name"])}" '
             f'data-product-category="{esc(product.get("category", ""))}" '
+            f'data-market="PT" data-language="pt-PT" data-product-id="{esc(product["id"])}" '
             f'data-position="{esc(position)}">{esc(label)} <span aria-hidden="true">↗</span>'
             '<span class="sr-only"> (link de afiliado, abre numa nova aba)</span></a>')
 
@@ -271,9 +275,12 @@ def render_nav(articles, current=None):
     return f'<nav class="guide-nav" aria-label="Categorias de equipamento"><ul>{items}</ul></nav>'
 
 
-def page(title, description, path, content, article=False, nav=""):
+def page(title, description, path, content, article=False, nav="", category=""):
     return template("page.html", title=esc(title), description=esc(description), path=esc(path),
-                    og_type="article" if article else "website", content=content, nav=nav)
+                    og_type="article" if article else "website", content=content, nav=nav,
+                    alternates=alternates(path), locale_switch=language_switch(path),
+                    page_kind="article" if article else "page", content_category=esc(category),
+                    article_slug=esc(path.strip("/").split("/")[-1]) if article else "")
 
 
 def json_ld(data):
@@ -463,7 +470,7 @@ def render_article(article, articles, catalog, products):
                               article_json_ld(article, selected, description),
                        closing=esc(article["closing"]), related="\n".join(guide_link(item) for item in others))
     return page(article.get("seoTitle") or article["title"], description,
-                f'/recomendacoes/{article["slug"]}/', content, True, render_nav(articles, article["slug"]))
+                f'/recomendacoes/{article["slug"]}/', content, True, render_nav(articles, article["slug"]), category=article["category"])
 
 
 def render_hub(editorial, catalog):

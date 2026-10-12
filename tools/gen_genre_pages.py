@@ -317,7 +317,7 @@ GENRES_EN = {
 
 # Interface text per language. PT pages keep their exact original wording.
 LABELS = {
- "pt": {"html_lang": "pt", "og_locale": '<meta property="og:locale" content="pt_PT" />\n  <meta property="og:locale:alternate" content="pt_BR" />',
+ "pt": {"html_lang": "pt-PT", "og_locale": '<meta property="og:locale" content="pt_PT" />\n  <meta property="og:locale:alternate" content="pt_BR" />',
         "play": "\U0001F3A7 Ouvir no player", "all": "▶ OUVIR TUDO NO PULSAR FM", "faq": "Perguntas frequentes",
         "others": "Outros géneros", "alt_label": "English", "lang_q": "",
         "footer": "Pulsar FM — rádio online grátis com visualizador retro estilo Winamp · <a href=\"/privacidade.html\">Privacidade &amp; Cookies</a>"},
@@ -372,8 +372,17 @@ GEAR = {
                       "Synthwave em vinil é outro ritual: prepara o teu primeiro lado A."),
 }
 
+with open(os.path.join(OUT, "data", "genres.es.json"), encoding="utf-8") as f:
+    GENRES_ES = json.load(f)
+LABELS["es"] = {"html_lang": "es-ES", "og_locale": '<meta property="og:locale" content="es_ES" />',
+    "play": "🎧 Escuchar en el player", "all": "▶ ESCUCHAR EN PULSAR FM", "faq": "Preguntas frecuentes",
+    "others": "Otros géneros", "alt_label": "Português", "lang_q": "",
+    "footer": 'Pulsar FM · Radio online gratis con visualizador retro Winamp · <a href="/es/privacidad/">Privacidad y cookies</a>'}
+
 def path_for(slug, lang):
     """URL path (no leading slash) of a genre page: PT keeps radios-*/, EN lives under en/."""
+    if lang == "es":
+        return "es/" + GENRES_ES[slug]["slug"] + "/"
     return slug + "/" if lang == "pt" else "en/" + GENRES_EN[slug]["slug"] + "/"
 
 
@@ -382,7 +391,7 @@ def localized(slug, lang):
     g = GENRES[slug]
     if lang == "pt":
         return g
-    en = GENRES_EN[slug]
+    en = GENRES_ES[slug] if lang == "es" else GENRES_EN[slug]
     assert len(en["stations"]) == len(g["stations"]), slug  # keep the same number of stations per genre
     return dict(g, **{k: v for k, v in en.items() if k != "slug"})
 
@@ -395,9 +404,10 @@ def page(slug, lang="pt"):
     base = "https://pulsarfm.eu/"
     alternates = "\n  ".join(
         '<link rel="alternate" hreflang="{}" href="{}{}" />'.format(code, base, path_for(slug, target))
-        for code, target in (("pt", "pt"), ("en", "en"), ("x-default", "pt")))
-    lang_alt = '<a class="lang-alt" href="/{}" hreflang="{}" lang="{}">{}</a>'.format(
-        path_for(slug, other_lang), other_lang, other_lang, L["alt_label"])
+        for code, target in (("pt-PT", "pt"), ("es-ES", "es"), ("en", "en"), ("x-default", "pt")))
+    lang_alt = ''.join('<a class="lang-alt" href="/{}" hreflang="{}" lang="{}">{}</a>'.format(
+        path_for(slug, target), code, code, label)
+        for target, code, label in (("pt", "pt-PT", "PT"), ("es", "es-ES", "ES"), ("en", "en", "EN")) if target != lang)
     gear_html = ""
     if lang == "pt":  # The guides are PT-only (and Amazon.es), so EN pages skip the GEAR box.
         gear_slug, gear_h, gear_p = GEAR[slug]
@@ -407,6 +417,9 @@ def page(slug, lang="pt"):
       <span>{}</span>
       <span class="gear-go">Ler o guia →</span>
     </a>'''.format(gear_slug, gear_h, gear_p)
+    if lang == "es":
+        gear_html = '<a class="gear-box" href="/es/recomendaciones/{}/"><span class="gear-tag">🎧 EQUIPO</span><strong>Guías para tu próxima sesión</strong><span>Compara el equipo que encaja con tu forma de escuchar.</span><span class="gear-go">Leer la guía →</span></a>'.format(g["gearSlug"])
+    home_path = "/es/" if lang == "es" else "/"
     others = "\n".join(
         '          <a href="/{}" class="genre-filter-link">{} {}</a>'.format(
             path_for(s, lang), d["emoji"], localized(s, lang)["nome"])
@@ -414,8 +427,8 @@ def page(slug, lang="pt"):
     cards = "\n".join('''      <article class="radio-card">
         <h3>{}</h3>
         <p>{}</p>
-        <a class="play-cta" href="/?genre={}{}">{}</a>
-      </article>'''.format(name, desc, g["genre"], L["lang_q"], L["play"]) for name, desc in g["stations"])
+        <a class="play-cta" href="{}?genre={}{}">{}</a>
+      </article>'''.format(name, desc, home_path, g["genre"], L["lang_q"], L["play"]) for name, desc in g["stations"])
     stations_ld = ",\n      ".join(
         '{{ "@type": "ListItem", "position": {}, "item": {{ "@type": "RadioStation", "name": {}, "description": {} }} }}'.format(
             i + 1, json.dumps(name, ensure_ascii=False), json.dumps(desc, ensure_ascii=False))
@@ -432,6 +445,7 @@ def page(slug, lang="pt"):
 <html lang="{html_lang}">
 <head>
 {GA}
+  <script src="/assets/site-language.js" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -471,7 +485,7 @@ def page(slug, lang="pt"):
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {{ "@type": "ListItem", "position": 1, "name": "Pulsar FM", "item": "https://pulsarfm.eu/" }},
+      {{ "@type": "ListItem", "position": 1, "name": "Pulsar FM", "item": "https://pulsarfm.eu{home_path}" }},
       {{ "@type": "ListItem", "position": 2, "name": "{h1}", "item": "https://pulsarfm.eu/{path}" }}
     ]
   }}
@@ -723,7 +737,7 @@ def page(slug, lang="pt"):
 </head>
 <body>
   <main>
-    <nav class="breadcrumb"><a href="/">Pulsar FM</a> › {emoji} {nome}{lang_alt}</nav>
+    <nav class="breadcrumb"><a href="{home_path}">Pulsar FM</a> › {emoji} {nome}{lang_alt}</nav>
 
     <h1>{emoji} {h1}</h1>
     <p class="intro">{intro}</p>
@@ -732,7 +746,7 @@ def page(slug, lang="pt"):
 {cards}
     </div>
 
-    <a class="home-cta" href="/?genre={genre}{lang_q}">{all_label}</a>
+    <a class="home-cta" href="{home_path}?genre={genre}{lang_q}">{all_label}</a>
 
 {gear_html}
 
@@ -750,7 +764,7 @@ def page(slug, lang="pt"):
   </main>
 </body>
 </html>
-'''.format(GA=GA, path=path, alternates=alternates, lang_alt=lang_alt, cards=cards, others=others,
+'''.format(GA=GA, home_path=home_path, path=path, alternates=alternates, lang_alt=lang_alt, cards=cards, others=others,
            stations_ld=stations_ld, html_lang=L["html_lang"], og_locale=L["og_locale"],
            lang_q=L["lang_q"], all_label=L["all"], faq_h=L["faq"], others_h=L["others"], footer=L["footer"],
            faq_html=faq_html, faq_ld=faq_ld, gear_html=gear_html,
@@ -758,7 +772,7 @@ def page(slug, lang="pt"):
            emoji=g["emoji"], nome=g["nome"], genre=g["genre"])
 
 for slug in GENRES:
-    for lang in ("pt", "en"):
+    for lang in ("pt", "en", "es"):
         d = os.path.join(OUT, *path_for(slug, lang).strip("/").split("/"))
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:

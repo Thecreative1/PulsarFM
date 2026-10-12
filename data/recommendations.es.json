@@ -1,0 +1,900 @@
+{
+  "schemaVersion": 1,
+  "title": "Recomendaciones de audio PulsarFM",
+  "description": "Guías para elegir equipo de audio en España: auriculares, altavoces, vinilo y home studio. La música sigue siendo lo primero.",
+  "updatedAt": "2026-10-12",
+  "categories": [
+    {
+      "slug": "auriculares-cascos",
+      "name": "Auriculares y Cascos",
+      "icon": "🎧",
+      "illustration": "/img/gear/auscultadores.svg",
+      "intro": "Elige entre auriculares de botón y cascos de diadema: ajuste, aislamiento y uso diario antes que el logotipo."
+    },
+    {
+      "slug": "altavoces-bluetooth",
+      "name": "Altavoces Bluetooth",
+      "icon": "🔊",
+      "illustration": "/img/gear/colunas.svg",
+      "intro": "Para la cocina, la terraza o un rincón fijo: compara alimentación, conexiones y espacio."
+    },
+    {
+      "slug": "tocadiscos",
+      "name": "Tocadiscos",
+      "icon": "💿",
+      "illustration": "/img/gear/gira-discos.svg",
+      "intro": "El primer vinilo necesita un sistema completo: tocadiscos, amplificación y altavoces compatibles."
+    },
+    {
+      "slug": "equipos-hi-fi",
+      "name": "Equipos Hi-Fi",
+      "icon": "🎛️",
+      "illustration": "/img/gear/amplificacao.svg",
+      "intro": "Altavoces activos o amplificador con cajas pasivas: dos caminos para escuchar en estéreo."
+    },
+    {
+      "slug": "home-studio",
+      "name": "Home Studio",
+      "icon": "🎹",
+      "illustration": "/img/gear/home-studio.svg",
+      "intro": "Empieza por lo que vas a grabar y añade equipo cuando el proyecto lo necesite."
+    },
+    {
+      "slug": "microfonos",
+      "name": "Micrófonos",
+      "icon": "🎙️",
+      "illustration": "/img/gear/microfones.svg",
+      "intro": "Voz, podcast y streaming: conexiones, colocación y monitorización sin complicaciones."
+    },
+    {
+      "slug": "accesorios-audio",
+      "name": "Accesorios de Audio",
+      "icon": "🔌",
+      "illustration": "/img/gear/acessorios.svg",
+      "intro": "El adaptador correcto puede devolver la música al equipo que ya tienes."
+    }
+  ],
+  "products": [
+    {
+      "id": "soundcore-p20i",
+      "name": "Soundcore P20i",
+      "category": "auriculares-cascos",
+      "profile": "Uso básico de bolsillo",
+      "description": "Auriculares de botón con estuche y ecualización en la app. Soundcore indica hasta 10 horas por carga; la duración real depende del volumen y del uso. Un punto de partida si no necesitas cancelación activa de ruido.",
+      "pros": [
+        "Formato compacto con estuche",
+        "Ecualizador en la app"
+      ],
+      "cons": [
+        "No son la opción para priorizar ANC",
+        "El ajuste depende de las almohadillas"
+      ],
+      "sourceUrl": "https://www.soundcore.com/products/p20i",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0BTYCRJSS/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "sony-wf-c710n",
+      "name": "Sony WF-C710N",
+      "category": "auriculares-cascos",
+      "profile": "Desplazamientos y formato compacto",
+      "description": "Auriculares de botón con cancelación activa de ruido y modo ambiente. Sony explica que un buen ajuste de las almohadillas es esencial para el aislamiento. Interesan si quieres reducir el ruido sin llevar una diadema.",
+      "pros": [
+        "Cancelación de ruido y modo ambiente",
+        "Conexión multipunto según Sony"
+      ],
+      "cons": [
+        "La cancelación no elimina todos los sonidos",
+        "El sellado de las almohadillas condiciona el resultado"
+      ],
+      "sourceUrl": "https://www.sony.es/electronics/get-started-with-your-wf-c710n",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0DZ6Z6T1C/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "sony-wh-ch520",
+      "name": "Sony WH-CH520",
+      "category": "auriculares-cascos",
+      "profile": "Diadema para escucha casual",
+      "description": "Cascos de diadema con almohadillas que se apoyan sobre las orejas (on-ear). Sony indica hasta 50 horas de reproducción. Son una alternativa a los auriculares de botón para quien prefiere no introducir almohadillas en el oído.",
+      "pros": [
+        "Hasta 50 horas de reproducción según Sony",
+        "Diadema con controles físicos"
+      ],
+      "cons": [
+        "Sin entrada de audio por cable",
+        "El formato on-ear no encaja con todas las preferencias de comodidad"
+      ],
+      "sourceUrl": "https://www.sony.es/headphones/products/wh-ch520",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0BTJD6LCL/",
+      "listingCheckedAt": "2026-10-06",
+      "sourceUrls": [
+        "https://www.sony.es/headphones/products/wh-ch520",
+        "https://www.sony.es/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch520/specifications"
+      ]
+    },
+    {
+      "id": "sony-wh-ch720n",
+      "name": "Sony WH-CH720N",
+      "category": "auriculares-cascos",
+      "profile": "Trabajo y estudio con diadema",
+      "description": "Cascos over-ear con ANC, entrada de audio por cable y peso de unos 192 g según Sony. La marca indica hasta 35 horas de música con cancelación activa. Conviene probar el ajuste con tus gafas antes de decidir.",
+      "pros": [
+        "Unos 192 g y hasta 35 horas con ANC según Sony",
+        "Entrada de audio por cable"
+      ],
+      "cons": [
+        "Códecs Bluetooth SBC y AAC; no admite LDAC",
+        "El ajuste y el confort deben comprobarse con tus gafas"
+      ],
+      "sourceUrl": "https://www.sony.es/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch720n/specifications",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0BTDX26B2/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "sony-wh-1000xm5",
+      "name": "Sony WH-1000XM5",
+      "category": "auriculares-cascos",
+      "profile": "Diadema con LDAC y control táctil",
+      "description": "Cascos con ANC, control táctil y entrada de audio por cable. Sony indica unos 250 g y hasta 30 horas de reproducción con ANC. LDAC requiere un dispositivo compatible; valora esa función si encaja con tu forma de escuchar.",
+      "pros": [
+        "SBC, AAC y LDAC según Sony",
+        "ANC y entrada de audio por cable"
+      ],
+      "cons": [
+        "Unos 250 g frente a los 192 g de los WH-CH720N, según Sony",
+        "El control táctil requiere familiarizarse con los gestos"
+      ],
+      "sourceUrl": "https://www.sony.es/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm5/specifications",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B09Y2MYL5C/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "jbl-flip-7",
+      "name": "JBL Flip 7",
+      "category": "altavoces-bluetooth",
+      "profile": "Mover la música entre habitaciones",
+      "description": "Altavoz portátil con batería y protección IP68 según JBL. La marca distingue 14 horas de reproducción y hasta 16 con Playtime Boost. Tiene sentido si vas a moverlo a menudo; para estéreo fijo, compara una par de altavoces.",
+      "pros": [
+        "Batería y formato portátil",
+        "IP68 según JBL"
+      ],
+      "cons": [
+        "Un solo altavoz no sustituye una pareja estéreo",
+        "La autonomía varía con el volumen y el modo"
+      ],
+      "sourceUrl": "https://www.jbl.com/FLIP-7.html",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0DXKMXPXW/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "edifier-r1280db",
+      "name": "Edifier R1280DB",
+      "category": "equipos-hi-fi",
+      "profile": "Estéreo fijo sin amplificador externo",
+      "description": "Par de altavoces activos con Bluetooth y entradas RCA, óptica y coaxial según Edifier. Resuelve un escritorio o un rincón de escucha con amplificación integrada. Un tocadiscos debe entregar señal de línea o usar un previo phono.",
+      "pros": [
+        "Amplificación integrada",
+        "Conexiones analógicas y digitales"
+      ],
+      "cons": [
+        "Necesita toma de corriente y espacio para dos cajas",
+        "La entrada RCA no sustituye un previo phono"
+      ],
+      "sourceUrl": "https://us.edifier.com/products/r1280db",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B01NCTNZRC/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "audio-technica-at-lp60x",
+      "name": "Audio-Technica AT-LP60X",
+      "category": "tocadiscos",
+      "profile": "Primer sistema de vinilo sencillo",
+      "description": "Tocadiscos automático por correa con previo phono conmutable según el manual de Audio-Technica. Permite comenzar con menos ajustes manuales. La versión AT-LP60X básica no debe confundirse con las variantes USB o Bluetooth.",
+      "pros": [
+        "Funcionamiento automático",
+        "Salida phono o línea"
+      ],
+      "cons": [
+        "Necesita altavoces activos o un amplificador con cajas",
+        "La variante básica no ofrece USB ni Bluetooth"
+      ],
+      "sourceUrl": "https://docs.audio-technica.com/eu/AT-LP60X_UM_162501370_V2_EN_web_190502.pdf",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B09J1B8DDS/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "audio-technica-at-lp120x",
+      "name": "Audio-Technica AT-LP120X USB",
+      "category": "tocadiscos",
+      "profile": "Control manual y digitalización",
+      "description": "El AT-LP120XUSB es manual, de tracción directa y con salida USB. Audio-Technica documenta el ajuste de fuerza de apoyo y antiskating. Es una alternativa si quieres aprender esos ajustes o grabar vinilos en el ordenador.",
+      "pros": [
+        "Salida USB",
+        "Contrapeso y antideslizamiento ajustables"
+      ],
+      "cons": [
+        "Exige ajustes y manejo manual",
+        "Necesita un sistema de altavoces compatible"
+      ],
+      "sourceUrl": "https://docs.audio-technica.com/us/at_lp120xusb_um_162501380_v1_es_web_190605.pdf",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B07MVY92KZ/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "focusrite-scarlett-solo-4",
+      "name": "Focusrite Scarlett Solo (4.ª geração)",
+      "category": "home-studio",
+      "profile": "Voz por XLR e instrumento",
+      "description": "Interfaz USB con una entrada de micrófono XLR y una entrada de instrumento o línea según Focusrite. Interesa para grabar una voz y una guitarra. No es una compra necesaria si empiezas únicamente con un micrófono USB.",
+      "pros": [
+        "Una entrada de micrófono XLR y otra de instrumento",
+        "Monitorización directa"
+      ],
+      "cons": [
+        "Solo una entrada de micrófono",
+        "No conecta dos micrófonos XLR simultáneamente"
+      ],
+      "sourceUrl": "https://focusrite.com/products/scarlett-solo",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0C5JSHP7M/",
+      "listingCheckedAt": "2026-10-06",
+      "localizedName": "Focusrite Scarlett Solo (4.ª generación)"
+    },
+    {
+      "id": "audio-technica-ath-m20x",
+      "name": "Audio-Technica ATH-M20x",
+      "category": "home-studio",
+      "profile": "Monitorización con cable",
+      "description": "Auriculares cerrados de monitorización con cable de 3 m según Audio-Technica. El cable evita añadir la latencia de una conexión Bluetooth al grabar. No confundas este modelo con el ATH-M20xBT inalámbrico.",
+      "pros": [
+        "Diseño cerrado",
+        "Conexión por cable"
+      ],
+      "cons": [
+        "El cable ocupa espacio en un escritorio pequeño",
+        "No tienen conexión inalámbrica"
+      ],
+      "sourceUrl": "https://docs.audio-technica.com/eu/ATH-M20x%20datasheet%20%28FR%29.pdf",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B00HVLUR18/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "samson-q2u",
+      "name": "Samson Q2U",
+      "category": "microfonos",
+      "profile": "Empezar por USB y conservar XLR",
+      "description": "Micrófono dinámico con conexiones USB y XLR, y salida para auriculares según Samson. Permite empezar en el ordenador y añadir una interfaz más adelante. Comprueba el conector USB y los accesorios del lote concreto antes de comprar.",
+      "pros": [
+        "USB y XLR",
+        "Escucha directa por auriculares"
+      ],
+      "cons": [
+        "Los accesorios y el conector USB deben confirmarse en la oferta concreta",
+        "La conexión XLR necesita una interfaz o mesa de mezclas"
+      ],
+      "sourceUrl": "https://samsontech.com/products/microphones/usb-microphones/q2u/",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B001R747SG/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "rode-podmic-usb",
+      "name": "RØDE PodMic USB",
+      "category": "microfonos",
+      "profile": "Voz con USB-C y opción XLR",
+      "description": "Micrófono dinámico con conexiones USB-C y XLR y salida de auriculares, según RØDE. Permite grabar por USB o conectarlo a una interfaz por XLR. Las funciones del software y el procesamiento digital de RØDE requieren USB.",
+      "pros": [
+        "USB-C y XLR",
+        "Monitorización por auriculares"
+      ],
+      "cons": [
+        "Necesita un soporte adecuado",
+        "El software de RØDE requiere conexión USB, no XLR"
+      ],
+      "sourceUrl": "https://rode.com/en-gb/user-guides/podmic-usb",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0BQM4TKF7/",
+      "listingCheckedAt": "2026-10-06",
+      "sourceUrls": [
+        "https://rode.com/en-gb/user-guides/podmic-usb",
+        "https://help.rode.com/hc/en-us/articles/16702089296783-Why-Won-t-R%C3%98DE-Software-Detect-My-XLR-Connected-R%C3%98DE-Microphone"
+      ]
+    },
+    {
+      "id": "denon-pma-600ne",
+      "name": "Denon PMA-600NE",
+      "category": "equipos-hi-fi",
+      "profile": "Sistema con altavoces pasivos",
+      "description": "Amplificador integrado con entrada phono MM, Bluetooth y entradas digitales según Denon. Es un camino distinto a las cajas activas: necesita altavoces pasivos y cables de altavoz, que debes incluir en el presupuesto.",
+      "pros": [
+        "Entrada phono para cápsulas MM",
+        "Entradas analógicas y digitales"
+      ],
+      "cons": [
+        "No incluye altavoces",
+        "La entrada phono no admite cápsulas MC directamente"
+      ],
+      "sourceUrl": "https://www.denon.com/en-gb/product/amplifiers/pma-600ne/PMA600NEGB.html",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B07YCVDKJT/",
+      "listingCheckedAt": "2026-10-06"
+    },
+    {
+      "id": "apple-usb-c-jack-35",
+      "name": "Apple adaptador USB-C para jack 3,5 mm",
+      "category": "accesorios-audio",
+      "profile": "Recuperar auriculares de 3,5 mm",
+      "description": "Adaptador USB-C a toma de auriculares de 3,5 mm. Apple documenta su uso para conectar auriculares con cable a dispositivos USB-C. Comprueba la compatibilidad del dispositivo concreto; la forma del conector por sí sola no la garantiza.",
+      "pros": [
+        "Reutiliza auriculares con cable",
+        "Formato de adaptador sencillo"
+      ],
+      "cons": [
+        "Ocupa el puerto USB-C mientras escuchas",
+        "No incorpora una segunda conexión para cargar a la vez"
+      ],
+      "sourceUrl": "https://support.apple.com/es-es/108042",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0D7MN4W7H/",
+      "listingCheckedAt": "2026-10-06",
+      "localizedName": "Apple adaptador USB-C a toma de auriculares de 3,5 mm"
+    },
+    {
+      "id": "fiio-ka11",
+      "name": "FiiO KA11",
+      "category": "accesorios-audio",
+      "profile": "DAC para auriculares con cable",
+      "description": "DAC y amplificador compacto para auriculares con cable. FiiO indica que no admite el micrófono integrado en el cable. Si haces llamadas, necesitarás otra forma compatible de captar tu voz. Comprueba el conector de la variante elegida antes de comprar.",
+      "pros": [
+        "DAC y amplificador de auriculares en formato compacto",
+        "Una alternativa dedicada para escucha por cable"
+      ],
+      "cons": [
+        "No admite el micrófono del cable según FiiO",
+        "La variante debe coincidir con el conector de tu dispositivo"
+      ],
+      "sourceUrl": "https://www.fiio.com/newsinfo/895480.html",
+      "specsCheckedAt": "2026-10-12",
+      "listingReference": "https://www.amazon.es/dp/B0CS62JGW2/",
+      "listingCheckedAt": "2026-10-06"
+    }
+  ],
+  "articles": [
+    {
+      "slug": "auriculares-bluetooth-calidad-precio",
+      "category": "auriculares-cascos",
+      "title": "Auriculares Bluetooth calidad-precio en 2026: cómo elegir",
+      "seoTitle": "Auriculares Bluetooth calidad-precio en 2026: cómo elegir",
+      "summary": "P20i y WF-C710N para llevar en el bolsillo, o WH-CH520 si prefieres diadema. Compara formato, autonomía y cancelación según tu uso.",
+      "metaDescription": "P20i y WF-C710N para llevar en el bolsillo, o WH-CH520 si prefieres diadema. Compara formato, autonomía y cancelación según tu uso.",
+      "intro": "Si buscas auriculares Bluetooth, empieza por el formato: botón para llevar en el bolsillo o diadema para quien prefiere no introducir almohadillas en el oído. Aquí comparamos Soundcore P20i, Sony WF-C710N y Sony WH-CH520 por sus funciones documentadas y el uso al que mejor se adaptan.",
+      "sections": [
+        {
+          "heading": "Qué significa calidad-precio en tu caso",
+          "paragraphs": [
+            "Compara el precio del mismo modelo, variante y estado: nuevo, reacondicionado o usado. Una oferta deja de compensar si el formato te molesta o falta una función que necesitas. El precio cambia; el uso que vas a darle debería decidir la compra.",
+            "En una habitación tranquila puedes priorizar ajuste y autonomía. En el transporte, la cancelación activa de ruido (ANC) merece más atención. Si haces muchas llamadas, prueba el micrófono con tu móvil o aplicación dentro del plazo de devolución: su rendimiento depende del ruido que te rodea."
+          ],
+          "checklist": [
+            "Formato: de botón con almohadillas, sobre la oreja (on-ear) o alrededor de la oreja (over-ear).",
+            "Autonomía del auricular separada de la autonomía total con estuche.",
+            "Compatibilidad de la aplicación y conexión con tus dispositivos.",
+            "Vendedor, estado nuevo o usado, garantía y devolución."
+          ]
+        },
+        {
+          "heading": "Elegir con un presupuesto ajustado",
+          "paragraphs": [
+            "Si buscas lo básico, compara los P20i y los WH-CH520: uno es de botón y el otro de diadema. Consulta el precio actual de ambos. Los WF-C710N añaden ANC en formato compacto; valora esa función si escuchas a menudo en transporte.",
+            "Si tus auriculares actuales funcionan y solo te falta una toma de 3,5 mm, un adaptador compatible puede resolverlo. Conserva el equipo que ya te resulta cómodo."
+          ]
+        }
+      ],
+      "productIds": [
+        "soundcore-p20i",
+        "sony-wf-c710n",
+        "sony-wh-ch520"
+      ],
+      "quickPicks": [
+        {
+          "productId": "soundcore-p20i",
+          "label": "Formato de bolsillo",
+          "note": "Formato compacto para escucha cotidiana."
+        },
+        {
+          "productId": "sony-wf-c710n",
+          "label": "Con cancelación",
+          "note": "Para desplazamientos, con un buen ajuste."
+        },
+        {
+          "productId": "sony-wh-ch520",
+          "label": "Con diadema",
+          "note": "Almohadillas sobre la oreja, sin introducirlas en el oído."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué auriculares Bluetooth tienen mejor relación calidad-precio?",
+          "a": "Para un formato básico de bolsillo, compara los P20i; si necesitas ANC, los WF-C710N; si prefieres diadema, los WH-CH520. La relación calidad-precio depende de la oferta actual y de cuánto vayas a usar sus funciones."
+        },
+        {
+          "q": "¿Necesito cancelación de ruido para escuchar radio?",
+          "a": "En una habitación tranquila puede no aportar suficiente para justificar el gasto. En transporte puede ser útil, pero no elimina todos los sonidos."
+        }
+      ],
+      "related": [
+        "auriculares-cancelacion-ruido-trabajar",
+        "accesorios-audio"
+      ],
+      "closing": "Elige el formato antes de elegir la marca. El ahorro empieza por comprar una función que vayas a usar.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    },
+    {
+      "slug": "auriculares-cancelacion-ruido-trabajar",
+      "category": "auriculares-cascos",
+      "title": "Auriculares con cancelación de ruido para trabajar: cómo elegir",
+      "seoTitle": "Auriculares con cancelación de ruido para trabajar",
+      "summary": "WH-CH720N y WH-1000XM5 para trabajar: compara peso, autonomía con ANC y conexiones. Elige según comodidad, llamadas y dispositivos.",
+      "metaDescription": "WH-CH720N y WH-1000XM5 para trabajar: compara peso, autonomía con ANC y conexiones. Elige según comodidad, llamadas y dispositivos.",
+      "intro": "Para una jornada larga, empieza por el ajuste y por cómo haces las llamadas. Los WH-CH720N pesan menos; los WH-1000XM5 añaden LDAC y control táctil, según Sony. Ambos tienen cancelación activa de ruido (ANC) y entrada de audio por cable.",
+      "sections": [
+        {
+          "heading": "El ruido de la oficina no es todo igual",
+          "paragraphs": [
+            "La cancelación activa puede ayudar con ruido continuo, como la ventilación. Su efecto sobre las conversaciones cercanas es más limitado. Además, el ANC reduce el ruido que tú escuchas; la captación de tu voz durante una llamada depende de los micrófonos y de la aplicación.",
+            "Los WH-CH720N pesan unos 192 g y los WH-1000XM5 unos 250 g según Sony. Es un dato comparable; que resulten cómodos depende de la presión, las almohadillas y tus gafas."
+          ],
+          "checklist": [
+            "Pruébalos con las gafas que usas para trabajar.",
+            "Comprueba cómo cambia la calidad al activar el micrófono Bluetooth.",
+            "Confirma que tu ordenador y móvil admiten las conexiones que necesitas.",
+            "El cable permite otro modo de escucha, pero verifica por separado el micrófono."
+          ]
+        },
+        {
+          "heading": "Cuándo gastar más",
+          "paragraphs": [
+            "Si priorizas menos peso y ANC, compara primero los WH-CH720N. Sony indica unos 192 g y hasta 35 horas de reproducción con ANC, frente a unos 250 g y hasta 30 horas de los WH-1000XM5. Son valores del fabricante, no resultados de nuestras pruebas.",
+            "Los WH-1000XM5 tienen sentido si vas a usar su control táctil o LDAC, que requiere un dispositivo compatible. Para videollamadas, decide también cómo vas a captar la voz: esas funciones de escucha no sustituyen a un micrófono adecuado para tus reuniones."
+          ]
+        }
+      ],
+      "productIds": [
+        "sony-wh-ch720n",
+        "sony-wh-1000xm5"
+      ],
+      "quickPicks": [
+        {
+          "productId": "sony-wh-ch720n",
+          "label": "Menor peso",
+          "note": "ANC y conexión por cable para la jornada."
+        },
+        {
+          "productId": "sony-wh-1000xm5",
+          "label": "LDAC y control táctil",
+          "note": "Para quien utiliza un dispositivo compatible con LDAC."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿El ANC elimina las conversaciones?",
+          "a": "No por completo. El resultado depende del ajuste y del tipo de ruido. El ANC actúa sobre lo que escuchas y no garantiza que tu interlocutor deje de oír el ruido de tu habitación."
+        },
+        {
+          "q": "¿Sirven para videollamadas?",
+          "a": "Tienen funciones de llamada, pero conviene probar el micrófono con tu aplicación y ordenador. La calidad de escucha puede cambiar cuando Bluetooth transmite voz."
+        }
+      ],
+      "related": [
+        "auriculares-bluetooth-calidad-precio",
+        "microfonos-usb-podcast-streaming"
+      ],
+      "closing": "No pagues por una promesa de silencio. Comprueba el ajuste, las llamadas y las condiciones de devolución.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    },
+    {
+      "slug": "altavoces-bluetooth-casa",
+      "category": "altavoces-bluetooth",
+      "title": "Altavoces Bluetooth para casa: portátil o estéreo",
+      "seoTitle": "Altavoces Bluetooth para casa: JBL Flip 7 o Edifier R1280DB",
+      "summary": "JBL Flip 7 o Edifier R1280DB: portátil con batería frente a pareja estéreo fija. Elige por espacio, alimentación y conexiones.",
+      "metaDescription": "JBL Flip 7 o Edifier R1280DB: portátil con batería frente a pareja estéreo fija. Elige por espacio, alimentación y conexiones.",
+      "intro": "Si mueves la música de la cocina a la terraza, el JBL Flip 7 aporta batería y portabilidad. Si escuchas siempre en un rincón, los Edifier R1280DB ofrecen un par de altavoces activos. La elección empieza por dónde van a sonar y por qué dispositivos quieres conectar.",
+      "sections": [
+        {
+          "heading": "Portátil o fijo: la primera decisión",
+          "paragraphs": [
+            "Una batería tiene sentido si cambias de habitación. Para escuchar siempre en el escritorio, un par de altavoces colocado a ambos lados permite una disposición estéreo. Reserva espacio para las dos cajas y comprueba las conexiones antes de comprar.",
+            "El Flip 7 tiene protección IP68 según JBL, pero respeta las instrucciones de carga y secado del fabricante. Los R1280DB necesitan corriente y un cable entre las cajas; deja espacio para ambos."
+          ],
+          "checklist": [
+            "¿Vas a moverlo todos los días? Prioriza batería y tamaño.",
+            "¿Quieres estéreo fijo? Reserva espacio para una pareja.",
+            "Comprueba entradas físicas si conectas TV o tocadiscos.",
+            "Compara tamaño, conexiones y colocación, además de los vatios declarados."
+          ]
+        },
+        {
+          "heading": "Presupuesto y equipo existente",
+          "paragraphs": [
+            "Calcula el sistema completo. Un altavoz portátil es una unidad; una pareja activa ya incorpora amplificación. Unos altavoces pasivos exigirían un amplificador adicional.",
+            "Para escuchar PulsarFM, basta conectar el dispositivo desde el que reproduces la radio. Si vas a usar un tocadiscos con los Edifier, necesitas salida de línea o un previo phono; la entrada RCA no hace ese trabajo por sí sola."
+          ]
+        }
+      ],
+      "productIds": [
+        "jbl-flip-7",
+        "edifier-r1280db"
+      ],
+      "quickPicks": [
+        {
+          "productId": "jbl-flip-7",
+          "label": "Para moverlo",
+          "note": "Batería para cambiar de habitación."
+        },
+        {
+          "productId": "edifier-r1280db",
+          "label": "Para quedarse",
+          "note": "Pareja activa con entradas físicas."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué altavoz Bluetooth comprar para casa?",
+          "a": "Para llevarlo de una habitación a otra, valora un portátil con batería como el Flip 7. Para un sitio fijo, considera un par activo como los R1280DB. Compara el sistema según el espacio y las entradas que necesitas."
+        },
+        {
+          "q": "¿Puedo conectar un tocadiscos por RCA?",
+          "a": "Solo si la señal tiene nivel de línea. Si el tocadiscos entrega phono, hace falta un previo, integrado o externo."
+        }
+      ],
+      "related": [
+        "equipos-hi-fi-empezar",
+        "tocadiscos-para-empezar"
+      ],
+      "closing": "Piensa dónde va a sonar la música. La batería sirve para moverse; el estéreo pide un sitio.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    },
+    {
+      "slug": "tocadiscos-para-empezar",
+      "category": "tocadiscos",
+      "title": "Qué tocadiscos comprar para empezar",
+      "seoTitle": "Qué tocadiscos comprar para empezar",
+      "summary": "AT-LP60X frente a AT-LP120XUSB: automático o manual, previo phono y USB. Comprueba qué altavoces necesitas para empezar con vinilo.",
+      "metaDescription": "AT-LP60X frente a AT-LP120XUSB: automático o manual, previo phono y USB. Comprueba qué altavoces necesitas para empezar con vinilo.",
+      "intro": "Si quieres poner un disco con pocos ajustes, compara un automático como el AT-LP60X. Si quieres ajustar el brazo y digitalizar, mira el AT-LP120XUSB. En ambos casos necesitas altavoces y amplificación compatibles: el presupuesto empieza por el sistema, no por el plato.",
+      "sections": [
+        {
+          "heading": "La cadena de audio antes del primer disco",
+          "paragraphs": [
+            "La cápsula de estos tocadiscos entrega una señal phono, que necesita un previo para amplificarse y ecualizarse hasta nivel de línea. Después, el sonido llega a unos altavoces activos o a un amplificador con altavoces pasivos.",
+            "Los dos modelos tienen previo conmutable según sus manuales. Si usas su salida LINE con altavoces activos, no añadas otro previo phono en esa cadena. Si utilizas PHONO, el siguiente aparato debe tener esa entrada o ser un previo."
+          ],
+          "checklist": [
+            "Confirma la variante: LP60X, LP60XBT y LP60XUSB no son iguales.",
+            "Elige un mueble estable y coloca los altavoces separados del plato.",
+            "Cuenta agujas, limpieza y cables en el gasto total.",
+            "En un modelo manual, sigue las instrucciones de ajuste del contrapeso y del antiskating (compensación de la fuerza lateral)."
+          ]
+        },
+        {
+          "heading": "Automático para empezar, manual para aprender",
+          "paragraphs": [
+            "El AT-LP60X reduce los ajustes del primer día. El AT-LP120XUSB permite ajustar la fuerza de apoyo y el antiskating, y exige manejo manual. La salida USB permite digitalizar discos con un programa de grabación en el ordenador.",
+            "Si aún no tienes altavoces, suma el coste de un par activo al del tocadiscos. Si ya tienes amplificador y cajas compatibles, puedes aprovecharlos. El AT-LP120XUSB añade control manual y digitalización; valora esas funciones antes de ampliar el gasto."
+          ]
+        }
+      ],
+      "productIds": [
+        "audio-technica-at-lp60x",
+        "audio-technica-at-lp120x"
+      ],
+      "quickPicks": [
+        {
+          "productId": "audio-technica-at-lp60x",
+          "label": "Pocos ajustes",
+          "note": "Automático para tu primer sistema."
+        },
+        {
+          "productId": "audio-technica-at-lp120x",
+          "label": "Control manual",
+          "note": "Para ajustar y digitalizar por USB."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Necesito un amplificador para un tocadiscos?",
+          "a": "Necesitas amplificación: puede estar dentro de los altavoces activos o en un amplificador separado. Además, la señal phono exige un previo antes de una entrada de línea."
+        },
+        {
+          "q": "¿Un tocadiscos USB suena por el ordenador automáticamente?",
+          "a": "USB permite capturar audio con software. No presupongas que funciona como altavoz ni que configura la escucha automáticamente; consulta el manual."
+        }
+      ],
+      "related": [
+        "equipos-hi-fi-empezar",
+        "accesorios-audio"
+      ],
+      "closing": "El primer lado A se disfruta más cuando todas las conexiones están resueltas.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    },
+    {
+      "slug": "home-studio-economico",
+      "category": "home-studio",
+      "title": "Cómo montar un home studio económico",
+      "seoTitle": "Cómo montar un home studio económico",
+      "summary": "Monta tu home studio por fases: micrófono USB, auriculares con cable e interfaz XLR cuando haga falta. Evita comprar equipo duplicado.",
+      "metaDescription": "Monta tu home studio por fases: micrófono USB, auriculares con cable e interfaz XLR cuando haga falta. Evita comprar equipo duplicado.",
+      "intro": "Para empezar, usa el ordenador que ya tienes y compra solo lo que tu primera grabación necesita. Si vas a hablar, un micrófono USB puede bastar. Si quieres grabar voz XLR y guitarra, necesitas una interfaz. El estudio crece por proyectos, no por metros de escritorio.",
+      "sections": [
+        {
+          "heading": "Micrófono, interfaz y auriculares: qué necesitas",
+          "paragraphs": [
+            "Un micrófono capta la voz. Una interfaz de audio recibe las señales de micrófonos o instrumentos y las lleva al ordenador por USB. Los auriculares permiten escucharte. Un micrófono USB ya incorpora la conversión necesaria para su propia señal, por lo que no exige una interfaz aparte.",
+            "El Q2U permite empezar por USB y conserva una salida XLR. La Scarlett Solo tiene una entrada de micrófono: para grabar dos voces XLR a la vez debes elegir otra interfaz. Los ATH-M20x sirven como escucha por cable, sin añadir el retardo de Bluetooth."
+          ],
+          "checklist": [
+            "Define la primera tarea: voz, guitarra, teclado o mezcla.",
+            "Confirma entradas, cables, puertos y compatibilidad con el software.",
+            "Graba cerca del micrófono y reduce ruido de la habitación.",
+            "Reserva presupuesto para soporte y cables; comprueba también las condiciones de devolución."
+          ]
+        },
+        {
+          "heading": "Cómo repartir un presupuesto pequeño",
+          "paragraphs": [
+            "Fase uno: ordenador existente, micrófono USB si necesitas voz y auriculares que ya tengas con cable. No compres una interfaz solo para enchufar un micrófono USB.",
+            "Segunda fase: añade una interfaz si necesitas conectar un micrófono XLR o un instrumento compatible. Después puedes valorar monitores y mejorar la habitación. Antes de ampliar, escucha tus grabaciones y localiza el problema concreto: ruido, eco, conexiones o falta de entradas.",
+            "Compara el coste completo de cada fase, incluidos los cables, el soporte y los importes de IVA y envío que aparezcan en la tienda. Así evitas gastar todo el presupuesto en una pieza que todavía no puedes usar."
+          ]
+        }
+      ],
+      "productIds": [
+        "samson-q2u",
+        "audio-technica-ath-m20x",
+        "focusrite-scarlett-solo-4"
+      ],
+      "quickPicks": [
+        {
+          "productId": "samson-q2u",
+          "label": "Primero la voz",
+          "note": "USB ahora, XLR cuando lo necesites."
+        },
+        {
+          "productId": "audio-technica-ath-m20x",
+          "label": "Escucha por cable",
+          "note": "Para monitorizar mientras grabas."
+        },
+        {
+          "productId": "focusrite-scarlett-solo-4",
+          "label": "Cuando necesites XLR",
+          "note": "Voz e instrumento, una entrada de micro."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Hace falta una interfaz para un micrófono USB?",
+          "a": "Para usar ese micrófono por USB, normalmente no. Una interfaz tiene sentido al incorporar micrófonos XLR o instrumentos compatibles."
+        },
+        {
+          "q": "¿Puedo grabar con auriculares Bluetooth?",
+          "a": "Para escuchar una mezcla pueden servir, pero al monitorizar una grabación añaden retardo. Prefiere cable para escucharte mientras interpretas."
+        }
+      ],
+      "related": [
+        "microfonos-usb-podcast-streaming",
+        "equipos-hi-fi-empezar"
+      ],
+      "closing": "Termina una grabación antes de ampliar la lista de compras. Esa prueba revela qué te falta.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    },
+    {
+      "slug": "microfonos-usb-podcast-streaming",
+      "category": "microfonos",
+      "title": "Micrófonos USB para podcast y streaming: cómo elegir",
+      "seoTitle": "Micrófonos USB para podcast y streaming: Q2U o PodMic USB",
+      "summary": "Samson Q2U y RØDE PodMic USB: compara USB, XLR y monitorización para voz. Elige un micrófono según tu mesa, software y presupuesto.",
+      "metaDescription": "Samson Q2U y RØDE PodMic USB: compara USB, XLR y monitorización para voz. Elige un micrófono según tu mesa, software y presupuesto.",
+      "intro": "Para grabar una voz en el ordenador, un micrófono USB permite empezar sin interfaz externa. Samson Q2U y RØDE PodMic USB también ofrecen salida XLR si amplías el equipo. Compara sus conexiones, la escucha por auriculares y el soporte que necesitarás en tu mesa.",
+      "sections": [
+        {
+          "heading": "La posición del micro antes que el procesamiento",
+          "paragraphs": [
+            "Habla a una distancia constante y fuera del chorro de aire directo de la boca. Un soporte que permita acercar el micro evita subir la ganancia para compensar una mala posición. Aleja el teclado y comprueba el ruido de fondo antes de hacer un directo.",
+            "Los dos modelos son dinámicos según sus fabricantes, pero eso no hace desaparecer el eco ni el ruido. Escúchate con auriculares y ajusta nivel y colocación."
+          ],
+          "checklist": [
+            "Comprueba compatibilidad USB con tu equipo y aplicación.",
+            "Cuenta soporte, cable y auriculares en el gasto total.",
+            "La salida de auriculares facilita escucharte directamente.",
+            "Para dos personas, planifica dos micrófonos y cómo los grabarás."
+          ]
+        },
+        {
+          "heading": "Qué opción comparar primero",
+          "paragraphs": [
+            "Para empezar con una voz y conservar la opción XLR, compara el Q2U y los accesorios incluidos en la oferta concreta. Si buscas conexión USB-C y procesamiento digital mediante el software de RØDE, valora el PodMic USB y un soporte adecuado.",
+            "En el PodMic USB, el software de RØDE y sus funciones de procesamiento requieren la conexión USB. XLR lleva una señal analógica a la interfaz. Para grabar dos voces, planifica las entradas y el software antes de comprar dos micrófonos USB."
+          ]
+        }
+      ],
+      "productIds": [
+        "samson-q2u",
+        "rode-podmic-usb"
+      ],
+      "quickPicks": [
+        {
+          "productId": "samson-q2u",
+          "label": "Empezar con una voz",
+          "note": "Conexiones USB y XLR; comprueba los accesorios incluidos."
+        },
+        {
+          "productId": "rode-podmic-usb",
+          "label": "Sistema USB-C",
+          "note": "Para usar USB-C y las funciones del software de RØDE."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué micrófono USB elegir para podcast?",
+          "a": "Para una voz, compara USB, escucha directa y soporte. Q2U y PodMic USB conservan XLR, pero la elección depende del equipo y del precio actual."
+        },
+        {
+          "q": "¿Necesito tratamiento acústico?",
+          "a": "El ruido y el eco de la habitación pueden limitar la grabación. Empieza por acercar el micrófono, alejar fuentes de ruido y escuchar una prueba. Después decide si necesitas acondicionar el espacio."
+        }
+      ],
+      "related": [
+        "home-studio-economico",
+        "auriculares-cancelacion-ruido-trabajar"
+      ],
+      "closing": "Haz una grabación corta, escúchala y ajusta la posición. Después decide qué parte del equipo merece cambiar.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    },
+    {
+      "slug": "equipos-hi-fi-empezar",
+      "category": "equipos-hi-fi",
+      "title": "Cómo elegir tu primer equipo Hi-Fi para casa",
+      "seoTitle": "Cómo elegir tu primer equipo Hi-Fi para casa",
+      "summary": "Altavoces activos Edifier R1280DB o amplificador Denon PMA-600NE con cajas pasivas. Compara el sistema completo, entradas y espacio.",
+      "metaDescription": "Altavoces activos Edifier R1280DB o amplificador Denon PMA-600NE con cajas pasivas. Compara el sistema completo, entradas y espacio.",
+      "intro": "Para montar un equipo estéreo puedes elegir altavoces activos, con amplificación integrada, o un amplificador con altavoces pasivos. Los Edifier R1280DB resuelven la primera opción; el Denon PMA-600NE es el amplificador de la segunda y necesita cajas aparte. Compara el coste y el espacio del conjunto.",
+      "sections": [
+        {
+          "heading": "Activo o pasivo: compara el sistema completo",
+          "paragraphs": [
+            "Los R1280DB son una pareja con amplificación integrada. El PMA-600NE es un amplificador: necesita cajas pasivas y cables. Comparar solo los precios de esos dos productos dejaría fuera una parte del segundo sistema.",
+            "En un escritorio pequeño, una pareja activa reduce componentes. En una sala donde quieres elegir y cambiar cajas, un sistema separado ofrece otra forma de ampliar. Mide el mueble y deja ventilación según el manual del amplificador."
+          ],
+          "checklist": [
+            "Haz una lista de fuentes: móvil, ordenador, TV y tocadiscos.",
+            "Comprueba cada salida de la fuente y cada entrada del equipo.",
+            "En un sistema pasivo, verifica compatibilidad de altavoces e impedancia.",
+            "Cuenta cables y soportes; evita gastar el presupuesto solo en el amplificador."
+          ]
+        },
+        {
+          "heading": "Conectar vinilo y radio online",
+          "paragraphs": [
+            "Denon documenta una entrada phono MM en el PMA-600NE. Los R1280DB reciben señal de línea por RCA: si el tocadiscos solo entrega phono, necesitas un previo. No conectes una salida LINE a PHONO.",
+            "Para escuchar PulsarFM, conecta al equipo el móvil u ordenador donde tienes abierta la radio, mediante Bluetooth o una entrada compatible. Para el tocadiscos, comprueba por separado si la salida es PHONO o LINE."
+          ]
+        }
+      ],
+      "productIds": [
+        "edifier-r1280db",
+        "denon-pma-600ne"
+      ],
+      "quickPicks": [
+        {
+          "productId": "edifier-r1280db",
+          "label": "Pareja activa",
+          "note": "Sistema fijo con menos componentes."
+        },
+        {
+          "productId": "denon-pma-600ne",
+          "label": "Cajas pasivas",
+          "note": "Amplificador para combinar con altavoces pasivos compatibles."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué es mejor, altavoces activos o pasivos?",
+          "a": "Depende del espacio y de cómo quieras ampliar. Los activos incorporan amplificación; los pasivos requieren amplificador. Compara siempre el coste del conjunto."
+        },
+        {
+          "q": "¿La entrada RCA sirve para vinilo?",
+          "a": "RCA describe el conector, no el nivel de señal. Distingue PHONO y LINE y consulta ambos manuales."
+        }
+      ],
+      "related": [
+        "altavoces-bluetooth-casa",
+        "tocadiscos-para-empezar"
+      ],
+      "closing": "Dibuja la cadena de conexiones antes de comprar. Es más fácil corregir un cable en papel.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    },
+    {
+      "slug": "accesorios-audio",
+      "category": "accesorios-audio",
+      "title": "Accesorios de audio: adaptadores y DAC para escuchar con cable",
+      "seoTitle": "Accesorios de audio: adaptadores y DAC para escuchar con cable",
+      "summary": "Apple USB-C a 3,5 mm o FiiO KA11: compara conexiones, micrófono y compatibilidad para seguir usando tus auriculares con cable.",
+      "metaDescription": "Apple USB-C a 3,5 mm o FiiO KA11: compara conexiones, micrófono y compatibilidad para seguir usando tus auriculares con cable.",
+      "intro": "Si tus auriculares funcionan y el móvil nuevo no tiene jack, empieza por resolver la conexión. El adaptador Apple USB-C a 3,5 mm y el FiiO KA11 son dos opciones para escuchar con cable. Comprueba primero la compatibilidad y si necesitas usar el micrófono de los auriculares.",
+      "sections": [
+        {
+          "heading": "Un conector igual no garantiza compatibilidad",
+          "paragraphs": [
+            "USB-C describe una conexión física. Comprueba si el accesorio funciona con tu móvil, ordenador o tableta y si necesitas micrófono, mando del cable o carga simultánea. Esa lista evita comprar dos veces.",
+            "Apple documenta su adaptador para conectar auriculares de 3,5 mm a USB-C. FiiO documenta que el KA11 no admite el micrófono integrado en el cable. Si haces llamadas con auriculares, esa diferencia puede decidir la compra."
+          ],
+          "checklist": [
+            "Modelo exacto y sistema operativo de tu dispositivo.",
+            "Conector de la variante del accesorio, no solo el nombre comercial.",
+            "Uso de micrófono y controles en el cable.",
+            "Necesidad de cargar mientras escuchas."
+          ]
+        },
+        {
+          "heading": "Qué comprobar en un adaptador o DAC",
+          "paragraphs": [
+            "DAC significa conversor de digital a analógico: convierte el audio digital en la señal que reciben los auriculares. La decisión práctica es qué accesorio conecta tu dispositivo y permite usar las funciones que necesitas. Un producto llamado «adaptador» puede incluir esa conversión; el nombre de la categoría no demuestra una ventaja sonora.",
+            "FiiO indica que el KA11 no admite el micrófono integrado en el cable de los auriculares. Si quieres usarlo para llamadas, ten en cuenta que la voz tendrá que captarse por otro micrófono compatible. Para escuchar radio, compara conexiones y comodidad antes de pagar por funciones que no vayas a utilizar."
+          ]
+        }
+      ],
+      "productIds": [
+        "apple-usb-c-jack-35",
+        "fiio-ka11"
+      ],
+      "quickPicks": [
+        {
+          "productId": "apple-usb-c-jack-35",
+          "label": "Conexión sencilla",
+          "note": "Para recuperar la toma de 3,5 mm."
+        },
+        {
+          "productId": "fiio-ka11",
+          "label": "Escucha dedicada",
+          "note": "Valora la limitación del micrófono."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Necesito un DAC para escuchar radio?",
+          "a": "Necesitas que el audio llegue a tus auriculares por una salida compatible. Si tu móvil no tiene toma de 3,5 mm, un adaptador de audio compatible puede resolverlo. No hace falta cambiar los auriculares solo por esa conexión."
+        },
+        {
+          "q": "¿El FiiO KA11 admite micrófono en el cable?",
+          "a": "FiiO indica que no admite ese micrófono. Confirma la variante, el sistema y cómo harás las llamadas antes de comprar."
+        }
+      ],
+      "related": [
+        "auriculares-bluetooth-calidad-precio",
+        "home-studio-economico"
+      ],
+      "closing": "El accesorio útil es el que resuelve una conexión real. Los demás se quedan en el cajón.",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12"
+    }
+  ]
+}

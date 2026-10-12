@@ -6,7 +6,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../assets/affiliate-analytics.js'), 'utf8');
 
-function setup({ consent = null, blocked = false, writeBlocked = false, existingTag = false, debug = false } = {}) {
+function setup({ consent = null, blocked = false, writeBlocked = false, existingTag = false, debug = false, market = 'PT' } = {}) {
   const events = {}, windowEvents = {}, appended = [], entries = [], logs = [];
   const button = choice => ({ dataset: { consentChoice: choice }, addEventListener(_, fn) { this.click = fn; }, focus() {} });
   const accept = button('granted'), reject = button('denied');
@@ -24,14 +24,14 @@ function setup({ consent = null, blocked = false, writeBlocked = false, existing
     head: { append(value) { appended.push(value); } }
   };
   const window = {
-    location: { pathname: '/recomendacoes/melhores-auscultadores/', search: debug ? '?affiliate_debug=1&email=private' : '' },
+    location: { pathname: market === 'ES' ? '/es/recomendaciones/auriculares-bluetooth-calidad-precio/' : '/recomendacoes/melhores-auscultadores/', search: debug ? '?affiliate_debug=1&email=private' : '' },
     addEventListener(type, fn) { windowEvents[type] = fn; }
   };
   if (existingTag) window.gtag = (...args) => entries.push(args);
   vm.runInNewContext(source, { window, document, localStorage: storage, URLSearchParams, console: { info(...args) { logs.push(args); } } });
   const link = {
-    href: 'https://www.amazon.es/dp/B0BTJD6LCL/?tag=pulsarfm-21',
-    dataset: { affiliatePlatform: 'amazon', trackingId: 'pulsarfm-21', productName: 'Sony WH-CH520',
+    href: 'https://www.amazon.es/dp/B0BTJD6LCL/?tag=' + (market === 'ES' ? 'pulsarfmes-21' : 'pulsarfm-21'),
+    dataset: { affiliatePlatform: 'amazon', market, language: market === 'ES' ? 'es-ES' : 'pt-PT', productId: 'sony-wh-ch520', merchant: 'amazon-es', trackingId: market === 'ES' ? 'pulsarfmes-21' : 'pulsarfm-21', productName: 'Sony WH-CH520',
       productCategory: 'Auscultadores', position: 'recommendation-1' }
   };
   const target = { closest: () => link };
@@ -57,6 +57,7 @@ test('accepted click sends the Amazon parameters and one event; page query is ex
   const events = state.affiliateEvents();
   assert.equal(events.length, 1);
   assert.deepEqual(JSON.parse(JSON.stringify(events[0][2])), {
+    market: 'PT', language: 'pt-PT', article_slug: 'melhores-auscultadores', product_id: 'sony-wh-ch520', merchant: 'amazon-es', link_position: 'recommendation-1',
     affiliate_platform: 'amazon', tracking_id: 'pulsarfm-21', product_name: 'Sony WH-CH520',
     product_category: 'Auscultadores', page_path: '/recomendacoes/melhores-auscultadores/',
     destination_url: 'https://www.amazon.es/dp/B0BTJD6LCL/?tag=pulsarfm-21',
@@ -120,6 +121,28 @@ test('storage write failure still honors a new explicit choice for this session'
   state.click();
   assert.equal(state.banner.hidden, true);
   assert.equal(state.affiliateEvents().length, 1);
+  state.reject.click();
+  state.click();
+  assert.equal(state.affiliateEvents().length, 1);
+});
+
+test('Spanish market uses its confirmed ID and respects consent without duplicate events', () => {
+  const state = setup({ market: 'ES' });
+  state.click();
+  assert.equal(state.affiliateEvents().length, 0);
+  state.accept.click();
+  state.click();
+  const events = state.affiliateEvents();
+  assert.equal(events.length, 1);
+  const p = events[0][2];
+  assert.equal(p.market, 'ES');
+  assert.equal(p.language, 'es-ES');
+  assert.equal(p.tracking_id, 'pulsarfmes-21');
+  assert.equal(p.article_slug, 'auriculares-bluetooth-calidad-precio');
+  assert.equal(p.product_id, 'sony-wh-ch520');
+  assert.equal(p.merchant, 'amazon-es');
+  assert.equal(p.link_position, 'recommendation-1');
+  assert.ok(!p.page_path.includes('?'));
   state.reject.click();
   state.click();
   assert.equal(state.affiliateEvents().length, 1);

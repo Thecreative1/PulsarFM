@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "pairs": [
+    {
+      "pt": "/",
+      "es": "/es/"
+    },
+    {
+      "pt": "/privacidade.html",
+      "es": "/es/privacidad/"
+    },
+    {
+      "pt": "/recomendacoes/",
+      "es": "/es/recomendaciones/"
+    },
+    {
+      "pt": "/recomendacoes/gira-discos/",
+      "es": "/es/recomendaciones/tocadiscos-para-empezar/"
+    },
+    {
+      "pt": "/recomendacoes/home-studio/",
+      "es": "/es/recomendaciones/home-studio-economico/"
+    },
+    {
+      "pt": "/radios-rock/",
+      "es": "/es/radio-rock/"
+    },
+    {
+      "pt": "/radios-jazz/",
+      "es": "/es/radio-jazz/"
+    },
+    {
+      "pt": "/radios-chill/",
+      "es": "/es/radio-chill/"
+    },
+    {
+      "pt": "/radios-pop/",
+      "es": "/es/radio-pop/"
+    },
+    {
+      "pt": "/radios-study/",
+      "es": "/es/radio-para-estudiar/"
+    },
+    {
+      "pt": "/radios-electronica/",
+      "es": "/es/radio-electronica/"
+    },
+    {
+      "pt": "/radios-psytrance/",
+      "es": "/es/radio-psytrance/"
+    },
+    {
+      "pt": "/radios-synthwave/",
+      "es": "/es/radio-synthwave/"
+    }
+  ]
+}

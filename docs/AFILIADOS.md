@@ -2,9 +2,9 @@
 
 ## Estado e integração
 
-A secção `/recomendacoes/` é monetizada pelo Programa de Afiliados da Amazon.es, com o tracking ID **`pulsarfm-21`**. É o único ID permitido em toda a PulsarFM: o gerador recusa qualquer outro, incluindo o de outros sites do mesmo dono.
+A secção `/recomendacoes/` é monetizada pelo Programa de Afiliados da Amazon.es, com o tracking ID **`pulsarfm-21`**. É o ID legado do mercado PT e nunca deve ser substituído. O mercado ES usa **pulsarfmes-21**, confirmado pelo dono em 12/10/2026. A configuração central está em `data/affiliate-markets.json`; `tools/market_config.py` valida o mercado e os IDs. Não aplicar um ID aos links do outro mercado.
 
-O catálogo tem 30 produtos em seis guias, todos com `linkType: "affiliate"` e `merchant: "amazon-es"`. Cada guia cobre várias gamas de preço (económico, médio, premium). Cada ASIN foi confirmado na Amazon.es a 06/10/2026: o produto existe, está em stock e tem botão de compra, sem ser apenas em segunda mão. Os modelos que existiam antes e não estavam disponíveis na Amazon.es foram substituídos:
+O catálogo PT atual tem 73 produtos em 13 guias, todos com `linkType: "affiliate"` e `merchant: "amazon-es"`. Cada guia cobre várias gamas de preço (económico, médio, premium). Cada ASIN foi confirmado na Amazon.es a 06/10/2026: o produto existe, está em stock e tem botão de compra, sem ser apenas em segunda mão. Os modelos que existiam antes e não estavam disponíveis na Amazon.es foram substituídos:
 
 | Antes | Agora | Motivo |
 | --- | --- | --- |
@@ -237,3 +237,15 @@ O gerador mantém o suporte à rede Awin (deep links `cread.php`, links `pclick.
 ## Publicação
 
 As páginas geradas devem acompanhar os dados, assets e templates no commit. Seguir o fluxo habitual do projeto: rever as alterações e fazer push para `main` quando quiseres publicar.
+
+## Edição espanhola (12/10/2026)
+
+26 páginas em /es/: rádio, oito géneros, portal, sete categorias, oito guias e privacidade. A edição espanhola compara 16 produtos já publicados no catálogo PT; não altera ASINs nem o tracking dos 13 guias PT. Os dados e as fontes dos fabricantes ficam em data/recommendations.es.json. A verificação anterior de fichas Amazon permanece datada de 06/10/2026; a consulta automatizada atual foi bloqueada, pelo que stock, vendedor e variante requerem confirmação manual.
+
+Gerar sempre todas as edições com python tools/build_site.py. Validar com python tools/check_site.py, node tools/check-js.cjs, python -m pytest -q tests e node --test tests/affiliate-analytics.test.cjs.
+
+GA4 mantém G-YRD1BYXB78 e pulsarfm-consent. affiliate_click inclui market, language, article_slug, product_id, merchant e link_position, preservando os parâmetros antigos. page_view nos guias recebe market, language, article_slug, content_category e page_kind após consentimento. Há um único emissor de affiliate_click. Cliques não são pedidos ou comissões.
+
+A frase espanhola exigida por Amazon está visível no portal, nos guias e na política. Cada artigo anuncia publicidade antes dos links. Sem um ID validado, o gerador oferece apenas links diretos, sem copiar o ID PT.
+
+Fluxo manual GA4: registar as dimensões de âmbito Evento (market, language, article_slug, product_id, merchant, link_position, content_category, page_kind). Usar País e Sessão: origem/meio/canal para país e tráfego orgânico; filtrar /es/ e google / organic. Agrupar page_view por artigos/categorias e affiliate_click por artigo/produto/posição. O país vem do GA4, não de geolocalização adicional. Validar a configuração real no DebugView com consentimento; os testes locais bloqueiam pedidos GA4. Consultar pedidos e comissões no relatório Amazon por pulsarfmes-21 ou pulsarfm-21.
